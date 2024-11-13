@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadMe - ミスター秘密侵入VR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            min-height: 100vh;
+        }
+        .section-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-100">
+    <!-- ナビゲーションバー -->
+    <nav class="bg-black bg-opacity-50 fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-xl font-bold">ミスター秘密侵入VR</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="readme.html" class="nav-link hover:text-gray-300">ReadMe</a>
+                        <a href="manual.html" class="nav-link hover:text-gray-300">説明書</a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-400">Ver 1.0.0</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <div class="pt-20 pb-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="section-card p-8">
+                <h1 class="text-3xl font-bold mb-8">ReadMe</h1>
+
+                <section class="mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">インストール方法</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium mb-3">PCVRバージョン</h3>
+                        <ol class="list-decimal pl-6 space-y-2">
+                            <li>SteamVRをインストールしてください</li>
+                            <li>ゲームフォルダを全角文字の含まれないパスに移動してください</li>
+                            <li>SteamVRを起動し、VRヘッドセットとの接続を確認してください</li>
+                            <li>stealthHeart.exeを実行してください</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-medium mb-3">Quest単体バージョン</h3>
+                        <ol class="list-decimal pl-6 space-y-2">
+                            <li>SideQuestをインストールしてください (Advanced Installerを推奨)</li>
+                            <li>QuestをPCに接続してください</li>
+                            <li>SideQuestでMRsecretVR.apkをインストールしてください</li>
+                            <li>Questで「提供源不明のアプリ」からゲームを起動してください</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">注意事項</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>本作品は18歳未満の方はプレイできません</li>
+                        <li>VR機器の安全ガイドラインに従ってプレイしてください</li>
+                        <li>定期的に休憩を取ることを推奨します</li>
+                        <li>プレイ中に気分が悪くなった場合は直ちに中止してください</li>
+                    </ul>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">動作環境</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-xl font-medium mb-2">PCVRバージョン</h3>
+                            <ul class="list-disc pl-6">
+                                <li>対応OS: Windows 10, 11</li>
+                                <li>必須: SteamVR</li>
+                                <li>推奨GPU: RTX3060以上</li>
+                                <li>主要VRヘッドセットに対応</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2">Quest単体バージョン</h3>
+                            <ul class="list-disc pl-6">
+                                <li>Meta Quest 2 (モノクロパススルー、空間認識機能は非対応)</li>
+                                <li>Meta Quest 3/3S</li>
+                                <li>Meta Quest Pro (空間認識機能は非対応)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4">サポート・お問い合わせ</h2>
+                    <p class="mb-4">不具合報告や要望は以下の方法で受け付けています：</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>DLsiteのレビュー機能</li>
+                        <li>公式Twitterアカウント</li>
+                        <li>メールでのお問い合わせ</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-black bg-opacity-50 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-500">© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p class="text-sm text-gray-600 mt-2">

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミスター秘密侵入VR - マニュアル</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            min-height: 100vh;
+        }
+        .section-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-gray-100">
+    <!-- ナビゲーションバー -->
+    <nav class="bg-black bg-opacity-50 fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-xl font-bold">ミスター秘密侵入VR</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="readme.html" class="nav-link hover:text-gray-300">ReadMe</a>
+                        <a href="manual.html" class="nav-link hover:text-gray-300">説明書</a>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-400">Ver 1.0.0</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <div class="pt-20 pb-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- ヘッダーセクション -->
+            <header class="text-center mb-16">
+                <img src="/api/placeholder/200/200" alt="ゲームロゴ" class="mx-auto w-32 h-32 rounded-full shadow-lg mb-6">
+                <h1 class="text-4xl font-bold mb-4">ミスター秘密侵入VR</h1>
+                <p class="text-xl text-gray-400 mb-2">公式マニュアル</p>
+                <p class="text-sm text-gray-500">最終更新: 2024年11月13日</p>
+            </header>
+
+            <!-- ドキュメントカード -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <a href="readme.html" class="section-card p-6 card-hover">
+                    <h2 class="text-2xl font-bold mb-4">ReadMe</h2>
+                    <p class="text-gray-400 mb-4">インストール方法や基本的な情報について説明しています。まずはこちらをお読みください。</p>
+                    <div class="text-blue-400 hover:text-blue-300">続きを読む →</div>
+                </a>
+
+                <a href="manual.html" class="section-card p-6 card-hover">
+                    <h2 class="text-2xl font-bold mb-4">説明書</h2>
+                    <p class="text-gray-400 mb-4">ゲームの詳細な操作方法や機能について解説しています。</p>
+                    <div class="text-blue-400 hover:text-blue-300">続きを読む →</div>
+                </a>
+            </div>
+
+            <!-- お知らせセクション -->
+            <section class="section-card p-6 mb-16">
+                <h2 class="text-2xl font-bold mb-4">お知らせ</h2>
+                <div class="space-y-4">
+                    <div class="border-b border-gray-700 pb-4">
+                        <div class="text-sm text-gray-400 mb-1">2024/11/13</div>
+                        <div>マニュアルサイトを公開しました。</div>
+                    </div>
+                    <div class="border-b border-gray-700 pb-4">
+                        <div class="text-sm text-gray-400 mb-1">2024/11/12</div>
+                        <div>Ver 1.0.0をリリースしました。</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 動作環境セクション -->
+            <section class="section-card p-6">
+                <h2 class="text-2xl font-bold mb-6">動作環境</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">PCVRバージョン</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                            <li>Windows 10, 11</li>
+                            <li>SteamVR必須</li>
+                            <li>推奨GPU: RTX3060以上</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Quest単体バージョン</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                            <li>Meta Quest 2/3/Pro</li>
+                            <li>SideQuestによるインストールが必要</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-black bg-opacity-50 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-500">© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p class="text-sm text-gray-600 mt-2">本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
+    </footer>
+</body>
+</html>
