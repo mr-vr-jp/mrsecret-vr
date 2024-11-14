@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミスター秘密侵入VR - ReadMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ベーススタイルは同じ */
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 以下ReadMe特有のスタイル */
+        .content-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .content-section h2 {
+            color: #4a90e2;
+            margin-top: 0;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: #63b3ed;
+            margin-top: 2rem;
+        }
+
+        .setup-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #4a4a4a;
+        }
+
+        .installation-steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step;
+        }
+
+        .installation-steps li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+            counter-increment: step;
+        }
+
+        .installation-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #4a90e2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: rgba(74, 144, 226, 0.1);
+            border-left: 4px solid #4a90e2;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .link-button {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            transition: background-color 0.2s;
+        }
+
+        .link-button:hover {
+            background-color: #357abd;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .language-button {
+            padding: 0.5rem 1rem;
+            background: none;
+            border: 2px solid #4a90e2;
+            color: #4a90e2;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .language-button.active {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        @media (max-width: 640px) {
+            .content-section {
+                padding: 1rem;
+            }
+
+            .installation-steps li {
+                padding-left: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <nav class="nav-links">
+                <a href="readme.html">ReadMe</a>
+                <a href="manual.html">説明書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 90px">
+        <div class="container">
+            <div class="language-toggle">
+                <button class="language-button active" onclick="showLanguage('jp')">日本語</button>
+                <button class="language-button" onclick="showLanguage('en')">English</button>
+            </div>
+
+            <div id="jp-content" class="content-section">
+                <h2>お買い上げありがとうございます</h2>
+                <p>本作品は、基本内容を同じとしながらも以下の2つのバージョンに分かれています：</p>
+                <ul>
+                    <li>PCVR版</li>
+                    <li>Quest単体版</li>
+                </ul>
+
+                <h3>PCVR版プレイ方法</h3>
+                <ol class="installation-steps">
+                    <li>SteamVRをインストールしてください。</li>
+                    <li>本作品フォルダを全角文字の含まれないパスに移してください（ゲーム内で入力が効かない現象を回避します）</li>
+                    <li>MRsecretVR_PCVRフォルダを開いてください</li>
+                    <li>SteamVRをあらかじめ起動しておき、VRヘッドセットとのリンクを確認。</li>
+                    <li>MRscretVR(.exe)をダブルクリックして開いてください</li>
+                </ol>
+
+                <h3>Quest単体版プレイ方法</h3>
+                <ol class="installation-steps">
+                    <li>
+                        SideQuestをインストールしてください。
+                        <br>
+                        <a href="https://sidequestvr.com/setup-howto" target="_blank" class="link-button">
+                            SideQuestセットアップガイド
+                        </a>
+                        <div class="note">Advanced Installerをお勧めします</div>
+                    </li>
+                    <li>SideQuestを開き、お持ちのQuestをPCとつないでください。</li>
+                    <li>
+                        接続が確認されましたら、下記アイコンをクリックし、MRsecretVR.apkをインストールしてください。
+                        <br>
+                        <img src="./assets/images/sidequest-install-1.png" alt="SideQuestインストール手順1" class="setup-image">
+                        <img src="./assets/images/sidequest-install-2.png" alt="SideQuestインストール手順2" class="setup-image">
+                    </li>
+                    <li>MetaQuestを開き、アプリ選択欄から「提供源不明のアプリ」を選択し、MRsecretVRを選択して起動してください。</li>
+                </ol>
+
+                <h3>バージョン間の違い</h3>
+                <div class="note">
+                    <h4>Quest単体版の特徴：</h4>
+                    <ul>
+                        <li>MR機能に対応
+                            <ul>
+                                <li>Quest3では、空間認識機能にも対応しており、MRモードで事前読み込みが要求されます。</li>
+                                <li>２ｍ×２ｍ以上の平坦なスペースを開けおくことを推奨します。</li>
+                            </ul>
+                        </li>
+                        <li>映像処理の軽量化対応</li>
+                    </ul>
+                    <h4>PCVR版の特徴：</h4>
+                    <ul>
+                        <li>クロマキーパススルーに対応（VirtualDesktopやALVRをご使用ください）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- English content -->
+            <div id="en-content" class="content-section" style="display: none;">
+                <!-- 英語版のコンテンツ -->
+                <!-- 日本語版と同じ構造で英語テキストを配置 -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
+    </footer>
+
+    <script>
+        function showLanguage(lang) {
+            document.getElementById('jp-content').style.display = lang === 'jp' ? 'block' : 'none';
+            document.getElementById('en-content').style.display = lang === 'en' ? 'block' : 'none';
+            
+            // Update button styles
+            document.querySelectorAll('.language-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
