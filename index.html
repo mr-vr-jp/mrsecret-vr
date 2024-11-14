@@ -157,13 +157,11 @@
     <main>
         <div class="container">
             <section class="hero">
-                <!-- 相対パスで画像を参照 -->
-                <img src="./assets/images/logo.png" alt="ゲームロゴ" class="hero-logo">
-                <!-- 画像が見つからない場合のフォールバック処理 -->
+                <img src="./assets/images/main-logo.png" alt="ゲームロゴ" class="hero-logo">
                 <script>
                     document.querySelector('.hero-logo').onerror = function() {
-                        this.src = './assets/images/logo-fallback.png';  // フォールバック画像
-                        this.onerror = null;  // 無限ループ防止
+                        this.src = './assets/images/main-logo.png'; 
+                        this.onerror = null;
                     }
                 </script>
                 <p>SNSでは見せない彼女の秘密の日常。今夜、その素顔に迫る——</p>
