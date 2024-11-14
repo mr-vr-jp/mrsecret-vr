@@ -70,13 +70,20 @@
         }
 
         .hero-logo {
-            width: 180px;
-            height: 180px;
-            border-radius: 20px;
+            width: 300px;
+            height: auto;
+            border-radius: 12px;
             margin-bottom: 2rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            object-fit: contain;
         }
 
+        @media (max-width: 640px) {
+            .hero-logo {
+                width: 240px;
+            }
+        }
+        
         .hero-title {
             font-size: 3rem;
             font-weight: 700;
