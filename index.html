@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ミスター秘密侵入VR - 公式マニュアル</title>
-    <!-- Noto Sans JPフォントの読み込み -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -52,10 +51,14 @@
             text-decoration: none;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
-            margin-left: 2rem;
             font-weight: 500;
             transition: color 0.2s;
         }
@@ -87,6 +90,12 @@
             color: transparent;
         }
 
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
         .section-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -99,17 +108,26 @@
             border-radius: 12px;
             padding: 2rem;
             transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
         }
 
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
         }
 
         .card h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #4a90e2;
+        }
+
+        .card p {
+            color: var(--text-color);
+            margin: 0;
         }
 
         .news-section {
@@ -119,14 +137,25 @@
             margin: 4rem 0;
         }
 
+        .news-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #4a90e2;
+        }
+
         .news-item {
             padding: 1rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
         .news-date {
             font-size: 0.875rem;
             color: #94a3b8;
+            margin-bottom: 0.5rem;
         }
 
         .system-requirements {
@@ -136,11 +165,38 @@
             margin: 4rem 0;
         }
 
+        .system-requirements .card {
+            height: 100%;
+        }
+
+        .system-requirements ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .system-requirements li {
+            margin-bottom: 0.5rem;
+        }
+
         .footer {
             text-align: center;
             padding: 2rem 0;
             color: #94a3b8;
             font-size: 0.875rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero-logo {
+                width: 240px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -158,24 +214,21 @@
     <main>
         <div class="container">
             <section class="hero">
-                <img src="./assets/images/main-logo.png" alt="ゲームロゴ" class="hero-logo">
-                <script>
-                    document.querySelector('.hero-logo').onerror = function() {
-                        this.src = './assets/images/main-logo.png'; 
-                        this.onerror = null;
-                    }
-                </script>
-                <p>SNSでは見せない彼女の秘密の日常。今夜、その素顔に迫る——</p>
+                <img src="./assets/images/logo.png" alt="ゲームロゴ" class="hero-logo">
+                <h1 class="hero-title">ミスター秘密侵入VR</h1>
+                <p class="hero-subtitle">SNSでは見せない彼女の秘密の日常。今夜、その素顔に迫る——</p>
             </section>
 
-            <a href="readme.html" class="card">
-                <h2>ReadMe</h2>
-                <p>インストール方法や基本情報を確認できます。まずはこちらをご確認ください。</p>
-            </a>
-            <a href="manual.html" class="card">
-                <h2>説明書</h2>
-                <p>詳細な操作方法やゲームシステムについて解説しています。</p>
-            </a>
+            <div class="section-grid">
+                <a href="readme.html" class="card">
+                    <h2>ReadMe</h2>
+                    <p>インストール方法や基本情報を確認できます。まずはこちらをご確認ください。</p>
+                </a>
+                <a href="manual.html" class="card">
+                    <h2>説明書</h2>
+                    <p>詳細な操作方法やゲームシステムについて解説しています。</p>
+                </a>
+            </div>
 
             <section class="news-section">
                 <h2>お知らせ</h2>
@@ -202,10 +255,10 @@
                 <div class="card">
                     <h2>Quest単体版</h2>
                     <ul>
-                        <li>Meta Quest 2/Pro/3/3S対応</li>
+                        <li>Meta Quest 2/3/Pro対応</li>
+                        <li>SideQuestによるインストールが必要</li>
+                        <li>Quest 3: 完全対応・空間認識機能対応</li>
                         <li>Quest 2/Pro: 一部機能制限あり</li>
-                        <li>Quest 3/3S: 完全対応・空間認識機能対応</li>
-                        <li>SideQuestによるインストールが必要です</li>
                     </ul>
                 </div>
             </section>
