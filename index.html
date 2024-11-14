@@ -3,131 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ミスター秘密侵入VR - マニュアル</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>ミスター秘密侵入VR - 公式マニュアル</title>
+    <!-- Noto Sans JPフォントの読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            min-height: 100vh;
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
         }
-        .section-card {
-            background: rgba(255, 255, 255, 0.05);
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
             backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ff6b6b;
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after {
+            position: fixed;
             width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-        .card-hover {
-            transition: transform 0.3s, box-shadow 0.3s;
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
         }
-        .card-hover:hover {
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #4a90e2, #63b3ed);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4a90e2;
+        }
+
+        .news-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 4rem 0;
+        }
+
+        .news-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .news-date {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        .system-requirements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
         }
     </style>
 </head>
-<body class="gradient-bg text-gray-100">
-    <!-- ナビゲーションバー -->
-    <nav class="bg-black bg-opacity-50 fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-8">
-                    <a href="index.html" class="text-xl font-bold">ミスター秘密侵入VR</a>
-                    <div class="hidden md:flex space-x-4">
-                        <a href="readme.html" class="nav-link hover:text-gray-300">ReadMe</a>
-                        <a href="manual.html" class="nav-link hover:text-gray-300">説明書</a>
-                    </div>
-                </div>
-                <div class="text-sm text-gray-400">Ver 1.0.0</div>
-            </div>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <nav class="nav-links">
+                <a href="readme.html">ReadMe</a>
+                <a href="manual.html">説明書</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- メインコンテンツ -->
-    <div class="pt-20 pb-12 px-4">
-        <div class="max-w-6xl mx-auto">
-            <!-- ヘッダーセクション -->
-            <header class="text-center mb-16">
-                <img src="/api/placeholder/200/200" alt="ゲームロゴ" class="mx-auto w-32 h-32 rounded-full shadow-lg mb-6">
-                <h1 class="text-4xl font-bold mb-4">ミスター秘密侵入VR</h1>
-                <p class="text-xl text-gray-400 mb-2">公式マニュアル</p>
-                <p class="text-sm text-gray-500">最終更新: 2024年11月13日</p>
-            </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <img src="/api/placeholder/180/180" alt="ゲームロゴ" class="hero-logo">
+                <h1 class="hero-title">ミスター秘密侵入VR</h1>
+                <p>SNSでは見せない彼女の秘密の日常。今夜、その素顔に迫る——</p>
+            </section>
 
-            <!-- ドキュメントカード -->
-            <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <a href="readme.html" class="section-card p-6 card-hover">
-                    <h2 class="text-2xl font-bold mb-4">ReadMe</h2>
-                    <p class="text-gray-400 mb-4">インストール方法や基本的な情報について説明しています。まずはこちらをお読みください。</p>
-                    <div class="text-blue-400 hover:text-blue-300">続きを読む →</div>
+            <div class="section-grid">
+                <a href="readme.html" class="card">
+                    <h2>ReadMe</h2>
+                    <p>インストール方法や基本情報を確認できます。まずはこちらをご確認ください。</p>
                 </a>
-
-                <a href="manual.html" class="section-card p-6 card-hover">
-                    <h2 class="text-2xl font-bold mb-4">説明書</h2>
-                    <p class="text-gray-400 mb-4">ゲームの詳細な操作方法や機能について解説しています。</p>
-                    <div class="text-blue-400 hover:text-blue-300">続きを読む →</div>
+                <a href="manual.html" class="card">
+                    <h2>説明書</h2>
+                    <p>詳細な操作方法やゲームシステムについて解説しています。</p>
                 </a>
             </div>
 
-            <!-- お知らせセクション -->
-            <section class="section-card p-6 mb-16">
-                <h2 class="text-2xl font-bold mb-4">お知らせ</h2>
-                <div class="space-y-4">
-                    <div class="border-b border-gray-700 pb-4">
-                        <div class="text-sm text-gray-400 mb-1">2024/11/13</div>
-                        <div>マニュアルサイトを公開しました。</div>
-                    </div>
-                    <div class="border-b border-gray-700 pb-4">
-                        <div class="text-sm text-gray-400 mb-1">2024/11/12</div>
-                        <div>Ver 1.0.0をリリースしました。</div>
-                    </div>
+            <section class="news-section">
+                <h2>お知らせ</h2>
+                <div class="news-item">
+                    <div class="news-date">2024/11/13</div>
+                    <p>マニュアルサイトを公開しました。</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2024/11/12</div>
+                    <p>Ver 1.0.0をリリースしました。</p>
                 </div>
             </section>
 
-            <!-- 動作環境セクション -->
-            <section class="section-card p-6">
-                <h2 class="text-2xl font-bold mb-6">動作環境</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">PCVRバージョン</h3>
-                        <ul class="list-disc pl-6 space-y-2 text-gray-300">
-                            <li>Windows 10, 11</li>
-                            <li>SteamVR必須</li>
-                            <li>推奨GPU: RTX3060以上</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Quest単体バージョン</h3>
-                        <ul class="list-disc pl-6 space-y-2 text-gray-300">
-                            <li>Meta Quest 2/3/Pro</li>
-                            <li>SideQuestによるインストールが必要</li>
-                        </ul>
-                    </div>
+            <section class="system-requirements">
+                <div class="card">
+                    <h2>PCVR版</h2>
+                    <ul>
+                        <li>Windows 10/11</li>
+                        <li>必須: SteamVR</li>
+                        <li>推奨GPU: RTX3060以上</li>
+                        <li>MR: クロマキーによるパススルーに対応</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Quest単体版</h2>
+                    <ul>
+                        <li>Meta Quest 2/Pro/3/3S対応</li>
+                        <li>Quest 2/Pro: 一部機能制限あり</li>
+                        <li>Quest 3/3S: 完全対応・空間認識機能対応</li>
+                        <li>SideQuestによるインストールが必要です</li>
+                    </ul>
                 </div>
             </section>
         </div>
-    </div>
+    </main>
 
-    <!-- フッター -->
-    <footer class="bg-black bg-opacity-50 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-500">© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
-            <p class="text-sm text-gray-600 mt-2">本マニュアルの内容は予告なく変更される場合があります。</p>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
         </div>
     </footer>
 </body>
