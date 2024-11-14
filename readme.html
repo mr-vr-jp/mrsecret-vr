@@ -211,8 +211,59 @@
 
             <!-- English content -->
             <div id="en-content" class="content-section" style="display: none;">
-                <!-- 英語版のコンテンツ -->
-                <!-- 日本語版と同じ構造で英語テキストを配置 -->
+                <h2>Thank you for your purchase</h2>
+                <p>This product is available in two versions, with the same core content:</p>
+                <ul>
+                    <li>PCVR Version</li>
+                    <li>Standalone Quest Version</li>
+                </ul>
+            
+                <h3>How to Play the PCVR Version</h3>
+                <ol class="installation-steps">
+                    <li>Please install SteamVR.</li>
+                    <li>Move the game folder to a path that does not contain any full-width (double-byte) characters to avoid input issues in the game.</li>
+                    <li>Open the MRsecretVR_PCVR folder.</li>
+                    <li>Launch SteamVR in advance and ensure it is linked to your VR headset.</li>
+                    <li>Double-click "MRscretVR.exe" to start the game.</li>
+                </ol>
+            
+                <h3>How to Play the Standalone Quest Version</h3>
+                <ol class="installation-steps">
+                    <li>
+                        Install SideQuest.
+                        <br>
+                        <a href="https://sidequestvr.com/setup-howto" target="_blank" class="link-button">
+                            SideQuest Setup Guide
+                        </a>
+                        <div class="note">We recommend using the Advanced Installer</div>
+                    </li>
+                    <li>Open SideQuest and connect your Quest to your PC.</li>
+                    <li>
+                        Once the connection is confirmed, click the icon as shown below and install the MRsecretVR.apk.
+                        <br>
+                        <img src="./assets/images/sidequest-install-1.png" alt="SideQuest Installation Step 1" class="setup-image">
+                        <img src="./assets/images/sidequest-install-2.png" alt="SideQuest Installation Step 2" class="setup-image">
+                    </li>
+                    <li>Open your MetaQuest, go to the app selection screen, choose "Unknown Sources," and launch MRsecretVR.</li>
+                </ol>
+            
+                <h3>Version Differences</h3>
+                <div class="note">
+                    <h4>Quest Standalone Version Features:</h4>
+                    <ul>
+                        <li>Supports MR functionality
+                            <ul>
+                                <li>On Quest 3, it also supports spatial awareness, and preloading is required in MR mode.</li>
+                                <li>It is recommended to clear a flat space of at least 2m x 2m.</li>
+                            </ul>
+                        </li>
+                        <li>Optimized graphics processing</li>
+                    </ul>
+                    <h4>PCVR Version Features:</h4>
+                    <ul>
+                        <li>Supports chroma key passthrough (Please use VirtualDesktop or ALVR)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
