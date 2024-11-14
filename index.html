@@ -68,21 +68,20 @@
         }
 
         .hero {
-            padding: 120px 0 80px;
+            padding: 80px 0 40px;
             text-align: center;
         }
 
         .hero-logo {
-            width: 300px;
+            width: 200px;
             height: auto;
-            border-radius: 12px;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             object-fit: contain;
         }
 
         .hero-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
             background: linear-gradient(45deg, #4a90e2, #63b3ed);
@@ -96,6 +95,22 @@
             margin-bottom: 2rem;
         }
 
+        .purchase-link {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .purchase-link:hover {
+            background-color: #357abd;
+        }
+
         .section-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -107,13 +122,16 @@
             background-color: var(--card-bg);
             border-radius: 12px;
             padding: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
             color: var(--text-color);
             display: block;
         }
 
-        .card:hover {
+        /* ReadMeと説明書のカードのみホバー効果を適用 */
+        .card-link {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-link:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             text-decoration: none;
@@ -165,19 +183,6 @@
             margin: 4rem 0;
         }
 
-        .system-requirements .card {
-            height: 100%;
-        }
-
-        .system-requirements ul {
-            padding-left: 1.5rem;
-            margin: 1rem 0;
-        }
-
-        .system-requirements li {
-            margin-bottom: 0.5rem;
-        }
-
         .footer {
             text-align: center;
             padding: 2rem 0;
@@ -187,7 +192,7 @@
 
         @media (max-width: 640px) {
             .hero-logo {
-                width: 240px;
+                width: 160px;
             }
 
             .hero-title {
@@ -217,14 +222,15 @@
                 <img src="./assets/images/logo.png" alt="ゲームロゴ" class="hero-logo">
                 <h1 class="hero-title">ミスター秘密侵入VR</h1>
                 <p class="hero-subtitle">SNSでは見せない彼女の秘密の日常。今夜、その素顔に迫る——</p>
+                <a href="https://www.dlsite.com/maniax/announce/=/product_id/RJ01266526.html" class="purchase-link" target="_blank">販売ページはこちら！</a>
             </section>
 
             <div class="section-grid">
-                <a href="readme.html" class="card">
+                <a href="readme.html" class="card card-link">
                     <h2>ReadMe</h2>
                     <p>インストール方法や基本情報を確認できます。まずはこちらをご確認ください。</p>
                 </a>
-                <a href="manual.html" class="card">
+                <a href="manual.html" class="card card-link">
                     <h2>説明書</h2>
                     <p>詳細な操作方法やゲームシステムについて解説しています。</p>
                 </a>
