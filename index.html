@@ -123,18 +123,16 @@
             border-radius: 12px;
             padding: 2rem;
             color: var(--text-color);
-            display: block;
+            text-decoration: none;
         }
 
-        /* ReadMeと説明書のカードのみホバー効果を適用 */
-        .card-link {
+        .card-hover {
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .card-link:hover {
+        .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
         }
 
         .card h2 {
@@ -146,6 +144,31 @@
         .card p {
             color: var(--text-color);
             margin: 0;
+        }
+
+        .news-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+
+        .requirements-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .requirements-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .requirements-category {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--primary-color);
         }
 
         .news-section {
@@ -226,18 +249,14 @@
             </section>
 
             <div class="section-grid">
-                <div class="card">
-                    <a href="readme.html" class="card-link">
-                        <h2>ReadMe（随時更新）</h2>
-                    </a>
+                <a href="readme.html" class="card card-hover">
+                    <h2>ReadMe（随時更新）</h2>
                     <p>インストール方法や基本情報を確認できます。まずはこちらをご確認ください。</p>
-                </div>
-                <div class="card">
-                    <a href="manual.html" class="card-link">
-                        <h2>説明書（随時更新）</h2>
-                    </a>
+                </a>
+                <a href="manual.html" class="card card-hover">
+                    <h2>説明書（随時更新）</h2>
                     <p>詳細な操作方法やゲームシステムについて解説しています。</p>
-                </div>
+                </a>
             </div>
 
             <section class="news-section">
@@ -245,7 +264,7 @@
                 <div class="news-item">
                     <div class="news-date">2024/11/15</div>
                     <p><a href="https://www.dlsite.com/maniax/announce/=/product_id/RJ01266526.html" target="_blank">ミスター秘密侵入VR</a>を販売開始いたしました！</p>
-                </div>               
+                </div>
                 <div class="news-item">
                     <div class="news-date">2024/11/13</div>
                     <p>マニュアルサイトを公開しました。</p>
@@ -259,26 +278,52 @@
             <section class="system-requirements">
                 <div class="card">
                     <h2>PCVR版</h2>
-                    <ul>
+                    <ul class="requirements-list">
                         <li>Windows 10/11</li>
                         <li>必須: SteamVR</li>
                         <li>推奨GPU: RTX3060以上</li>
                         <li>MR: クロマキーによるパススルーに対応</li>
                     </ul>
                 </div>
+                
                 <div class="card">
                     <h2>Quest単体版</h2>
-                    <ul>
+                    <ul class="requirements-list">
+                        <div class="requirements-category">注意事項</div>
                         <li>SideQuestによるインストールが必要です。</li>
-                        <li>Meta Quest 2/Pro/3/3S対応</li>
-                        <li>Quest 2/Pro: 一部機能制限あり</li>
-                        <li>Quest 3/3S: 完全対応・空間認識機能対応</li>                        
+
+                        <div class="requirements-category">対応機種</div>
+                        <li>Meta Quest 2</li>
+                        <li>Quest Pro</li>
+                        <li>Quest 3</li>
+                        <li>Quest 3S</li>
+
+                        <div class="requirements-category">機能制限</div>
+                        <li>Meta Quest 2：一部機能制限あり</li>
+                        <li>Quest Pro：一部機能制限あり</li>
+                        <li>Quest 3：完全対応・空間認識機能対応</li>
+                        <li>Quest 3S：完全対応・空間認識機能対応</li>
                     </ul>
                 </div>
             </section>
+
+            <div class="section-grid">
+                <a href="troubleshooting.html" class="card card-hover">
+                    <h2>トラブルシューティング</h2>
+                    <p>よくある問題と解決方法について解説しています。</p>
+                </a>
+                <a href="credits.html" class="card card-hover">
+                    <h2>ゲームクレジット</h2>
+                    <p>開発スタッフや使用アセットなどのクレジット情報です。</p>
+                </a>
+                <a href="updates.html" class="card card-hover">
+                    <h2>アップデート履歴と変更点</h2>
+                    <p>各バージョンでの更新内容や変更点を確認できます。</p>
+                </a>
+            </div>
         </div>
     </main>
-
+    
     <footer class="footer">
         <div class="container">
             <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
