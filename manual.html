@@ -3,132 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadMe - ミスター秘密侵入VR</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>ミスター秘密侵入VR - 説明書</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            min-height: 100vh;
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
         }
-        .section-card {
-            background: rgba(255, 255, 255, 0.05);
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
             backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ff6b6b;
-            transition: width 0.3s;
-        }
-        .nav-link:hover::after {
+            position: fixed;
             width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .content-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .content-section h2 {
+            color: #4a90e2;
+            margin-top: 0;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: #63b3ed;
+            margin-top: 1.5rem;
+        }
+
+        .content-section ul, .content-section ol {
+            padding-left: 1.5rem;
+        }
+
+        .note {
+            background-color: rgba(74, 144, 226, 0.1);
+            border-left: 4px solid #4a90e2;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .purchase-link {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .purchase-link:hover {
+            background-color: #357abd;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
         }
     </style>
 </head>
-<body class="gradient-bg text-gray-100">
-    <!-- ナビゲーションバー -->
-    <nav class="bg-black bg-opacity-50 fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-8">
-                    <a href="index.html" class="text-xl font-bold">ミスター秘密侵入VR</a>
-                    <div class="hidden md:flex space-x-4">
-                        <a href="readme.html" class="nav-link hover:text-gray-300">ReadMe</a>
-                        <a href="manual.html" class="nav-link hover:text-gray-300">説明書</a>
-                    </div>
-                </div>
-                <div class="text-sm text-gray-400">Ver 1.0.0</div>
-            </div>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <nav class="nav-links">
+                <a href="readme.html">ReadMe</a>
+                <a href="manual.html">説明書</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- メインコンテンツ -->
-    <div class="pt-20 pb-12 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="section-card p-8">
-                <h1 class="text-3xl font-bold mb-8">ReadMe</h1>
+    <main style="padding-top: 90px;">
+        <div class="container">
+            <section class="content-section">
+                <h2>1. ゲームの概要</h2>
+                <p>「ミスター秘密侵入VR」は、VRの高度な没入技術を駆使し、人気急上昇中の美少女「天音ミライ」の秘密の日常に迫るステルスアクションゲームです。プレイヤーは、彼女が暮らす一軒家に忍び込み、彼女に気づかれないよう慎重に行動しながら、探索とインタラクションを楽しみます。緊張感とドキドキが融合した新感覚のVR体験が特徴です。</p>
 
-                <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">インストール方法</h2>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-xl font-medium mb-3">PCVRバージョン</h3>
-                        <ol class="list-decimal pl-6 space-y-2">
-                            <li>SteamVRをインストールしてください</li>
-                            <li>ゲームフォルダを全角文字の含まれないパスに移動してください</li>
-                            <li>SteamVRを起動し、VRヘッドセットとの接続を確認してください</li>
-                            <li>stealthHeart.exeを実行してください</li>
-                        </ol>
-                    </div>
+                <h3>ゲームの舞台とシナリオ</h3>
+                <p>舞台は、広々とした一軒家。天音ミライはSNSに完璧な日常写真を投稿し、ファンの間で注目を集める存在ですが、その裏の生活は誰も知りません。プレイヤーは彼女の日常写真に魅了され、日々その生活に憧れを抱くようになりますが、次第に彼女への興味は「実際に見てみたい」という欲望へと変わっていきます。そしてある夜、彼女の家を突き止めたプレイヤーは、彼女の本当の姿を知りたいという衝動に駆られ、家に忍び込むことを決意します。</p>
+                <p><strong>ストーリー</strong>：SNSがきっかけで人気急上昇中の「天音ミライ」。投稿される完璧な日常写真に魅了され、彼女の裏の姿を見たいという欲望に駆られたプレイヤーは、ついに彼女の住所を特定してしまう...。</p>
 
-                    <div>
-                        <h3 class="text-xl font-medium mb-3">Quest単体バージョン</h3>
-                        <ol class="list-decimal pl-6 space-y-2">
-                            <li>SideQuestをインストールしてください (Advanced Installerを推奨)</li>
-                            <li>QuestをPCに接続してください</li>
-                            <li>SideQuestでMRsecretVR.apkをインストールしてください</li>
-                            <li>Questで「提供源不明のアプリ」からゲームを起動してください</li>
-                        </ol>
-                    </div>
-                </section>
+                <h3>ゲームの目的</h3>
+                <p>本作の目的は、彼女に見つからないように家の中を探索し、物語を進行させながらアイテムを収集し、彼女とのインタラクションを深めていくことです。プレイヤーの行動に応じて物語が展開し、スリルと没入感のあるプレイ体験が楽しめます。</p>
 
-                <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">注意事項</h2>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>本作品は18歳未満の方はプレイできません</li>
-                        <li>VR機器の安全ガイドラインに従ってプレイしてください</li>
-                        <li>定期的に休憩を取ることを推奨します</li>
-                        <li>プレイ中に気分が悪くなった場合は直ちに中止してください</li>
-                    </ul>
-                </section>
+                <h3>ゲームの特徴</h3>
+                <ul>
+                    <li><strong>VRならではのステルスアクション</strong>：VR空間で隠密行動を取り、彼女に見つからないように行動します。</li>
+                    <li><strong>リアルなインタラクションと触感表現</strong>：「もっちりシェーダー」により触れた箇所が自然に変形します。</li>
+                    <li><strong>探索と収集要素</strong>：家の中に隠された衣装やアイテムを収集することでゲームが進行します。</li>
+                    <li><strong>プレイモードの多様性</strong>：「ストーリーモード」「フリーモード」「MRモード」など異なるモードを搭載。</li>
+                    <li><strong>多様なシナリオ展開</strong>：プレイヤーの行動によって展開が変化し、再プレイでも異なる体験が得られます。</li>
+                </ul>
+            </section>
 
-                <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">動作環境</h2>
-                    <div class="space-y-4">
-                        <div>
-                            <h3 class="text-xl font-medium mb-2">PCVRバージョン</h3>
-                            <ul class="list-disc pl-6">
-                                <li>対応OS: Windows 10, 11</li>
-                                <li>必須: SteamVR</li>
-                                <li>推奨GPU: RTX3060以上</li>
-                                <li>主要VRヘッドセットに対応</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-medium mb-2">Quest単体バージョン</h3>
-                            <ul class="list-disc pl-6">
-                                <li>Meta Quest 2 (モノクロパススルー、空間認識機能は非対応)</li>
-                                <li>Meta Quest 3/3S</li>
-                                <li>Meta Quest Pro (空間認識機能は非対応)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+            <section class="content-section">
+                <h2>2. 基本操作方法</h2>
+                <p>本作では、VRならではの直感的な操作が求められます。以下に、探索やアイテム操作などの基本操作を説明します。</p>
+            
+                <h3>VR移動と操作</h3>
+                <ul>
+                    <li><strong>前後移動</strong>：左スティックで前後に移動</li>
+                    <li><strong>視点の変更</strong>：右スティックで左右を向く</li>
+                    <li><strong>ダッシュ</strong>：左スティックを押し込み</li>
+                    <li><strong>しゃがむ</strong>：右Bボタン</li>
+                    <li><strong>目線の高さ調整</strong>：両手トリガー＋上下移動</li>
+                </ul>
+            
+                <h3>アイテムの掴み操作</h3>
+                <ul>
+                    <li><strong>アイテムの掴み</strong>：グリップボタンを押してアイテムを掴む</li>
+                    <li><strong>下着の操作</strong>：
+                        <ul>
+                            <li><strong>パンツ</strong>：トリガーボタンで掴み、そのまま下にずらして脱がす</li>
+                            <li><strong>ブラジャー</strong>：グリップボタンで掴み、位置をずらして脱がす</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <h3>インベントリシステム</h3>
+                <ul>
+                    <li><strong>リュックの使い方</strong>：探索中に背中にあるリュックをインベントリとして使用します。背中でグリップボタンを押すと、リュックを掴み、中身を確認できます。</li>
+                    <li><strong>ホルスターの使用</strong>：両手首にホルスターが装備されており、よく使うアイテムを収納できます。モニターなど頻繁に使用するアイテムをホルスターに入れておくことで、素早く取り出し、彼女の位置確認などに役立てることが可能です。</li>
+                </ul>
+            
+                <h3>監視カメラとモニター</h3>
+                <ul>
+                    <li><strong>監視カメラの設置</strong>：プレイヤーは家の中に監視カメラを設置することができます。監視カメラはインベントリから取り出し、彼女の行動を観察するための戦略的な場所に設置します。</li>
+                    <li><strong>モニターでの確認</strong>：ホルスターに収納したモニターを取り出し、設置した監視カメラの映像を確認できます。これにより、彼女の居場所を把握しながら隠密行動をとることができ、見つかるリスクを軽減します。</li>
+                </ul>
+            </section>
 
-                <section>
-                    <h2 class="text-2xl font-semibold mb-4">サポート・お問い合わせ</h2>
-                    <p class="mb-4">不具合報告や要望は以下の方法で受け付けています：</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>DLsiteのレビュー機能</li>
-                        <li>公式Twitterアカウント</li>
-                        <li>メールでのお問い合わせ</li>
-                    </ul>
-                </section>
-            </div>
+            <!-- 以降も同様に、3〜8のセクションを追加してください -->
+
+            <a href="https://www.dlsite.com/maniax/announce/=/product_id/RJ01266526.html" class="purchase-link" target="_blank">販売ページはこちら！</a>
         </div>
-    </div>
+    </main>
 
-    <!-- フッター -->
-    <footer class="bg-black bg-opacity-50 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-gray-500">© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
-            <p class="text-sm text-gray-600 mt-2">
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
+    </footer>
+</body>
+</html>
