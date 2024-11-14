@@ -1,0 +1,313 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミスター秘密侵入VR - トラブルシューティング</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
+            --warning-color: #e2984a;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .notice-banner {
+            background-color: rgba(226, 152, 74, 0.1);
+            border-left: 4px solid var(--warning-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .notice-banner a {
+            color: var(--warning-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--warning-color);
+        }
+
+        .notice-banner a:hover {
+            border-bottom-style: solid;
+        }
+
+        .troubleshooting-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem 0;
+            animation: fadeInUp 0.6s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation-fill-mode: forwards;
+        }
+
+        .troubleshooting-section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .issue-card {
+            background-color: rgba(74, 144, 226, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .issue-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .solution-steps {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+
+        .solution-steps li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .solution-steps li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .known-issues {
+            background-color: rgba(226, 74, 74, 0.1);
+            border-left: 4px solid #e24a4a;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 2rem;
+        }
+
+        .known-issues h3 {
+            color: #e24a4a;
+            margin-top: 0;
+        }
+
+        code {
+            background-color: rgba(74, 144, 226, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+            .troubleshooting-section {
+                padding: 1rem;
+            }
+            
+            .issue-card {
+                padding: 1rem;
+            }
+
+            .notice-banner {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <nav class="nav-links">
+                <a href="readme.html">ReadMe</a>
+                <a href="manual.html">説明書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 90px">
+        <div class="container">
+            <div class="notice-banner">
+                <p>ご迷惑をおかけし申し訳ございません。よくある問題について以下をご参考ください。</p>
+                <p>その他の問題については<a href="https://ci-en.net/creator/27628" target="_blank">シエンのページ</a>でコメントいただければ幸いです。</p>
+            </div>
+
+            <div class="troubleshooting-section">
+                <h2>起動・インストール関連</h2>
+                
+                <div class="issue-card">
+                    <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない場合</div>
+                    <p>フォルダパスに日本語や全角文字が含まれている可能性があります</p>
+                    <ul class="solution-steps">
+                        <li>インストール先を英数字のパスに移動してください</li>
+                        <li>上層フォルダも英数字である必要があります</li>
+                        <li>例: <code>C:\Games\MRsecretVR</code></li>
+                    </ul>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">【PC版】SteamVRで起動できない場合</div>
+                    <ol class="solution-steps">
+                        <li>SteamVRウィンドウの「三本線」メニュー →「設定」を選択</li>
+                        <li>OpenXRの項目で「STEAMVRをOPENXRランタイムとして設定」を選択</li>
+                    </ol>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">Quest Linkで起動できない場合</div>
+                    <p>PCのMeta Quest Linkソフトで設定:</p>
+                    <ul class="solution-steps">
+                        <li>設定→一般→OpenXRランタイム</li>
+                        <li>「Meta Quest Linkをアクティブ」を選択</li>
+                    </ul>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">【Quest単体版】APKファイルが導入できない場合</div>
+                    <p>Quest2でSideQuestによる導入に問題がある場合があります。導入方法については<a href="https://x.com/3DVR3" target="_blank" class="credits-link">@3DVR3</a>までお問い合わせください。</p>
+                </div>
+            </div>
+
+            <div class="troubleshooting-section" style="animation-delay: 0.2s">
+                <h2>操作・ゲームプレイ関連</h2>
+
+                <div class="issue-card">
+                    <div class="issue-title">髪型が着せ替えられない場合</div>
+                    <p>衣装と髪型で操作方法が異なります</p>
+                    <ul class="solution-steps">
+                        <li>衣装の場合: リュックから取り出して掴むだけで着せ替えができます</li>
+                        <li>髪型の場合: リュックから取り出した後、彼女の髪に当てる必要があります</li>
+                    </ul>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">下着が脱がせられない場合</div>
+                    <p>パンツはトリガー、ブラジャーはグリップボタンで掴むことができます。</p>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">扉やアイテムの操作が難しい場合</div>
+                    <ul class="solution-steps">
+                        <li>手には物理判定があるので、扉に手をあててそのままスライドすると操作しやすいです。</li>
+                        <li>グリップボタンは使わず、手で直接押すとうまくいきやすい場合があります。</li>
+                    </ul>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">手つなぎがうまくいかない場合</div>
+                    <p>手から肘の間（前腕部分）を掴むようにしてください。</p>
+                </div>
+
+                <div class="issue-card">
+                    <div class="issue-title">MRモードでおてて繋ぎができない場合</div>
+                    <ul class="solution-steps">
+                        <li>メニューのポーズリセット後に1回のみ可能です</li>
+                        <li>仕様上の制約となっています</li>
+                    </ul>
+                </div>
+
+                <div class="known-issues">
+                    <h3>既知の不具合</h3>
+                    <p>フリーモードでランドリールームの扉を閉めたまま行為ポイントに行くと彼女が動けなくなります</p>
+                    <p><strong>対処法:</strong> 扉を開けた状態で行ってください</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
+    </footer>
+</body>
+</html>
