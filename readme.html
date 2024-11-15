@@ -245,6 +245,76 @@
 		    animation: fadeIn 0.4s ease;
 		}
 
+		.version-card {
+		    background-color: rgba(74, 144, 226, 0.05);
+		    border-radius: 12px;
+		    padding: 1.5rem;
+		    margin-bottom: 1rem;
+		    border: 1px solid rgba(74, 144, 226, 0.2);
+		}
+		
+		.version-content {
+		    /* version-contentクラスのdisplay: none;を削除 */
+		    margin-top: 1rem;
+		}
+		
+		.version-content ul {
+		    list-style: none;
+		    padding-left: 1.2rem;
+		    margin: 0;
+		}
+		
+		.version-content li {
+		    position: relative;
+		    margin-bottom: 0.5rem;
+		}
+		
+		.version-content li::before {
+		    content: "•";
+		    color: var(--primary-color);
+		    position: absolute;
+		    left: -1.2rem;
+		}	
+
+		.version-cards {
+		    display: grid;
+		    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		    gap: 1.5rem;
+		    margin: 2rem 0;
+		}
+
+		.version-card {
+		    background-color: rgba(74, 144, 226, 0.05);
+		    border-radius: 12px;
+		    padding: 1.5rem;
+		    border: 1px solid rgba(74, 144, 226, 0.2);
+		}
+
+		.version-card h3 {
+		    color: var(--primary-color);
+		    margin: 0 0 1rem 0;
+		    padding-bottom: 0.5rem;
+		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+		}
+
+		.version-card-content ul {
+		    list-style: none;
+		    padding-left: 1.2rem;
+		    margin: 0;
+		}
+
+		.version-card-content li {
+		    position: relative;
+		    margin-bottom: 0.8rem;
+		}
+
+		.version-card-content li::before {
+		    content: "•";
+		    color: var(--primary-color);
+		    position: absolute;
+		    left: -1.2rem;
+		}		
+		
 		.sub-steps {
 		    padding-left: 2rem;
 		    margin-top: 1rem;
@@ -564,30 +634,26 @@
                 <section class="section intro-section">
                     <div class="thank-you">
                         <h2>お買い上げありがとうございます</h2>
-                        <div class="version-cards">
-                            <div class="version-card pcvr">
-                                <div class="version-header">
-                                    <h3>PCVR版</h3>
-                                </div>
-                                <div class="version-content">
-                                    <ul>
-                                        <li>PCとVRヘッドセットを接続して使用</li>
-                                        <li>SteamVRを起動し、「MRsecretVR.exe」を実行してプレイ</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="version-card quest">
-                                <div class="version-header">
-                                    <h3>Quest単体版</h3>
-                                </div>
-                                <div class="version-content">
-                                    <ul>
-                                        <li>Meta Questシリーズ単体で動作</li>
-                                        <li>Quest本体に「MRsecretVR.apk」をインストールしてプレイ</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+						<div class="version-cards">
+						    <div class="version-card pcvr">
+						        <h3>PCVR版</h3>
+						        <div class="version-card-content">
+						            <ul>
+						                <li>PCとVRヘッドセットを接続して使用</li>
+						                <li>SteamVRを起動し、「MRsecretVR.exe」を実行してプレイ</li>
+						            </ul>
+						        </div>
+						    </div>
+						    <div class="version-card quest">
+						        <h3>Quest単体版</h3>
+						        <div class="version-card-content">
+						            <ul>
+						                <li>Meta Questシリーズ単体で動作</li>
+						                <li>Quest本体に「MRsecretVR.apk」をインストールしてプレイ</li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>                        
                         <div class="section-note">
                             <p>以下に詳しい手順を記載します。</p>
                         </div>
@@ -595,7 +661,7 @@
                 </section>
 
 
-<section id="pcvr-setup" class="section setup-section">
+		<section id="pcvr-setup" class="section setup-section">
                     <h2>PCVR版のセットアップ手順</h2>
 
                     <div id="steamvr-install" class="setup-block">
@@ -607,9 +673,9 @@
                                     もしくは<a href="https://store.steampowered.com/app/250820/SteamVR/" 
                                        class="installation-link" 
                                        target="_blank">
-                                        こちらから
+                                        こちら
                                     </a>
-					直接アクセス
+					から直接アクセス
                                 </div>
                             </li>
                             <li>「ゲームをプレイ」を選択し、インストールを完了させてください</li>
