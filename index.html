@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -219,6 +220,40 @@
             font-size: 0.875rem;
         }
 
+        .review-section {
+            margin-top: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .review-section .bg-slate-800\/50 {
+            background-color: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        
+        .review-section .star-icon {
+            color: #60a5fa;
+            fill: #60a5fa;
+        }
+        
+        .review-section .heart-icon {
+            color: rgba(96, 165, 250, 0.7);
+        }
+        
+        .review-section a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .review-section a:hover {
+            color: #93c5fd;
+        }
+        
         @media (max-width: 640px) {
             .hero-title {
                 font-size: 2rem;
@@ -250,6 +285,35 @@
                 <h1 class="hero-title">ミスター秘密侵入VR 公式マニュアル</h1>
                 <img src="assets/images/main-image.jpg" alt="ゲームメイン画像" class="main-image">
                 <a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" class="purchase-link" target="_blank">販売ページはこちら！</a>
+                <div class="review-section">
+                    <div class="bg-slate-800/50">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <span class="star-icon">★</span>
+                            <span class="font-medium text-blue-400/90">レビューのお願い</span>
+                            <span class="star-icon">★</span>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-4">
+                            プレイしていただき、誠にありがとうございます。<br/>
+                            感想やご意見をDLsiteのレビューに残していただけますと、今後の開発の大きな励みとなります。
+                        </p>
+                        
+                        <div class="flex items-center justify-center gap-2 text-sm text-gray-400 mb-3">
+                            <span>DLsiteマイページの</span>
+                            <a href="https://www.dlsite.com/home/mypage/short-review" target="_blank" rel="noopener noreferrer">
+                                レビューページ
+                            </a>
+                            <span>から投稿できます</span>
+                        </div>
+                
+                        <div class="text-xs text-gray-500 flex items-center justify-center gap-1">
+                            <span>レビュー投稿でDLsiteポイントが還元されます。</span>
+                            <a href="https://cs.dlsite.com/hc/ja/articles/11837465209881" target="_blank" rel="noopener noreferrer" class="underline ml-1">
+                                詳細はこちら
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <div class="section-grid">
