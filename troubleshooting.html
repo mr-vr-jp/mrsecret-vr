@@ -161,6 +161,45 @@
             font-family: monospace;
         }
 
+        .video-container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 200px;
+            max-height: 600px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            border-radius: 4px;
+            object-fit: contain;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .video-caption {
+            text-align: center;
+            color: var(--text-color);
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+     
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -186,18 +225,20 @@
         }
 
         @media (max-width: 640px) {
-            .troubleshooting-section {
-                padding: 1rem;
+            .video-container {
+                padding: 0.75rem;
+                margin: 1rem 0;
             }
             
-            .issue-card {
-                padding: 1rem;
+            .video-wrapper {
+                min-height: 150px;
             }
-
-            .notice-banner {
-                margin: 1rem;
-                padding: 1rem;
+            
+            .video-caption {
+                font-size: 0.8rem;
             }
+        }
+        
         }
     </style>
 </head>
@@ -306,8 +347,15 @@
                         <li>肩の位置でグリップボタンを押して掴む。</li>
                         <li>バッグを自分の目の前に持ってくるように手前に移動させる</li>
                     </ul>
-                    <p><img src="assets/videos/troubles/trouble-bag.mp4" alt="trouble-bag" class="main-image"></p>                    
-                </div>
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <video controls playsinline>
+                                <source src="assets/videos/troubles/trouble-bag.mp4" type="video/mp4">
+                                お使いのブラウザは動画の再生に対応していません。
+                            </video>
+                        </div>
+                        <div class="video-caption">▲ リュックの取り出し方のデモ映像</div>
+                    </div>
                 
             </div>
         </div>
