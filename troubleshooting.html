@@ -168,7 +168,7 @@
             padding: 1rem;
             margin: 1.5rem 0;
             width: 100%;
-            max-width: 800px;
+            max-width: 400px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -176,24 +176,23 @@
         .video-wrapper {
             position: relative;
             width: 100%;
-            /* 最小高さと最大高さを設定してコンテナが極端に小さくなったり大きくなったりするのを防ぐ */
-            min-height: 200px;
-            max-height: 600px;
-            /* Flexboxを使用して動画を中央配置 */
+            height: auto;
+            max-height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
 
         .video-wrapper video {
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
+            max-width: 100%;
             max-height: 100%;
-            border-radius: 4px;
-            /* contain で元の動画のアスペクト比を保持しながら最適なサイズで表示 */
             object-fit: contain;
+            display: block;
+            border-radius: 4px;
             background-color: rgba(0, 0, 0, 0.1);
-            display: block; /* 余分な余白を防ぐ */
         }
 
         .video-caption {
@@ -251,18 +250,18 @@
 
         @media (max-width: 640px) {
             .video-container {
+                max-width: 300px;
                 padding: 0.75rem;
-                margin: 1rem 0;
+                margin: 1rem auto;
             }
             
             .video-wrapper {
-                min-height: 150px;
+                max-height: 300px;
             }
             
             .video-caption {
                 font-size: 0.8rem;
             }
-        }
         
         }
     </style>
@@ -376,7 +375,7 @@
                             </video>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </main>
