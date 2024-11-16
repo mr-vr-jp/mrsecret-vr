@@ -167,16 +167,19 @@
             border-radius: 8px;
             padding: 1rem;
             margin: 1.5rem 0;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .video-wrapper {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
+            /* 最小高さと最大高さを設定してコンテナが極端に小さくなったり大きくなったりするのを防ぐ */
             min-height: 200px;
             max-height: 600px;
-            height: auto;
+            /* Flexboxを使用して動画を中央配置 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -184,12 +187,13 @@
 
         .video-wrapper video {
             width: 100%;
-            height: auto;
+            height: 100%;
             max-height: 100%;
             border-radius: 4px;
+            /* contain で元の動画のアスペクト比を保持しながら最適なサイズで表示 */
             object-fit: contain;
             background-color: rgba(0, 0, 0, 0.1);
-            display: block;
+            display: block; /* 余分な余白を防ぐ */
         }
 
         .video-caption {
@@ -199,7 +203,28 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
-     
+        
+        @media (max-width: 640px) {
+            .video-container {
+                padding: 0.75rem;
+                margin: 1rem auto;
+            }
+            
+            .video-wrapper {
+                min-height: 150px;
+            }
+            
+            .video-caption {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .video-container {
+                max-width: 90%;
+            }
+        }
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
