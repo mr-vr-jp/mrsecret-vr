@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミスター秘密侵入VR - 開発秘話</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
+            --accent-color: #63b3ed;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .purchase-link {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .purchase-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+        }
+
+        .purchase-link::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) rotate(35deg);
+            transition: transform 0.5s ease;
+        }
+
+        .purchase-link:hover::after {
+            transform: translate(-50%, -50%) rotate(35deg) translateX(20%);
+        }
+      
+        .changelog {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-top: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .version-entry {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: rgba(74, 144, 226, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .version-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .version-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .release-date {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .changes-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .changes-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .changes-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+            .version-entry {
+                padding: 1rem;
+            }
+            
+            .version-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <nav class="nav-links">
+                <a href="readme.html">導入ガイド</a>
+                <a href="manual.html">プレイガイド</a>
+                <a href="troubleshooting.html">トラブル</a>
+                <a href="credits.html">クレジット</a>
+                <a href="updates.html">アップデート</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 90px">
+        <div class="container">
+            <section class="changelog">
+                <h1 style="color: var(--primary-color); margin-bottom: 2rem;">開発秘話</h1>
+                
+                <div class="version-entry" style="animation-delay: 0.2s;">
+                    <div class="version-header">
+                        <span class="version-number">Youtubeリリース記念配信</span>
+                        <span class="release-date">2024/11/15</span>
+                    </div>
+                    <ul class="changes-list">
+                        <a href="https://youtube.com/live/ZnHNnToFrcM" class="purchase-link" target="_blank">こちら</a>
+                    </ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
+    </footer>
+</body>
+</html>
