@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /credits.html
+Disallow: /dev-story.html
+Disallow: /manual.html
+Disallow: /readme.html
+Disallow: /shop.html
+Disallow: /troubleshooting.html
+Disallow: /updates.html
