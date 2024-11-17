@@ -107,6 +107,15 @@
             border-bottom: 2px solid var(--primary-color);
         }
 
+        .custom-link {
+            color: var(--text-color);
+            text-decoration: underline;
+        }
+        
+        .custom-link:hover {
+            color: var(--primary-color);
+        }
+
         .issue-card {
             background-color: rgba(74, 144, 226, 0.1);
             border-radius: 8px;
@@ -292,12 +301,14 @@
                 <h2>起動・インストール関連</h2>
                 
                 <div class="issue-card">
-                    <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない</div>
-                    <p>フォルダパスに日本語や全角文字が含まれている可能性があります。</p>
+                    <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</div>
+                    <p>フォルダパスに日本語や全角文字、スペースが含まれていると入力が正常に機能しない場合があります。</p>
                     <ul class="solution-steps">
-                        <li>インストール先を英数字のパスに移動してください。</li>
-                        <li>上層フォルダも英数字である必要があります。</li>
+                        <li>ゲームフォルダを英数字のみのパスに移動してください。</li>
+                        <li>上層フォルダも含めパス全体が英数字である必要があります。</li>
                         <li>例: <code>C:\Games\MRsecretVR</code></li>
+                        <li>再度ダウンロードし直す必要がある場合があります。</li>
+                        <li>英数字だけでも起こる場合、フォルダ名を変えて再度お試しください。</li>
                     </ul>
                 </div>
 
@@ -320,9 +331,10 @@
 
                 <div class="issue-card">
                     <div class="issue-title">【Quest単体版】APKファイルが導入できない</div>
-                    <p>Quest2でSideQuestによる導入ができない現象を確認しています。<br>
-                        「Mobile VR Station」を使用してAPKをインストール可能です。<br>
-                        後日追記予定ですが、方法については<a href="https://x.com/3DVR3" target="_blank" class="credits-link">@3DVR3</a>までお問い合わせください。</p>
+                    <ol class="solution-steps">
+                        <li>Quest2でSideQuestによる導入ができない現象を確認しています。</li>
+                        <li><a href="https://mr-vr-jp.github.io/mrsecret-vr/readme.html#mobile-vr-method" class="custom-link" target="_blank">導入ガイド</a>の「B. Mobile VR Stationを使用する方法」をお試しください。の「B. Mobile VR Stationを使用する方法」をお試しください。<br></li>
+                    </ol>
                 </div>
             </div>
 
