@@ -1,0 +1,76 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Main Image */
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Review Section */
+.review-section {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.bg-slate-800\/50 {
+    background-color: rgba(30, 41, 59, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.star-icon {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.highlight {
+    color: #4d9cf6;
+    font-weight: bold;
+}
+
+/* Requirements Section */
+.requirements-section {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* News Section */
+.news-section {
+    margin: 3rem 0;
+}
+
+.news-item {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-date {
+    min-width: 100px;
+    color: var(--secondary-color);
+}
