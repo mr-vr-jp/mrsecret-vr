@@ -1,0 +1,62 @@
+/* Changelog Section */
+.changelog {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Version Entry */
+.version-entry {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.5s ease-out;
+}
+
+.version-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.version-number {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.release-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Update List */
+.version-entry ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.version-entry ul li {
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.version-entry ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: -1rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
