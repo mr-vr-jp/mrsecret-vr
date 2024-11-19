@@ -1,0 +1,97 @@
+/* Notice Banner */
+.notice-banner {
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Troubleshooting Section */
+.troubleshooting-section {
+    margin-bottom: 4rem;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Issue Cards */
+.issue-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.issue-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Sub Issues */
+.sub-issue {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-issue-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Solution Sections */
+.solution-header {
+    color: var(--success-color);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+/* Additional Notes */
+.additional-notes {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Video Container */
+.video-container {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
