@@ -146,6 +146,17 @@
 		    margin-bottom: 1rem;
 		}
 
+		.section-link {
+		    color: var(--primary-color);
+		    text-decoration: none;
+		    transition: color 0.2s;
+		}
+		
+		.section-link:hover {
+		    color: #63b3ed;
+		    text-decoration: underline;
+		}
+
 		.step-list {
 		    list-style: none;
 		    padding-left: 0;
@@ -608,31 +619,40 @@
             <div class="manual-content">
                 <h1 class="main-title">導入ガイド</h1>
 
-                <div class="table-of-contents">
-                    <h2>目次</h2>
-                    <nav class="toc-list">
-                        <div class="toc-section">
-                            <div class="toc-heading">
-                                <a href="#pcvr-setup">PCVR版のセットアップ手順</a>
-                            </div>
-                            <ul>
-                                <li><a href="#steamvr-install">1. SteamVRのインストール</a></li>
-                                <li><a href="#game-placement">2. ゲームファイルの配置</a></li>
-                                <li><a href="#vr-connection">3. VRヘッドセットの接続とSteamVRの起動</a></li>
-                                <li><a href="#game-launch-pcvr">4. ゲームの起動</a></li>
-                            </ul>
-                        </div>
-                        <div class="toc-section">
-                            <div class="toc-heading">
-                                <a href="#quest-setup">Quest単体版のセットアップ手順</a>
-                            </div>
-                            <ul>
-                                <li><a href="#sidequest-method">A. SideQuestを使用する方法</a></li>
-                                <li><a href="#mobile-vr-method">B. Mobile VR Stationを使用する方法</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+		<div class="table-of-contents">
+		    <h2>目次</h2>
+		    <nav class="toc-list">
+		        <div class="toc-section">
+		            <div class="toc-heading">
+		                <a href="#pcvr-setup">PCVR版のセットアップ手順</a>
+		            </div>
+		            <ul>
+		                <li><a href="#steamvr-install">1. SteamVRのインストール</a></li>
+		                <li><a href="#game-placement">2. ゲームファイルの配置</a></li>
+		                <li><a href="#vr-connection">3. VRヘッドセットの接続とSteamVRの起動</a></li>
+		                <li><a href="#game-launch-pcvr">4. ゲームの起動</a></li>
+		            </ul>
+		        </div>
+		        <div class="toc-section">
+		            <div class="toc-heading">
+		                <a href="#quest-setup">Quest単体版のセットアップ手順</a>
+		            </div>
+		            <ul>
+		                <li><a href="#sidequest-method">A. SideQuestを使用する方法</a></li>
+		                <li><a href="#mobile-vr-method">B. Mobile VR Stationを使用する方法</a></li>
+		            </ul>
+		        </div>
+		        <div class="toc-section">
+		            <div class="toc-heading">
+		                <a href="#update-section">アップデート手順</a>
+		            </div>
+		            <ul>
+		                <li><a href="#pcvr-update">PCVR版のアップデート</a></li>
+		                <li><a href="#quest-update">Quest単体版のアップデート</a></li>
+		            </ul>
+		        </div>
+		    </nav>
+		</div>
 
                 <section class="section intro-section">
                     <div class="thank-you">
@@ -1026,6 +1046,72 @@
                         </div>
                     </div>
                 </section>
+
+                <div class="setup-divider">
+                </div>
+		
+		<section class="section update-section">
+		    <h2>アップデート手順</h2>
+		    
+		    <div class="note-box important">
+		        <p>アップデートの前にお読みください</p>
+		        <ul>
+		            <li>PC版、Quest版ともにセーブデータは引き継がれます</li>
+		        </ul>
+		    </div>
+				
+			<div class="setup-block">
+			    <h3>PCVR版のアップデート</h3>
+			    <ol class="step-list">
+				<li>ダウンロードしたファイルを展開</li>
+				<li>新バージョンの「MRsecretVR.exe」を実行</li>
+			    </ol>
+			
+			    <div class="note-box troubleshooting">
+				<p>💡 アップデート後にゲーム開始画面でメニューが選択できない場合</p>
+				<ul>
+				    <li>ゲームフォルダを別の場所に移動してみてください
+					<div class="path-example">
+					    <code>例: Downloads → Desktop</code>
+					</div>
+				    </li>
+				    <li>または、フォルダ名を最初に起動した時の名前に戻してみてください<BR>
+					<div class="path-example">
+					    <code>例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0</code>
+					</div>
+				    </li>
+				</ul>
+			    </div>
+			</div>
+		
+		    <div class="setup-block">
+			<h3>Quest単体版のアップデート</h3>
+			<div class="update-methods">
+			    <div class="method-card">
+				<h4>方法1: SideQuestを使用する場合</h4>
+				<ol class="step-list">
+				    <li>新バージョンの「MRsecretVR.apk」を用意</li>
+				    <li>通常のインストール手順と同様にSideQuestでインストール
+					<div class="note-box">
+					    <p>※自動的に上書きインストールされます</p>
+					</div>
+				    </li>
+				</ol>
+			    </div>
+		
+			<div class="method-card">
+			    <h4>方法2: Mobile VR Stationを使用する場合</h4>
+			    <p>SideQuestでインストールできない場合は、本ガイドの<a href="#mobile-vr-method" class="section-link">「B. Mobile VR Stationを使用する方法」</a>の手順で実施してください。</p>
+			</div>
+			</div>
+		    </div>
+		
+		    <div class="completion-message">
+			<p>アップデートが完了しました！</p>
+			<p>新機能や改善された体験をお楽しみください！</p>
+		    </div>
+		</section>
+		    
             </div>
         </div>
     </main>
