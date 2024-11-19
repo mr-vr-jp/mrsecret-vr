@@ -84,6 +84,17 @@ body {
 }
 
 /* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer p {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
 .container footer {
     text-align: center;
     padding: 1rem 0;
