@@ -31,6 +31,14 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .card-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
