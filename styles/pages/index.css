@@ -7,32 +7,30 @@
 
 .hero-title {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    font-weight: 700;
     margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+    color: var(--text-color);
 }
 
 /* Main Image */
 .main-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1000px;
     height: auto;
     border-radius: 8px;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Review Section */
 .review-section {
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(30, 41, 59, 0.5);
     padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.bg-slate-800\/50 {
-    background-color: rgba(30, 41, 59, 0.5);
-    padding: 2rem;
-    border-radius: 8px;
-    color: white;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 32rem;
+    border: 1px solid var(--border-color);
 }
 
 .star-icon {
@@ -41,13 +39,13 @@
 }
 
 .highlight {
-    color: #4d9cf6;
+    color: rgba(147, 197, 253, 0.9);
     font-weight: bold;
 }
 
 /* Requirements Section */
 .requirements-section {
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 8px;
     margin: 3rem 0;
@@ -57,6 +55,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements-list li {
+    margin-bottom: 0.5rem;
 }
 
 /* News Section */
@@ -73,4 +80,42 @@
 .news-date {
     min-width: 100px;
     color: var(--secondary-color);
+}
+
+/* Point Info */
+.point-info {
+    background-color: rgba(15, 23, 42, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* Manual About */
+.manual-about {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.manual-about-content {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.thank-you-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: rgba(147, 197, 253, 0.9);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
 }
