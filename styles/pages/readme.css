@@ -1,0 +1,143 @@
+/* Main Title */
+.main-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Table of Contents */
+.table-of-contents {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.toc-section {
+    margin-bottom: 1.5rem;
+}
+
+.toc-heading {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Setup Sections */
+.intro-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.version-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.version-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.version-card.pcvr {
+    border-left: 4px solid var(--primary-color);
+}
+
+.version-card.quest {
+    border-left: 4px solid var(--success-color);
+}
+
+/* Setup Steps */
+.setup-block {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+}
+
+.setup-step {
+    margin-bottom: 2rem;
+}
+
+.sub-steps {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+/* File Path Examples */
+.file-path-examples {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.path-example {
+    padding: 0.5rem;
+    font-family: monospace;
+}
+
+.path-example.success {
+    color: var(--success-color);
+}
+
+.path-example.error {
+    color: var(--error-color);
+}
+
+/* Connection Methods */
+.connection-methods {
+    margin-top: 2rem;
+}
+
+.method-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Completion Message */
+.completion-message {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: var(--success-color);
+}
+
+/* Setup Divider */
+.setup-divider {
+    text-align: center;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.setup-divider::before,
+.setup-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.setup-divider::before {
+    left: 0;
+}
+
+.setup-divider::after {
+    right: 0;
+}
+
+.setup-divider-text {
+    background: white;
+    padding: 0 1rem;
+    color: var(--secondary-color);
+}
