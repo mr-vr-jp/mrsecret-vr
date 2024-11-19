@@ -1,38 +1,352 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ミスター秘密侵入VR 公式マニュアル</title>
-    
-    <!-- SEO -->
-    <meta name="description" content="ミスター秘密侵入VR の公式マニュアルサイトです。インストール方法、プレイガイド、トラブルシューティングなどを掲載しています。">
-    <meta name="keywords" content="ミスター秘密侵入VR, VRゲーム, マニュアル, インストールガイド">
-    <meta name="robots" content="index, follow">
-    
-    <!-- OGP -->
-    <meta property="og:title" content="ミスター秘密侵入VR 公式マニュアル">
-    <meta property="og:description" content="ミスター秘密侵入VR の公式マニュアルサイトです。インストール方法、プレイガイド、トラブルシューティングなどを掲載しています。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
-    <meta property="og:image" content="assets/images/ogp.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/utils.css">
-    <link rel="stylesheet" href="styles/pages/index.css">
+    <meta name="description" content="ミスター秘密侵入VRの公式マニュアルサイトです。インストール方法、ゲームの操作ガイド、トラブル解決、アップデート情報など、プレイヤーに役立つ情報をまとめています。">
+    <meta name="keywords" content="ミスター秘密侵入VR, VRエロゲ, アダルトVR, エロゲ, ミスターVR, いちゃらぶXR研究所, VRゲーム, マニュアル, トラブル解決, アップデート, VRゲームガイド, ダウンロード, セッティング方法">
+    <meta name="author" content="ミスターVR">
+    <title>ミスター秘密侵入VR - 公式マニュアル｜完全ガイド</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+            color: var(--text-color);
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .purchase-link {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .purchase-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+        }
+
+        .purchase-link::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%) rotate(35deg);
+            transition: transform 0.5s ease;
+        }
+
+        .purchase-link:hover::after {
+            transform: translate(-50%, -50%) rotate(35deg) translateX(20%);
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4a90e2;
+        }
+
+        .card p {
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .requirements-section {
+            margin: 4rem 0;
+        }
+
+        .requirements-section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .requirements-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .requirements-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .requirements-category {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .news-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 4rem 0;
+        }
+
+        .news-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .news-date {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        .review-section {
+            margin-top: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .review-section .bg-slate-800\/50 {
+            background-color: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        
+        .review-section .star-icon {
+            color: #60a5fa;
+            fill: #60a5fa;
+        }
+        
+        .review-section .heart-icon {
+            color: rgba(96, 165, 250, 0.7);
+        }
+        
+        .review-section a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .review-section a:hover {
+            color: #93c5fd;
+        }
+
+        .manual-about {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            background-color: rgba(30, 41, 59, 0.3);
+            border: 1px solid rgba(51, 65, 85, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .manual-about-header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .manual-about-title {
+            color: rgba(96, 165, 250, 0.9);
+            font-weight: 500;
+        }
+        
+        .manual-about-content {
+            color: #e4e4e7;
+            line-height: 1.8;
+        }
+        
+        .manual-about-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .manual-about-content p.highlight {
+            color: rgba(147, 197, 253, 0.9);
+        }
+        
+        .highlight {
+            color: rgba(147, 197, 253, 0.9);
+        }
+
+        .point-info {
+            background-color: rgba(15, 23, 42, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: rgb(107, 114, 128);
+        }
+        
+        .heart-icon {
+            color: rgba(96, 165, 250, 0.7);
+        }
+        
+        .manual-about-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .info-icon {
+            color: rgba(96, 165, 250, 0.9);
+            font-size: 1.125rem;
+        }
+
+        .thank-you-message {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: rgba(147, 197, 253, 0.9);
+            font-weight: 500;
+            padding: 0.5rem 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container header-content">
             <a href="index.html" class="logo">ミスター秘密侵入VR</a>
-            <nav>
+            <nav class="nav-links">
                 <a href="readme.html">導入ガイド</a>
                 <a href="manual.html">プレイガイド</a>
                 <a href="troubleshooting.html">トラブルガイド</a>
@@ -42,160 +356,153 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main role="main">
+    <main>
         <div class="container">
             <section class="hero">
                 <h1 class="hero-title">ミスター秘密侵入VR 公式マニュアル</h1>
-                
+
                 <div class="manual-about">
                     <div class="manual-about-content">
-                        この度はご購入いただき、誠にありがとうございます。
-                        <br>
-                        本マニュアルは、ミスター秘密侵入VRの公式ガイドです。
-                        インストール方法やゲームの遊び方、トラブル解決方法など、プレイに必要な情報をまとめています。
+                        <p class="thank-you-message">
+                            この度はご購入いただき、誠にありがとうございます
+                        </p>
+                        <p>
+                            本マニュアルは、ミスター秘密侵入VRの公式ガイドです。<br>
+                            インストール方法やゲームの遊び方、トラブル解決方法など、プレイに必要な情報をまとめています。
+                        </p>
                     </div>
                 </div>
-
+                
                 <img src="assets/images/main-image.jpg" alt="ゲームメイン画像" class="main-image">
-                <a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" 
-                   class="purchase-link" target="_blank">販売ページはこちら！</a>
-                   <!-- Review Section -->
-                <section class="review-section">
+                <a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" class="purchase-link" target="_blank">販売ページはこちら！</a>
+                <div class="review-section">
                     <div class="bg-slate-800/50">
                         <div class="flex items-center justify-center gap-2 mb-4">
                             <span class="star-icon">★</span>
                             <span class="font-medium text-blue-400/90">レビューのお願い</span>
                             <span class="star-icon">★</span>
                         </div>
-
-                        <p>DLsiteのレビューおよび、感想やご意見を<span class="highlight">「作品に応援コメント」</span>で残していただけますと、今後の開発の大きな励みとなります！</p>
-
+                        
+                        <p class="text-gray-300 mb-4">
+                            DLsiteのレビューおよび、感想やご意見を<span class="highlight">「作品に応援コメント」</span>で残していただけますと、今後の開発の大きな励みとなります！
+                        </p>
+                        
                         <div class="flex items-center justify-center gap-2 text-sm text-gray-400 mb-3">
-                            DLsiteマイページの
-                            <a href="https://www.dlsite.com/home/mypage/short-review" target="_blank" rel="noopener noreferrer">レビューページ</a>
-                            から投稿できます
+                            <span>DLsiteマイページの</span>
+                            <a href="https://www.dlsite.com/home/mypage/short-review" target="_blank" rel="noopener noreferrer">
+                                レビューページ
+                            </a>
+                            <span>から投稿できます</span>
                         </div>
-
+                
                         <div class="text-xs text-gray-500 flex items-center justify-center gap-1">
                             <div class="point-info">
-                                レビュー投稿でDLsiteポイントが還元されます
-                                <a href="https://cs.dlsite.com/hc/ja/articles/11837465209881" 
-                                   class="underline ml-1" target="_blank" rel="noopener noreferrer">詳細はこちら</a>
+                                <span>レビュー投稿でDLsiteポイントが還元されます</span>
+                                <a href="https://cs.dlsite.com/hc/ja/articles/11837465209881" target="_blank" rel="noopener noreferrer" class="underline ml-1">
+                                    詳細はこちら
+                                </a>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- Navigation Grid -->
-                <div class="section-grid">
-                    <a href="shop.html" class="card card-hover">
-                        <h2>🛒 販売ページ</h2>
-                        <p>ゲームを購入できるストア一覧です。</p>
-                    </a>
-
-                    <a href="readme.html" class="card card-hover">
-                        <h2>🥽 導入ガイド</h2>
-                        <p>PCVR版、Quest版のインストール、アップデート方法を解説しています。まずはこちらをご確認ください。</p>
-                    </a>
-
-                    <a href="manual.html" class="card card-hover">
-                        <h2>📖 プレイガイド（随時更新）</h2>
-                        <p>ゲームの操作方法とシステムを解説しています。ゲーム内のチュートリアルでも遊べますが、このガイドを読むとより楽しく遊べます。</p>
-                    </a>
-
-                    <a href="troubleshooting.html" class="card card-hover">
-                        <h2>🔧 トラブルガイド</h2>
-                        <p>よくある問題と解決方法について解説しています。</p>
-                    </a>
-
-                    <a href="credits.html" class="card card-hover">
-                        <h2>👥 ゲームクレジット</h2>
-                        <p>開発スタッフや使用アセットなどのクレジット情報です。</p>
-                    </a>
-
-                    <a href="updates.html" class="card card-hover">
-                        <h2>📝 アップデート履歴と変更点</h2>
-                        <p>各バージョンでの更新内容や変更点を確認できます。</p>
-                    </a>
-
-                    <a href="dev-story.html" class="card card-hover">
-                        <h2>💡 開発秘話（随時更新）</h2>
-                        <p>ゲーム制作の背景やエピソードをご紹介します。</p>
-                    </a>
                 </div>
-                <!-- Requirements Section -->
-                <section class="requirements-section">
-                    <h2>対応機種</h2>
-                    <div class="requirements-grid">
-                        <div class="card">
-                            <h3>PCVR版</h3>
-                            <ul>
-                                <li>対応OS: Windows 10/11</li>
-                                <li>必須: SteamVR</li>
-                                <li>推奨GPU: RTX3060以上</li>
-                                <li>MR: クロマキーによるパススルーに対応</li>
-                            </ul>
-                        </div>
+            </section>
 
-                        <div class="card">
-                            <h3>Quest単体版</h3>
+            <div class="section-grid">
+                <a href="shop.html" class="card card-hover">
+                    <h2>🛒 販売ページ</h2>
+                    <p>ゲームを購入できるストア一覧です。</p>                    
+                </a>
+
+                <a href="readme.html" class="card card-hover">
+                    <h2>🥽 導入ガイド</h2>
+                    <p>PCVR版、Quest版のインストール、アップデート方法を解説しています。</p>
+                    <p>まずはこちらをご確認ください。</p>
+                </a>
+                <a href="manual.html" class="card card-hover">
+                    <h2>📖 プレイガイド（随時更新）</h2>
+                    <p>ゲームの操作方法とシステムを解説しています。</p>
+                    <p>ゲーム内のチュートリアルでも遊べますが、このガイドを読むとより楽しく遊べます。</p>
+                </a>
+                <a href="troubleshooting.html" class="card card-hover">
+                    <h2>🔧 トラブルガイド</h2>
+                    <p>よくある問題と解決方法について解説しています。</p>
+                </a>
+                <a href="credits.html" class="card card-hover">
+                    <h2>👥 ゲームクレジット</h2>
+                    <p>開発スタッフや使用アセットなどのクレジット情報です。</p>
+                </a>
+                <a href="updates.html" class="card card-hover">
+                    <h2>📝 アップデート履歴と変更点</h2>
+                    <p>各バージョンでの更新内容や変更点を確認できます。</p>
+                </a>
+                <a href="dev-story.html" class="card card-hover">
+                    <h2>💡 開発秘話（随時更新）</h2>
+                    <p>ゲーム制作の背景やエピソードをご紹介します。</p>
+                </a>
+            </div>
+
+            <section class="requirements-section">
+                <h2>対応機種</h2>
+                <div class="requirements-grid">
+                    <div class="card">
+                        <h2>PCVR版</h2>
+                        <ul class="requirements-list">
+                            <li>対応OS: Windows 10/11</li>
+                            <li>必須: SteamVR</li>
+                            <li>推奨GPU: RTX3060以上</li>
+                            <li>MR: クロマキーによるパススルーに対応</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h2>Quest単体版</h2>
+                        <ul class="requirements-list">
                             <div class="requirements-category">注意事項</div>
-                            <ul>
-                                <li>SideQuestによるインストールが必要です。</li>
-                            </ul>
+                            <li>SideQuestによるインストールが必要です。</li>
 
                             <div class="requirements-category">対応機種</div>
-                            <ul>
-                                <li>Meta Quest 2</li>
-                                <li>Meta Quest Pro</li>
-                                <li>Meta Quest 3</li>
-                                <li>Meta Quest 3S</li>
-                            </ul>
+                            <li>Meta Quest 2</li>
+                            <li>Meta Quest Pro</li>
+                            <li>Meta Quest 3</li>
+                            <li>Meta Quest 3S</li>
 
                             <div class="requirements-category">機能制限</div>
-                            <ul>
-                                <li>Meta Quest 2：一部機能制限あり（販売ページをご覧ください）</li>
-                                <li>Meta Quest Pro：一部機能制限あり（販売ページをご覧ください）</li>
-                                <li>Meta Quest 3：完全対応・空間認識機能対応</li>
-                                <li>Meta Quest 3S：完全対応・空間認識機能対応</li>
-                            </ul>
-                        </div>
+                            <li>Meta Quest 2：一部機能制限あり（販売ページをご覧ください）</li>
+                            <li>Meta Quest Pro：一部機能制限あり（販売ページをご覧ください）</li>
+                            <li>Meta Quest 3：完全対応・空間認識機能対応</li>
+                            <li>Meta Quest 3S：完全対応・空間認識機能対応</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- News Section -->
-                <section class="news-section">
-                    <h2>お知らせ</h2>
-                    <div class="news-item">
-                        <div class="news-date">2024/11/16</div>
-                        <div><a href="readme.html">導入ガイド</a>を更新しました。</div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-date">2024/11/15</div>
-                        <div><a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" target="_blank">ミスター秘密侵入VR</a>を販売開始しました！</div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-date">2024/11/13</div>
-                        <div>マニュアルサイトを公開しました。</div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-date">2024/11/12</div>
-                        <div>Ver 1.0.0をリリースしました。</div>
-                    </div>
-                </section>
+            <section class="news-section">
+                <h2>お知らせ</h2>
+                <div class="news-item">
+                    <div class="news-date">2024/11/16</div>
+                    <p><a href="readme.html">導入ガイド</a>を更新しました。</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2024/11/15</div>
+                    <p><a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" target="_blank">ミスター秘密侵入VR</a>を販売開始しました！</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2024/11/13</div>
+                    <p>マニュアルサイトを公開しました。</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2024/11/12</div>
+                    <p>Ver 1.0.0をリリースしました。</p>
+                </div>
             </section>
         </div>
     </main>
-
-    <a href="#" id="backToTop" class="back-to-top">↑</a>
-
-    <!-- Footer -->
-    <footer class="container">
-        <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
-        <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+        </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
