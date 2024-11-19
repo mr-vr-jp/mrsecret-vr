@@ -30,6 +30,14 @@
             padding: 0 20px;
         }
 
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+      
         .header {
             background-color: rgba(39, 39, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -143,6 +151,19 @@
             margin-bottom: 0.8rem;
         }
 
+        .sub-issue {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: rgba(74, 144, 226, 0.05);
+            border-radius: 6px;
+        }
+        
+        .sub-issue-title {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+        
         .solution-steps li::before {
             content: "•";
             color: var(--primary-color);
@@ -249,14 +270,6 @@
             to { opacity: 1; }
         }
 
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-top: 4rem;
-        }
-
         @media (max-width: 640px) {
             .video-container {
                 max-width: 300px;
@@ -301,24 +314,38 @@
                 <h2>起動・インストール関連</h2>
                 
                 <div class="issue-card">
-                    <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</div>
-                    <p>フォルダパスに日本語や全角文字、スペースが含まれていると入力が正常に機能しない場合があります。</p>
-                    
-                    <div class="solution-header">対処方法：</div>
-                    <ul class="solution-steps">
-                        <li>ゲームフォルダを英数字のみのパスに移動してください。</li>
-                        <li>上層フォルダも含めパス全体が英数字である必要があります。</li>
-                        <li>例: <code>C:\Games\MRsecretVR</code></li>
-                    </ul>
-                    
-                    <div class="additional-notes">問題が解決しない場合：</div>
-                    <ul class="solution-steps">
-                        <li>一度選択不可になると対処を行っても、SteamVRを再起動する必要があります。</li>
-                        <li>ZIPファイルを再度ダウンロードし、新しい場所に展開してお試しください。</li>
-                        <li>英数字のパスでも問題が発生する場合は、フォルダ名を変更して再度お試しください。</li>
-                    </ul>
+                   <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</div>
+                  
+                   <div class="sub-issue">
+                       <div class="sub-issue-title">ケース1: フォルダパスに日本語や全角文字、スペースが含まれている場合</div>
+                       <div class="solution-header">対処方法</div>
+                       <ul class="solution-steps">
+                           <li>ゲームフォルダを英数字のみのパスに移動してください。</li>
+                           <li>上層フォルダも含めパス全体が英数字である必要があります。</li>
+                           <li>例: <code>C:\Games\MRsecretVR</code></li>
+                       </ul>
+                   </div>
+                
+                   <div class="sub-issue">
+                       <div class="sub-issue-title">ケース2: 一度ゲームを起動した場所でフォルダ名を変更した場合</div>
+                       <div class="solution-header">対処方法</div>
+                       <ul class="solution-steps">
+                           <li>ゲームフォルダを完全に別の場所に移動する（例：Downloads → Desktop）</li>
+                           <li>またはフォルダ名を最初に起動した時の名前に戻す</li>
+                           <li>例: <code>MRsecretVR_ver1.0 → MRsecretVR_ver1.0.1</code></li>
+                       </ul>
+                   </div>
+                  
+                   <div class="additional-notes">問題が解決しない場合</div>
+                   <ul class="solution-steps">
+                       <li>一度選択不可になると対処を行っても、SteamVRを再起動する必要があります。</li>
+                       <li>ZIPファイルを再度ダウンロードし、新しい場所に展開してお試しください。</li>
+                       <li>英数字のパスでも問題が発生する場合は、フォルダ名を変更して再度お試しください。</li>
+                   </ul>
+                
+                   <p class="note">※これらの問題はSteamVRの仕様によるもので、アプリケーション側では制御できない問題となっています。</p>
                 </div>
-
+                
                 <div class="issue-card">
                     <div class="issue-title">【PC版】SteamVRで起動できない</div>
                     <ol class="solution-steps">
