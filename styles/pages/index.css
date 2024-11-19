@@ -52,18 +52,22 @@
 }
 
 .requirements-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    min-height: 300px;  /* 最小の高さを設定 */
+    display: flex;
+    flex-direction: column;    
 }
 
 .requirements-list {
     list-style: none;
     padding: 0;
+    margin: 1rem 0;
 }
 
 .requirements-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 /* News Section */
