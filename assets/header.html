@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<style>
+    :root {
+        --primary-color: #4a90e2;
+        --text-color: #e4e4e7;
+        --bg-color: #18181b;
+        --card-bg: #27272a;
+    }
+    
+    .header {
+        background-color: rgba(39, 39, 42, 0.95);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+    
+    .logo {
+        height: 90px;
+        display: inline-block;
+    }
+    
+    .logo img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 640px) {
+        .nav-links {
+            gap: 1rem;
+        }
+    }
+</style>
+
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="ミスター秘密侵入VR">
+        </a>
+        <nav class="nav-links">
+            <a href="readme.html">導入ガイド</a>
+            <a href="manual.html">プレイガイド</a>
+            <a href="troubleshooting.html">トラブルガイド</a>
+        </nav>
+    </div>
+</header>
