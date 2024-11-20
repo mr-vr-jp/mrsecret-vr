@@ -1351,25 +1351,38 @@
             font-size: 0.9rem;
         }
 
-        .tips-category {
-            background: rgba(74, 144, 226, 0.08);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tips-category h4 {
-            color: var(--accent-color);
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .tips-category h4::before {
-            font-size: 1.2rem;
-        }
+	.tips-category {
+	    background: rgba(74, 144, 226, 0.08);
+	    border-radius: 12px;
+	    padding: 1.5rem;
+	    margin-bottom: 1.5rem;
+	}
+	
+	.tips-category .tips-list {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	    gap: 1rem;
+	    list-style: none;
+	    padding: 0;
+	    margin: 0 0 1.5rem 0;
+	}
+	
+	.tips-category .tips-list li {
+	    list-style-type: none;
+	    padding: 1rem;
+	    margin: 0;
+	    background: rgba(74, 144, 226, 0.08);
+	    border-radius: 8px;
+	    transition: transform 0.2s ease;
+	}
+	
+	.tips-category .tips-list li::before {
+	    display: none;
+	}
+	
+	.tips-category .tips-list li:hover {
+	    transform: translateX(4px);
+	}
 
         .tips-list {
             list-style: none;
@@ -1382,13 +1395,6 @@
             padding-left: 1.5rem;
             position: relative;
             line-height: 1.5;
-        }
-
-        .tips-list li::before {
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
         }
 
         .info-box {
