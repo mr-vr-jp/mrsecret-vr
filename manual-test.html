@@ -1795,70 +1795,112 @@
             }
         }
 
-	.table-of-contents {
-	    background: linear-gradient(
-	        145deg,
-	        rgba(74, 144, 226, 0.08),
-	        rgba(74, 144, 226, 0.05)
-	    );
-	    padding: 2rem;
-	    border-radius: 12px;
-	    margin: 2rem 0;
-	    border: 1px solid var(--border-color);
-	}
-	
-	.table-of-contents h2 {
-	    color: var(--accent-color);
-	    margin: 0 0 1.5rem 0;
-	    padding-bottom: 0.8rem;
-	    border-bottom: 1px solid var(--border-color);
-	    font-size: 1.6rem;
-	}
-	
-	.toc-list {
-	    display: flex;
-	    flex-direction: column;
-	    gap: 1rem;
-	}
-	
-	.toc-section {
-	    padding: 0.5rem 0;
-	}
-	
-	.toc-section a {
-	    color: var(--text-color);
-	    text-decoration: none;
-	    display: flex;
-	    align-items: center;
-	    gap: 0.8rem;
-	    padding: 0.8rem 1.2rem;
-	    border-radius: 8px;
-	    transition: all 0.3s ease;
-	    background: rgba(74, 144, 226, 0.08);
-	}
-	
-	.toc-section a:hover {
-	    background: rgba(74, 144, 226, 0.12);
-	    transform: translateX(4px);
-	    color: var(--primary-color);
-	}
-	
-	.toc-section a::before {
-	    content: "•";
-	    color: var(--primary-color);
-	    font-size: 1.5rem;
-	    line-height: 1;
-	}
-	
-	@media (max-width: 768px) {
-	    .table-of-contents {
-	        padding: 1.2rem;
-	    }
-	
-	    .toc-section a {
-	        padding: 0.6rem 1rem;
-	    }
-	}
+
+		.quick-nav {
+		    position: fixed;
+		    right: 2rem;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    background: rgba(74, 144, 226, 0.1);
+		    backdrop-filter: blur(8px);
+		    padding: 1rem;
+		    border-radius: 12px;
+		    border: 1px solid rgba(74, 144, 226, 0.2);
+		    z-index: 1000;
+		    width: 200px;
+		    max-height: 80vh;
+		    overflow-y: auto;
+		    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		}
+
+		.quick-nav::-webkit-scrollbar {
+		    width: 4px;
+		}
+
+		.quick-nav::-webkit-scrollbar-track {
+		    background: rgba(74, 144, 226, 0.05);
+		}
+
+		.quick-nav::-webkit-scrollbar-thumb {
+		    background: var(--primary-color);
+		    border-radius: 2px;
+		}
+
+		.quick-nav-title {
+		    color: var(--accent-color);
+		    font-size: 0.9rem;
+		    margin-bottom: 1rem;
+		    padding-bottom: 0.5rem;
+		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+		}
+
+		.quick-nav-list {
+		    list-style: none;
+		    padding: 0;
+		    margin: 0;
+		    display: flex;
+		    flex-direction: column;
+		    gap: 0.25rem;
+		}
+
+		.quick-nav-item {
+		    font-size: 0.85rem;
+		    position: relative;
+		}
+
+		.quick-nav-link {
+		    display: block;
+		    color: var(--text-color);
+		    text-decoration: none;
+		    padding: 0.5rem 0.75rem;
+		    border-radius: 6px;
+		    transition: all 0.3s ease;
+		    opacity: 0.7;
+		    position: relative;
+		}
+
+		.quick-nav-link:hover {
+		    background: rgba(74, 144, 226, 0.2);
+		    opacity: 1;
+		}
+
+		.quick-nav-link.active {
+		    background: var(--primary-color);
+		    color: white;
+		    opacity: 1;
+		}
+
+		/* 現在位置を示すインジケーター */
+		.quick-nav-link::before {
+		    content: "";
+		    position: absolute;
+		    left: -0.5rem;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    width: 3px;
+		    height: 0;
+		    background: var(--primary-color);
+		    transition: height 0.3s ease;
+		    border-radius: 1.5px;
+		}
+
+		.quick-nav-link.active::before {
+		    height: 80%;
+		}
+
+		@media (max-width: 1400px) {
+		    .quick-nav {
+		        right: 1rem;
+		        width: 180px;
+		    }
+		}
+
+		@media (max-width: 1200px) {
+		    .quick-nav {
+		        display: none;
+		    }
+		}
+
     </style>
 </head>
 <body>
@@ -1866,27 +1908,36 @@
         <div class="container">
             <div class="guide-content">
                 <h1 class="main-title">プレイガイド</h1>
-
-				<div class="table-of-contents">
-				    <h2>目次</h2>
-				    <nav class="toc-list">
-				        <div class="toc-section">
-				            <a href="#introduction">はじめに</a>
-				        </div>
-				        <div class="toc-section">
-				            <a href="#basic-controls">基本操作ガイド</a>
-				        </div>
-				        <div class="toc-section">
-				            <a href="#mode-details">各モードの詳細</a>
-				        </div>
-				        <div class="toc-section">
-				            <a href="#tips">豆知識とTips</a>
-				        </div>
-				        <div class="toc-section">
-				            <a href="#faq">よくある質問と対処方法</a>
-				        </div>
-				    </nav>
-				</div>
+				<nav class="quick-nav">
+				    <h2 class="quick-nav-title">目次</h2>
+				    <ul class="quick-nav-list">
+				        <li class="quick-nav-item">
+				            <a href="#introduction" class="quick-nav-link">
+				                はじめに
+				            </a>
+				        </li>
+				        <li class="quick-nav-item">
+				            <a href="#basic-controls" class="quick-nav-link">
+				                基本操作ガイド
+				            </a>
+				        </li>
+				        <li class="quick-nav-item">
+				            <a href="#mode-details" class="quick-nav-link">
+				                各モードの詳細
+				            </a>
+				        </li>
+				        <li class="quick-nav-item">
+				            <a href="#tips" class="quick-nav-link">
+				                豆知識とTips
+				            </a>
+				        </li>
+				        <li class="quick-nav-item">
+				            <a href="#faq" class="quick-nav-link">
+				                よくある質問
+				            </a>
+				        </li>
+				    </ul>
+				</nav>
 
 				<section id="introduction" class="chapter">
                     <h2 class="chapter-title">はじめに</h2>
@@ -2195,6 +2246,7 @@
                                 <span class="nav-label">MR</span>
                             </div>
                         </div>
+
 
                         <div class="mode-content active" id="story-mode">
                             <div class="mode-header">
@@ -2971,6 +3023,56 @@
             initBackToTop();
             initAccordion();
         });
+        
+        
+        
+        document.addEventListener('DOMContentLoaded', function() {
+		    const sections = document.querySelectorAll('.chapter');
+		    const navLinks = document.querySelectorAll('.quick-nav-link');
+		    
+		    // Intersection Observerの設定
+		    const observerOptions = {
+		        threshold: 0.2,
+		        rootMargin: '-20% 0px -60% 0px'
+		    };
+
+		    const observer = new IntersectionObserver((entries) => {
+		        entries.forEach(entry => {
+		            if (entry.isIntersecting) {
+		                // 現在のアクティブなリンクからactiveクラスを除去
+		                navLinks.forEach(link => link.classList.remove('active'));
+		                
+		                // 現在表示されているセクションに対応するリンクを探してアクティブにする
+		                const activeLink = document.querySelector(`.quick-nav-link[href="#${entry.target.id}"]`);
+		                if (activeLink) {
+		                    activeLink.classList.add('active');
+		                }
+		            }
+		        });
+		    }, observerOptions);
+
+		    // 各セクションの監視を開始
+		    sections.forEach(section => observer.observe(section));
+
+		    // スムーズスクロール
+		    navLinks.forEach(link => {
+		        link.addEventListener('click', (e) => {
+		            e.preventDefault();
+		            const targetId = link.getAttribute('href');
+		            const targetElement = document.querySelector(targetId);
+		            
+		            if (targetElement) {
+		                const offset = 100; // ヘッダーの高さなどを考慮
+		                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+		                
+		                window.scrollTo({
+		                    top: targetPosition,
+		                    behavior: 'smooth'
+		                });
+		            }
+		        });
+		    });
+		});
     </script>
 </body>
 </html>
