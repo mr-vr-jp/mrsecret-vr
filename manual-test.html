@@ -1345,7 +1345,6 @@
         }
 
         .feature-list li::before {
-            content: "✨";
             position: absolute;
             left: 0;
             font-size: 0.9rem;
@@ -1385,7 +1384,6 @@
         }
 
         .tips-list li::before {
-            content: "•";
             color: var(--primary-color);
             position: absolute;
             left: 0;
@@ -1508,11 +1506,6 @@
         .mode-section h4::before {
             font-size: 1.2rem;
         }
-
-        /* モード別アイコン */
-        .mode-section:nth-child(1) h4::before { content: "📖"; }
-        .mode-section:nth-child(2) h4::before { content: "🎯"; }
-        .mode-section:nth-child(3) h4::before { content: "✨"; }
 
         @media (max-width: 768px) {
             .tips-grid,
@@ -2470,31 +2463,26 @@
                     </div>
                 </section>
 
-                
-                
-                
                 <section id="tips" class="chapter">
                     <h2 class="chapter-title">豆知識とTips</h2>
 
                     <div class="tips-container">
                         <div class="feature-card shader-info">
                             <div class="card-header">
-                                <div class="header-icon">✨</div>
                                 <h3>もっちりシェーダーについて</h3>
                             </div>
                             <div class="feature-content">
                                 <ul class="feature-list">
-                                    <li>VRChatで人気の「もっちりシェーダー」を正式採用</li>
-                                    <li>触れた場所が本物のように自然に凹む表現を実現</li>
-                                    <li>物理演算との組み合わせで、よりリアルな触り心地を表現</li>
-                                    <li>胸やお尻など、柔らかい部分の触感を忠実に再現</li>
+                                    <li>VRSNSで人気の「もっちりシェーダー」を正式採用</li>
+                                    <li>触れた場所が自然に凹む表現を実現</li>
+                                    <li>物理演算との組み合わせで、よりリアルな接触を表現</li>
+                                    <li>胸やお尻など、柔らかい部分の触り心地を演出</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="feature-card comfort-tips">
                             <div class="card-header">
-                                <div class="header-icon">🎮</div>
                                 <h3>快適に遊ぶためのコツ</h3>
                             </div>
                             <div class="feature-content">
@@ -2506,9 +2494,8 @@
                                         <li>疲れを感じたら適度な休憩を</li>
                                     </ul>
                                     <div class="info-box">
-                                        <div class="info-icon">📺</div>
                                         <div class="info-content">
-                                            <p>詳しい対策は「看護師に聞いた5つのVR酔い対策」の動画も参考に:</p>
+                                            <p>詳しい対策はYouTubeの「看護師に聞いた5つのVR酔い対策 by ミスターVR」も参考に</p>
                                             <a href="https://youtu.be/VzBKmSKs63E" class="reference-link" target="_blank">
                                                 <span class="link-icon">🎥</span>
                                                 <span class="link-text">動画を見る</span>
@@ -2522,74 +2509,33 @@
                                     <ul class="tips-list">
                                         <li>引き戸や引き出しは、グリップ操作をせず手で直接操作する方が扱いやすい</li>
                                         <li>モニターはホルスターに入れておくと常時確認が可能で便利</li>
-                                        <li>衣装の着せ替えは、一度脱がしてから新しい服を着せると確実</li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="feature-card exploration-tips">
-                            <div class="card-header">
-                                <div class="header-icon">🔍</div>
-                                <h3>効率的な探索方法</h3>
-                            </div>
-                            <div class="feature-content">
-                                <div class="tips-grid">
-                                    <div class="tip-card">
-                                        <div class="tip-header">
-                                            <span class="tip-icon">📱</span>
-                                            <h4>モニターの活用</h4>
-                                        </div>
-                                        <p>常に彼女の位置を確認しながら行動することで、効率的な探索が可能です。</p>
-                                    </div>
-                                    <div class="tip-card">
-                                        <div class="tip-header">
-                                            <span class="tip-icon">🚶‍♀️</span>
-                                            <h4>移動のタイミング</h4>
-                                        </div>
-                                        <p>彼女が移動している最中は、別の場所を探索するチャンスです。</p>
-                                    </div>
-                                    <div class="tip-card">
-                                        <div class="tip-header">
-                                            <span class="tip-icon">👀</span>
-                                            <h4>視点の活用</h4>
-                                        </div>
-                                        <p>しゃがんだまま移動したり、高い位置から覗くことで新たな発見があるかもしれません。</p>
-                                    </div>
-                                    <div class="tip-card">
-                                        <div class="tip-header">
-                                            <span class="tip-icon">📷</span>
-                                            <h4>カメラの設置</h4>
-                                        </div>
-                                        <p>様々な場所にカメラを設置して、普段見られない角度からの観察も楽しめます。</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="feature-card play-modes">
                             <div class="card-header">
-                                <div class="header-icon">🎯</div>
-                                <h3>モード別の楽しみ方</h3>
+                                <h3>攻略後の新たな楽しみ方</h3>
                             </div>
                             <div class="feature-content">
                                 <div class="mode-tips">
                                     <div class="mode-section">
                                         <h4>ストーリーモード</h4>
                                         <ul class="tips-list">
-                                            <li>スピードアタックに挑戦してみよう</li>
-                                            <li>死角を活用した素早い移動がコツ</li>
-                                            <li>様々な場所にカメラを設置して新しい視点を探そう</li>
-                                            <li>家の中には隠された仕掛けも...</li>
+                                            <li>様々な行動パターンを全て把握して覗き見してみよう</li>
+                                            <li>しゃがんだり、天井近くから新たな視点を楽しもう</li>
+                                            <li>様々な場所にカメラを設置して、普段見れない角度から覗こう</li>
+                                            <li>家の中にはちょっとした遊び心や隠された仕掛けも...</li>
                                         </ul>
                                     </div>
                                     
                                     <div class="mode-section">
                                         <h4>フリーモード</h4>
                                         <ul class="tips-list">
-                                            <li>彼女に会わずこっそり生活を覗き見するのも面白い</li>
+                                            <li>彼女に会わずこっそり生活を覗き見してみよう</li>
                                             <li>衣装や髪型を変えながらの覗き見も可能</li>
-                                            <li>カメラとモニターを使った特殊なプレイにも挑戦</li>
+                                            <li>カメラとモニターを駆使して特殊なプレイにも挑戦</li>
                                         </ul>
                                     </div>
 
