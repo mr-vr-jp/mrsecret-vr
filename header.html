@@ -26,8 +26,27 @@
     .logo {
         height: 90px;
         display: inline-block;
+        position: relative;
     }
     
+    .logo::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-25deg);
+        animation: shine 6s ease-in-out infinite;
+    }
+        
     .logo img {
         height: 100%;
         width: auto;
@@ -55,6 +74,27 @@
             gap: 1rem;
         }
     }
+
+    @keyframes shine {
+        0% {
+            left: -100%;
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.3;
+        }
+        15% {
+            left: 200%;
+            opacity: 0.3;
+        }
+        16% {
+            opacity: 0;
+        }
+        100% {
+            left: 200%;
+            opacity: 0;
+        }
+    }    
 </style>
 
 <header class="header">
