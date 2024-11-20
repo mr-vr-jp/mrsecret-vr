@@ -53,9 +53,23 @@
 
 .requirements-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.requirements-grid .card {
+    height: 100%;
+    margin: 0;
+}
+
+.requirements-grid .requirements-category {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.requirements-grid .requirements-list {
+    margin: 0.5rem 0;
 }
 
 .requirements-list {
@@ -123,7 +137,7 @@
 
 @media (max-width: 768px) {
     .requirements-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 }
