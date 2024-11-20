@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -207,6 +206,8 @@
         }
 
         .news-item {
+            align-items: center;            
+            gap: 1rem;
             padding: 1rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -225,7 +226,7 @@
 
         .review-section {
             margin-top: 2rem;
-            max-width: 32rem;
+            max-width: 35rem;
             margin-left: auto;
             margin-right: auto;
         }
@@ -260,10 +261,7 @@
         .manual-about {
             max-width: 800px;
             margin: 0 auto 3rem;
-            background-color: rgba(30, 41, 59, 0.3);
-            border: 1px solid rgba(51, 65, 85, 0.3);
-            border-radius: 12px;
-            padding: 1.5rem;
+            text-align: center;
         }
         
         .manual-about-header {
@@ -319,16 +317,26 @@
             color: rgba(96, 165, 250, 0.9);
             font-size: 1.125rem;
         }
-
+        
         .thank-you-message {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            color: rgba(147, 197, 253, 0.9);
+            font-size: 1.25rem;
+            color: var(--primary-color);
             font-weight: 500;
-            padding: 0.5rem 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+            opacity: 0;
+            animation: fadeInMessage 1.5s ease forwards;
+        }
+        
+        @keyframes fadeInMessage {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         @media (max-width: 640px) {
@@ -362,11 +370,9 @@
                 <h1 class="hero-title">ミスター秘密侵入VR 公式マニュアル</h1>
 
                 <div class="manual-about">
-                    <div class="manual-about-content">
-                        <p class="thank-you-message">
-                            この度はご購入いただき、誠にありがとうございます
-                        </p>
-                    </div>
+                    <p class="thank-you-message">
+                        この度はご購入いただき、誠にありがとうございます
+                    </p>
                 </div>
                 
                 <img src="assets/images/main-image.jpg" alt="ゲームメイン画像" class="main-image">
