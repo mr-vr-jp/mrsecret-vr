@@ -277,8 +277,18 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .news-item a {
+           color: var(--primary-color);
+           text-decoration: none;
+           transition: color 0.2s;
+        }
+        
+        .news-item a:hover {
+           text-decoration: underline;
+           opacity: 0.8;
         }
         
         .news-date {
@@ -413,8 +423,6 @@
                 <a href="readme.html">導入ガイド</a>
                 <a href="manual.html">プレイガイド</a>
                 <a href="troubleshooting.html">トラブルガイド</a>
-                <a href="credits.html">クレジット</a>
-                <a href="updates.html">アップデート</a>
             </nav>
         </div>
     </header>
@@ -465,11 +473,6 @@
             </section>
 
             <div class="section-grid">
-                <a href="shop.html" class="card card-hover">
-                    <h2>🛒 販売ページ</h2>
-                    <p>ゲームを購入できるストア一覧です。</p>                    
-                </a>
-
                 <a href="readme.html" class="card card-hover">
                     <h2>🥽 導入ガイド</h2>
                     <p>インストール、アップデート方法を解説しています。</p>
@@ -484,6 +487,11 @@
                     <h2>🔧 トラブルガイド</h2>
                     <p>よくある問題と解決方法について解説しています。</p>
                 </a>
+                
+                <a href="shop.html" class="card card-hover">
+                    <h2>🛒 販売ページ</h2>
+                    <p>ゲームを購入できるストア一覧です。</p>                    
+                </a>
                 <a href="credits.html" class="card card-hover">
                     <h2>👥 ゲームクレジット</h2>
                     <p>開発スタッフや使用アセットなどのクレジット情報です。</p>
@@ -492,6 +500,7 @@
                     <h2>📝 アップデート履歴と変更点</h2>
                     <p>各バージョンでの更新内容や変更点を確認できます。</p>
                 </a>
+                
                 <a href="dev-story.html" class="card card-hover">
                     <h2>💡 開発秘話（随時更新）</h2>
                     <p>ゲーム制作の背景やエピソードを随時ご紹介していく予定です。</p>
