@@ -96,33 +96,39 @@
         }
         
         .main-image-container {
-            position: relative;
-            margin: 2rem auto;
-            max-width: 1000px;
+           position: relative;
+           margin: 2rem auto;
+           max-width: 1000px;
+           padding: 15px;
         }
         
         .main-image {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-                        0 0 30px rgba(74, 144, 226, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            z-index: 1;
+           width: 100%;
+           height: auto;
+           border-radius: 12px;
+           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                       0 0 30px rgba(74, 144, 226, 0.2);
+           border: 1px solid rgba(255, 255, 255, 0.1);
+           position: relative;
+           z-index: 2;
         }
         
         .image-glow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            background: radial-gradient(circle at center, rgba(74, 144, 226, 0.2) 0%, rgba(74, 144, 226, 0) 70%);
-            filter: blur(20px);
-            animation: glowPulse 4s ease-in-out infinite;
-            z-index: 0;
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           border-radius: 12px;
+           background: radial-gradient(
+               ellipse at center,
+               rgba(74, 144, 226, 0.15) 0%,
+               rgba(74, 144, 226, 0.1) 30%,
+               rgba(74, 144, 226, 0) 70%
+           );
+           filter: blur(15px);
+           animation: pulseGlow 3s ease-in-out infinite;
+           z-index: 1;
         }
         
         .purchase-link {
@@ -369,6 +375,12 @@
             0% { opacity: 0.5; }
             50% { opacity: 0.8; }
             100% { opacity: 0.5; }
+        }
+
+        @keyframes pulseGlow {
+           0% { opacity: 0.5; }
+           50% { opacity: 0.8; }
+           100% { opacity: 0.5; }
         }
         
         @media (max-width: 768px) {
