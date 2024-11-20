@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ミスター秘密侵入VR - 導入ガイド</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('ヘッダーの読み込みに失敗しました:', error);
+                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
+                });
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('フッターの読み込みに失敗しました:', error);
+                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
+                });
+        });
+    </script>	
 	<style>
 		:root {
 		    --primary-color: #4a90e2;
@@ -13,7 +36,7 @@
 		    --card-bg: #27272a;
 		    --warning-color: #e2984a;
 		}
-
+	
 		body {
 		    font-family: 'Noto Sans JP', sans-serif;
 		    background-color: var(--bg-color);
@@ -22,13 +45,13 @@
 		    margin: 0;
 		    padding: 0;
 		}
-
+	
 		.container {
 		    max-width: 1200px;
 		    margin: 0 auto;
 		    padding: 0 20px;
 		}
-
+	
 		.header {
 		    background-color: rgba(39, 39, 42, 0.95);
 		    backdrop-filter: blur(10px);
@@ -37,37 +60,37 @@
 		    top: 0;
 		    z-index: 1000;
 		}
-
+	
 		.header-content {
 		    display: flex;
 		    justify-content: space-between;
 		    align-items: center;
 		    height: 70px;
 		}
-
+	
 		.logo {
 		    font-size: 1.5rem;
 		    font-weight: 700;
 		    color: var(--text-color);
 		    text-decoration: none;
 		}
-
+	
 		.nav-links {
 		    display: flex;
 		    gap: 2rem;
 		}
-
+	
 		.nav-links a {
 		    color: var(--text-color);
 		    text-decoration: none;
 		    font-weight: 500;
 		    transition: color 0.2s;
 		}
-
+	
 		.nav-links a:hover {
 		    color: var(--primary-color);
 		}
-
+	
 		.manual-content {
 		    padding: 2rem;
 		    background-color: var(--card-bg);
@@ -75,37 +98,37 @@
 		    margin-top: 2rem;
 		    animation: fadeIn 0.6s ease;
 		}
-
+	
 		.table-of-contents {
 		    background-color: rgba(74, 144, 226, 0.1);
 		    padding: 1.5rem;
 		    border-radius: 8px;
 		    margin-bottom: 2rem;
 		}
-
+	
 		.table-of-contents h2 {
 		    margin-top: 0;
 		    color: var(--primary-color);
 		    border-bottom: 2px solid var(--primary-color);
 		    padding-bottom: 0.5rem;
 		}
-
+	
 		.toc-list {
 		    list-style: none;
 		    padding-left: 0;
 		    margin: 0;
 		}
-
+	
 		.toc-list li {
 		    margin-bottom: 0.8rem;
 		}
-
+	
 		.toc-list ul {
 		    list-style: none;
 		    padding-left: 1.5rem;
 		    margin-top: 0.5rem;
 		}
-
+	
 		.toc-list a {
 		    color: var(--text-color);
 		    text-decoration: none;
@@ -113,24 +136,24 @@
 		    display: flex;
 		    align-items: center;
 		}
-
+	
 		.toc-list a:hover {
 		    color: var(--primary-color);
 		}
-
+	
 		.toc-list a::before {
 		    content: "•";
 		    color: var(--primary-color);
 		    margin-right: 0.5rem;
 		}
-
+	
 		.section {
 		    margin-bottom: 3rem;
 		    opacity: 0;
 		    transform: translateY(20px);
 		    animation: fadeInUp 0.6s ease forwards;
 		}
-
+	
 		.section h2 {
 		    color: var(--primary-color);
 		    font-size: 1.8rem;
@@ -138,14 +161,14 @@
 		    padding-bottom: 0.5rem;
 		    border-bottom: 2px solid var(--primary-color);
 		}
-
+	
 		.section h3 {
 		    color: #63b3ed;
 		    font-size: 1.4rem;
 		    margin-top: 2rem;
 		    margin-bottom: 1rem;
 		}
-
+	
 		.section-link {
 		    color: var(--primary-color);
 		    text-decoration: none;
@@ -156,20 +179,20 @@
 		    color: #63b3ed;
 		    text-decoration: underline;
 		}
-
+	
 		.step-list {
 		    list-style: none;
 		    padding-left: 0;
 		    counter-reset: step-counter;
 		}
-
+	
 		.step-list > li {
 		    position: relative;
 		    padding-left: 2.5rem;
 		    margin-bottom: 1.5rem;
 		    counter-increment: step-counter;
 		}
-
+	
 		.step-list > li::before {
 		    content: counter(step-counter);
 		    position: absolute;
@@ -186,7 +209,7 @@
 		    font-weight: bold;
 		    color: white;
 		}
-
+	
 		.path-example {
 		    font-family: 'Source Code Pro', monospace;
 		    background-color: rgba(74, 144, 226, 0.1);
@@ -196,7 +219,7 @@
 		    display: inline-block;
 		    margin: 0.5rem 0;
 		}
-
+	
 		.installation-link {
 		    display: inline-flex;
 		    align-items: center;
@@ -209,11 +232,11 @@
 		    transition: background-color 0.2s;
 		    border: 1px solid rgba(74, 144, 226, 0.3);
 		}
-
+	
 		.installation-link:hover {
 		    background-color: rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.note-box {
 		    background-color: rgba(226, 152, 74, 0.1);
 		    border-left: 4px solid #e2984a;
@@ -221,14 +244,14 @@
 		    margin: 1rem 0;
 		    border-radius: 0 8px 8px 0;
 		}
-
+	
 		.version-tabs {
 		    display: flex;
 		    gap: 1rem;
 		    margin-bottom: 2rem;
 		    flex-wrap: wrap;
 		}
-
+	
 		.version-tab {
 		    padding: 0.8rem 1.5rem;
 		    background: none;
@@ -241,21 +264,21 @@
 		    min-width: 150px;
 		    text-align: center;
 		}
-
+	
 		.version-tab.active {
 		    background-color: var(--primary-color);
 		    color: white;
 		}
-
+	
 		.version-content {
 		    display: none;
 		}
-
+	
 		.version-content.active {
 		    display: block;
 		    animation: fadeIn 0.4s ease;
 		}
-
+	
 		.version-card {
 		    background-color: rgba(74, 144, 226, 0.05);
 		    border-radius: 12px;
@@ -286,39 +309,39 @@
 		    position: absolute;
 		    left: -1.2rem;
 		}	
-
+	
 		.version-cards {
 		    display: grid;
 		    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		    gap: 1.5rem;
 		    margin: 2rem 0;
 		}
-
+	
 		.version-card {
 		    background-color: rgba(74, 144, 226, 0.05);
 		    border-radius: 12px;
 		    padding: 1.5rem;
 		    border: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.version-card h3 {
 		    color: var(--primary-color);
 		    margin: 0 0 1rem 0;
 		    padding-bottom: 0.5rem;
 		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.version-card-content ul {
 		    list-style: none;
 		    padding-left: 1.2rem;
 		    margin: 0;
 		}
-
+	
 		.version-card-content li {
 		    position: relative;
 		    margin-bottom: 0.8rem;
 		}
-
+	
 		.version-card-content li::before {
 		    content: "•";
 		    color: var(--primary-color);
@@ -331,7 +354,7 @@
 		    margin-top: 1rem;
 		    border-left: 2px solid rgba(74, 144, 226, 0.3);
 		}
-
+	
 		.warning {
 		    background-color: rgba(226, 74, 74, 0.1);
 		    border-left: 4px solid #e24a4a;
@@ -339,7 +362,7 @@
 		    margin: 1rem 0;
 		    border-radius: 0 8px 8px 0;
 		}
-
+	
 		.back-to-top {
 		    position: fixed;
 		    bottom: 2rem;
@@ -357,15 +380,15 @@
 		    transition: opacity 0.3s, background-color 0.2s;
 		    z-index: 1000;
 		}
-
+	
 		.back-to-top.visible {
 		    opacity: 1;
 		}
-
+	
 		.back-to-top:hover {
 		    background-color: #357abd;
 		}
-
+	
 		.footer {
 		    text-align: center;
 		    padding: 2rem 0;
@@ -373,44 +396,44 @@
 		    font-size: 0.875rem;
 		    margin-top: 4rem;
 		}
-
+	
 		@keyframes fadeInUp {
 		    from {
-		        opacity: 0;
-		        transform: translateY(20px);
+			opacity: 0;
+			transform: translateY(20px);
 		    }
 		    to {
-		        opacity: 1;
-		        transform: translateY(0);
+			opacity: 1;
+			transform: translateY(0);
 		    }
 		}
-
+	
 		@keyframes fadeIn {
 		    from {
-		        opacity: 0;
+			opacity: 0;
 		    }
 		    to {
-		        opacity: 1;
+			opacity: 1;
 		    }
 		}
-
+	
 		.headset-options {
 		    display: flex;
 		    flex-direction: column;
 		    gap: 2rem;
 		}
-
+	
 		.headset-option {
 		    background-color: rgba(74, 144, 226, 0.05);
 		    border-radius: 12px;
 		    padding: 1.5rem;
 		    border: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.headset-type {
 		    margin-bottom: 1.5rem;
 		}
-
+	
 		.headset-type h4 {
 		    display: flex;
 		    align-items: center;
@@ -419,28 +442,28 @@
 		    font-size: 1.2rem;
 		    margin: 0 0 0.5rem 0;
 		}
-
+	
 		.headset-icon {
 		    font-size: 1.4rem;
 		}
-
+	
 		.supported-devices {
 		    color: #94a3b8;
 		    font-size: 0.9rem;
 		    margin-left: 2rem;
 		}
-
+	
 		.connection-methods {
 		    margin-top: 1rem;
 		}
-
+	
 		.method-card {
 		    background-color: rgba(74, 144, 226, 0.1);
 		    border-radius: 8px;
 		    padding: 1.25rem;
 		    margin-bottom: 1rem;
 		}
-
+	
 		.method-card h5 {
 		    color: var(--primary-color);
 		    font-size: 1.1rem;
@@ -448,53 +471,53 @@
 		    padding-bottom: 0.5rem;
 		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.video-guide {
 		    padding: 0.5rem;
 		}
-
+	
 		.video-link {
 		    display: inline-flex;
 		    align-items: center;
 		    gap: 0.5rem;
 		}
-
+	
 		.video-icon {
 		    font-size: 1.2rem;
 		    color: #e24a4a;
 		}
-
+	
 		@media (max-width: 640px) {
 		    .manual-content {
-		        padding: 1rem;
+			padding: 1rem;
 		    }
-
+	
 		    .section h2 {
-		        font-size: 1.5rem;
+			font-size: 1.5rem;
 		    }
-
+	
 		    .section h3 {
-		        font-size: 1.2rem;
+			font-size: 1.2rem;
 		    }
-
+	
 		    .version-tab {
-		        width: 100%;
+			width: 100%;
 		    }
-
+	
 		    .back-to-top {
-		        bottom: 1rem;
-		        right: 1rem;
+			bottom: 1rem;
+			right: 1rem;
 		    }
-
+	
 		    .headset-option {
-		        padding: 1rem;
+			padding: 1rem;
 		    }
-
+	
 		    .method-card {
-		        padding: 1rem;
+			padding: 1rem;
 		    }
 		}
-
+	
 		.main-title {
 		    font-size: 2.5rem;
 		    color: var(--primary-color);
@@ -504,14 +527,14 @@
 		    border-bottom: 3px solid var(--primary-color);
 		    animation: fadeInDown 0.6s ease;
 		}
-
+	
 		.setup-divider {
 		    margin: 4rem 0;
 		    position: relative;
 		    text-align: center;
-		    padding: 2rem 0;
+		    padding: 10rem 0;
 		}
-
+	
 		.setup-divider::before {
 		    content: "";
 		    position: absolute;
@@ -520,14 +543,14 @@
 		    right: 0;
 		    height: 2px;
 		    background: linear-gradient(90deg, 
-		        transparent, 
-		        rgba(74, 144, 226, 0.3) 20%, 
-		        rgba(74, 144, 226, 0.3) 80%, 
-		        transparent
+			transparent, 
+			rgba(74, 144, 226, 0.3) 20%, 
+			rgba(74, 144, 226, 0.3) 80%, 
+			transparent
 		    );
 		    z-index: 1;
 		}
-
+	
 		.setup-divider-text {
 		    position: relative;
 		    z-index: 2;
@@ -539,7 +562,7 @@
 		    border: 2px solid rgba(74, 144, 226, 0.3);
 		    border-radius: 50px;
 		}
-
+	
 		.completion-message {
 		    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(99, 179, 237, 0.1));
 		    border: 2px solid rgba(74, 144, 226, 0.2);
@@ -549,36 +572,36 @@
 		    margin-top: 2rem;
 		    animation: pulse 2s infinite;
 		}
-
+	
 		.completion-message p {
 		    font-size: 1.2rem;
 		    color: var(--primary-color);
 		    margin: 0;
 		}
-
+	
 		@keyframes pulse {
 		    0% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+			box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
 		    }
 		    70% {
-		        box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+			box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
 		    }
 		    100% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+			box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
 		    }
 		}
-
+	
 		@keyframes fadeInDown {
 		    from {
-		        opacity: 0;
-		        transform: translateY(-20px);
+			opacity: 0;
+			transform: translateY(-20px);
 		    }
 		    to {
-		        opacity: 1;
-		        transform: translateY(0);
+			opacity: 1;
+			transform: translateY(0);
 		    }
 		}
-
+	
 		.setup-block {
 		    background-color: rgba(74, 144, 226, 0.05);
 		    border-radius: 12px;
@@ -586,7 +609,7 @@
 		    margin-bottom: 1.5rem;
 		    border: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 		.setup-block h4 {
 		    color: var(--primary-color);
 		    font-size: 1.2rem;
@@ -594,25 +617,12 @@
 		    padding-bottom: 0.5rem;
 		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
 		}
-
+	
 	</style>
 </head>
 
-
-
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
-            <nav class="nav-links">
-                <a href="readme.html">導入ガイド</a>
-                <a href="manual.html">プレイガイド</a>
-                <a href="troubleshooting.html">トラブルガイド</a>
-                <a href="credits.html">クレジット</a>
-                <a href="updates.html">アップデート</a>
-	    </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main style="padding-top: 90px">
         <div class="container">
@@ -1112,13 +1122,6 @@
 
     <a href="#" class="back-to-top" id="backToTop">↑</a>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
-            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
-        </div>
-    </footer>
-
-    <!-- 既存のスクリプト部分 -->
+    <div id="footer"></div>
 </body>
 </html>
