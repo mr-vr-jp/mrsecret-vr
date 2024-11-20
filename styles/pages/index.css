@@ -148,7 +148,6 @@
     text-align: center;
 }
 
-
 .manual-about-content {
     text-align: center;
     line-height: 1.8;
@@ -163,7 +162,6 @@
     opacity: 0;
     animation: fadeInMessage 1.5s ease forwards;
 }
-
 
 @keyframes fadeInMessage {
     from {
