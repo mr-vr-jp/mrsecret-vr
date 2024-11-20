@@ -28,12 +28,12 @@
             padding: 0;
         }
 
-		.container {
-		    max-width: 1200px;  /* オリジナルと同じ幅 */
-		    margin: 0 auto;
-		    padding: 0 20px;
-		    position: relative; /* 目次の位置決めの基準点として必要 */
-		}
+	.container {
+	    max-width: 1200px;  /* オリジナルと同じ幅 */
+	    margin: 0 auto;
+	    padding: 0 20px;
+	    position: relative; /* 目次の位置決めの基準点として必要 */
+	}
 
 
         .guide-content {
@@ -1807,116 +1807,115 @@
             }
         }
 
+	.quick-nav {
+	    position: fixed;
+	    left: calc(50% + 450px); /* コンテナの半分 + 余白 */
+	    top: 20%;
+	    transform: translateY(-50%);
+	    background: rgba(74, 144, 226, 0.1);
+	    backdrop-filter: blur(8px);
+	    padding: 1rem;
+	    border-radius: 12px;
+	    border: 1px solid rgba(74, 144, 226, 0.2);
+	    z-index: 1000;
+	    width: 200px;
+	    max-height: 80vh;
+	    overflow-y: auto;
+	    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
 
-		.quick-nav {
-		    position: fixed;
-		    left: calc(50% + 450px); /* コンテナの半分 + 余白 */
-		    top: 50%;
-		    transform: translateY(-50%);
-		    background: rgba(74, 144, 226, 0.1);
-		    backdrop-filter: blur(8px);
-		    padding: 1rem;
-		    border-radius: 12px;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		    z-index: 1000;
-		    width: 200px;
-		    max-height: 80vh;
-		    overflow-y: auto;
-		    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-		}
+	.quick-nav::-webkit-scrollbar {
+	    width: 4px;
+	}
 
-		.quick-nav::-webkit-scrollbar {
-		    width: 4px;
-		}
+	.quick-nav::-webkit-scrollbar-track {
+	    background: rgba(74, 144, 226, 0.05);
+	}
 
-		.quick-nav::-webkit-scrollbar-track {
-		    background: rgba(74, 144, 226, 0.05);
-		}
+	.quick-nav::-webkit-scrollbar-thumb {
+	    background: var(--primary-color);
+	    border-radius: 2px;
+	}
 
-		.quick-nav::-webkit-scrollbar-thumb {
-		    background: var(--primary-color);
-		    border-radius: 2px;
-		}
+	.quick-nav-title {
+	    color: var(--accent-color);
+	    font-size: 0.9rem;
+	    margin-bottom: 1rem;
+	    padding-bottom: 0.5rem;
+	    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+	}
 
-		.quick-nav-title {
-		    color: var(--accent-color);
-		    font-size: 0.9rem;
-		    margin-bottom: 1rem;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
+	.quick-nav-list {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    display: flex;
+	    flex-direction: column;
+	    gap: 0.25rem;
+	}
 
-		.quick-nav-list {
-		    list-style: none;
-		    padding: 0;
-		    margin: 0;
-		    display: flex;
-		    flex-direction: column;
-		    gap: 0.25rem;
-		}
+	.quick-nav-item {
+	    font-size: 0.85rem;
+	    position: relative;
+	}
 
-		.quick-nav-item {
-		    font-size: 0.85rem;
-		    position: relative;
-		}
+	.quick-nav-link {
+	    display: block;
+	    color: var(--text-color);
+	    text-decoration: none;
+	    padding: 0.5rem 0.75rem;
+	    border-radius: 6px;
+	    transition: all 0.3s ease;
+	    opacity: 0.7;
+	    position: relative;
+	}
 
-		.quick-nav-link {
-		    display: block;
-		    color: var(--text-color);
-		    text-decoration: none;
-		    padding: 0.5rem 0.75rem;
-		    border-radius: 6px;
-		    transition: all 0.3s ease;
-		    opacity: 0.7;
-		    position: relative;
-		}
+	.quick-nav-link:hover {
+	    background: rgba(74, 144, 226, 0.2);
+	    opacity: 1;
+	}
 
-		.quick-nav-link:hover {
-		    background: rgba(74, 144, 226, 0.2);
-		    opacity: 1;
-		}
+	.quick-nav-link.active {
+	    background: var(--primary-color);
+	    color: white;
+	    opacity: 1;
+	}
 
-		.quick-nav-link.active {
-		    background: var(--primary-color);
-		    color: white;
-		    opacity: 1;
-		}
+	/* 現在位置を示すインジケーター */
+	.quick-nav-link::before {
+	    content: "";
+	    position: absolute;
+	    left: -0.5rem;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    width: 3px;
+	    height: 0;
+	    background: var(--primary-color);
+	    transition: height 0.3s ease;
+	    border-radius: 1.5px;
+	}
 
-		/* 現在位置を示すインジケーター */
-		.quick-nav-link::before {
-		    content: "";
-		    position: absolute;
-		    left: -0.5rem;
-		    top: 50%;
-		    transform: translateY(-50%);
-		    width: 3px;
-		    height: 0;
-		    background: var(--primary-color);
-		    transition: height 0.3s ease;
-		    border-radius: 1.5px;
-		}
+	.quick-nav-link.active::before {
+	    height: 80%;
+	}
 
-		.quick-nav-link.active::before {
-		    height: 80%;
-		}
+	@media (max-width: 1700px) {
+	    .quick-nav {
+		left: calc(50% + 400px);
+	    }
+	}
 
-		@media (max-width: 1700px) {
-		    .quick-nav {
-		        left: calc(50% + 400px);
-		    }
-		}
-
-		@media (max-width: 1500px) {
-		    .quick-nav {
-		        left: calc(50% + 350px);
-		    }
-		}
-		
-		@media (max-width: 1200px) {
-		    .quick-nav {
-		        display: none;
-		    }
-		}
+	@media (max-width: 1500px) {
+	    .quick-nav {
+		left: calc(50% + 350px);
+	    }
+	}
+	
+	@media (max-width: 1200px) {
+	    .quick-nav {
+		display: none;
+	    }
+	}
     </style>
 </head>
 <body>
@@ -1924,38 +1923,38 @@
         <div class="container">
             <div class="guide-content">
                 <h1 class="main-title">プレイガイド</h1>
-				<nav class="quick-nav">
-				    <h2 class="quick-nav-title">目次</h2>
-				    <ul class="quick-nav-list">
-				        <li class="quick-nav-item">
-				            <a href="#introduction" class="quick-nav-link">
-				                はじめに
-				            </a>
-				        </li>
-				        <li class="quick-nav-item">
-				            <a href="#basic-controls" class="quick-nav-link">
-				                基本操作ガイド
-				            </a>
-				        </li>
-				        <li class="quick-nav-item">
-				            <a href="#mode-details" class="quick-nav-link">
-				                各モードの詳細
-				            </a>
-				        </li>
-				        <li class="quick-nav-item">
-				            <a href="#tips" class="quick-nav-link">
-				                豆知識とTips
-				            </a>
-				        </li>
-				        <li class="quick-nav-item">
-				            <a href="#faq" class="quick-nav-link">
-				                よくある質問
-				            </a>
-				        </li>
-				    </ul>
-				</nav>
-
-				<section id="introduction" class="chapter">
+			<nav class="quick-nav">
+			    <h2 class="quick-nav-title">目次</h2>
+			    <ul class="quick-nav-list">
+				<li class="quick-nav-item">
+				    <a href="#introduction" class="quick-nav-link">
+					はじめに
+				    </a>
+				</li>
+				<li class="quick-nav-item">
+				    <a href="#basic-controls" class="quick-nav-link">
+					基本操作ガイド
+				    </a>
+				</li>
+				<li class="quick-nav-item">
+				    <a href="#mode-details" class="quick-nav-link">
+					各モードの詳細
+				    </a>
+				</li>
+				<li class="quick-nav-item">
+				    <a href="#tips" class="quick-nav-link">
+					豆知識とTips
+				    </a>
+				</li>
+				<li class="quick-nav-item">
+				    <a href="#faq" class="quick-nav-link">
+					よくある質問
+				    </a>
+				</li>
+			    </ul>
+			</nav>
+	
+		<section id="introduction" class="chapter">
                     <h2 class="chapter-title">はじめに</h2>
 
                     <div class="intro-card">
