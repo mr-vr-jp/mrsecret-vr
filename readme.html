@@ -3,603 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ミスター秘密侵入VR - 導入ガイド</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-	<style>
-		:root {
-		    --primary-color: #4a90e2;
-		    --text-color: #e4e4e7;
-		    --bg-color: #18181b;
-		    --card-bg: #27272a;
-		    --warning-color: #e2984a;
-		}
-
-		body {
-		    font-family: 'Noto Sans JP', sans-serif;
-		    background-color: var(--bg-color);
-		    color: var(--text-color);
-		    line-height: 1.6;
-		    margin: 0;
-		    padding: 0;
-		}
-
-		.container {
-		    max-width: 1200px;
-		    margin: 0 auto;
-		    padding: 0 20px;
-		}
-
-		.header {
-		    background-color: rgba(39, 39, 42, 0.95);
-		    backdrop-filter: blur(10px);
-		    position: fixed;
-		    width: 100%;
-		    top: 0;
-		    z-index: 1000;
-		}
-
-		.header-content {
-		    display: flex;
-		    justify-content: space-between;
-		    align-items: center;
-		    height: 70px;
-		}
-
-		.logo {
-		    font-size: 1.5rem;
-		    font-weight: 700;
-		    color: var(--text-color);
-		    text-decoration: none;
-		}
-
-		.nav-links {
-		    display: flex;
-		    gap: 2rem;
-		}
-
-		.nav-links a {
-		    color: var(--text-color);
-		    text-decoration: none;
-		    font-weight: 500;
-		    transition: color 0.2s;
-		}
-
-		.nav-links a:hover {
-		    color: var(--primary-color);
-		}
-
-		.manual-content {
-		    padding: 2rem;
-		    background-color: var(--card-bg);
-		    border-radius: 12px;
-		    margin-top: 2rem;
-		    animation: fadeIn 0.6s ease;
-		}
-
-		.table-of-contents {
-		    background-color: rgba(74, 144, 226, 0.1);
-		    padding: 1.5rem;
-		    border-radius: 8px;
-		    margin-bottom: 2rem;
-		}
-
-		.table-of-contents h2 {
-		    margin-top: 0;
-		    color: var(--primary-color);
-		    border-bottom: 2px solid var(--primary-color);
-		    padding-bottom: 0.5rem;
-		}
-
-		.toc-list {
-		    list-style: none;
-		    padding-left: 0;
-		    margin: 0;
-		}
-
-		.toc-list li {
-		    margin-bottom: 0.8rem;
-		}
-
-		.toc-list ul {
-		    list-style: none;
-		    padding-left: 1.5rem;
-		    margin-top: 0.5rem;
-		}
-
-		.toc-list a {
-		    color: var(--text-color);
-		    text-decoration: none;
-		    transition: color 0.2s;
-		    display: flex;
-		    align-items: center;
-		}
-
-		.toc-list a:hover {
-		    color: var(--primary-color);
-		}
-
-		.toc-list a::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    margin-right: 0.5rem;
-		}
-
-		.section {
-		    margin-bottom: 3rem;
-		    opacity: 0;
-		    transform: translateY(20px);
-		    animation: fadeInUp 0.6s ease forwards;
-		}
-
-		.section h2 {
-		    color: var(--primary-color);
-		    font-size: 1.8rem;
-		    margin-bottom: 1.5rem;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 2px solid var(--primary-color);
-		}
-
-		.section h3 {
-		    color: #63b3ed;
-		    font-size: 1.4rem;
-		    margin-top: 2rem;
-		    margin-bottom: 1rem;
-		}
-
-		.section-link {
-		    color: var(--primary-color);
-		    text-decoration: none;
-		    transition: color 0.2s;
-		}
-		
-		.section-link:hover {
-		    color: #63b3ed;
-		    text-decoration: underline;
-		}
-
-		.step-list {
-		    list-style: none;
-		    padding-left: 0;
-		    counter-reset: step-counter;
-		}
-
-		.step-list > li {
-		    position: relative;
-		    padding-left: 2.5rem;
-		    margin-bottom: 1.5rem;
-		    counter-increment: step-counter;
-		}
-
-		.step-list > li::before {
-		    content: counter(step-counter);
-		    position: absolute;
-		    left: 0;
-		    top: 0;
-		    width: 1.8rem;
-		    height: 1.8rem;
-		    background-color: var(--primary-color);
-		    border-radius: 50%;
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    font-size: 0.9rem;
-		    font-weight: bold;
-		    color: white;
-		}
-
-		.path-example {
-		    font-family: 'Source Code Pro', monospace;
-		    background-color: rgba(74, 144, 226, 0.1);
-		    padding: 0.4rem 0.8rem;
-		    border-radius: 4px;
-		    border-left: 3px solid var(--primary-color);
-		    display: inline-block;
-		    margin: 0.5rem 0;
-		}
-
-		.installation-link {
-		    display: inline-flex;
-		    align-items: center;
-		    color: var(--primary-color);
-		    text-decoration: none;
-		    padding: 0.5rem 1rem;
-		    background-color: rgba(74, 144, 226, 0.1);
-		    border-radius: 4px;
-		    margin: 0.5rem 0;
-		    transition: background-color 0.2s;
-		    border: 1px solid rgba(74, 144, 226, 0.3);
-		}
-
-		.installation-link:hover {
-		    background-color: rgba(74, 144, 226, 0.2);
-		}
-
-		.note-box {
-		    background-color: rgba(226, 152, 74, 0.1);
-		    border-left: 4px solid #e2984a;
-		    padding: 1rem;
-		    margin: 1rem 0;
-		    border-radius: 0 8px 8px 0;
-		}
-
-		.version-tabs {
-		    display: flex;
-		    gap: 1rem;
-		    margin-bottom: 2rem;
-		    flex-wrap: wrap;
-		}
-
-		.version-tab {
-		    padding: 0.8rem 1.5rem;
-		    background: none;
-		    border: 2px solid var(--primary-color);
-		    color: var(--primary-color);
-		    border-radius: 8px;
-		    cursor: pointer;
-		    transition: all 0.2s;
-		    font-weight: 500;
-		    min-width: 150px;
-		    text-align: center;
-		}
-
-		.version-tab.active {
-		    background-color: var(--primary-color);
-		    color: white;
-		}
-
-		.version-content {
-		    display: none;
-		}
-
-		.version-content.active {
-		    display: block;
-		    animation: fadeIn 0.4s ease;
-		}
-
-		.version-card {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    margin-bottom: 1rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-		
-		.version-content {
-		    /* version-contentクラスのdisplay: none;を削除 */
-		    margin-top: 1rem;
-		}
-		
-		.version-content ul {
-		    list-style: none;
-		    padding-left: 1.2rem;
-		    margin: 0;
-		}
-		
-		.version-content li {
-		    position: relative;
-		    margin-bottom: 0.5rem;
-		}
-		
-		.version-content li::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    position: absolute;
-		    left: -1.2rem;
-		}	
-
-		.version-cards {
-		    display: grid;
-		    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		    gap: 1.5rem;
-		    margin: 2rem 0;
-		}
-
-		.version-card {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.version-card h3 {
-		    color: var(--primary-color);
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.version-card-content ul {
-		    list-style: none;
-		    padding-left: 1.2rem;
-		    margin: 0;
-		}
-
-		.version-card-content li {
-		    position: relative;
-		    margin-bottom: 0.8rem;
-		}
-
-		.version-card-content li::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    position: absolute;
-		    left: -1.2rem;
-		}		
-		
-		.sub-steps {
-		    padding-left: 2rem;
-		    margin-top: 1rem;
-		    border-left: 2px solid rgba(74, 144, 226, 0.3);
-		}
-
-		.warning {
-		    background-color: rgba(226, 74, 74, 0.1);
-		    border-left: 4px solid #e24a4a;
-		    padding: 1rem;
-		    margin: 1rem 0;
-		    border-radius: 0 8px 8px 0;
-		}
-
-		.back-to-top {
-		    position: fixed;
-		    bottom: 2rem;
-		    right: 2rem;
-		    background-color: var(--primary-color);
-		    color: white;
-		    width: 40px;
-		    height: 40px;
-		    border-radius: 50%;
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    text-decoration: none;
-		    opacity: 0;
-		    transition: opacity 0.3s, background-color 0.2s;
-		    z-index: 1000;
-		}
-
-		.back-to-top.visible {
-		    opacity: 1;
-		}
-
-		.back-to-top:hover {
-		    background-color: #357abd;
-		}
-
-		.footer {
-		    text-align: center;
-		    padding: 2rem 0;
-		    color: #94a3b8;
-		    font-size: 0.875rem;
-		    margin-top: 4rem;
-		}
-
-		@keyframes fadeInUp {
-		    from {
-		        opacity: 0;
-		        transform: translateY(20px);
-		    }
-		    to {
-		        opacity: 1;
-		        transform: translateY(0);
-		    }
-		}
-
-		@keyframes fadeIn {
-		    from {
-		        opacity: 0;
-		    }
-		    to {
-		        opacity: 1;
-		    }
-		}
-
-		.headset-options {
-		    display: flex;
-		    flex-direction: column;
-		    gap: 2rem;
-		}
-
-		.headset-option {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.headset-type {
-		    margin-bottom: 1.5rem;
-		}
-
-		.headset-type h4 {
-		    display: flex;
-		    align-items: center;
-		    gap: 0.5rem;
-		    color: var(--primary-color);
-		    font-size: 1.2rem;
-		    margin: 0 0 0.5rem 0;
-		}
-
-		.headset-icon {
-		    font-size: 1.4rem;
-		}
-
-		.supported-devices {
-		    color: #94a3b8;
-		    font-size: 0.9rem;
-		    margin-left: 2rem;
-		}
-
-		.connection-methods {
-		    margin-top: 1rem;
-		}
-
-		.method-card {
-		    background-color: rgba(74, 144, 226, 0.1);
-		    border-radius: 8px;
-		    padding: 1.25rem;
-		    margin-bottom: 1rem;
-		}
-
-		.method-card h5 {
-		    color: var(--primary-color);
-		    font-size: 1.1rem;
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.video-guide {
-		    padding: 0.5rem;
-		}
-
-		.video-link {
-		    display: inline-flex;
-		    align-items: center;
-		    gap: 0.5rem;
-		}
-
-		.video-icon {
-		    font-size: 1.2rem;
-		    color: #e24a4a;
-		}
-
-		@media (max-width: 640px) {
-		    .manual-content {
-		        padding: 1rem;
-		    }
-
-		    .section h2 {
-		        font-size: 1.5rem;
-		    }
-
-		    .section h3 {
-		        font-size: 1.2rem;
-		    }
-
-		    .version-tab {
-		        width: 100%;
-		    }
-
-		    .back-to-top {
-		        bottom: 1rem;
-		        right: 1rem;
-		    }
-
-		    .headset-option {
-		        padding: 1rem;
-		    }
-
-		    .method-card {
-		        padding: 1rem;
-		    }
-		}
-
-		.main-title {
-		    font-size: 2.5rem;
-		    color: var(--primary-color);
-		    text-align: center;
-		    margin-bottom: 3rem;
-		    padding-bottom: 1rem;
-		    border-bottom: 3px solid var(--primary-color);
-		    animation: fadeInDown 0.6s ease;
-		}
-
-		.setup-divider {
-		    margin: 4rem 0;
-		    position: relative;
-		    text-align: center;
-		    padding: 2rem 0;
-		}
-
-		.setup-divider::before {
-		    content: "";
-		    position: absolute;
-		    top: 50%;
-		    left: 0;
-		    right: 0;
-		    height: 2px;
-		    background: linear-gradient(90deg, 
-		        transparent, 
-		        rgba(74, 144, 226, 0.3) 20%, 
-		        rgba(74, 144, 226, 0.3) 80%, 
-		        transparent
-		    );
-		    z-index: 1;
-		}
-
-		.setup-divider-text {
-		    position: relative;
-		    z-index: 2;
-		    background: var(--card-bg);
-		    padding: 0 2rem;
-		    font-size: 1.2rem;
-		    color: var(--primary-color);
-		    display: inline-block;
-		    border: 2px solid rgba(74, 144, 226, 0.3);
-		    border-radius: 50px;
-		}
-
-		.completion-message {
-		    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(99, 179, 237, 0.1));
-		    border: 2px solid rgba(74, 144, 226, 0.2);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    text-align: center;
-		    margin-top: 2rem;
-		    animation: pulse 2s infinite;
-		}
-
-		.completion-message p {
-		    font-size: 1.2rem;
-		    color: var(--primary-color);
-		    margin: 0;
-		}
-
-		@keyframes pulse {
-		    0% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
-		    }
-		    70% {
-		        box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
-		    }
-		    100% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
-		    }
-		}
-
-		@keyframes fadeInDown {
-		    from {
-		        opacity: 0;
-		        transform: translateY(-20px);
-		    }
-		    to {
-		        opacity: 1;
-		        transform: translateY(0);
-		    }
-		}
-
-		.setup-block {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    margin-bottom: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.setup-block h4 {
-		    color: var(--primary-color);
-		    font-size: 1.2rem;
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-	</style>
+    <title>導入ガイド - ミスター秘密侵入VR</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="ミスター秘密侵入VR のインストール方法と初期設定を解説しています。PCVR版とQuest版それぞれの導入手順を詳しく説明します。">
+    <meta name="keywords" content="ミスター秘密侵入VR, インストール, セットアップ, 導入方法">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- OGP -->
+    <meta property="og:title" content="導入ガイド - ミスター秘密侵入VR">
+    <meta property="og:description" content="ミスター秘密侵入VR のインストール方法と初期設定を解説しています。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://your-domain.com/readme.html">
+    <meta property="og:image" content="assets/images/ogp.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/utils.css">
+    <link rel="stylesheet" href="styles/pages/readme.css">
 </head>
-
-
-
 <body>
     <header class="header">
         <div class="container header-content">
@@ -610,507 +40,504 @@
                 <a href="troubleshooting.html">トラブルガイド</a>
                 <a href="credits.html">クレジット</a>
                 <a href="updates.html">アップデート</a>
-	    </nav>
+            </nav>
         </div>
     </header>
 
-    <main style="padding-top: 90px">
+    <main role="main">
         <div class="container">
-            <div class="manual-content">
-                <h1 class="main-title">導入ガイド</h1>
+            <h1 class="main-title">導入ガイド</h1>
 
-		<div class="table-of-contents">
-		    <h2>目次</h2>
-		    <nav class="toc-list">
-		        <div class="toc-section">
-		            <div class="toc-heading">
-		                <a href="#pcvr-setup">PCVR版のセットアップ手順</a>
-		            </div>
-		            <ul></ul>
-		        </div>
-		        <div class="toc-section">
-		            <div class="toc-heading">
-		                <a href="#quest-setup">Quest単体版のセットアップ手順</a>
-		            </div>
-		            <ul>
-		                <li><a href="#sidequest-method">A. SideQuestを使用する方法</a></li>
-		                <li><a href="#mobile-vr-method">B. Mobile VR Stationを使用する方法</a></li>
-		            </ul>
-		        </div>
-			<div class="toc-section">
-			    <div class="toc-heading">
-			        <a href="#update-instructions">アップデート手順</a>
-			    </div>
-			    <ul>
-			        <li><a href="#pcvr-update">PCVR版のアップデート</a></li>
-			        <li><a href="#quest-update">Quest単体版のアップデート</a></li>
-			    </ul>
-			</div>
-		    </nav>
-		</div>
-
-                <section class="section intro-section">
-                    <div class="thank-you">
-                        <h2>お買い上げありがとうございます</h2>
-						<div class="version-cards">
-						    <div class="version-card pcvr">
-						        <h3>PCVR版</h3>
-						        <div class="version-card-content">
-						            <ul>
-						                <li>PCとVRヘッドセットを接続して使用</li>
-						                <li>SteamVRを起動し、「MRsecretVR.exe」を実行してプレイ</li>
-						            </ul>
-						        </div>
-						    </div>
-						    <div class="version-card quest">
-						        <h3>Quest単体版</h3>
-						        <div class="version-card-content">
-						            <ul>
-						                <li>Meta Questシリーズ単体で動作</li>
-						                <li>Quest本体に「MRsecretVR.apk」をインストールしてプレイ</li>
-						            </ul>
-						        </div>
-						    </div>
-						</div>                        
-                        <div class="section-note">
-                            <p>以下に詳しい手順を記載します。</p>
-                        </div>
-                    </div>
-                </section>
-
-
-		<section id="pcvr-setup" class="section setup-section">
-                    <h2>PCVR版のセットアップ手順</h2>
-
-                    <div id="steamvr-install" class="setup-block">
-                        <h3>1. SteamVRのインストール</h3>
-                        <ol class="step-list">
-                            <li>PCでSteamを起動してください</li>
-                            <li>画面上部の「ストア」から「SteamVR」を検索
-                                <div class="sub-steps">
-                                    もしくは<a href="https://store.steampowered.com/app/250820/SteamVR/" 
-                                       class="installation-link" 
-                                       target="_blank">
-                                        こちら
-                                    </a>
-					から直接アクセス
-                                </div>
-                            </li>
-                            <li>「ゲームをプレイ」を選択し、インストールを完了させてください</li>
-                        </ol>
-                    </div>
-                    
-                    <div id="game-placement" class="setup-block">
-                        <h3>2. ゲームファイルの配置</h3>
-                        <ol class="step-list">
-                            <li>ダウンロードしたゲームファイルを展開してください</li>
-                            <li>展開したフォルダ「MRsecretVR_PCVR」を以下のような条件の場所に配置してください
-                                <div class="sub-steps file-path-examples">
-                                    <p>日本語（全角文字）が含まれないフォルダに置く:</p>
-                                    <div class="path-example success">
-                                        <code>OK → C:\Games\MRsecretVR_PCVR</code>
-                                    </div>
-                                    <div class="path-example error">
-                                        <code>NG → C:\ゲーム\MRsecretVR_PCVR</code>
-                                    </div>
-                                </div>
-                            </li>
-                        </ol>
-                        <div class="note-box">
-                            <p>※全角文字が含まれるとゲーム内での入力が効かなくなる場合があります。</p>
-                        </div>
-                    </div>
-
-                    <div id="vr-connection" class="setup-block">
-                        <h3>3. VRヘッドセットの接続とSteamVRの起動</h3>
-                        
-                        <div class="headset-options">
-                            <div class="headset-type">
-                                <h4>PCVR専用機の場合</h4>
-                                <div class="supported-devices">対応機種：Pimax、VIVE等</div>
-                            </div>
-                            <div class="setup-steps">
-                                <ol class="step-list">
-                                    <li>VRヘッドセットをPCに接続</li>
-                                    <li>SteamVRを起動</li>
-                                </ol>
-                            </div>
-
-                            <div class="headset-type">
-                                <h4>スタンドアロン機の場合</h4>
-                                <div class="supported-devices">対応機種：Quest 2/Pro/3/3S、PICO Neo 3/4/4 Ultra等</div>
-                            </div>
-                            <div class="connection-methods">
-                                <p>PCVRを遊ぶには以下のいずれかの方法が必要です</p>
-                                
-                                <div class="method-card">
-                                    <h5>1. Quest Link（Questのみ）</h5>
-                                    <ol class="step-list">
-                                        <li><a href="https://www.meta.com/ja-jp/help/quest/articles/headsets-and-accessories/oculus-rift-s/install-app-for-link/" class="installation-link" target="_blank">Meta Quest Linkアプリ</a>をインストール</li>
-                                        <li>Quest本体の設定→システム→リンク→オン</li>
-                                        <li>Air Linkの場合は<a href="https://www.meta.com/ja-jp/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/" class="installation-link" target="_blank">ペアリング</a>が必要です</li>
-                                        <li>接続後、Quest Linkのホーム画面が起動します</li>
-                                        <li>ホーム画面からSteam VRを選択して起動します</li>
-                                    </ol>
-                                </div>
-
-                                <div class="method-card">
-                                    <h5>2. Virtual Desktop（無線・別途購入必要）</h5>
-                                    <ol class="step-list">
-                                        <li>Quest本体に<a href="https://www.meta.com/ja-jp/experiences/virtual-desktop/2017050365004772/" class="installation-link" target="_blank">Virtual Desktopアプリ</a>をインストール</li>
-                                        <li>PCに<a href="https://www.vrdesktop.net/" class="installation-link" target="_blank">Virtual Desktopストリーマー</a>をインストール</li>
-                                        <li>Quest本体からVirtual Desktopを起動し、PCと接続</li>
-                                        <li>接続が成功するとQuest内にPC画面が表示されます</li>
-                                        <li>左メニューから「Launch SteamVR」を選択</li>
-                                    </ol>
-                                </div>
-
-                                <div class="method-card">
-                                    <h5>3. Steam Link（Questのみ）</h5>
-                                    <div class="video-guide">
-                                        <a href="https://youtu.be/m5I_IkItfUA" class="installation-link video-link" target="_blank">
-                                            Steam Link設定の解説動画
-                                        </a>を見る
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="note-box">
-                            <p>各接続方法が正常に完了すると、SteamVRのホーム画面がヘッドセットに表示されます。その状態で次に進んでください。</p>
-                        </div>
-                    </div>
-
-                    <div id="game-launch-pcvr" class="setup-block">
-                        <h3>4. ゲームの起動</h3>
-                        <ol class="step-list">
-                            <li>配置した「MRsecretVR_PCVR」フォルダを開く</li>
-                            <li>フォルダ内の「MRsecretVR.exe」をダブルクリック</li>
-                            <li>ゲームが起動し、VRヘッドセットにゲーム画面が表示されます</li>
-                        </ol>
-                        <div class="completion-message">
-                            <p>✨ おめでとうございます！ ✨</p>
-                            <p>これですべての準備が完了しました！</p>
-                            <p>存分に彼女との時間をお楽しみください！🕶</p>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="setup-divider">
-                    <span class="setup-divider-text">または</span>
+            <section class="intro-section">
+                <div class="thank-you-message">
+                    この度はご購入いただき、誠にありがとうございます
                 </div>
-                
-                
-                <section id="quest-setup" class="section setup-section">
-                    <h2>Quest単体版のセットアップ手順</h2>
 
-                    <div class="setup-block method-options">
-                        <h3>インストール方法の選択</h3>
-                        <p>現在、インストール方法は大きく2通りあります</p>
-                        <div class="method-options-grid">
-                            <div class="method-option">
-                                <h4>A. SideQuestを使用する方法</h4>
-                                <p>PCを使用してインストールする方法です</p>
-                            </div>
-                            <div class="method-option">
-                                <h4>B. Mobile VR Stationを使用する方法</h4>
-                                <p>Quest単体でインストール可能な方法です</p>
-                            </div>
+                <div class="version-cards">
+                    <div class="version-card pcvr">
+                        <h3>PCVR版</h3>
+                        <div class="version-card-content">
+                            <ul>
+                                <li>PCとVRヘッドセットを接続して使用</li>
+                                <li>SteamVRを起動し、「MRsecretVR.exe」を実行してプレイ</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div id="sidequest-method" class="setup-block">
-                        <h3>A. SideQuestを使用する方法</h3>
-                        
-                        <div class="setup-step">
-                            <h4>1. 開発者モードの有効化</h4>
-                            
-                            <div class="sub-step">
-                                <h5>Meta Quest for Developersでの組織登録</h5>
-                                <ol class="step-list">
-                                    <li><a href="https://developer.oculus.com/" class="installation-link" target="_blank">Meta Quest for Developers</a>にアクセス</li>
-                                    <li>Meta Questのアカウントでログイン</li>
-                                    <li>本人確認のため以下のいずれかを設定
-                                        <div class="sub-steps">
-                                            <ul>
-                                                <li>クレジットカード情報の登録（請求は発生しません）</li>
-                                                <li>または二段階認証の設定</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>組織名を登録</li>
-                                </ol>
-                                <div class="note-box">
-                                    <p>非公式アプリをプレイするだけの場合は任意の名前で問題ありません</p>
-                                </div>
-                            </div>
-
-                            <div class="sub-step">
-                                <h5>スマホのMeta Questアプリでの設定</h5>
-                                <ol class="step-list">
-                                    <li>スマホのBluetooth機能をオンにする</li>
-                                    <li>スマホのMeta Questアプリを起動</li>
-                                    <li>三本線アイコンをタップしてメニューを開く</li>
-                                    <li>「デバイス」を選択</li>
-                                    <li>お使いのQuestを選択（「接続済み」と表示されていることを確認）</li>
-                                    <li>「ヘッドセットの設定」をタップ</li>
-                                    <li>「開発者モード」をタップしてオン</li>
-                                    <li>Quest本体を再起動</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>2. ADBドライバーのインストール</h4>
-                            <ol class="step-list">
-                                <li><a href="https://developer.oculus.com/downloads/package/oculus-adb-drivers/" class="installation-link" target="_blank">Meta Quest開発者センター</a>にアクセス</li>
-                                <li>「Download」をクリック</li>
-                                <li>「I have read and agree to the terms of the license .」にチェックを入れる</li>
-                                <li>「Download」をクリックしてファイルを保存</li>
-                                <li>ダウンロードしたzipファイルを解凍</li>
-                                <li>解凍したフォルダ内の「android_winusb.inf」を右クリックし「インストール」を選択</li>
-                                <li>「この操作を正しく終了しました」と表示されたら「OK」をクリック</li>
-                            </ol>
-                        </div>
-                        
-                        
-                        
-                        <div class="setup-step">
-                            <h4>3. SideQuestのインストール</h4>
-                            <ol class="step-list">
-                                <li><a href="https://sidequestvr.com/setup-howto" class="installation-link" target="_blank">SideQuest公式サイト</a>にアクセス</li>
-                                <li>「Advanced Installer」から「DOWNLOAD FOR WINDOWS」をクリック</li>
-                                <li>ダウンロードしたファイルを実行してインストール</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h4>4. QuestとPCの接続</h4>
-                            <ol class="step-list">
-                                <li>QuestとPCをUSBケーブルで接続</li>
-                                <li>Quest内で「USBデバッグを許可しますか？」→「許可する」を選択</li>
-                                <li>Quest内のホームメニュー下部のベルアイコンの「お知らせ」を選択</li>
-                                <li>「USBが検出されました」を選択</li>
-                                <li>「接続したデバイスにファイルへのアクセスを許可しますか？」→「許可する」を選択</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>5. ゲームのインストール</h4>
-                            <ol class="step-list">
-                                <li>SideQuestを起動</li>
-                                <li>SideQuest画面左上のマークが緑色になっていることを確認
-                                    <div class="sub-steps">
-                                        <div class="status-box success">
-                                            <p>Questの機種名が表示されていれば接続成功です</p>
-                                        </div>
-                                        <div class="status-box warning">
-                                            <p>オレンジ色の場合は接続できていません。PCとの接続を確認してください</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>画面右上の「Install APK from folder」アイコン（フォルダマーク）をクリック</li>
-                                <li>ダウンロードした「MRsecretVR.apk」を選択</li>
-                                <li>インストール進行状況が画面左に表示されます</li>
-                                <li>インストール完了時に「MRsecretVR.apk: APK installed ok!!」と表示されます</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>6. ゲームの起動</h4>
-                            <ol class="step-list">
-                                <li>Questでアプリメニューを開く</li>
-                                <li>左側メニューから
-                                    <div class="sub-steps">
-                                        <ul>
-                                            <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>「MRsecretVR」を選択して起動</li>
-                            </ol>
-                            <div class="note-box">
-                                <p>※提供元不明が表示されない場合はQuest本体を再起動してください。</p>
-                            </div>
-                            <div class="completion-message">
-                                <p>✨ おめでとうございます！ ✨</p>
-                                <p>これですべての準備が完了しました！</p>
-                                <p>存分に彼女との時間お楽しみください！🕶</p>
-                            </div>
+                    <div class="version-card quest">
+                        <h3>Quest単体版</h3>
+                        <div class="version-card-content">
+                            <ul>
+                                <li>Meta Questシリーズ単体で動作</li>
+                                <li>Quest本体に「MRsecretVR.apk」をインストールしてプレイ</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    
-                    <div id="mobile-vr-method" class="setup-block">
-                        <h3>B. Mobile VR Stationを使用する方法</h3>
-
-                        <div class="setup-step">
-                            <h4>1. 開発者モードの有効化</h4>
-                            <div class="reference-box">
-                                <p>前述のA方式の「開発者モードの有効化」と同じ手順で設定してください</p>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>2. Mobile VR Stationのインストール</h4>
-                            <div class="store-link">
-                                <a href="https://www.meta.com/ja-jp/experiences/mobile-vr-station/3887008398005125/" 
-                                   class="installation-link store-button" 
-                                   target="_blank">
-                                    Meta Quest ストア
-                                </a>
-                                からインストール
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>3. APKファイルの準備</h4>
-                            <p>APKファイルをQuest本体に用意する方法は2通りあります</p>
-
-                            <div class="method-card">
-                                <h5>方法1: Quest単体で準備する場合</h5>
-                                <ol class="step-list">
-                                    <li>Questのブラウザから<a href="https://www.dlsite.com/" class="installation-link" target="_blank">DLSite</a>にアクセス</li>
-                                    <li>アカウントにログインしてゲームをダウンロード</li>
-                                    <li>ダウンロードしたzipファイルをMobile VR Stationで解凍
-                                        <div class="sub-steps procedure-steps">
-                                            <ol>
-                                                <li>Mobile VR Stationを開く</li>
-                                                <li>「ローカルファイル - Local Files」を選択</li>
-                                                <li>「ダウンロード - Downloads」を選択</li>
-                                                <li>ダウンロードしたゲームのzipファイルを選択</li>
-                                                <li>「ファイルの抽出 - Extract Files」を選択</li>
-                                                <li>「お待ちください」メッセージが表示→「OK」を選択</li>
-                                                <li>ダウンロードフォルダに解凍されたことを確認</li>
-                                            </ol>
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="note-box">
-                                    <p>※この時点ではapkファイルは見えません</p>
-                                </div>
-                            </div>
-
-                            <div class="method-card">
-                                <h5>方法2: PCから転送する場合</h5>
-                                <ol class="step-list">
-                                    <li>PCでダウンロードしたゲームファイルを展開</li>
-                                    <li>QuestとPCをUSB接続</li>
-                                    <li>Quest内で「ファイルアクセスを許可」を選択</li>
-                                    <li>PCからQuestの「download」フォルダに「MRsecretVR.apk」をコピー</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>4. APKのインストール</h4>
-                            <ol class="step-list">
-                                <li>Mobile VR Stationを起動</li>
-                                <li>「構成ウィザード - Configuration Wizard」→「Show All Options」→「Configure Scoped Storage」→再度「Configure Scoped Storage」を選択</li>
-                                <li>「Step1: Request Access」を選択</li>
-                                <li>「Quest」→「Download」フォルダを開く</li>
-                                <li>「MRsecretVR_ver**」フォルダ内の「MRsecretVR.apk」を確認</li>
-                                <li>APKファイルの右上の4つの矢印アイコンを選択</li>
-                                <li>確認画面で「次へ」→「インストール」を選択</li>
-                                <li>インストール完了したら「完了」を選択</li>
-                                <li>Mobile VR Stationを終了</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>5. ゲームの起動</h4>
-                            <ol class="step-list">
-                                <li>Questでアプリメニューを開く</li>
-                                <li>左側メニューから
-                                    <div class="sub-steps">
-                                        <ul>
-                                            <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>「MRsecretVR」を選択して起動</li>
-                            </ol>
-                            <div class="note-box">
-                                <p>※提供元不明が表示されない場合はQuest本体を再起動してください。</p>
-                            </div>
-                            <div class="completion-message">
-                                <p>✨ おめでとうございます！ ✨</p>
-                                <p>これですべての準備が完了しました！</p>
-                                <p>存分に彼女との時間をお楽しみください！🕶</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="setup-divider">
                 </div>
-		
-		<section id="update-instructions" class="section update-section">
-		    <h2>アップデート手順</h2>
-		    
-		    <div class="note-box important">
-		        <p>アップデートの前にお読みください</p>
-		        <ul>
-		            <li>PC版、Quest版ともにセーブデータは引き継がれます</li>
-		        </ul>
-		    </div>
-				
-			<div id="pcvr-update" class="setup-block">
-			    <h3>PCVR版のアップデート</h3>
-			    <ol class="step-list">
-				<li>ダウンロードしたファイルを展開</li>
-				<li>新バージョンの「MRsecretVR.exe」を実行</li>
-			    </ol>
-			
-			    <div class="note-box troubleshooting">
-				<p>💡 アップデート後にゲーム開始画面でメニューが選択できない場合</p>
-				<ul>
-				    <li>ゲームフォルダを別の場所に移動してみてください
-					<div class="path-example">
-					    <code>例: Downloads → Desktop</code>
-					</div>
-				    </li>
-				    <li>または、フォルダ名を最初に起動した時の名前に戻してみてください<BR>
-					<div class="path-example">
-					    <code>例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0</code>
-					</div>
-				    </li>
-				</ul>
-			    </div>
-			</div>
 
-		    <div id="quest-update" class="setup-block">
-			<h3>Quest単体版のアップデート</h3>
-			<div class="update-methods">
-			    <div class="method-card">
-				<h4>方法1: SideQuestを使用する場合</h4>
-				<ol class="step-list">
-				    <li>新バージョンの「MRsecretVR.apk」を用意</li>
-				    <li>通常のインストール手順と同様にSideQuestでインストール
-					<div class="note-box">
-					    <p>※自動的に上書きインストールされます</p>
-					</div>
-				    </li>
-				</ol>
-			    </div>
-		
-			<div class="method-card">
-			    <h4>方法2: Mobile VR Stationを使用する場合</h4>
-			    <p>SideQuestでインストールできない場合は、本ガイドの<a href="#mobile-vr-method" class="section-link">「B. Mobile VR Stationを使用する方法」</a>の手順で実施してください。</p>
-			</div>
-			</div>
-		    </div>
-		
-		    <div class="completion-message">
-			<p>アップデートが完了しました！</p>
-			<p>新機能や改善された体験をお楽しみください！</p>
-		    </div>
-		</section>
+                <div class="section-note">
+                    以下に詳しい手順を記載します。
+                </div>
+            </section>
+
+
+
+	    <div class="table-of-contents">
+                <h2>目次</h2>
+                <div class="toc-section">
+                    <div class="toc-heading">
+                        <a href="#pcvr-setup">PCVR版のセットアップ手順</a>
+                    </div>
+                </div>
+
+                <div class="toc-section">
+                    <div class="toc-heading">
+                        <a href="#quest-setup">Quest単体版のセットアップ手順</a>
+                    </div>
+                    <ul>
+                        <li><a href="#sidequest-method">A. SideQuestを使用する方法</a></li>
+                        <li><a href="#mobile-vr-method">B. Mobile VR Stationを使用する方法</a></li>
+                    </ul>
+                </div>
+
+                <div class="toc-section">
+                    <div class="toc-heading">
+                        <a href="#update-instructions">アップデート手順</a>
+                    </div>
+                    <ul>
+                        <li><a href="#pcvr-update">PCVR版のアップデート</a></li>
+                        <li><a href="#quest-update">Quest単体版のアップデート</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <section id="pcvr-setup" class="setup-section">
+                <h2>PCVR版のセットアップ手順</h2>
+
+                <div class="setup-block">
+                    <h3>1. SteamVRのインストール</h3>
+                    <ol>
+                        <li>PCでSteamを起動してください</li>
+                        <li>画面上部の「ストア」から「SteamVR」を検索</li>
+                        <li class="sub-steps">
+                            もしくは
+                            <a href="https://store.steampowered.com/app/250820/SteamVR/" 
+                               class="installation-link" target="_blank">こちら</a>
+                            から直接アクセス
+                        </li>
+                        <li>「ゲームをプレイ」を選択し、インストールを完了させてください</li>
+                    </ol>
+                </div>
+
+                <div class="setup-block">
+                    <h3>2. ゲームファイルの配置</h3>
+                    <ol>
+                        <li>ダウンロードしたゲームファイルを展開してください</li>
+                        <li>展開したフォルダ「MRsecretVR_PCVR」を以下のような条件の場所に配置してください</li>
+                        <div class="sub-steps">
+                            日本語（全角文字）が含まれないフォルダに置く:
+                            <div class="path-example success">OK → C:\Games\MRsecretVR_PCVR</div>
+                            <div class="path-example error">NG → C:\ゲーム\MRsecretVR_PCVR</div>
+                        </div>
+                    </ol>
+                    <div class="note-box">
+                        ※全角文字が含まれるとゲーム内での入力が効かなくなる場合があります。
+                    </div>
+                </div>
+
+		<div class="setup-block">
+                    <h3>3. VRヘッドセットの接続とSteamVRの起動</h3>
+                    
+                    <div class="setup-step">
+                        <h4>PCVR専用機の場合</h4>
+                        <div class="sub-step">
+                            <p>対応機種：Pimax、VIVE等</p>
+                            <ol>
+                                <li>VRヘッドセットをPCに接続</li>
+                                <li>SteamVRを起動</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>スタンドアロン機の場合</h4>
+                        <div class="sub-step">
+                            <p>対応機種：Quest 2/Pro/3/3S、PICO Neo 3/4/4 Ultra等</p>
+                            <p>PCVRを遊ぶには以下のいずれかの方法が必要です</p>
+                            
+                            <div class="method-card">
+                                <h5>1. Quest Link（Questのみ）</h5>
+                                <ol>
+                                    <li>
+                                        <a href="https://www.meta.com/ja-jp/quest/setup/" 
+                                           class="installation-link" target="_blank">Meta Quest Link</a>
+                                        をインストール
+                                    </li>
+                                    <li>Quest本体の設定→システム→リンク→オン</li>
+                                    <li>Air Linkの場合は
+                                        <a href="https://www.meta.com/ja-jp/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/" 
+                                           target="_blank">ペアリング</a>
+                                        が必要です
+                                    </li>
+                                    <li>接続後、Quest Linkのホーム画面が起動します</li>
+                                    <li>ホーム画面からSteam VRを選択して起動します</li>
+                                </ol>
+                            </div>
+
+                            <div class="method-card">
+                                <h5>2. Virtual Desktop（無線・別途購入必要）</h5>
+                                <ol>
+                                    <li>Quest本体に
+                                        <a href="https://www.meta.com/ja-jp/experiences/virtual-desktop/" 
+                                           class="installation-link" target="_blank">Virtual Desktop</a>
+                                        をインストール
+                                    </li>
+                                    <li>PCに
+                                        <a href="https://www.vrdesktop.net/" 
+                                           class="installation-link" target="_blank">Virtual Desktop ストリーマー</a>
+                                        をインストール
+                                    </li>
+                                    <li>Quest本体からVirtual Desktopを起動し、PCと接続</li>
+                                    <li>接続が成功するとQuest内にPC画面が表示されます</li>
+                                    <li>左メニューから「Launch SteamVR」を選択</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-box">
+                        各接続方法が正常に完了すると、SteamVRのホーム画面がヘッドセットに表示されます。その状態で次に進んでください。
+                    </div>
+                </div>
+
+		<div class="setup-block">
+                    <h3>4. ゲームの起動</h3>
+                    <ol>
+                        <li>配置した「MRsecretVR_PCVR」フォルダを開く</li>
+                        <li>フォルダ内の「MRsecretVR.exe」をダブルクリック</li>
+                        <li>ゲームが起動し、VRヘッドセットにゲーム画面が表示されます</li>
+                    </ol>
+
+                    <div class="completion-message">
+                        ✨ おめでとうございます！ ✨<br>
+                        これですべての準備が完了しました！<br>
+                        存分に彼女との時間をお楽しみください！🕶
+                    </div>
+                </div>
+            </section>
+
+            <div class="setup-divider">
+                <span class="setup-divider-text">または</span>
+            </div>
+
+            <section id="quest-setup" class="setup-section">
+                <h2>Quest単体版のセットアップ手順</h2>
+
+                <div class="setup-block method-options">
+                    <h3>インストール方法の選択</h3>
+                    <p>現在、インストール方法は大きく2通りあります</p>
+
+                    <div class="method-options-grid">
+                        <div class="method-option">
+                            <h4>A. SideQuestを使用する方法</h4>
+                            <p>PCを使用してインストールする方法です</p>
+                        </div>
+
+                        <div class="method-option">
+                            <h4>B. Mobile VR Stationを使用する方法</h4>
+                            <p>Quest単体でインストール可能な方法です</p>
+                        </div>
+                    </div>
+                </div>
+
+		<div id="sidequest-method" class="setup-block">
+                    <h3>A. SideQuestを使用する方法</h3>
+                    
+                    <div class="setup-step">
+                        <h4>1. 開発者モードの有効化</h4>
+                        <div class="sub-step">
+                            <h5>Meta Quest for Developersでの組織登録</h5>
+                            <ol>
+                                <li>
+                                    <a href="https://developer.oculus.com/" class="installation-link" target="_blank">
+                                        Meta Quest for Developers
+                                    </a>にアクセス
+                                </li>
+                                <li>Meta Questのアカウントでログイン</li>
+                                <li>本人確認のため以下のいずれかを設定
+                                    <div class="sub-steps">
+                                        <ul>
+                                            <li>クレジットカード情報の登録（請求は発生しません）</li>
+                                            <li>または二段階認証の設定</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>組織名を登録</li>
+                            </ol>
+                            <div class="note-box">
+                                非公式アプリをプレイするだけの場合は任意の名前で問題ありません
+                            </div>
+                        </div>
+
+                        <div class="sub-step">
+                            <h5>スマホのMeta Questアプリでの設定</h5>
+                            <ol>
+                                <li>スマホのBluetooth機能をオンにする</li>
+                                <li>スマホのMeta Questアプリを起動</li>
+                                <li>三本線アイコンをタップしてメニューを開く</li>
+                                <li>「デバイス」を選択</li>
+                                <li>お使いのQuestを選択（「接続済み」と表示されていることを確認）</li>
+                                <li>「ヘッドセットの設定」をタップ</li>
+                                <li>「開発者モード」をタップしてオン</li>
+                                <li>Quest本体を再起動</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>2. ADBドライバーのインストール</h4>
+                        <ol>
+                            <li>
+                                <a href="https://developer.oculus.com/downloads/package/oculus-adb-drivers/" 
+                                   class="installation-link" target="_blank">Meta Quest開発者センター</a>
+                                にアクセス
+                            </li>
+                            <li>「Download」をクリック</li>
+                            <li>「I have read and agree to the terms of the license」にチェックを入れる</li>
+                            <li>「Download」をクリックしてファイルを保存</li>
+                            <li>ダウンロードしたzipファイルを解凍</li>
+                            <li>解凍したフォルダ内の「android_winusb.inf」を右クリックし「インストール」を選択</li>
+                            <li>「この操作を正しく終了しました」と表示されたら「OK」をクリック</li>
+                        </ol>
+                    </div>
+
+		    <div class="setup-step">
+                        <h4>3. SideQuestのインストール</h4>
+                        <ol>
+                            <li>
+                                <a href="https://sidequestvr.com/setup-howto" class="installation-link" target="_blank">
+                                    SideQuest公式サイト
+                                </a>にアクセス
+                            </li>
+                            <li>「Advanced Installer」から「DOWNLOAD FOR WINDOWS」をクリック</li>
+                            <li>ダウンロードしたファイルを実行してインストール</li>
+                        </ol>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>4. QuestとPCの接続</h4>
+                        <ol>
+                            <li>QuestとPCをUSBケーブルで接続</li>
+                            <li>Quest内で「USBデバッグを許可しますか？」→「許可する」を選択</li>
+                            <li>Quest内のホームメニュー下部のベルアイコンの「お知らせ」を選択</li>
+                            <li>「USBが検出されました」を選択</li>
+                            <li>「接続したデバイスにファイルへのアクセスを許可しますか？」→「許可する」を選択</li>
+                        </ol>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>5. ゲームのインストール</h4>
+                        <ol>
+                            <li>SideQuestを起動</li>
+                            <li>SideQuest画面左上のマークが緑色になっていることを確認
+                                <div class="sub-steps">
+                                    <div class="status-box success">
+                                        Questの機種名が表示されていれば接続成功です
+                                    </div>
+                                    <div class="status-box warning">
+                                        オレンジ色の場合は接続できていません。PCとの接続を確認してください
+                                    </div>
+                                </div>
+                            </li>
+                            <li>画面右上の「Install APK from folder」アイコン（フォルダマーク）をクリック</li>
+                            <li>ダウンロードした「MRsecretVR.apk」を選択</li>
+                            <li>インストール進行状況が画面左に表示されます</li>
+                            <li>インストール完了時に「MRsecretVR.apk: APK installed ok!!」と表示されます</li>
+                        </ol>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>6. ゲームの起動</h4>
+                        <ol>
+                            <li>Questでアプリメニューを開く</li>
+                            <li>左側メニューから
+                                <div class="sub-steps">
+                                    <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
+                                </div>
+                            </li>
+                            <li>「MRsecretVR」を選択して起動</li>
+                        </ol>
+                        <div class="note-box">
+                            ※提供元不明が表示されない場合はQuest本体を再起動してください。
+                        </div>
+
+                        <div class="completion-message">
+                            ✨ おめでとうございます！ ✨<br>
+                            これですべての準備が完了しました！<br>
+                            存分に彼女との時間をお楽しみください！🕶
+                        </div>
+                    </div>
+                </div>
+
+		<div id="mobile-vr-method" class="setup-block">
+                    <h3>B. Mobile VR Stationを使用する方法</h3>
+
+                    <div class="setup-step">
+                        <h4>1. 開発者モードの有効化</h4>
+                        <div class="reference-box">
+                            前述のA方式の「開発者モードの有効化」と同じ手順で設定してください
+                        </div>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>2. Mobile VR Stationのインストール</h4>
+                        <div class="store-link">
+                            <a href="https://www.meta.com/ja-jp/experiences/mobile-vr-station/3887008398005125/" 
+                               class="installation-link store-button" target="_blank">Meta Quest ストア</a>
+                            からインストール
+                        </div>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>3. APKファイルの準備</h4>
+                        <p>APKファイルをQuest本体に用意する方法は2通りあります</p>
+
+                        <div class="method-card">
+                            <h5>方法1: Quest単体で準備する場合</h5>
+                            <ol>
+                                <li>QuestのブラウザからDLSiteにアクセス</li>
+                                <li>アカウントにログインしてゲームをダウンロード</li>
+                                <li>ダウンロードしたzipファイルをMobile VR Stationで解凍
+                                    <div class="sub-steps procedure-steps">
+                                        <ol>
+                                            <li>Mobile VR Stationを開く</li>
+                                            <li>「ローカルファイル - Local Files」を選択</li>
+                                            <li>「ダウンロード - Downloads」を選択</li>
+                                            <li>ダウンロードしたゲームのzipファイルを選択</li>
+                                            <li>「ファイルの抽出 - Extract Files」を選択</li>
+                                            <li>「お待ちください」メッセージが表示→「OK」を選択</li>
+                                            <li>ダウンロードフォルダに解凍されたことを確認</li>
+                                        </ol>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="note-box">
+                                ※この時点ではapkファイルは見えません
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <h5>方法2: PCから転送する場合</h5>
+                            <ol>
+                                <li>PCでダウンロードしたゲームファイルを展開</li>
+                                <li>QuestとPCをUSB接続</li>
+                                <li>Quest内で「ファイルアクセスを許可」を選択</li>
+                                <li>PCからQuestの「download」フォルダに「MRsecretVR.apk」をコピー</li>
+                            </ol>
+                        </div>
+                    </div>
+
+		    <div class="setup-step">
+                        <h4>4. APKのインストール</h4>
+                        <ol>
+                            <li>Mobile VR Stationを起動</li>
+                            <li>「構成ウィザード - Configuration Wizard」→「Show All Options」→「Configure Scoped Storage」→再度「Configure Scoped Storage」を選択</li>
+                            <li>「Step1: Request Access」を選択</li>
+                            <li>「Quest」→「Download」フォルダを開く</li>
+                            <li>「MRsecretVR_ver**」フォルダ内の「MRsecretVR.apk」を確認</li>
+                            <li>APKファイルの右上の4つの矢印アイコンを選択</li>
+                            <li>確認画面で「次へ」→「インストール」を選択</li>
+                            <li>インストール完了したら「完了」を選択</li>
+                            <li>Mobile VR Stationを終了</li>
+                        </ol>
+                    </div>
+
+                    <div class="setup-step">
+                        <h4>5. ゲームの起動</h4>
+                        <ol>
+                            <li>Questでアプリメニューを開く</li>
+                            <li>左側メニューから
+                                <div class="sub-steps">
+                                    <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
+                                </div>
+                            </li>
+                            <li>「MRsecretVR」を選択して起動</li>
+                        </ol>
+                        <div class="note-box">
+                            ※提供元不明が表示されない場合はQuest本体を再起動してください。
+                        </div>
+
+                        <div class="completion-message">
+                            ✨ おめでとうございます！ ✨<br>
+                            これですべての準備が完了しました！<br>
+                            存分に彼女との時間をお楽しみください！🕶
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="update-instructions" class="update-section">
+                <h2>アップデート手順</h2>
+
+                <div class="note-box important">
+                    アップデートの前にお読みください
+                    <ul>
+                        <li>PC版、Quest版ともにセーブデータは引き継がれます</li>
+                    </ul>
+                </div>
+
+                <div id="pcvr-update" class="setup-block">
+                    <h3>PCVR版のアップデート</h3>
+                    <ol>
+                        <li>ダウンロードしたファイルを展開</li>
+                        <li>新バージョンの「MRsecretVR.exe」を実行</li>
+                    </ol>
+
+                    <div class="note-box troubleshooting">
+                        💡 アップデート後にゲーム開始画面でメニューが選択できない場合
+                        <ul>
+                            <li>ゲームフォルダを別の場所に移動してみてください
+                                <div class="path-example">例: Downloads → Desktop</div>
+                            </li>
+                            <li>または、フォルダ名を最初に起動した時の名前に戻してみてください
+                                <div class="path-example">例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="quest-update" class="setup-block">
+                    <h3>Quest単体版のアップデート</h3>
+                    <div class="update-methods">
+                        <div class="method-card">
+                            <h4>方法1: SideQuestを使用する場合</h4>
+                            <ol>
+                                <li>新バージョンの「MRsecretVR.apk」を用意</li>
+                                <li>通常のインストール手順と同様にSideQuestでインストール</li>
+                            </ol>
+                            <div class="note-box">
+                                ※自動的に上書きインストールされます
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <h4>方法2: Mobile VR Stationを使用する場合</h4>
+                            <p>
+                                SideQuestでインストールできない場合は、本ガイドの
+                                <a href="#mobile-vr-method">「B. Mobile VR Stationを使用する方法」</a>
+                                の手順で実施してください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="completion-message">
+                    アップデートが完了しました！<br>
+                    新機能や改善された体験をお楽しみください！
+                </div>
+            </section>
         </div>
     </main>
-
-    <a href="#" class="back-to-top" id="backToTop">↑</a>
 
     <footer class="footer">
         <div class="container">
@@ -1119,6 +546,8 @@
         </div>
     </footer>
 
-    <!-- 既存のスクリプト部分 -->
+    <a href="#" id="backToTop" class="back-to-top">↑</a>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
