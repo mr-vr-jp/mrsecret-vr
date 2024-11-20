@@ -27,6 +27,15 @@
         height: 90px;
         display: inline-block;
         position: relative;
+        overflow: hidden;
+    }
+    
+    .logo img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        position: relative;
+        z-index: 1;
     }
     
     .logo::after {
@@ -45,12 +54,8 @@
         );
         transform: skewX(-25deg);
         animation: shine 6s ease-in-out infinite;
-    }
-        
-    .logo img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
+        z-index: 2;
+        pointer-events: none;
     }
     
     .nav-links {
