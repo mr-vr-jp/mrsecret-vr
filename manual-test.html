@@ -1567,12 +1567,12 @@
             border: 2px solid transparent;
         }
 
-        .category-button.active {
-            background: var(--primary-color);
-            color: white;
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
-        }
-
+	.category-button.active {
+	    background: var(--primary-color);
+	    color: white;
+	    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+	}
+	
         .category-button:hover:not(.active) {
             background: rgba(74, 144, 226, 0.15);
             transform: translateY(-2px);
@@ -1582,14 +1582,13 @@
             font-size: 1.5rem;
         }
 
-        .faq-content {
-            display: none;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .faq-content.active {
-            display: block;
-        }
+	.faq-content {
+	    display: none;
+	}
+	
+	.faq-content.active {
+	    display: block;
+	}
 
         .faq-card {
             background: rgba(74, 144, 226, 0.08);
@@ -2553,12 +2552,20 @@
                     </div>
                 </section>
                 
-                
-                <section id="faq" class="chapter">
+        	<section id="faq" class="chapter">
                     <h2 class="chapter-title">よくある質問と対処方法</h2>
 
                     <div class="faq-container">
-                        <div class="faq-content" id="gameplay-faq">
+			<div class="faq-categories">
+			    <div class="category-button active" data-category="gameplay">
+			        <span>ゲームプレイ</span>
+			    </div>
+			    <div class="category-button" data-category="controls">
+			        <span>操作方法</span>
+			    </div>
+			</div>
+
+			<div class="faq-content active" id="gameplay-faq">
                             <div class="faq-card">
                                 <div class="faq-question">
                                     <div class="question-icon">❓</div>
@@ -2651,7 +2658,6 @@
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
     </main>
@@ -2854,10 +2860,33 @@
 		});
 	    });
 	});
+
+	document.addEventListener('DOMContentLoaded', function() {
+	    // FAQのタブ切り替え機能
+	    const faqButtons = document.querySelectorAll('.category-button');
+	    const faqContents = document.querySelectorAll('.faq-content');
+	    
+	    // 初期状態で最初のカテゴリーを表示
+	    document.querySelector('.category-button').classList.add('active');
+	    document.querySelector('.faq-content').classList.add('active');
+	    
+	    faqButtons.forEach(button => {
+	        button.addEventListener('click', () => {
+	            // ボタンのアクティブ状態を切り替え
+	            faqButtons.forEach(btn => btn.classList.remove('active'));
+	            button.classList.add('active');
+	            
+	            // コンテンツの表示を切り替え
+	            const targetCategory = button.getAttribute('data-category');
+	            faqContents.forEach(content => {
+	                content.classList.remove('active');
+	                if (content.id === `${targetCategory}-faq`) {
+	                    content.classList.add('active');
+	                }
+	            });
+	        });
+	    });
+	});
     </script>
 </body>
 </html>
-
-
-
-
