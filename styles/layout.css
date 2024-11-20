@@ -105,9 +105,23 @@
 /* Requirements Section Layout */
 .requirements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-top: 1.5rem;
+}
+
+.requirements-grid .card {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+.requirements-grid .requirements-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
 /* Video Container Layout */
