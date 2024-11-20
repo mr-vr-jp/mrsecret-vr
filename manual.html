@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ミスター秘密侵入VR - プレイガイド</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('ヘッダーの読み込みに失敗しました:', error);
+                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
+                });
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('フッターの読み込みに失敗しました:', error);
+                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
+                });
+        });
+    </script>    
     <style>
         :root {
             --primary-color: #4a90e2;
@@ -225,18 +248,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
-            <nav class="nav-links">
-                <a href="readme.html">導入ガイド</a>
-                <a href="manual.html">プレイガイド</a>
-                <a href="troubleshooting.html">トラブルガイド</a>
-                <a href="credits.html">クレジット</a>
-                <a href="updates.html">アップデート</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main style="padding-top: 90px">
         <div class="container">
@@ -470,15 +482,8 @@
 
     <a href="#" class="back-to-top" id="backToTop">↑</a>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
-            <p>本マニュアルの内容は予告なく変更される場合があります。</p>
-        </div>
-    </footer>
-
+    <div id="footer"></div>
     <script>
-        // スムーズスクロール
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -491,7 +496,6 @@
             });
         });
 
-        // トップに戻るボタンの表示制御
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 200) {
@@ -501,7 +505,6 @@
             }
         });
 
-        // 各セクションのアニメーション遅延設定
         document.querySelectorAll('.section').forEach((section, index) => {
             section.style.animationDelay = `${index * 0.1}s`;
         });
