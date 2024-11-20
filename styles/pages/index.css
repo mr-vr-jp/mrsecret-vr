@@ -148,11 +148,6 @@
     text-align: center;
 }
 
-.manual-about-content {
-    text-align: center;
-    line-height: 1.8;
-}
-
 .thank-you-message {
     font-size: 1.25rem;
     color: var(--primary-color);
