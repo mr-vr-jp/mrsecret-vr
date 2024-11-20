@@ -1,4 +1,10 @@
 /* Main Title */
+.manual-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .main-title {
     color: var(--primary-color);
     text-align: center;
@@ -7,10 +13,11 @@
 
 /* Table of Contents */
 .table-of-contents {
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(255, 255, 255, 0.03);
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 3rem;
+    border: 1px solid var(--border-color);
 }
 
 .toc-section {
@@ -18,28 +25,29 @@
 }
 
 .toc-heading {
+    color: var(--primary-color);
     font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.toc-section li {
+    margin-left: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-/* Setup Sections */
-.intro-section {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
+/* Version Cards */
 .version-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 2rem 0;
 }
 
 .version-card {
-    background: white;
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .version-card.pcvr {
@@ -50,12 +58,41 @@
     border-left: 4px solid var(--success-color);
 }
 
-/* Setup Steps */
+.version-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.version-card-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.version-card-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.version-card-content li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Setup Section */
 .setup-block {
-    margin-bottom: 3rem;
+    background: var(--card-bg);
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.02);
     border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.setup-block h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
 }
 
 .setup-step {
@@ -63,52 +100,90 @@
 }
 
 .sub-steps {
-    margin-left: 2rem;
-    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
 }
 
-/* File Path Examples */
-.file-path-examples {
-    background: rgba(0, 0, 0, 0.03);
-    padding: 1rem;
-    border-radius: 4px;
-    margin: 1rem 0;
-}
-
-.path-example {
-    padding: 0.5rem;
-    font-family: monospace;
-}
-
-.path-example.success {
-    color: var(--success-color);
-}
-
-.path-example.error {
-    color: var(--error-color);
-}
-
-/* Connection Methods */
-.connection-methods {
-    margin-top: 2rem;
-}
-
+/* Method Cards */
 .method-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.03);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
 }
 
-/* Completion Message */
-.completion-message {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(40, 167, 69, 0.1);
-    border-radius: 8px;
-    margin: 2rem 0;
+.method-card h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Installation Links */
+.installation-link {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(74, 144, 226, 0.1);
+    transition: background-color 0.2s;
+}
+
+.installation-link:hover {
+    background: rgba(74, 144, 226, 0.2);
+    text-decoration: none;
+}
+
+/* Path Examples */
+.file-path-examples {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.path-example {
+    font-family: monospace;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.path-example.success {
     color: var(--success-color);
+    border-left: 3px solid var(--success-color);
+    padding-left: 1rem;
+}
+
+.path-example.error {
+    color: var(--error-color);
+    border-left: 3px solid var(--error-color);
+    padding-left: 1rem;
+}
+
+/* Note Box */
+.note-box {
+    background: rgba(74, 144, 226, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+/* Status Box */
+.status-box {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+.status-box.success {
+    background: rgba(40, 167, 69, 0.1);
+    border-left: 3px solid var(--success-color);
+}
+
+.status-box.warning {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 3px solid var(--warning-color);
 }
 
 /* Setup Divider */
@@ -118,8 +193,8 @@
     position: relative;
 }
 
-.setup-divider::before,
-.setup-divider::after {
+.setup-divider:before,
+.setup-divider:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -128,16 +203,26 @@
     background: var(--border-color);
 }
 
-.setup-divider::before {
+.setup-divider:before {
     left: 0;
 }
 
-.setup-divider::after {
+.setup-divider:after {
     right: 0;
 }
 
 .setup-divider-text {
-    background: white;
+    background: var(--bg-color);
     padding: 0 1rem;
     color: var(--secondary-color);
+}
+
+/* Completion Message */
+.completion-message {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.2);
+    border-radius: 8px;
+    margin: 2rem 0;
 }
