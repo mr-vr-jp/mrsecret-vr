@@ -28,11 +28,12 @@
             padding: 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+		.container {
+		    max-width: 800px; /* メインコンテンツの最大幅 */
+		    margin: 0 auto;
+		    padding: 0 20px;
+		    position: relative; /* 位置の基準点として設定 */
+		}
 
         .guide-content {
             padding: 2rem;
@@ -1798,7 +1799,8 @@
 
 		.quick-nav {
 		    position: fixed;
-		    right: 2rem;
+		    /* コンテンツ枠からの相対位置指定に変更 */
+		    left: calc(50% + 400px); /* メインコンテンツ幅の半分 + 余白 */
 		    top: 50%;
 		    transform: translateY(-50%);
 		    background: rgba(74, 144, 226, 0.1);
@@ -1888,10 +1890,15 @@
 		    height: 80%;
 		}
 
-		@media (max-width: 1400px) {
+		@media (max-width: 1700px) {
 		    .quick-nav {
-		        right: 1rem;
-		        width: 180px;
+		        left: calc(50% + 350px);
+		    }
+		}
+
+		@media (max-width: 1500px) {
+		    .quick-nav {
+		        left: calc(50% + 300px);
 		    }
 		}
 
@@ -1900,7 +1907,6 @@
 		        display: none;
 		    }
 		}
-
     </style>
 </head>
 <body>
