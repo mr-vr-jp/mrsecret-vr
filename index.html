@@ -50,10 +50,14 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
+            height: 40px;
+            display: inline-block;
+        }
+        
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
         }
         
         .nav-links {
@@ -393,9 +397,12 @@
         }
     </style>
 </head>
-<body>    <header class="header">
+<body>
+    <header class="header">
         <div class="container header-content">
-            <a href="index.html" class="logo">ミスター秘密侵入VR</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="ミスター秘密侵入VR">
+            </a>
             <nav class="nav-links">
                 <a href="readme.html">導入ガイド</a>
                 <a href="manual.html">プレイガイド</a>
@@ -409,12 +416,9 @@
     <main>
         <div class="container">
             <section class="hero">
-                <h1 class="hero-title">ミスター秘密侵入VR 公式マニュアル</h1>
-                <div class="manual-about">
                     <p class="thank-you-message">
-                        この度はご購入いただき、誠にありがとうございます
+                        この度はご購入いただき、誠にありがとうございます!
                     </p>
-                </div>
                 
                 <div class="main-image-container">
                     <div class="image-glow"></div>
