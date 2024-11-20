@@ -127,7 +127,7 @@
             position: relative;
             margin: 2rem auto;
             max-width: 1000px;
-            padding: 20px;
+            padding: 25px;
             overflow: hidden;
         }
         
@@ -135,29 +135,48 @@
             width: 100%;
             height: auto;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-                        0 0 30px rgba(74, 144, 226, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(74, 144, 226, 0.3),
+                0 0 50px rgba(74, 144, 226, 0.2);  /* 追加の光彩効果 */
+            border: 1px solid rgba(255, 255, 255, 0.15);
             position: relative;
             z-index: 2;
         }
         
         .image-glow {
             position: absolute;
-            top: -20px;
-            left: -20px;
-            width: calc(100% + 40px);
-            height: calc(100% + 40px);
+            top: -30px;
+            left: -30px;
+            width: calc(100% + 60px);
+            height: calc(100% + 60px);
             border-radius: 12px;
             background: radial-gradient(
                 ellipse at center,
-                rgba(74, 144, 226, 0.3) 0%,
-                rgba(74, 144, 226, 0.15) 30%,
-                rgba(74, 144, 226, 0) 70%
+                rgba(74, 144, 226, 0.4) 0%,
+                rgba(74, 144, 226, 0.2) 40%,
+                rgba(74, 144, 226, 0.1) 60%,
+                rgba(74, 144, 226, 0) 80%
             );
-            filter: blur(20px);  /* ぼかしを強める */
-            animation: pulseGlow 3s ease-in-out infinite;
+            filter: blur(25px);  /* ぼかしを強める */
+            animation: pulseGlow 4s ease-in-out infinite;
             z-index: 1;
+        }
+
+        .image-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(
+                circle at center,
+                rgba(74, 144, 226, 0.3) 0%,
+                rgba(74, 144, 226, 0.1) 40%,
+                transparent 70%
+            );
+            animation: pulseGlow 4s ease-in-out infinite reverse;
         }
         
         .purchase-link {
@@ -411,9 +430,18 @@
         }
         
         @keyframes pulseGlow {
-            0% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-            100% { opacity: 0.3; }
+            0% { 
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.8;
+                transform: scale(1.02);
+            }
+            100% { 
+                opacity: 0.4;
+                transform: scale(1);
+            }
         }
         
         @media (max-width: 768px) {
