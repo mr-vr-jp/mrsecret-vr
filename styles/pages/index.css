@@ -52,11 +52,10 @@
 }
 
 .requirements-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    min-height: 300px;  /* 最小の高さを設定 */
-    display: flex;
-    flex-direction: column;    
+    margin-bottom: 2rem;
 }
 
 .requirements-list {
@@ -120,4 +119,11 @@
     text-align: center;
     margin-bottom: 1rem;
     text-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+@media (max-width: 768px) {
+    .requirements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
