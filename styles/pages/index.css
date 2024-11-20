@@ -59,8 +59,9 @@
 }
 
 .requirements-grid .card {
-    height: 100%;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
 }
 
 .requirements-grid .requirements-category {
@@ -69,7 +70,11 @@
 }
 
 .requirements-grid .requirements-list {
-    margin: 0.5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
 .requirements-list {
@@ -81,6 +86,17 @@
 .requirements-list li {
     margin-bottom: 1rem;
     line-height: 1.5;
+}
+
+.requirements-grid h2 {
+    margin-bottom: 1.5rem;
+}
+
+.requirements-category {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /* News Section */
