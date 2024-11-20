@@ -517,9 +517,6 @@
             font-size: 1.2rem;
         }
 
-        .item-management h3::before { content: "🎒"; }
-        .interaction-guide h3::before { content: "👆"; }
-
         .feature-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -641,7 +638,6 @@
         }
 
         .setting-card h4::before {
-            content: "⚙️";
             font-size: 1.2rem;
         }
         
@@ -2029,7 +2025,6 @@
                             <h3>基本操作</h3>
                             <div class="controls-grid">
                                 <div class="control-card">
-                                    <div class="control-icon">🕹️</div>
                                     <div class="control-content">
                                         <h4>移動操作</h4>
                                         <ul>
@@ -2042,7 +2037,6 @@
                                 </div>
 
                                 <div class="control-card">
-                                    <div class="control-icon">🎮</div>
                                     <div class="control-content">
                                         <h4>アクション操作</h4>
                                         <ul>
@@ -2054,7 +2048,6 @@
                                 </div>
 
                                 <div class="control-card">
-                                    <div class="control-icon">📏</div>
                                     <div class="control-content">
                                         <h4>視点調整</h4>
                                         <ul>
@@ -2066,27 +2059,27 @@
                         </div>
 
                         <div class="item-management feature-section">
-                            <h3>アイテム管理システム</h3>
-                            
+                            <h3>アイテム収納</h3>
                             <div class="feature-cards">
                                 <div class="feature-card">
                                     <h4>リュックの使用方法</h4>
                                     <div class="feature-content">
                                         <ul>
                                             <li>背中に手を伸ばしグリップでリュックを掴む</li>
-                                            <li>前に持ってくると収納スロットが確認可能</li>
-                                            <li>12個の正面スロットと各側面に1個のスロット</li>
+                                            <li>目の前に持ってくると中身を確認可能</li>
+                                            <li>12個の収納スロット＋両サイドに各1個のスロット</li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div class="feature-card">
-                                    <h4>ホルスターシステム</h4>
+                                    <h4>ホルスター（左手首）</h4>
                                     <div class="feature-content">
                                         <ul>
-                                            <li>左手首に1つのクイックアクセススロット</li>
-                                            <li>よく使うアイテムの収納に最適</li>
-                                            <li>モニターを入れると常時映像確認が可能</li>
+                                            <li>よく使うアイテム1つを収納可能</li>
+                                            <div class="tip-box">
+                                                <p>💡 モニターを入れると常時映像確認が可能です</p>
+                                            </div>
                                         </ul>
                                     </div>
                                 </div>
@@ -2094,7 +2087,7 @@
                         </div>
 
                         <div class="interaction-guide feature-section">
-                            <h3>インタラクションガイド</h3>
+                            <h3>インタラクション</h3>
                             
                             <div class="feature-cards">
                                 <div class="feature-card">
@@ -2115,117 +2108,34 @@
                                     <h4>特殊インタラクション</h4>
                                     <div class="feature-content">
                                         <ul>
-                                            <li>下着の脱衣:
-                                                <ul>
-                                                    <li>パンツ: トリガーで掴み下方向へ</li>
-                                                    <li>ブラジャー: グリップで掴んでずらす</li>
-                                                </ul>
-                                            </li>
+					    <li>パンツ: トリガーで掴み下方向へ</li>
+					    <li>ブラジャー: グリップで掴んでずらす</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="vr-settings feature-section">
                             <h3>VR酔い防止設定</h3>
-                            
-                            <div class="comfort-alert">
-                                <div class="comfort-icon">🎮</div>
-                                <div class="comfort-content">
-                                    <p>快適なプレイ体験のため、以下の設定をメニューからカスタマイズできます。初めてVRを体験される方は、デフォルト設定でのプレイをお勧めします。</p>
-                                </div>
-                            </div>
-
-                            <div class="settings-grid">
-                                <div class="setting-card">
+                            <div class="feature-cards">
+                                <div class="feature-card">
                                     <h4>ビネット効果</h4>
-                                    <div class="setting-content">
+                                    <div class="feature-content">
                                         <div class="setting-description">
                                             <p>移動時に視界の周辺が暗くなり、VR酔いを軽減します。</p>
                                         </div>
-                                        <div class="setting-options">
-                                            <div class="option">
-                                                <span class="option-label">標準</span>
-                                                <span class="option-description">移動時に軽いビネット効果を適用</span>
-                                            </div>
-                                            <div class="option">
-                                                <span class="option-label">強め</span>
-                                                <span class="option-description">より強いビネット効果で酔いを抑制</span>
-                                            </div>
-                                            <div class="option">
-                                                <span class="option-label">オフ</span>
-                                                <span class="option-description">ビネット効果を無効化</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="setting-card">
-                                    <h4>回転方式</h4>
-                                    <div class="setting-content">
-                                        <div class="setting-description">
-                                            <p>視点回転時の動作方式を設定できます。</p>
-                                        </div>
-                                        <div class="setting-options">
-                                            <div class="option">
-                                                <span class="option-label">スナップ</span>
-                                                <span class="option-description">一定角度ずつ瞬時に回転</span>
-                                            </div>
-                                            <div class="option">
-                                                <span class="option-label">スムーズ</span>
-                                                <span class="option-description">なめらかな連続回転</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="setting-card">
+                                <div class="feature-card">
                                     <h4>しゃがみ動作</h4>
-                                    <div class="setting-content">
+                                    <div class="feature-content">
                                         <div class="setting-description">
-                                            <p>しゃがみ時の視点移動方式を設定できます。</p>
-                                        </div>
-                                        <div class="setting-options">
-                                            <div class="option">
-                                                <span class="option-label">スムーズ</span>
-                                                <span class="option-description">なめらかな上下移動</span>
-                                            </div>
-                                            <div class="option">
-                                                <span class="option-label">瞬間</span>
-                                                <span class="option-description">瞬時に姿勢を切り替え</span>
-                                            </div>
+                                            <p>瞬時に姿勢が切り替わり、VR酔いを軽減します。</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="comfort-tips">
-                                <h4>快適なプレイのためのアドバイス</h4>
-                                <ul>
-                                    <li>
-                                        <span class="tip-icon">⏰</span>
-                                        <div class="tip-content">
-                                            <span class="tip-title">定期的な休憩</span>
-                                            <p>30分ごとに5分程度の休憩を取ることをお勧めします</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="tip-icon">🌡️</span>
-                                        <div class="tip-content">
-                                            <span class="tip-title">快適な環境作り</span>
-                                            <p>適度な室温と換気を保ち、座ってプレイすることで酔いを軽減できます</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="tip-icon">👟</span>
-                                        <div class="tip-content">
-                                            <span class="tip-title">段階的な慣れ</span>
-                                            <p>最初は短時間から始め、徐々にプレイ時間を延ばしていくことをお勧めします</p>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -2238,16 +2148,13 @@
                     <div class="mode-details">
                         <div class="mode-navigation">
                             <div class="nav-button active" data-mode="story">
-                                <span class="nav-icon">📖</span>
-                                <span class="nav-label">ストーリー</span>
+                                <span class="nav-label">ストーリーモード</span>
                             </div>
                             <div class="nav-button" data-mode="free">
-                                <span class="nav-icon">🎯</span>
-                                <span class="nav-label">フリー</span>
+                                <span class="nav-label">フリーモード</span>
                             </div>
                             <div class="nav-button" data-mode="mr">
-                                <span class="nav-icon">✨</span>
-                                <span class="nav-label">MR</span>
+                                <span class="nav-label">MRモード</span>
                             </div>
                         </div>
 
