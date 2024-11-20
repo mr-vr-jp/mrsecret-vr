@@ -166,17 +166,30 @@
         }
     }
 
-    @keyframes shine {
-        0% {
-            left: -100%;
-        }
-        20% {
-            left: 100%;
-        }
-        100% {
-            left: 200%;
-        }
+@keyframes shine {
+    0% {
+        left: -100%;
+        opacity: 0;
     }
+    30% {
+        left: -100%;
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.3;
+    }
+    50% {
+        left: 200%;
+        opacity: 0.3;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        left: 200%;
+        opacity: 0;
+    }
+}
 </style>
 
 <header class="header">
