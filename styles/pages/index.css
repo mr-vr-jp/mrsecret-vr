@@ -20,24 +20,20 @@
     height: auto;
     border-radius: 12px;
     margin: 2rem auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transform: perspective(1000px) rotateX(2deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(74, 144, 226, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    animation: imageFloat 6s ease-in-out infinite;
+    animation: glowPulse 4s ease-in-out infinite;
 }
 
-.main-image:hover {
-    transform: perspective(1000px) rotateX(0deg) scale(1.02);
-    box-shadow: 0 25px 50px rgba(74, 144, 226, 0.3);
-}
-
-@keyframes imageFloat {
+@keyframes glowPulse {
     0%, 100% {
-        transform: perspective(1000px) rotateX(2deg) translateY(0px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                    0 0 30px rgba(74, 144, 226, 0.1);
     }
     50% {
-        transform: perspective(1000px) rotateX(2deg) translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                    0 0 50px rgba(74, 144, 226, 0.3);
     }
 }
 
