@@ -1,604 +1,229 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ミスター秘密侵入VR - 導入ガイド</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-	<style>
-		:root {
-		    --primary-color: #4a90e2;
-		    --text-color: #e4e4e7;
-		    --bg-color: #18181b;
-		    --card-bg: #27272a;
-		    --warning-color: #e2984a;
-		}
-
-		body {
-		    font-family: 'Noto Sans JP', sans-serif;
-		    background-color: var(--bg-color);
-		    color: var(--text-color);
-		    line-height: 1.6;
-		    margin: 0;
-		    padding: 0;
-		}
-
-		.container {
-		    max-width: 1200px;
-		    margin: 0 auto;
-		    padding: 0 20px;
-		}
-
-		.header {
-		    background-color: rgba(39, 39, 42, 0.95);
-		    backdrop-filter: blur(10px);
-		    position: fixed;
-		    width: 100%;
-		    top: 0;
-		    z-index: 1000;
-		}
-
-		.header-content {
-		    display: flex;
-		    justify-content: space-between;
-		    align-items: center;
-		    height: 70px;
-		}
-
-		.logo {
-		    font-size: 1.5rem;
-		    font-weight: 700;
-		    color: var(--text-color);
-		    text-decoration: none;
-		}
-
-		.nav-links {
-		    display: flex;
-		    gap: 2rem;
-		}
-
-		.nav-links a {
-		    color: var(--text-color);
-		    text-decoration: none;
-		    font-weight: 500;
-		    transition: color 0.2s;
-		}
-
-		.nav-links a:hover {
-		    color: var(--primary-color);
-		}
-
-		.manual-content {
-		    padding: 2rem;
-		    background-color: var(--card-bg);
-		    border-radius: 12px;
-		    margin-top: 2rem;
-		    animation: fadeIn 0.6s ease;
-		}
-
-		.table-of-contents {
-		    background-color: rgba(74, 144, 226, 0.1);
-		    padding: 1.5rem;
-		    border-radius: 8px;
-		    margin-bottom: 2rem;
-		}
-
-		.table-of-contents h2 {
-		    margin-top: 0;
-		    color: var(--primary-color);
-		    border-bottom: 2px solid var(--primary-color);
-		    padding-bottom: 0.5rem;
-		}
-
-		.toc-list {
-		    list-style: none;
-		    padding-left: 0;
-		    margin: 0;
-		}
-
-		.toc-list li {
-		    margin-bottom: 0.8rem;
-		}
-
-		.toc-list ul {
-		    list-style: none;
-		    padding-left: 1.5rem;
-		    margin-top: 0.5rem;
-		}
-
-		.toc-list a {
-		    color: var(--text-color);
-		    text-decoration: none;
-		    transition: color 0.2s;
-		    display: flex;
-		    align-items: center;
-		}
-
-		.toc-list a:hover {
-		    color: var(--primary-color);
-		}
-
-		.toc-list a::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    margin-right: 0.5rem;
-		}
-
-		.section {
-		    margin-bottom: 3rem;
-		    opacity: 0;
-		    transform: translateY(20px);
-		    animation: fadeInUp 0.6s ease forwards;
-		}
-
-		.section h2 {
-		    color: var(--primary-color);
-		    font-size: 1.8rem;
-		    margin-bottom: 1.5rem;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 2px solid var(--primary-color);
-		}
-
-		.section h3 {
-		    color: #63b3ed;
-		    font-size: 1.4rem;
-		    margin-top: 2rem;
-		    margin-bottom: 1rem;
-		}
-
-		.section-link {
-		    color: var(--primary-color);
-		    text-decoration: none;
-		    transition: color 0.2s;
-		}
-		
-		.section-link:hover {
-		    color: #63b3ed;
-		    text-decoration: underline;
-		}
-
-		.step-list {
-		    list-style: none;
-		    padding-left: 0;
-		    counter-reset: step-counter;
-		}
-
-		.step-list > li {
-		    position: relative;
-		    padding-left: 2.5rem;
-		    margin-bottom: 1.5rem;
-		    counter-increment: step-counter;
-		}
-
-		.step-list > li::before {
-		    content: counter(step-counter);
-		    position: absolute;
-		    left: 0;
-		    top: 0;
-		    width: 1.8rem;
-		    height: 1.8rem;
-		    background-color: var(--primary-color);
-		    border-radius: 50%;
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    font-size: 0.9rem;
-		    font-weight: bold;
-		    color: white;
-		}
-
-		.path-example {
-		    font-family: 'Source Code Pro', monospace;
-		    background-color: rgba(74, 144, 226, 0.1);
-		    padding: 0.4rem 0.8rem;
-		    border-radius: 4px;
-		    border-left: 3px solid var(--primary-color);
-		    display: inline-block;
-		    margin: 0.5rem 0;
-		}
-
-		.installation-link {
-		    display: inline-flex;
-		    align-items: center;
-		    color: var(--primary-color);
-		    text-decoration: none;
-		    padding: 0.5rem 1rem;
-		    background-color: rgba(74, 144, 226, 0.1);
-		    border-radius: 4px;
-		    margin: 0.5rem 0;
-		    transition: background-color 0.2s;
-		    border: 1px solid rgba(74, 144, 226, 0.3);
-		}
-
-		.installation-link:hover {
-		    background-color: rgba(74, 144, 226, 0.2);
-		}
-
-		.note-box {
-		    background-color: rgba(226, 152, 74, 0.1);
-		    border-left: 4px solid #e2984a;
-		    padding: 1rem;
-		    margin: 1rem 0;
-		    border-radius: 0 8px 8px 0;
-		}
-
-		.version-tabs {
-		    display: flex;
-		    gap: 1rem;
-		    margin-bottom: 2rem;
-		    flex-wrap: wrap;
-		}
-
-		.version-tab {
-		    padding: 0.8rem 1.5rem;
-		    background: none;
-		    border: 2px solid var(--primary-color);
-		    color: var(--primary-color);
-		    border-radius: 8px;
-		    cursor: pointer;
-		    transition: all 0.2s;
-		    font-weight: 500;
-		    min-width: 150px;
-		    text-align: center;
-		}
-
-		.version-tab.active {
-		    background-color: var(--primary-color);
-		    color: white;
-		}
-
-		.version-content {
-		    display: none;
-		}
-
-		.version-content.active {
-		    display: block;
-		    animation: fadeIn 0.4s ease;
-		}
-
-		.version-card {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    margin-bottom: 1rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-		
-		.version-content {
-		    /* version-contentクラスのdisplay: none;を削除 */
-		    margin-top: 1rem;
-		}
-		
-		.version-content ul {
-		    list-style: none;
-		    padding-left: 1.2rem;
-		    margin: 0;
-		}
-		
-		.version-content li {
-		    position: relative;
-		    margin-bottom: 0.5rem;
-		}
-		
-		.version-content li::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    position: absolute;
-		    left: -1.2rem;
-		}	
-
-		.version-cards {
-		    display: grid;
-		    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		    gap: 1.5rem;
-		    margin: 2rem 0;
-		}
-
-		.version-card {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.version-card h3 {
-		    color: var(--primary-color);
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.version-card-content ul {
-		    list-style: none;
-		    padding-left: 1.2rem;
-		    margin: 0;
-		}
-
-		.version-card-content li {
-		    position: relative;
-		    margin-bottom: 0.8rem;
-		}
-
-		.version-card-content li::before {
-		    content: "•";
-		    color: var(--primary-color);
-		    position: absolute;
-		    left: -1.2rem;
-		}		
-		
-		.sub-steps {
-		    padding-left: 2rem;
-		    margin-top: 1rem;
-		    border-left: 2px solid rgba(74, 144, 226, 0.3);
-		}
-
-		.warning {
-		    background-color: rgba(226, 74, 74, 0.1);
-		    border-left: 4px solid #e24a4a;
-		    padding: 1rem;
-		    margin: 1rem 0;
-		    border-radius: 0 8px 8px 0;
-		}
-
-		.back-to-top {
-		    position: fixed;
-		    bottom: 2rem;
-		    right: 2rem;
-		    background-color: var(--primary-color);
-		    color: white;
-		    width: 40px;
-		    height: 40px;
-		    border-radius: 50%;
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    text-decoration: none;
-		    opacity: 0;
-		    transition: opacity 0.3s, background-color 0.2s;
-		    z-index: 1000;
-		}
-
-		.back-to-top.visible {
-		    opacity: 1;
-		}
-
-		.back-to-top:hover {
-		    background-color: #357abd;
-		}
-
-		.footer {
-		    text-align: center;
-		    padding: 2rem 0;
-		    color: #94a3b8;
-		    font-size: 0.875rem;
-		    margin-top: 4rem;
-		}
-
-		@keyframes fadeInUp {
-		    from {
-		        opacity: 0;
-		        transform: translateY(20px);
-		    }
-		    to {
-		        opacity: 1;
-		        transform: translateY(0);
-		    }
-		}
-
-		@keyframes fadeIn {
-		    from {
-		        opacity: 0;
-		    }
-		    to {
-		        opacity: 1;
-		    }
-		}
-
-		.headset-options {
-		    display: flex;
-		    flex-direction: column;
-		    gap: 2rem;
-		}
-
-		.headset-option {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.headset-type {
-		    margin-bottom: 1.5rem;
-		}
-
-		.headset-type h4 {
-		    display: flex;
-		    align-items: center;
-		    gap: 0.5rem;
-		    color: var(--primary-color);
-		    font-size: 1.2rem;
-		    margin: 0 0 0.5rem 0;
-		}
-
-		.headset-icon {
-		    font-size: 1.4rem;
-		}
-
-		.supported-devices {
-		    color: #94a3b8;
-		    font-size: 0.9rem;
-		    margin-left: 2rem;
-		}
-
-		.connection-methods {
-		    margin-top: 1rem;
-		}
-
-		.method-card {
-		    background-color: rgba(74, 144, 226, 0.1);
-		    border-radius: 8px;
-		    padding: 1.25rem;
-		    margin-bottom: 1rem;
-		}
-
-		.method-card h5 {
-		    color: var(--primary-color);
-		    font-size: 1.1rem;
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.video-guide {
-		    padding: 0.5rem;
-		}
-
-		.video-link {
-		    display: inline-flex;
-		    align-items: center;
-		    gap: 0.5rem;
-		}
-
-		.video-icon {
-		    font-size: 1.2rem;
-		    color: #e24a4a;
-		}
-
-		@media (max-width: 640px) {
-		    .manual-content {
-		        padding: 1rem;
-		    }
-
-		    .section h2 {
-		        font-size: 1.5rem;
-		    }
-
-		    .section h3 {
-		        font-size: 1.2rem;
-		    }
-
-		    .version-tab {
-		        width: 100%;
-		    }
-
-		    .back-to-top {
-		        bottom: 1rem;
-		        right: 1rem;
-		    }
-
-		    .headset-option {
-		        padding: 1rem;
-		    }
-
-		    .method-card {
-		        padding: 1rem;
-		    }
-		}
-
-		.main-title {
-		    font-size: 2.5rem;
-		    color: var(--primary-color);
-		    text-align: center;
-		    margin-bottom: 3rem;
-		    padding-bottom: 1rem;
-		    border-bottom: 3px solid var(--primary-color);
-		    animation: fadeInDown 0.6s ease;
-		}
-
-		.setup-divider {
-		    margin: 4rem 0;
-		    position: relative;
-		    text-align: center;
-		    padding: 2rem 0;
-		}
-
-		.setup-divider::before {
-		    content: "";
-		    position: absolute;
-		    top: 50%;
-		    left: 0;
-		    right: 0;
-		    height: 2px;
-		    background: linear-gradient(90deg, 
-		        transparent, 
-		        rgba(74, 144, 226, 0.3) 20%, 
-		        rgba(74, 144, 226, 0.3) 80%, 
-		        transparent
-		    );
-		    z-index: 1;
-		}
-
-		.setup-divider-text {
-		    position: relative;
-		    z-index: 2;
-		    background: var(--card-bg);
-		    padding: 0 2rem;
-		    font-size: 1.2rem;
-		    color: var(--primary-color);
-		    display: inline-block;
-		    border: 2px solid rgba(74, 144, 226, 0.3);
-		    border-radius: 50px;
-		}
-
-		.completion-message {
-		    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(99, 179, 237, 0.1));
-		    border: 2px solid rgba(74, 144, 226, 0.2);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    text-align: center;
-		    margin-top: 2rem;
-		    animation: pulse 2s infinite;
-		}
-
-		.completion-message p {
-		    font-size: 1.2rem;
-		    color: var(--primary-color);
-		    margin: 0;
-		}
-
-		@keyframes pulse {
-		    0% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
-		    }
-		    70% {
-		        box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
-		    }
-		    100% {
-		        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
-		    }
-		}
-
-		@keyframes fadeInDown {
-		    from {
-		        opacity: 0;
-		        transform: translateY(-20px);
-		    }
-		    to {
-		        opacity: 1;
-		        transform: translateY(0);
-		    }
-		}
-
-		.setup-block {
-		    background-color: rgba(74, 144, 226, 0.05);
-		    border-radius: 12px;
-		    padding: 1.5rem;
-		    margin-bottom: 1.5rem;
-		    border: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-		.setup-block h4 {
-		    color: var(--primary-color);
-		    font-size: 1.2rem;
-		    margin: 0 0 1rem 0;
-		    padding-bottom: 0.5rem;
-		    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
-		}
-
-	</style>
+    <title>ミスター秘密侵入VR - プレイガイド</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --text-color: #e4e4e7;
+            --bg-color: #18181b;
+            --card-bg: #27272a;
+            --toc-bg: rgba(74, 144, 226, 0.1);
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background-color: rgba(39, 39, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .manual-content {
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-top: 2rem;
+            animation: fadeIn 0.6s ease;
+        }
+
+        .table-of-contents {
+            background-color: var(--toc-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .table-of-contents h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .toc-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .toc-list a::before {
+            content: "•";
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .section h3 {
+            color: #63b3ed;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+        }
+
+        .section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.3s, background-color 0.2s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: #357abd;
+        }
+
+        @media (max-width: 640px) {
+            .manual-content {
+                padding: 1rem;
+            }
+            
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
 </head>
-
-
 
 <body>
     <header class="header">
@@ -610,502 +235,236 @@
                 <a href="troubleshooting.html">トラブルガイド</a>
                 <a href="credits.html">クレジット</a>
                 <a href="updates.html">アップデート</a>
-	    </nav>
+            </nav>
         </div>
     </header>
 
     <main style="padding-top: 90px">
         <div class="container">
             <div class="manual-content">
-                <h1 class="main-title">導入ガイド</h1>
-
-		<div class="table-of-contents">
-		    <h2>目次</h2>
-		    <nav class="toc-list">
-		        <div class="toc-section">
-		            <div class="toc-heading">
-		                <a href="#pcvr-setup">PCVR版のセットアップ手順</a>
-		            </div>
-		            <ul></ul>
-		        </div>
-		        <div class="toc-section">
-		            <div class="toc-heading">
-		                <a href="#quest-setup">Quest単体版のセットアップ手順</a>
-		            </div>
-		            <ul>
-		                <li><a href="#sidequest-method">A. SideQuestを使用する方法</a></li>
-		                <li><a href="#mobile-vr-method">B. Mobile VR Stationを使用する方法</a></li>
-		            </ul>
-		        </div>
-			<div class="toc-section">
-			    <div class="toc-heading">
-			        <a href="#update-instructions">アップデート手順</a>
-			    </div>
-			    <ul>
-			        <li><a href="#pcvr-update">PCVR版のアップデート</a></li>
-			        <li><a href="#quest-update">Quest単体版のアップデート</a></li>
-			    </ul>
-			</div>
-		    </nav>
-		</div>
-
-                <section class="section intro-section">
-                    <div class="thank-you">
-                        <h2>お買い上げありがとうございます</h2>
-						<div class="version-cards">
-						    <div class="version-card pcvr">
-						        <h3>PCVR版</h3>
-						        <div class="version-card-content">
-						            <ul>
-						                <li>PCとVRヘッドセットを接続して使用</li>
-						                <li>SteamVRを起動し、「MRsecretVR.exe」を実行してプレイ</li>
-						            </ul>
-						        </div>
-						    </div>
-						    <div class="version-card quest">
-						        <h3>Quest単体版</h3>
-						        <div class="version-card-content">
-						            <ul>
-						                <li>Meta Questシリーズ単体で動作</li>
-						                <li>Quest本体に「MRsecretVR.apk」をインストールしてプレイ</li>
-						            </ul>
-						        </div>
-						    </div>
-						</div>                        
-                        <div class="section-note">
-                            <p>以下に詳しい手順を記載します。</p>
-                        </div>
-                    </div>
-                </section>
-
-
-		<section id="pcvr-setup" class="section setup-section">
-                    <h2>PCVR版のセットアップ手順</h2>
-
-                    <div id="steamvr-install" class="setup-block">
-                        <h3>1. SteamVRのインストール</h3>
-                        <ol class="step-list">
-                            <li>PCでSteamを起動してください</li>
-                            <li>画面上部の「ストア」から「SteamVR」を検索
-                                <div class="sub-steps">
-                                    もしくは<a href="https://store.steampowered.com/app/250820/SteamVR/" 
-                                       class="installation-link" 
-                                       target="_blank">
-                                        こちら
-                                    </a>
-					から直接アクセス
-                                </div>
-                            </li>
-                            <li>「ゲームをプレイ」を選択し、インストールを完了させてください</li>
-                        </ol>
-                    </div>
-                    
-                    <div id="game-placement" class="setup-block">
-                        <h3>2. ゲームファイルの配置</h3>
-                        <ol class="step-list">
-                            <li>ダウンロードしたゲームファイルを展開してください</li>
-                            <li>展開したフォルダ「MRsecretVR_PCVR」を以下のような条件の場所に配置してください
-                                <div class="sub-steps file-path-examples">
-                                    <p>日本語（全角文字）が含まれないフォルダに置く:</p>
-                                    <div class="path-example success">
-                                        <code>OK → C:\Games\MRsecretVR_PCVR</code>
-                                    </div>
-                                    <div class="path-example error">
-                                        <code>NG → C:\ゲーム\MRsecretVR_PCVR</code>
-                                    </div>
-                                </div>
-                            </li>
-                        </ol>
-                        <div class="note-box">
-                            <p>※全角文字が含まれるとゲーム内での入力が効かなくなる場合があります。</p>
-                        </div>
-                    </div>
-
-                    <div id="vr-connection" class="setup-block">
-                        <h3>3. VRヘッドセットの接続とSteamVRの起動</h3>
-                        
-                        <div class="headset-options">
-                            <div class="headset-type">
-                                <h4>PCVR専用機の場合</h4>
-                                <div class="supported-devices">対応機種：Pimax、VIVE等</div>
-                            </div>
-                            <div class="setup-steps">
-                                <ol class="step-list">
-                                    <li>VRヘッドセットをPCに接続</li>
-                                    <li>SteamVRを起動</li>
-                                </ol>
-                            </div>
-
-                            <div class="headset-type">
-                                <h4>スタンドアロン機の場合</h4>
-                                <div class="supported-devices">対応機種：Quest 2/Pro/3/3S、PICO Neo 3/4/4 Ultra等</div>
-                            </div>
-                            <div class="connection-methods">
-                                <p>PCVRを遊ぶには以下のいずれかの方法が必要です</p>
-                                
-                                <div class="method-card">
-                                    <h5>1. Quest Link（Questのみ）</h5>
-                                    <ol class="step-list">
-                                        <li><a href="https://www.meta.com/ja-jp/help/quest/articles/headsets-and-accessories/oculus-rift-s/install-app-for-link/" class="installation-link" target="_blank">Meta Quest Linkアプリ</a>をインストール</li>
-                                        <li>Quest本体の設定→システム→リンク→オン</li>
-                                        <li>Air Linkの場合は<a href="https://www.meta.com/ja-jp/help/quest/articles/headsets-and-accessories/oculus-link/connect-with-air-link/" class="installation-link" target="_blank">ペアリング</a>が必要です</li>
-                                        <li>接続後、Quest Linkのホーム画面が起動します</li>
-                                        <li>ホーム画面からSteam VRを選択して起動します</li>
-                                    </ol>
-                                </div>
-
-                                <div class="method-card">
-                                    <h5>2. Virtual Desktop（無線・別途購入必要）</h5>
-                                    <ol class="step-list">
-                                        <li>Quest本体に<a href="https://www.meta.com/ja-jp/experiences/virtual-desktop/2017050365004772/" class="installation-link" target="_blank">Virtual Desktopアプリ</a>をインストール</li>
-                                        <li>PCに<a href="https://www.vrdesktop.net/" class="installation-link" target="_blank">Virtual Desktopストリーマー</a>をインストール</li>
-                                        <li>Quest本体からVirtual Desktopを起動し、PCと接続</li>
-                                        <li>接続が成功するとQuest内にPC画面が表示されます</li>
-                                        <li>左メニューから「Launch SteamVR」を選択</li>
-                                    </ol>
-                                </div>
-
-                                <div class="method-card">
-                                    <h5>3. Steam Link（Questのみ）</h5>
-                                    <div class="video-guide">
-                                        <a href="https://youtu.be/m5I_IkItfUA" class="installation-link video-link" target="_blank">
-                                            Steam Link設定の解説動画
-                                        </a>を見る
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="note-box">
-                            <p>各接続方法が正常に完了すると、SteamVRのホーム画面がヘッドセットに表示されます。その状態で次に進んでください。</p>
-                        </div>
-                    </div>
-
-                    <div id="game-launch-pcvr" class="setup-block">
-                        <h3>4. ゲームの起動</h3>
-                        <ol class="step-list">
-                            <li>配置した「MRsecretVR_PCVR」フォルダを開く</li>
-                            <li>フォルダ内の「MRsecretVR.exe」をダブルクリック</li>
-                            <li>ゲームが起動し、VRヘッドセットにゲーム画面が表示されます</li>
-                        </ol>
-                        <div class="completion-message">
-                            <p>✨ おめでとうございます！ ✨</p>
-                            <p>これですべての準備が完了しました！</p>
-                            <p>存分に彼女との時間をお楽しみください！🕶</p>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="setup-divider">
-                    <span class="setup-divider-text">または</span>
+                <div class="table-of-contents">
+                    <h2>目次</h2>
+                    <ol class="toc-list">
+                        <li><a href="#section-1">ゲームの概要</a></li>
+                        <li><a href="#section-2">基本操作方法</a></li>
+                        <li><a href="#section-3">ゲームモードの紹介</a></li>
+                        <li><a href="#section-4">ゲーム内でのインタラクション</a></li>
+                        <li><a href="#section-5">ステルス探索システム</a></li>
+                        <li><a href="#section-6">アイテムと収集要素</a></li>
+                        <li><a href="#section-7">部屋の種類</a></li>
+                        <li><a href="#section-8">エッチシステムとプレイスタイル</a></li>
+                    </ol>
                 </div>
+
+                <section id="section-1" class="section">
+                    <h2>1. ゲームの概要</h2>
+                    <p>「ミスター秘密侵入VR」は、VRの高度な没入技術を駆使し、人気急上昇中の美少女「天音ミライ」の秘密の日常に迫るステルスアクションゲームです。</p>
+                    <p>プレイヤーは、彼女が暮らす一軒家に忍び込み、彼女に気づかれないよう慎重に行動しながら、探索とインタラクションを楽しみます。</p>
+                    <p>緊張感とドキドキが融合した新感覚のVR体験が特徴です。</p>
+
+                    <h3>ゲームの舞台とシナリオ</h3>
+                    <p>舞台は、広々とした一軒家。</p>
+                    <p>天音ミライはSNSに完璧な日常写真を投稿し、ファンの間で注目を集める存在ですが、その裏の生活は誰も知りません。</p>
+<p>プレイヤーは彼女の日常写真に魅了され、日々その生活に憧れを抱くようになりますが、次第に彼女への興味は「実際に見てみたい」という欲望へと変わっていきます。</p>
+                    <p>そしてある夜、彼女の家を突き止めたプレイヤーは、彼女の本当の姿を知りたいという衝動に駆られ、家に忍び込むことを決意します。</p>
+
+                    <h3>ゲームの目的</h3>
+                    <p>本作の目的は、彼女に見つからないように家の中を探索し、物語を進行させながらアイテムを収集し、彼女とのインタラクションを深めていくことです。</p>
+                    <p>プレイヤーの行動に応じて物語が展開し、スリルと没入感のあるプレイ体験が楽しめます。</p>
+                    <p>本作は探索型アドベンチャーゲームです。</p>
+                    女の子との触れ合いをお楽しみいただく前に、まずはストーリーモードで部屋の探索とアイテム収集による攻略が必要となります。</p>
+
+                </section>
+
+                <section id="section-2" class="section">
+                    <h2>2. 基本操作方法</h2>
+                    <p>探索やアイテム操作などの基本操作を説明します。</p>
+
+                    <h3>VR移動と操作</h3>
+                    <ul>
+                        <li>前後移動：左スティックで前後に移動</li>
+                        <li>視点の変更：右スティックで左右を向く</li>
+                        <li>ダッシュ：左スティックを押し込み</li>
+                        <li>しゃがむ：右Bボタン</li>
+                        <li>メニューを開く：左Xボタン</li>
+                        <li>目線の高さ調整：両手トリガー＋上下移動</li>
+                    </ul>
+
+                    <h3>アイテムの掴み操作</h3>
+                    <ul>
+                        <li>アイテムの掴み：グリップボタンを押してアイテムを掴む</li>
+                        <li>下着の操作：
+                            <ul>
+                                <li>パンツ：トリガーボタンで掴み、そのまま下にずらして脱がす</li>
+                                <li>ブラジャー：グリップボタンで掴み、位置をずらして脱がす</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>アイテムの収納</h3>
+                    <ul>
+                        <li>リュック：背中にあるリュックをインベントリとして使用します。背中でグリップボタンを押すと、リュックを掴み、中身を確認できます。</li>
+                        <li>ホルスター：両手首にホルスターが装備されており、よく使うアイテムを収納できます。モニターなど頻繁に使用するアイテムをホルスターに入れておくことで、素早く取り出し、彼女の位置確認などに役立てることが可能です。</li>
+                    </ul>
+
+                    <h3>メニュー</h3>
+                    <ul>
+                        <li>スナップターンの設定が可能です。</li>
+                    </ul>
+                </section>
+                
+                <section id="section-3" class="section">
+                    <h2>3. ゲームモードの紹介</h2>
+                    <p>本作には、異なる体験を提供する3つのプレイモードが搭載されています。</p>
+                    <p>プレイヤーの進行状況や解放条件に応じて、各モードでさまざまなシチュエーションを楽しむことができます。</p>
+
+                    <h3>1. ストーリーモード</h3>
+                    <p>ストーリーモードは、緊張感あふれるステルスアクションを中心に楽しむメインモードです。</p>
+しながら、謎を解き目的を達成していきます。</p>
+                    <ul>
+                        <li>探索とアイテム収集：背中のリュックにアイテムを収め、家中を探索してアイテムやヒントを集めます。</li>
+                        <li>監視カメラの活用：隠しカメラを設置し、モニターで彼女の居場所を確認しながら、安全なルートで進行します。</li>
+                        <li>ステルスプレイ：彼女に気づかれないよう慎重に行動し、バレてしまうと即ゲームオーバーになる緊張感を味わえます。</li>
+                    </ul>
+
+                    <h3>2. フリーモード（攻略後解放）</h3>
+                    <p>フリーモードは、ストーリーモードの攻略後に解放される自由度の高いプレイモードです。</p>
+                    <p>時間制限やミッションがなく、彼女とのインタラクションや探索を気ままに楽しむことができます。</p>
+                    <ul>
+                        <li>自由な触れ合い：彼女と手を繋いだり、頭を撫でたりして、さまざまなリアクションを楽しめます。</li>
+                        <li>多彩なシチュエーション：リビングやシャワールーム、ベッドルームなど、家の中の各場所で異なるシチュエーションが展開されます。</li>
+                        <li>着せ替え：収集した衣装や髪型を自由に組み合わせ、彼女を好みのスタイルにカスタマイズ可能です。</li>
+                    </ul>
+
+                    <h3>3. MRモード（条件クリア後解放）</h3>
+                    <p>MRモードは、複合現実（MR）機能を用いた特別な体験モードで、条件をクリアすると解放されます。</p>
+                    <ul>
+                        <li>現実の部屋での体験：彼女が実際に自分の部屋にいるように感じられ、VR空間だけでなく現実の家具や環境にも対応します。</li>
+                        <li>空間認識機能（Quest3/3S対応）：Quest3やQuest3Sの空間認識機能により、ベッドや椅子の形を認識し、それに応じた自然な動きを楽しめます。</li>
+                        <li>ポーズと姿勢の自由な変更：脱力/重力のポーズを切り替えられ、等身大の人形のように様々なポーズを付けられます。</li>
+                    </ul>
+                </section>
+
+                <section id="section-4" class="section">
+                    <h2>4. ゲーム内でのインタラクション</h2>
+                    <p>本作では、VRならではのリアルな触れ合い体験が楽しめます。</p>
+                    <p>プレイヤーの行動に応じて彼女が様々な反応を示し、まるで本物の人間と触れ合っているかのような体験を提供します。</p>
+
+                    <h3>リアルなリアクション</h3>
+                    <ul>
+                        <li>距離と触れ方に応じた反応：近づくと彼女がこちらを向き、顔を見合わせることができます。</li>
+                        <li>頭を撫でると恥ずかしがったり、手を繋いで引っ張ると照れた様子でついてくるなど、スキンシップの内容に応じて異なるリアクションを示します。</li>
+                    </ul>
+
+                    <h3>触感システム「もっちりシェーダー」</h3>
+                    <ul>
+                        <li>触感の再現：「もっちりシェーダー」を採用し、触れた場所が自然に凹むリアルな触感を実現しています。</li>
+                    </ul>
+                </section>
+
+                <section id="section-5" class="section">
+                    <h2>5. ステルス探索システム</h2>
+                    <p>本作では、彼女に見つからないように家の中を探索するスリル満点のステルス要素が盛り込まれています。プレイヤーはカメラや音に頼りながら慎重に行動し、戦略的に目的を達成していきます。</p>
+
+                    <h3>見つからないように進むステルス行動</h3>
+                    <ul>
+                        <li>視界と位置の確認：彼女は家の中をランダムに移動し、様々なエリアで行動を取ります。</li>
+                        <li>彼女の位置を確認しながら、音やカメラ映像を頼りに行動し、気づかれないよう慎重に探索を進める必要があります。</li>
+                        <li>ゲームオーバー条件：彼女の視界に入ったり直接触れてしまうと、即座にゲームオーバーになります。</li>
+                    </ul>
+
+                    <h3>監視カメラとモニターの活用</h3>
+                    <ul>
+                        <li>監視カメラの設置：家の中の特定の場所に監視カメラを設置し、彼女の動きを観察することができます。</li>
+                        <li>モニターによる確認：ホルスターに収納したモニターを取り出し、設置したカメラの映像をリアルタイムで確認します。</li>
+                    </ul>
+                </section>
                 
                 
-                <section id="quest-setup" class="section setup-section">
-                    <h2>Quest単体版のセットアップ手順</h2>
+                <section id="section-6" class="section">
+                    <h2>6. アイテムと収集要素</h2>
+                    <p>本作では、ストーリー進行に必要なアイテムの探索や、彼女を好みの姿に変えられる衣装や髪型の収集といった要素が充実しています。</p>
 
-                    <div class="setup-block method-options">
-                        <h3>インストール方法の選択</h3>
-                        <p>現在、インストール方法は大きく2通りあります</p>
-                        <div class="method-options-grid">
-                            <div class="method-option">
-                                <h4>A. SideQuestを使用する方法</h4>
-                                <p>PCを使用してインストールする方法です</p>
-                            </div>
-                            <div class="method-option">
-                                <h4>B. Mobile VR Stationを使用する方法</h4>
-                                <p>Quest単体でインストール可能な方法です</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>収集アイテム</h3>
+                    <ul>
+                        <li>重要アイテムの収集：ストーリーモードでは、特定のエリアやシーンの解放に必要なアイテムが家の中に隠されています。</li>
+                        <li>収集の楽しさ：アイテム探索は、実際にタンスやクローゼットを手で開けるなど、VRならではのインタラクティブな操作で行われます。</li>
+                    </ul>
 
-                    <div id="sidequest-method" class="setup-block">
-                        <h3>A. SideQuestを使用する方法</h3>
-                        
-                        <div class="setup-step">
-                            <h4>1. 開発者モードの有効化</h4>
-                            
-                            <div class="sub-step">
-                                <h5>Meta Quest for Developersでの組織登録</h5>
-                                <ol class="step-list">
-                                    <li><a href="https://developer.oculus.com/" class="installation-link" target="_blank">Meta Quest for Developers</a>にアクセス</li>
-                                    <li>Meta Questのアカウントでログイン</li>
-                                    <li>本人確認のため以下のいずれかを設定
-                                        <div class="sub-steps">
-                                            <ul>
-                                                <li>クレジットカード情報の登録（請求は発生しません）</li>
-                                                <li>または二段階認証の設定</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>組織名を登録</li>
-                                </ol>
-                                <div class="note-box">
-                                    <p>非公式アプリをプレイするだけの場合は任意の名前で問題ありません</p>
-                                </div>
-                            </div>
-
-                            <div class="sub-step">
-                                <h5>スマホのMeta Questアプリでの設定</h5>
-                                <ol class="step-list">
-                                    <li>スマホのBluetooth機能をオンにする</li>
-                                    <li>スマホのMeta Questアプリを起動</li>
-                                    <li>三本線アイコンをタップしてメニューを開く</li>
-                                    <li>「デバイス」を選択</li>
-                                    <li>お使いのQuestを選択（「接続済み」と表示されていることを確認）</li>
-                                    <li>「ヘッドセットの設定」をタップ</li>
-                                    <li>「開発者モード」をタップしてオン</li>
-                                    <li>Quest本体を再起動</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>2. ADBドライバーのインストール</h4>
-                            <ol class="step-list">
-                                <li><a href="https://developer.oculus.com/downloads/package/oculus-adb-drivers/" class="installation-link" target="_blank">Meta Quest開発者センター</a>にアクセス</li>
-                                <li>「Download」をクリック</li>
-                                <li>「I have read and agree to the terms of the license .」にチェックを入れる</li>
-                                <li>「Download」をクリックしてファイルを保存</li>
-                                <li>ダウンロードしたzipファイルを解凍</li>
-                                <li>解凍したフォルダ内の「android_winusb.inf」を右クリックし「インストール」を選択</li>
-                                <li>「この操作を正しく終了しました」と表示されたら「OK」をクリック</li>
-                            </ol>
-                        </div>
-                        
-                        
-                        
-                        <div class="setup-step">
-                            <h4>3. SideQuestのインストール</h4>
-                            <ol class="step-list">
-                                <li><a href="https://sidequestvr.com/setup-howto" class="installation-link" target="_blank">SideQuest公式サイト</a>にアクセス</li>
-                                <li>「Advanced Installer」から「DOWNLOAD FOR WINDOWS」をクリック</li>
-                                <li>ダウンロードしたファイルを実行してインストール</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="setup-step">
-                            <h4>4. QuestとPCの接続</h4>
-                            <ol class="step-list">
-                                <li>QuestとPCをUSBケーブルで接続</li>
-                                <li>Quest内で「USBデバッグを許可しますか？」→「許可する」を選択</li>
-                                <li>Quest内のホームメニュー下部のベルアイコンの「お知らせ」を選択</li>
-                                <li>「USBが検出されました」を選択</li>
-                                <li>「接続したデバイスにファイルへのアクセスを許可しますか？」→「許可する」を選択</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>5. ゲームのインストール</h4>
-                            <ol class="step-list">
-                                <li>SideQuestを起動</li>
-                                <li>SideQuest画面左上のマークが緑色になっていることを確認
-                                    <div class="sub-steps">
-                                        <div class="status-box success">
-                                            <p>Questの機種名が表示されていれば接続成功です</p>
-                                        </div>
-                                        <div class="status-box warning">
-                                            <p>オレンジ色の場合は接続できていません。PCとの接続を確認してください</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>画面右上の「Install APK from folder」アイコン（フォルダマーク）をクリック</li>
-                                <li>ダウンロードした「MRsecretVR.apk」を選択</li>
-                                <li>インストール進行状況が画面左に表示されます</li>
-                                <li>インストール完了時に「MRsecretVR.apk: APK installed ok!!」と表示されます</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>6. ゲームの起動</h4>
-                            <ol class="step-list">
-                                <li>Questでアプリメニューを開く</li>
-                                <li>左側メニューから
-                                    <div class="sub-steps">
-                                        <ul>
-                                            <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>「MRsecretVR」を選択して起動</li>
-                            </ol>
-                            <div class="note-box">
-                                <p>※提供元不明が表示されない場合はQuest本体を再起動してください。</p>
-                            </div>
-                            <div class="completion-message">
-                                <p>✨ おめでとうございます！ ✨</p>
-                                <p>これですべての準備が完了しました！</p>
-                                <p>存分に彼女との時間お楽しみください！🕶</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div id="mobile-vr-method" class="setup-block">
-                        <h3>B. Mobile VR Stationを使用する方法</h3>
-
-                        <div class="setup-step">
-                            <h4>1. 開発者モードの有効化</h4>
-                            <div class="reference-box">
-                                <p>前述のA方式の「開発者モードの有効化」と同じ手順で設定してください</p>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>2. Mobile VR Stationのインストール</h4>
-                            <div class="store-link">
-                                <a href="https://www.meta.com/ja-jp/experiences/mobile-vr-station/3887008398005125/" 
-                                   class="installation-link store-button" 
-                                   target="_blank">
-                                    Meta Quest ストア
-                                </a>
-                                からインストール
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>3. APKファイルの準備</h4>
-                            <p>APKファイルをQuest本体に用意する方法は2通りあります</p>
-
-                            <div class="method-card">
-                                <h5>方法1: Quest単体で準備する場合</h5>
-                                <ol class="step-list">
-                                    <li>Questのブラウザから<a href="https://www.dlsite.com/" class="installation-link" target="_blank">DLSite</a>にアクセス</li>
-                                    <li>アカウントにログインしてゲームをダウンロード</li>
-                                    <li>ダウンロードしたzipファイルをMobile VR Stationで解凍
-                                        <div class="sub-steps procedure-steps">
-                                            <ol>
-                                                <li>Mobile VR Stationを開く</li>
-                                                <li>「ローカルファイル - Local Files」を選択</li>
-                                                <li>「ダウンロード - Downloads」を選択</li>
-                                                <li>ダウンロードしたゲームのzipファイルを選択</li>
-                                                <li>「ファイルの抽出 - Extract Files」を選択</li>
-                                                <li>「お待ちください」メッセージが表示→「OK」を選択</li>
-                                                <li>ダウンロードフォルダに解凍されたことを確認</li>
-                                            </ol>
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="note-box">
-                                    <p>※この時点ではapkファイルは見えません</p>
-                                </div>
-                            </div>
-
-                            <div class="method-card">
-                                <h5>方法2: PCから転送する場合</h5>
-                                <ol class="step-list">
-                                    <li>PCでダウンロードしたゲームファイルを展開</li>
-                                    <li>QuestとPCをUSB接続</li>
-                                    <li>Quest内で「ファイルアクセスを許可」を選択</li>
-                                    <li>PCからQuestの「download」フォルダに「MRsecretVR.apk」をコピー</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>4. APKのインストール</h4>
-                            <ol class="step-list">
-                                <li>Mobile VR Stationを起動</li>
-                                <li>「構成ウィザード - Configuration Wizard」→「Show All Options」→「Configure Scoped Storage」→再度「Configure Scoped Storage」を選択</li>
-                                <li>「Step1: Request Access」を選択</li>
-                                <li>「Quest」→「Download」フォルダを開く</li>
-                                <li>「MRsecretVR_ver**」フォルダ内の「MRsecretVR.apk」を確認</li>
-                                <li>APKファイルの右上の4つの矢印アイコンを選択</li>
-                                <li>確認画面で「次へ」→「インストール」を選択</li>
-                                <li>インストール完了したら「完了」を選択</li>
-                                <li>Mobile VR Stationを終了</li>
-                            </ol>
-                        </div>
-
-                        <div class="setup-step">
-                            <h4>5. ゲームの起動</h4>
-                            <ol class="step-list">
-                                <li>Questでアプリメニューを開く</li>
-                                <li>左側メニューから
-                                    <div class="sub-steps">
-                                        <ul>
-                                            <li>ハテナマークのフォルダアイコンを選択し、「提供元不明」を開く</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>「MRsecretVR」を選択して起動</li>
-                            </ol>
-                            <div class="note-box">
-                                <p>※提供元不明が表示されない場合はQuest本体を再起動してください。</p>
-                            </div>
-                            <div class="completion-message">
-                                <p>✨ おめでとうございます！ ✨</p>
-                                <p>これですべての準備が完了しました！</p>
-                                <p>存分に彼女との時間をお楽しみください！🕶</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>着せ替えアイテム</h3>
+                    <ul>
+                        <li>衣装や髪型の収集：家の中を探索することで、彼女の衣装や髪型を入手できます。</li>
+                        <li>多彩なコスチューム：収集した衣装を組み合わせることで、彼女をさまざまなスタイルに変え、プレイヤー好みの姿にアレンジ可能です。</li>
+                    </ul>
                 </section>
 
-                <div class="setup-divider">
-                </div>
-		
-		<section id="update-instructions" class="section update-section">
-		    <h2>アップデート手順</h2>
-		    
-		    <div class="note-box important">
-		        <p>アップデートの前にお読みください</p>
-		        <ul>
-		            <li>PC版、Quest版ともにセーブデータは引き継がれます</li>
-		        </ul>
-		    </div>
-				
-			<div id="pcvr-update" class="setup-block">
-			    <h3>PCVR版のアップデート</h3>
-			    <ol class="step-list">
-				<li>ダウンロードしたファイルを展開</li>
-				<li>新バージョンの「MRsecretVR.exe」を実行</li>
-			    </ol>
-			
-			    <div class="note-box troubleshooting">
-				<p>💡 アップデート後にゲーム開始画面でメニューが選択できない場合</p>
-				<ul>
-				    <li>ゲームフォルダを別の場所に移動してみてください
-					<div class="path-example">
-					    <code>例: Downloads → Desktop</code>
-					</div>
-				    </li>
-				    <li>または、フォルダ名を最初に起動した時の名前に戻してみてください<BR>
-					<div class="path-example">
-					    <code>例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0</code>
-					</div>
-				    </li>
-				</ul>
-			    </div>
-			</div>
+                <section id="section-7" class="section">
+                    <h2>7. 部屋の種類</h2>
+                    <p>本作の舞台となる広い一軒家には、彼女が自律的に移動する様々な部屋があり、それぞれで異なる行動ルーチンが設定されています。</p>
 
-		    <div id="quest-update" class="setup-block">
-			<h3>Quest単体版のアップデート</h3>
-			<div class="update-methods">
-			    <div class="method-card">
-				<h4>方法1: SideQuestを使用する場合</h4>
-				<ol class="step-list">
-				    <li>新バージョンの「MRsecretVR.apk」を用意</li>
-				    <li>通常のインストール手順と同様にSideQuestでインストール
-					<div class="note-box">
-					    <p>※自動的に上書きインストールされます</p>
-					</div>
-				    </li>
-				</ol>
-			    </div>
-		
-			<div class="method-card">
-			    <h4>方法2: Mobile VR Stationを使用する場合</h4>
-			    <p>SideQuestでインストールできない場合は、本ガイドの<a href="#mobile-vr-method" class="section-link">「B. Mobile VR Stationを使用する方法」</a>の手順で実施してください。</p>
-			</div>
-			</div>
-		    </div>
-		
-		    <div class="completion-message">
-			<p>アップデートが完了しました！</p>
-			<p>新機能や改善された体験をお楽しみください！</p>
-		    </div>
-		</section>
+                    <h3>各部屋の特徴と行動パターン</h3>
+                    <ul>
+                        <li>リビング
+                            <ul>
+                                <li>彼女がリラックスしていることが多く、スマホをいじったり、ソファで寝転んだりします。</li>
+                                <li>この部屋は広く、遮蔽物もあるため、彼女に見つからないように移動しやすい部屋です。</li>
+                            </ul>
+                        </li>
+                        <li>キッチン
+                            <ul>
+                                <li>キッチンでは彼女がお茶を入れたり、飲み物を用意したりします。</li>
+                            </ul>
+                        <li>ベッドルーム
+                            <ul>
+                                <li>ここでは彼女が眠るほか、彼女の秘密の行動も見ることができるかもしれません。</li>
+                                <li>プレイヤーが彼女の寝室を探索する際には、彼女が不在のタイミングを狙う必要があります。</li>
+                            </ul>
+                        </li>
+                        <li>PCルーム
+                            <ul>
+                                <li>彼女がパソコンで作業をしたり、ネットサーフィンをする場所です。</li>
+                            </ul>
+                        <li>シャワールーム
+                            <ul>
+                                <li>彼女がシャワーを浴びたり、リラックスした時間を過ごす場所です。</li>
+                            </ul>
+                        <li>トイレ
+                            <ul>
+                                 <li>彼女が用を足しに来る短時間の用事の部屋です。</li>
+                                 <li>こっそり聞き耳を立ててみるのもおもしろいかもしれません。</li>
+                            </ul>
+                        <li>ランドリールーム
+                            <ul>
+                                <li>家事を行うエリアですが、彼女が入ることはよほどのことがない限りありません。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="section-8" class="section">
+                    <h2>8. エッチシステムとプレイスタイル</h2>
+                    <p>本作のエッチシーンは、ストーリーモードの一部として組み込まれているほか、フリーモードやMRモードでも楽しむことができます。</p>
+
+                    <h3>プレイスタイル</h3>
+                    <ul>
+                        <li>シチュエーションに応じたプレイ：リビング、シャワールーム、ベッドルームなど、各場所で異なる雰囲気や演出を楽しめます。</li>
+                        <li>体位の選択（MRモード）：正常位や後背位など、複数の体位が用意されており、好みに合わせて選択可能です。</li>
+                        <li>肉棒を近づけることで自動でピストンが行われます。両手をフリーにした愛撫も可能です。</li>
+                    </ul>
+
+                    <h3>インタラクティブ操作</h3>
+                    <ul>
+                        <li>自然な着脱システム：ブラジャーやパンツを直感的に掴んで脱がすことができます。</li>
+                        <li>特別なリアクション：奥まで触れた際には特別な反応があり、リアルなリアクションを楽しめます。</li>
+                        <li>身体の物理演算：触れた際の胸の揺れや髪の動きなどがリアルに再現されています。</li>
+                        <li>肉棒の調整：肉棒は自動で空間に固定されています。掴んで位置を調整することができます。
+                    </ul>
+
+                    <h3>表現</h3>
+                    <ul>
+                        <li>断面図表示機能：挿入時には断面図が表示され、プレイ内容をリアルに体感できます。</li>
+                    </ul>
+                </section>
             </div>
         </div>
     </main>
@@ -1119,6 +478,34 @@
         </div>
     </footer>
 
-    <!-- 既存のスクリプト部分 -->
+    <script>
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // トップに戻るボタンの表示制御
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 200) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // 各セクションのアニメーション遅延設定
+        document.querySelectorAll('.section').forEach((section, index) => {
+            section.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
 </body>
 </html>
