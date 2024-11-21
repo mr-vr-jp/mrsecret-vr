@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ミスター秘密侵入VR - プレイガイド</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('ヘッダーの読み込みに失敗しました:', error);
+                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
+                });
+    
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('フッターの読み込みに失敗しました:', error);
+                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
+                });
+        });
+    </script>    	
     <style>
         :root {
             --primary-color: #4a90e2;
@@ -1988,6 +2011,8 @@
     </style>
 </head>
 <body>
+    <div id="footer"></div>
+	
     <main style="padding-top: 90px">
         <div class="container">
             <div class="guide-content">
@@ -2555,97 +2580,89 @@
                                 </div>				    
                             </div>
                         </div>
-
-
 			    
-<div class="mode-content" id="mr-settings-mode">
-    <div class="mode-header">
-        <h3>MRの設定方法</h3>
-        <div class="mode-badge">設定ガイド</div>
-    </div>
+			<div class="mode-content" id="mr-settings-mode">
+			    <div class="mode-header">
+			        <h3>MRの設定方法</h3>
+			        <div class="mode-badge">設定ガイド</div>
+			    </div>
+			
+			    <div class="feature-cards">
+			        <div class="feature-card">
+			            <h4>PCVR版のMR設定</h4>
+			            <div class="feature-content">
+			                <div class="explanation-box">
+			                    <h5>クロマキーの仕組み</h5>
+			                    <ul class="check-list">
+			                        <li>MRモードでは、背景が緑色の空間になります</li>
+			                        <li>Virtual Desktopで緑色を抜き、現実の映像に置き換えます</li>
+			                    </ul>
+			                </div>
+			
+			                <div class="setup-section">
+			                    <div class="settings-grid">
+			                        <!-- 基本設定 -->
+			                        <div class="setting-card">
+			                            <h5>Virtual Desktop設定手順</h5>
+			                            <ol class="setup-steps">
+			                                <li>STREAMINGメニューを開きます</li>
+			                                <li>「VR Passthrough」から「Environment」をオンにします</li>
+			                                <li>右側のConfigボタンをクリックします</li>
+			                            </ol>
+			                        </div>
+			                        
+			                        <!-- 詳細設定値 -->
+			                        <div class="setting-card">
+			                            <h5>推奨パラメータ</h5>
+			                            <div class="parameter-groups">
+			                                <div class="parameter-group">
+			                                    <h6>色設定</h6>
+			                                    <ul class="parameter-list">
+			                                        <li><span class="param-label">Red:</span> 0</li>
+			                                        <li><span class="param-label">Green:</span> 255</li>
+			                                        <li><span class="param-label">Blue:</span> 0</li>
+			                                    </ul>
+			                                </div>
+			                                <div class="parameter-group">
+			                                    <h6>その他の設定</h6>
+			                                    <ul class="parameter-list">
+			                                        <li><span class="param-label">Similarity:</span> 25%</li>
+			                                        <li><span class="param-label">Smoothness:</span> 20%</li>
+			                                        <li><span class="param-label">Opacity:</span> 100%</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			
+			        <!-- Quest 3/3Sの設定 -->
+			        <div class="feature-card">
+			            <h4>Quest 3/3Sの空間認識設定</h4>
+			            <div class="feature-content">
+			                <!-- 設定手順 -->
+			                <div class="setup-section">
+			                    <h5>必要な初期設定</h5>
+			                    <div class="setup-card">
+			                        <ol class="setup-steps">
+			                            <li>Quest本体の設定を開きます</li>
+			                            <li>「物理的空間」→「スペースの設定」→「スペースの設定」を選択</li>
+			                   	    <li>スペースの設定を完了させます</li>
+			                            <li>メニューから空間認識のON/OFFが切り替え可能です</li>
+			                        </ol>
+			                    </div>
+			                </div>
+					<div class="tip-box">
+					    <p>💡 ONにすると一時的に空間の形状が表示されます</p>
+					</div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
 
-    <div class="feature-cards">
-        <div class="feature-card">
-            <h4>PCVR版のMR設定</h4>
-            <div class="feature-content">
-                <div class="explanation-box">
-                    <h5>クロマキーの仕組み</h5>
-                    <ul class="check-list">
-                        <li>MRモードでは、背景が緑色の空間になります</li>
-                        <li>Virtual Desktopで緑色を抜き、現実の映像に置き換えます</li>
-                    </ul>
-                </div>
-
-                <div class="setup-section">
-                    <div class="settings-grid">
-                        <!-- 基本設定 -->
-                        <div class="setting-card">
-                            <h5>Virtual Desktop設定手順</h5>
-                            <ol class="setup-steps">
-                                <li>STREAMINGメニューを開きます</li>
-                                <li>「VR Passthrough」から「Environment」をオンにします</li>
-                                <li>右側のConfigボタンをクリックします</li>
-                            </ol>
-                        </div>
-                        
-                        <!-- 詳細設定値 -->
-                        <div class="setting-card">
-                            <h5>推奨パラメータ</h5>
-                            <div class="parameter-groups">
-                                <div class="parameter-group">
-                                    <h6>色設定</h6>
-                                    <ul class="parameter-list">
-                                        <li><span class="param-label">Red:</span> 0</li>
-                                        <li><span class="param-label">Green:</span> 255</li>
-                                        <li><span class="param-label">Blue:</span> 0</li>
-                                    </ul>
-                                </div>
-                                <div class="parameter-group">
-                                    <h6>その他の設定</h6>
-                                    <ul class="parameter-list">
-                                        <li><span class="param-label">Similarity:</span> 25%</li>
-                                        <li><span class="param-label">Smoothness:</span> 20%</li>
-                                        <li><span class="param-label">Opacity:</span> 100%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quest 3/3Sの設定 -->
-        <div class="feature-card">
-            <h4>Quest 3/3Sの空間認識設定</h4>
-            <div class="feature-content">
-                <!-- 設定手順 -->
-                <div class="setup-section">
-                    <h5>必要な初期設定</h5>
-                    <div class="setup-card">
-                        <ol class="setup-steps">
-                            <li>Quest本体の設定を開きます</li>
-                            <li>「物理的空間」→「スペースの設定」→「スペースの設定」を選択</li>
-                   	    <li>スペースの設定を完了させます</li>
-                            <li>メニューから空間認識のON/OFFが切り替え可能です</li>
-                        </ol>
-                    </div>
-                </div>
-		<div class="tip-box">
-		    <p>💡 ONにすると一時的に空間の形状が表示されます</p>
-		</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-			    
                     </div>
                 </section>
 
@@ -2847,6 +2864,9 @@
             </div>
         </div>
     </main>
+
+    <div id="footer"></div>
+	
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // タブ切り替え機能の実装
