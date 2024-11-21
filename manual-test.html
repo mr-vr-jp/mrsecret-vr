@@ -1874,7 +1874,6 @@
 	    opacity: 1;
 	}
 
-	/* 現在位置を示すインジケーター */
 	.quick-nav-link::before {
 	    content: "";
 	    position: absolute;
@@ -1909,6 +1908,40 @@
 		display: none;
 	    }
 	}
+
+	.parameter-grid {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	    gap: 1rem;
+	    margin-top: 1rem;
+	}
+	
+	.parameter-group {
+	    background: rgba(74, 144, 226, 0.08);
+	    padding: 1rem;
+	    border-radius: 8px;
+	}
+	
+	.parameter-group h6 {
+	    color: var(--accent-color);
+	    margin: 0 0 0.8rem 0;
+	    font-size: 0.95rem;
+	}
+	
+	.settings-guide {
+	    margin-top: 1.5rem;
+	    padding-top: 1.5rem;
+	    border-top: 1px solid var(--border-color);
+	}
+	
+	.nav-button[data-mode="mr-settings"] {
+	    background: rgba(74, 144, 226, 0.15);
+	}
+	
+	.nav-button[data-mode="mr-settings"].active {
+	    background: var(--primary-color);
+	    border-color: var(--accent-color);
+	}	    
     </style>
 </head>
 <body>
@@ -2144,17 +2177,20 @@
                     <h2 class="chapter-title">各モードの詳細</h2>
 
                     <div class="mode-details">
-                        <div class="mode-navigation">
-                            <div class="nav-button active" data-mode="story">
-                                <span class="nav-label">ストーリーモード</span>
-                            </div>
-                            <div class="nav-button" data-mode="free">
-                                <span class="nav-label">フリーモード</span>
-                            </div>
-                            <div class="nav-button" data-mode="mr">
-                                <span class="nav-label">MRモード</span>
-                            </div>
-                        </div>
+			<div class="mode-navigation">
+			    <div class="nav-button active" data-mode="story">
+			        <span class="nav-label">ストーリーモード</span>
+			    </div>
+			    <div class="nav-button" data-mode="free">
+			        <span class="nav-label">フリーモード</span>
+			    </div>
+			    <div class="nav-button" data-mode="mr">
+			        <span class="nav-label">MRモード</span>
+			    </div>
+			    <div class="nav-button" data-mode="mr-settings">
+			        <span class="nav-label">MRの設定方法</span>
+			    </div>
+			</div>
 
 
                         <div class="mode-content active" id="story-mode">
@@ -2471,94 +2507,96 @@
                                     </div>
                                 </div>
 
+<div class="mode-content" id="mr-settings-mode">
+    <div class="mode-header">
+        <h3>MR詳細設定</h3>
+        <div class="mode-badge">設定ガイド</div>
+    </div>
 
-
-
-
-
-				    
-<div class="feature-card">
-    <h4>MRモードの詳細設定</h4>
-    <div class="feature-content">
-        <div class="setting-section">
-            <h5>PCVR版のMR設定</h5>
-            <div class="instruction-steps">
-                <div class="step">
-                    <div class="step-content">
-                        <h5>クロマキーの仕組み</h5>
-                        <ul class="check-list">
-                            <li>MRモード起動時に緑色のクロマキー背景が表示</li>
-                            <li>Virtual Desktopで緑色を抜いてカメラ映像と合成</li>
-                            <li>現実空間とVRキャラクターを組み合わせて表示</li>
-                        </ul>
+    <div class="feature-cards">
+        <div class="feature-card">
+            <h4>PCVR版のMR設定</h4>
+            <div class="feature-content">
+                <div class="instruction-steps">
+                    <div class="step">
+                        <div class="step-content">
+                            <h5>クロマキーの仕組み</h5>
+                            <ul class="check-list">
+                                <li>MRモード起動時に緑色のクロマキー背景が表示</li>
+                                <li>Virtual Desktopで緑色を抜いてカメラ映像と合成</li>
+                                <li>現実空間とVRキャラクターを組み合わせて表示</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="step">
-                    <div class="step-content">
-                        <h5>Virtual Desktop設定手順</h5>
-                        <ol class="setup-steps">
-                            <li>STREAMINGメニューを開く</li>
-                            <li>「VR Passthrough」から「Environment」にチェック</li>
-                            <li>Configボタンから以下を設定：
-                                <div class="settings-grid">
-                                    <div class="setting-card">
-                                        <h6>色設定</h6>
-                                        <ul>
-                                            <li>Red: 0</li>
-                                            <li>Green: 255</li>
-                                            <li>Blue: 0</li>
-                                        </ul>
-                                    </div>
-                                    <div class="setting-card">
-                                        <h6>その他</h6>
-                                        <ul>
-                                            <li>Similarity: 25%</li>
-                                            <li>Smoothness: 20%</li>
-                                            <li>Passthrough Opacity: 100%</li>
-                                        </ul>
-                                    </div>
+                <div class="settings-guide">
+                    <h5>Virtual Desktop設定手順</h5>
+                    <div class="settings-grid">
+                        <div class="setting-card">
+                            <h6>基本設定</h6>
+                            <ol class="setup-steps">
+                                <li>STREAMINGメニューを開く</li>
+                                <li>「VR Passthrough」から「Environment」にチェック</li>
+                                <li>Configボタンを開く</li>
+                            </ol>
+                        </div>
+                        <div class="setting-card">
+                            <h6>詳細パラメータ</h6>
+                            <div class="parameter-grid">
+                                <div class="parameter-group">
+                                    <h6>色設定</h6>
+                                    <ul class="check-list">
+                                        <li>Red: 0</li>
+                                        <li>Green: 255</li>
+                                        <li>Blue: 0</li>
+                                    </ul>
                                 </div>
-                            </li>
-                        </ol>
+                                <div class="parameter-group">
+                                    <h6>その他設定</h6>
+                                    <ul class="check-list">
+                                        <li>Similarity: 25%</li>
+                                        <li>Smoothness: 20%</li>
+                                        <li>Passthrough Opacity: 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="setting-section">
-            <h5>Quest 3/3S 空間認識機能の設定</h5>
-            <div class="setup-container">
-                <div class="setup-card">
-                    <h6>初期設定手順</h6>
-                    <ol class="setup-steps">
-                        <li>Quest本体の設定を開く</li>
-                        <li>物理的空間 > スペースの設定 > スペースの設定 を選択</li>
-                        <li>ゲーム内メニューから空間認識のON/OFF可能</li>
-                    </ol>
+        <div class="feature-card">
+            <h4>Quest 3/3Sの空間認識設定</h4>
+            <div class="feature-content">
+                <div class="setup-container">
+                    <div class="setup-card">
+                        <h5>初期設定手順</h5>
+                        <ol class="setup-steps">
+                            <li>Quest本体の設定を開く</li>
+                            <li>物理的空間 > スペースの設定 > スペースの設定 を選択</li>
+                            <li>ゲーム内メニューから空間認識のON/OFF可能</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="setup-card">
+                        <h5>空間認識の機能</h5>
+                        <ul class="feature-list">
+                            <li>家具の形状に沿った自然な動き</li>
+                            <li>現実の物体との正確な位置関係</li>
+                            <li>より自然な影の表示</li>
+                        </ul>
+                        <div class="tip-box">
+                            <p>💡 ONにすると一時的に空間の形状が表示され、より自然なMR体験が可能になります</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="setup-card">
-                    <h6>空間認識の機能</h6>
-                    <ul class="feature-list">
-                        <li>家具の形状に沿った自然な動き</li>
-                        <li>現実の物体との正確な位置関係</li>
-                        <li>より自然な影の表示</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tip-box">
-                <p>💡 ONにすると一時的に空間の形状が表示され、より自然なMR体験が可能になります</p>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-				    
+		    
 				    
                             </div>
                         </div>
