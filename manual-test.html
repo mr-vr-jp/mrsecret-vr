@@ -1942,6 +1942,49 @@
 	    background: var(--primary-color);
 	    border-color: var(--accent-color);
 	}	    
+
+	.explanation-box {
+	    background: rgba(74, 144, 226, 0.08);
+	    padding: 1.5rem;
+	    border-radius: 12px;
+	    margin-bottom: 1.5rem;
+	}
+	
+	.setup-section {
+	    margin-top: 1.5rem;
+	}
+	
+	.parameter-groups {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	    gap: 1rem;
+	}
+	
+	.parameter-list {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	}
+	
+	.parameter-list li {
+	    display: flex;
+	    justify-content: space-between;
+	    margin-bottom: 0.5rem;
+	    padding: 0.5rem;
+	    background: rgba(74, 144, 226, 0.05);
+	    border-radius: 6px;
+	}
+	
+	.param-label {
+	    font-weight: 500;
+	    color: var(--accent-color);
+	}
+	
+	.function-section {
+	    margin-top: 1.5rem;
+	    padding-top: 1.5rem;
+	    border-top: 1px solid var(--border-color);
+	}
     </style>
 </head>
 <body>
@@ -2509,95 +2552,110 @@
                             </div>
                         </div>
 
-			<div class="mode-content" id="mr-settings-mode">
-			    <div class="mode-header">
-				<h3>MRの設定方法</h3>
-				<div class="mode-badge">設定ガイド</div>
-			    </div>
-			
-			    <div class="feature-cards">
-				<div class="feature-card">
-				    <h4>PCVR版のMR設定</h4>
-				    <div class="feature-content">
-					<div class="instruction-steps">
-					    <div class="step">
-						<div class="step-content">
-						    <h5>クロマキーの仕組み</h5>
-						    <ul class="check-list">
-							<li>MRモードでは背景が緑色の空間で表示</li>
-							<li>Virtual Desktopで緑色を抜いて現実空間をパススルー</li>
-							<li>現実空間とVRモデルを重ね合わせて表示</li>
-						    </ul>
-						</div>
-					    </div>
-					</div>
-			
-					<div class="settings-guide">
-					    <h5>Virtual Desktop設定手順</h5>
-					    <div class="settings-grid">
-						<div class="setting-card">
-						    <h6>基本設定</h6>
-						    <ol class="setup-steps">
-							<li>STREAMINGメニューを開く</li>
-							<li>「VR Passthrough」から「Environment」にチェック</li>
-							<li>Configボタンを開く</li>
-						    </ol>
-						</div>
-						<div class="setting-card">
-						    <h6>おすすめパラメータ</h6>
-						    <div class="parameter-grid">
-							<div class="parameter-group">
-							    <h6>色設定</h6>
-							    <ul class="check-list">
-								<li>Red: 0</li>
-								<li>Green: 255</li>
-								<li>Blue: 0</li>
-							    </ul>
-							</div>
-							<div class="parameter-group">
-							    <h6>その他設定</h6>
-							    <ul class="check-list">
-								<li>Similarity: 25%</li>
-								<li>Smoothness: 20%</li>
-								<li>Passthrough Opacity: 100%</li>
-							    </ul>
-							</div>
-						    </div>
-						</div>
-					    </div>
-					</div>
-				    </div>
-				</div>
-			
-				<div class="feature-card">
-				    <h4>Quest 3/3Sの空間認識設定</h4>
-				    <div class="feature-content">
-					<div class="setup-container">
-					    <div class="setup-card">
-						<h5>初期設定手順</h5>
-						<ol class="setup-steps">
-						    <li>Quest本体の設定を開く</li>
-						    <li>物理的空間 > スペースの設定 > スペースの設定 を選択</li>
-						    <li>ゲーム内メニューから空間認識のON/OFF可能</li>
-						</ol>
-					    </div>
-					    
-					    <div class="setup-card">
-						<h5>空間認識の機能</h5>
-						<ul class="feature-list">
-						    <li>家具の形状に沿った自然な動き</li>
-						    <li>現実の物体との正確な位置関係</li>
-						    <li>より自然な影の表示</li>
-						</ul>
-						<div class="tip-box">
-						    <p>💡 ONにすると一時的に空間の形状が表示され、より自然なMR体験が可能になります</p>
-						</div>
-					    </div>
-					</div>
-				    </div>
-				</div>
-			    </div>
-			</div>							    
+
+			    
+<div class="mode-content" id="mr-settings-mode">
+    <div class="mode-header">
+        <h3>MRの設定方法</h3>
+        <div class="mode-badge">設定ガイド</div>
+    </div>
+
+    <div class="feature-cards">
+        <!-- PCVR版の設定 -->
+        <div class="feature-card">
+            <h4>PCVR版のMR設定</h4>
+            <div class="feature-content">
+                <!-- クロマキーの説明 -->
+                <div class="explanation-box">
+                    <h5>クロマキーの仕組み</h5>
+                    <ul class="check-list">
+                        <li>MRモードを起動すると、背景が緑色の空間になります</li>
+                        <li>Virtual Desktopで緑色を抜き、カメラ映像に置き換えることでMRを実現</li>
+                        <li>これにより現実空間とVRキャラクターを合成表示できます</li>
+                    </ul>
+                </div>
+
+                <!-- Virtual Desktop設定手順 -->
+                <div class="setup-section">
+                    <h5>Virtual Desktop設定手順</h5>
+                    <div class="settings-grid">
+                        <!-- 基本設定 -->
+                        <div class="setting-card">
+                            <h6>STREAMINGメニューでの設定</h6>
+                            <ol class="setup-steps">
+                                <li>STREAMINGメニューを開きます</li>
+                                <li>「VR Passthrough」から「Environment」をオンにします</li>
+                                <li>右側のConfigボタンをクリックします</li>
+                            </ol>
+                        </div>
+                        
+                        <!-- 詳細設定値 -->
+                        <div class="setting-card">
+                            <h6>推奨パラメータ</h6>
+                            <div class="parameter-groups">
+                                <div class="parameter-group">
+                                    <h6>色設定</h6>
+                                    <ul class="parameter-list">
+                                        <li><span class="param-label">Red:</span> 0</li>
+                                        <li><span class="param-label">Green:</span> 255</li>
+                                        <li><span class="param-label">Blue:</span> 0</li>
+                                    </ul>
+                                </div>
+                                <div class="parameter-group">
+                                    <h6>その他の設定</h6>
+                                    <ul class="parameter-list">
+                                        <li><span class="param-label">Similarity:</span> 25%</li>
+                                        <li><span class="param-label">Smoothness:</span> 20%</li>
+                                        <li><span class="param-label">Opacity:</span> 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quest 3/3Sの設定 -->
+        <div class="feature-card">
+            <h4>Quest 3/3Sの空間認識設定</h4>
+            <div class="feature-content">
+                <!-- 設定手順 -->
+                <div class="setup-section">
+                    <h5>初期設定手順</h5>
+                    <div class="setup-card">
+                        <ol class="setup-steps">
+                            <li>Quest本体の設定を開きます</li>
+                            <li>「物理的空間」→「スペースの設定」→「スペースの設定」を選択</li>
+                            <li>ゲーム内メニューから空間認識のON/OFFが切り替え可能です</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 機能説明 -->
+                <div class="function-section">
+                    <h5>空間認識の機能について</h5>
+                    <ul class="feature-list">
+                        <li>家具の形状に沿った自然な動きが可能になります</li>
+                        <li>現実の物体との正確な位置関係を把握できます</li>
+                        <li>より自然な影の表示が可能になります</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <p>💡 ONにすると一時的に空間の形状が表示され、より自然なMR体験が可能になります</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+			    
                     </div>
                 </section>
 
