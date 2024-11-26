@@ -127,26 +127,6 @@
             z-index: 2;
         }
         
-        .image-glow {
-            position: absolute;
-            top: -108px;
-            left: -131px;
-            width: calc(120% + 60px);
-            height: calc(120% + 60px);
-            border-radius: 12px;
-            background: radial-gradient(
-                ellipse at center,
-                rgba(74, 144, 226, 0.6) 10%,
-                rgba(74, 144, 226, 0.2) 40%,
-                rgba(74, 144, 226, 0.1) 60%,
-                rgba(74, 144, 226, 0) 80%
-            );
-            filter: blur(25px);
-            animation: pulseGlow 3s ease-in-out infinite;
-            z-index: 1;
-            will-change: transform, opacity;
-        }
-        
         .purchase-link {
             display: inline-block;
             background-color: var(--primary-color);
@@ -265,6 +245,12 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        .review-section a {
+            color: var(--primary-color);  /* 既存の青色変数を使用 */
+            text-decoration: none;
+            transition: color 0.2s;
+        }        
         
         .review-section .bg-slate-800\/50 {
             background-color: rgba(30, 41, 59, 0.5);
@@ -399,21 +385,6 @@
             }
         }
         
-        @keyframes pulseGlow {
-            0% { 
-                opacity: 0.1;
-                transform: scale(0.98);
-            }
-            50% { 
-                opacity: 0.8;
-                transform: scale(1.02);
-            }
-            100% { 
-                opacity: 0.1;
-                transform: scale(0.98);
-            }
-        }
-        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
@@ -452,7 +423,6 @@
                     </p>
                 
                 <div class="main-image-container">
-                    <div class="image-glow"></div>
                     <img src="assets/images/main-image.jpg" alt="ゲームメイン画像" class="main-image">
                 </div>
                 
