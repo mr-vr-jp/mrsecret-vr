@@ -183,6 +183,38 @@
             left: 0;
             color: var(--accent-color);
         }
+        
+        /* YouTubeの埋め込み用スタイル */
+        .youtube-container {
+            position: relative;
+            width: 70%;
+            padding-bottom: 39.375%;
+            height: 0;
+            overflow: hidden;
+            margin: 1rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .video-description {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            text-align: center;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         @keyframes fadeInUp {
             from {
@@ -213,6 +245,17 @@
                 gap: 0.5rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .youtube-container {
+                width: 90%;
+                padding-bottom: 50.625%;
+            }
+
+            .video-description {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -228,9 +271,10 @@
                         <span class="version-number">ミスター秘密侵入VRの遊び方説明</span>
                         <span class="release-date">2025/1/9</span>
                     </div>
-                    <ul class="changes-list">
-                        <a href="https://youtu.be/g8o0q27eRUM" class="purchase-link" target="_blank">こちら</a>
-                    </ul>
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/g8o0q27eRUM" title="ミスター秘密侵入VRの遊び方説明" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">本作の基本的な遊び方を解説した動画です。このゲームの楽しみ方をマスターしましょう。</p>
                 </div>
 
                 <div class="version-entry" style="animation-delay: 0.3s;">
@@ -238,9 +282,10 @@
                         <span class="version-number">公式PV</span>
                         <span class="release-date">2024/12/31</span>
                     </div>
-                    <ul class="changes-list">
-                        <a href="https://youtu.be/y4QCJ7pBeh8" class="purchase-link" target="_blank">こちら</a>
-                    </ul>
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/y4QCJ7pBeh8" title="ミスター秘密侵入VR公式PV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">新感覚VRエロゲー「ミスター秘密侵入VR」の公式PVです。ゲームの世界観をお楽しみください。</p>
                 </div>
                 
                 <div class="version-entry" style="animation-delay: 0.4s;">
@@ -248,9 +293,10 @@
                         <span class="version-number">Youtubeリリース記念配信</span>
                         <span class="release-date">2024/11/15</span>
                     </div>
-                    <ul class="changes-list">
-                        <a href="https://youtube.com/live/ZnHNnToFrcM" class="purchase-link" target="_blank">こちら</a>
-                    </ul>
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/ZnHNnToFrcM" title="ミスター秘密侵入VRリリース記念配信" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">ゲームのリリースを記念した配信アーカイブです。開発秘話や今後の展望についても語っています。</p>
                 </div>
             </section>
         </div>
