@@ -1,8 +1,12 @@
 User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /manual.html
+Allow: /readme.html
+Allow: /shop.html
+Allow: /troubleshooting.html
+Allow: /updates.html
 Disallow: /credits.html
 Disallow: /dev-story.html
-Disallow: /manual.html
-Disallow: /readme.html
-Disallow: /shop.html
-Disallow: /troubleshooting.html
-Disallow: /updates.html
+
+Sitemap: https://mr-vr-jp.github.io/mrsecret-vr/sitemap.xml
