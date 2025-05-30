@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+
+# 重要なページを明示的に許可
 Allow: /index.html
 Allow: /setup-guide.html
 Allow: /manual.html
@@ -7,5 +9,14 @@ Allow: /troubleshooting.html
 Allow: /shop.html
 Allow: /credits.html
 Allow: /dev-story.html
+Allow: /updates.html
 
+# アセットファイルも許可
+Allow: /assets/
+Allow: /styles/
+
+# サイトマップの場所を指定
 Sitemap: https://mr-vr-jp.github.io/mrsecret-vr/sitemap.xml
+
+# クロール遅延（サーバー負荷軽減）
+Crawl-delay: 1
