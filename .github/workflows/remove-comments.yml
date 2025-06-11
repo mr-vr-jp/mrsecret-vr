@@ -1,0 +1,156 @@
+name: Remove Comments on Push
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  remove-comments:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies for comment removal
+      run: |
+        npm init -y
+        npm install cheerio jsdom
+        
+    - name: Remove comments from files
+      run: |
+        node -e "
+        const fs = require('fs');
+        const path = require('path');
+        const { JSDOM } = require('jsdom');
+        
+        // JavaScript ファイルのコメント削除関数
+        function removeJSComments(content) {
+          // 行コメント (//) を削除（文字列内は除く）
+          content = content.replace(/(?:^|\n|\r)(\s*)\/\/.*$/gm, '');
+          
+          // ブロックコメント (/* */) を削除（文字列内は除く）
+          content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+          
+          // 空行を削除
+          content = content.replace(/^\s*\n/gm, '');
+          
+          // 連続する空行を1つに
+          content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+          
+          return content;
+        }
+        
+        // HTML ファイルのコメント削除関数（インラインJSも処理）
+        function removeHTMLComments(filePath) {
+          try {
+            let content = fs.readFileSync(filePath, 'utf8');
+            
+            // HTML コメント <!-- --> を削除
+            content = content.replace(/<!--[\s\S]*?-->/g, '');
+            
+            // インラインJavaScriptのコメントも削除
+            content = content.replace(/<script[^>]*>([\s\S]*?)<\/script>/gi, (match, jsContent) => {
+              const cleanJS = removeJSComments(jsContent);
+              return match.replace(jsContent, cleanJS);
+            });
+            
+            // インラインCSSのコメントも削除
+            content = content.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (match, cssContent) => {
+              const cleanCSS = cssContent.replace(/\/\*[\s\S]*?\*\//g, '');
+              return match.replace(cssContent, cleanCSS);
+            });
+            
+            fs.writeFileSync(filePath, content);
+            console.log(\`Processed HTML: \${filePath}\`);
+          } catch (error) {
+            console.error(\`Error processing \${filePath}:\`, error.message);
+          }
+        }
+        
+        // CSS ファイルのコメント削除関数
+        function removeCSSComments(filePath) {
+          try {
+            let content = fs.readFileSync(filePath, 'utf8');
+            
+            // CSS コメント /* */ を削除
+            content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+            
+            // 空行を削除
+            content = content.replace(/^\s*\n/gm, '');
+            
+            fs.writeFileSync(filePath, content);
+            console.log(\`Processed CSS: \${filePath}\`);
+          } catch (error) {
+            console.error(\`Error processing \${filePath}:\`, error.message);
+          }
+        }
+        
+        // JavaScript ファイルのコメント削除関数
+        function removeJSCommentsFromFile(filePath) {
+          try {
+            let content = fs.readFileSync(filePath, 'utf8');
+            content = removeJSComments(content);
+            fs.writeFileSync(filePath, content);
+            console.log(\`Processed JS: \${filePath}\`);
+          } catch (error) {
+            console.error(\`Error processing \${filePath}:\`, error.message);
+          }
+        }
+        
+        // ファイルを再帰的に検索して処理
+        function processFiles(dir) {
+          const files = fs.readdirSync(dir, { withFileTypes: true });
+          
+          for (const file of files) {
+            const fullPath = path.join(dir, file.name);
+            
+            if (file.isDirectory()) {
+              // node_modules, .git, .github などのディレクトリは除外
+              if (!['node_modules', '.git', '.github', 'dist', 'build', 'assets', 'videos', 'images'].includes(file.name)) {
+                processFiles(fullPath);
+              }
+            } else if (file.isFile()) {
+              const ext = path.extname(file.name).toLowerCase();
+              
+              if (ext === '.js') {
+                removeJSCommentsFromFile(fullPath);
+              } else if (ext === '.html' || ext === '.htm') {
+                removeHTMLComments(fullPath);
+              } else if (ext === '.css') {
+                removeCSSComments(fullPath);
+              }
+            }
+          }
+        }
+        
+        // 現在のディレクトリから処理開始
+        processFiles('.');
+        "
+        
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Remove comments from code files [skip ci]"
+        git push 
