@@ -13,7 +13,6 @@ Allow: /updates.html
 
 # アセットファイルも許可
 Allow: /assets/
-Allow: /styles/
 
 # サイトマップの場所を指定
 Sitemap: https://mr-vr-jp.github.io/mrsecret-vr/sitemap.xml

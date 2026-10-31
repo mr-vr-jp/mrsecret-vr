@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安装指南 | MRsecretVR 官方手册</title>
+    <meta name="description" content="MRsecretVR的安装指南。讲解PCVR版与Quest一体机版的安装步骤及更新方法。">
+    <meta name="theme-color" content="#09060f">
+    <link rel="canonical" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="安装指南 | MRsecretVR 官方手册">
+    <meta property="og:description" content="MRsecretVR的安装指南。讲解PCVR版与Quest一体机版的安装步骤及更新方法。">
+    <meta property="og:url" content="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html">
+    <link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/setup-guide.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="page-setup-guide">
+<a class="skip" href="#top">跳到正文</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9246a"/><stop offset=".55" stop-color="#9333d6"/><stop offset="1" stop-color="#6446d8"/></linearGradient><linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f5e"/><stop offset="1" stop-color="#171127"/></linearGradient></defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html"><img src="../assets/images/logo-trim-640.webp" alt="MRsecretVR" width="640" height="269"></a>
+    <nav class="site-nav" id="site-nav" aria-label="站内导航">
+      <a href="setup-guide.html" aria-current="page">安装指南</a>
+      <a href="manual.html">游玩指南</a>
+      <a href="troubleshooting.html">问题解决</a>
+      <a href="updates.html">更新记录</a>
+      <a href="shop.html" class="nav-shop">购买页面</a>
+    </nav>
+    <details class="lang"><summary><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-globe"></use></svg>中文</summary><div class="lang-menu"><a href="../setup-guide.html" lang="ja" hreflang="ja">日本語</a><a href="../en/setup-guide.html" lang="en" hreflang="en">English</a><a href="../zh/setup-guide.html" lang="zh-CN" hreflang="zh-CN" aria-current="true">简体中文</a></div></details>
+    <button class="nav-toggle" type="button" aria-label="菜单" aria-expanded="false" aria-controls="site-nav"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+<main id="top">
+  <section class="p-hero">
+    <div class="p-hero-bg"><img src="../assets/images/manual/img-entrance.webp" alt="" width="1920" height="1080"></div>
+    <div class="wrap">
+      <p class="eyebrow">Install Guide</p>
+      <h1 class="p-title">安装指南</h1>
+      <p class="p-lead">感谢购买。请选择游玩环境，按顺序操作。</p>
+    </div>
+  </section>
+
+  <nav class="chapter-bar" aria-label="目录" data-toc>
+    <div class="wrap">
+      <a href="#pcvr-setup"><b>01</b>PCVR版</a>
+      <a href="#quest-setup"><b>02</b>Quest一体机版</a>
+      <a href="#update-instructions"><b>03</b>更新</a>
+    </div>
+  </nav>
+
+  <div class="wrap mt-l">
+    <div class="choices">
+      <a class="choice reveal" href="#pcvr-setup">
+        <span class="choice-art fig"><img src="../assets/images/controls/choose-pcvr.webp" alt="" loading="lazy"></span>
+        <span class="choice-body">
+          <span class="eyebrow">PCVR</span>
+          <h2>PCVR版</h2>
+          <p>连接电脑与VR头显使用。启动SteamVR，运行“MRsecretVR.exe”即可游玩。</p>
+        </span>
+        <span class="choice-go"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-arrow"></use></svg></span>
+      </a>
+      <a class="choice reveal" href="#quest-setup">
+        <span class="choice-art fig"><img src="../assets/images/controls/choose-quest.webp" alt="" loading="lazy"></span>
+        <span class="choice-body">
+          <span class="eyebrow">Quest</span>
+          <h2>Quest一体机版</h2>
+          <p>仅用Meta Quest系列头显即可运行。在Quest上安装“MRsecretVR.apk”后游玩。</p>
+        </span>
+        <span class="choice-go"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-arrow"></use></svg></span>
+      </a>
+    </div>
+    <details class="more">
+      <summary><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-chev"></use></svg>解压后的文件示例</summary>
+      <div class="more-body"><figure class="media"><div class="frame r-16x9"><img class="zoomable" src="../assets/images/setup/package-contents.webp" alt="解压下载文件后的内容（MRsecretVR.apk 和 MRsecretVR_PCVR 文件夹）" loading="lazy"></div></figure></div>
+    </details>
+  </div>
+
+  
+  <section id="pcvr-setup" class="chapter">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-no">01</span>
+        <p class="eyebrow">PCVR Setup</p>
+        <h2>PCVR版安装</h2>
+      </div>
+
+      <div class="flow">
+        <div class="step" id="steamvr-install">
+          <div class="step-no"></div>
+          <div class="step-body">
+            <h3>安装SteamVR</h3>
+            <ol class="do">
+              <li>在电脑上启动Steam</li>
+              <li>打开顶部的<span class="ui">商店</span></li>
+              <li>搜索<a href="https://store.steampowered.com/app/250820/SteamVR/" target="_blank" rel="noopener">SteamVR</a></li>
+              <li>点击绿色按钮（<span class="ui">添加至库</span>或<span class="ui">开始游戏</span>），完成安装</li>
+            </ol>
+            <p class="muted mt-s">安装后可在Steam库的“工具”中启动。</p>
+          </div>
+          <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-pc"></use></svg>电脑 · Steam</figcaption><svg viewBox="0 0 400 312" role="img" aria-label="示意图：在商店搜索并安装SteamVR"><rect class="f-win" x=".5" y=".5" width="399" height="311" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t b" x="26" y="64">商店</text><text class="f-t s" x="92" y="64">库</text><text class="f-t s" x="176" y="64">社区</text><rect class="f-hl-fill" x="14" y="44" width="66" height="30" rx="8"/><rect class="f-hl" x="14" y="44" width="66" height="30" rx="8"/><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="14" cy="44" r="12" opacity=".55"/><circle class="f-pin" cx="14" cy="44" r="12"/><text class="f-pin-t" x="14" y="44">2</text></g><rect class="f-soft" x="16" y="88" width="368" height="34" rx="9"/><text class="f-t l" x="32" y="110">SteamVR</text><path class="f-ic" d="M358 101a7 7 0 1 0 0 .1M363 111l5 5"/><rect class="f-hl-fill" x="16" y="88" width="368" height="34" rx="9"/><rect class="f-hl" x="16" y="88" width="368" height="34" rx="9"/><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="16" cy="88" r="12" opacity=".55"/><circle class="f-pin" cx="16" cy="88" r="12"/><text class="f-pin-t" x="16" y="88">3</text></g><line class="f-line" x1="1" y1="138" x2="399" y2="138"/><rect x="16" y="154" width="128" height="76" rx="10" fill="url(#fgrad)" opacity=".3"/><text class="f-t l c b" x="80" y="199" font-size="26">VR</text><text class="f-t l b" x="160" y="178" font-size="19">SteamVR</text><text class="f-t s" x="160" y="200">免费</text><rect class="f-soft" x="160" y="212" width="190" height="8" rx="4"/><rect class="f-on" x="16" y="248" width="220" height="46" rx="10"/><text class="f-t c b" x="126" y="277">添加至库</text><rect class="f-hl-fill" x="16" y="248" width="220" height="46" rx="10"/><rect class="f-hl" x="16" y="248" width="220" height="46" rx="10"/><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="16" cy="248" r="12" opacity=".55"/><circle class="f-pin" cx="16" cy="248" r="12"/><text class="f-pin-t" x="16" y="248">4</text></g><path class="f-cursor" transform="translate(196 278)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure></div>
+        </div>
+
+        <div class="step" id="game-placement">
+          <div class="step-no"></div>
+          <div class="step-body">
+            <h3>放置游戏文件</h3>
+            <ol class="do">
+              <li>解压下载的游戏文件</li>
+              <li>将解压出的<span class="file">MRsecretVR_PCVR</span>文件夹放到路径中不含中文、日文等全角字符的位置</li>
+            </ol>
+            <div class="note warn"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"></use></svg><p>路径含全角字符时，游戏内的操作可能失灵。</p></div>
+          </div>
+          <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-pc"></use></svg>电脑 · 游戏文件夹的位置</figcaption><svg viewBox="0 0 400 200" role="img" aria-label="示例：文件夹路径不要包含日文字符"><circle cx="16" cy="40" r="13" class="f-ok"/><path d="M10 40l4.5 4.5 8-9" fill="none" stroke="#4fe0b4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><rect class="f-soft " x="38" y="20" width="52" height="40" rx="9"/><path class="f-ic" transform="translate(48 31)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="74" y="46">C:</text><path class="f-ic" d="M96 35l5 5-5 5"/><rect class="f-soft " x="108" y="20" width="98" height="40" rx="9"/><path class="f-ic" transform="translate(118 31)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="144" y="46">Games</text><path class="f-ic" d="M212 35l5 5-5 5"/><rect class="f-soft " x="224" y="20" width="172" height="40" rx="9"/><path class="f-ic" transform="translate(234 31)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="260" y="46">MRsecretVR_PCVR</text><circle cx="16" cy="122" r="13" class="f-ng"/><path d="M11 117l10 10M21 117l-10 10" fill="none" stroke="#ff6d82" stroke-width="2.4" stroke-linecap="round"/><rect class="f-soft " x="38" y="102" width="52" height="40" rx="9"/><path class="f-ic" transform="translate(48 113)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="74" y="128">C:</text><path class="f-ic" d="M96 117l5 5-5 5"/><rect class="f-soft f-ng" x="108" y="102" width="98" height="40" rx="9"/><path class="f-ic" transform="translate(118 113)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="144" y="128">游戏</text><path class="f-ic" d="M212 117l5 5-5 5"/><rect class="f-soft " x="224" y="102" width="172" height="40" rx="9"/><path class="f-ic" transform="translate(234 113)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.1 0 2 .9 2 2V14c0 1.2-.9 2-2 2H3c-1.3 0-2-.8-2-2z"/><text class="f-t m" x="260" y="128">MRsecretVR_PCVR</text><text class="f-t s c ng" x="157" y="166">不可使用中文、日文等全角字符</text></svg></figure></div>
+        </div>
+
+        <div class="step no-fig" id="vr-connection">
+          <div class="step-no"></div>
+          <div class="step-body">
+            <h3>连接VR头显并启动SteamVR</h3>
+            <p>请选择你使用的头显。连接完成后，头显中会显示SteamVR主界面。</p>
+            <div data-tabs class="mt-m">
+              <div class="seg" role="tablist" aria-label="连接方式">
+                <button role="tab" id="tab-c-pc" aria-controls="conn-pcvr" aria-selected="true" tabindex="0">PCVR专用头显<small>Pimax, VIVE…</small></button>
+                <button role="tab" id="tab-c-link" aria-controls="conn-link" aria-selected="false" tabindex="-1">Meta Horizon Link<small>原 Quest Link</small></button>
+                <button role="tab" id="tab-c-vd" aria-controls="conn-vd" aria-selected="false" tabindex="-1">Virtual Desktop<small>Quest / PICO</small></button>
+                <button role="tab" id="tab-c-sl" aria-controls="conn-sl" aria-selected="false" tabindex="-1">Steam Link<small>Quest</small></button>
+              </div>
+
+              <div role="tabpanel" id="conn-pcvr" aria-labelledby="tab-c-pc">
+                <ol class="do">
+                  <li>将VR头显连接到电脑</li>
+                  <li>启动SteamVR</li>
+                </ol>
+              </div>
+
+              <div role="tabpanel" id="conn-link" aria-labelledby="tab-c-link" hidden>
+                <div class="split">
+                  <ol class="do">
+                    <li>在电脑上安装<a href="https://www.meta.com/help/quest/1517439565442928/" target="_blank" rel="noopener">Meta Horizon Link 应用</a>（原 Meta Quest Link）</li>
+                    <li>在Quest的导航栏中打开<span class="ui">Quick Settings</span>→<span class="ui">Link</span></li>
+                    <li>选择电脑，点击<span class="ui">Launch</span><span class="sub">使用Air Link（无线）时，需开启<span class="ui">Use Air Link</span>并完成<a href="https://www.meta.com/help/quest/509273027107091/" target="_blank" rel="noopener">配对</a></span></li>
+                    <li>在Link主界面选择SteamVR并启动</li>
+                  </ol>
+                  <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-link"></use></svg>连接电脑与头显</figcaption><svg viewBox="0 0 400 200" role="img" aria-label="示意图：连接电脑与头显"><g transform="translate(10 34) scale(0.8)">
+<rect x="0" y="0" width="200" height="124" rx="10" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<rect x="9" y="9" width="182" height="106" rx="5" fill="#0b0814"/>
+<path d="M9 90l44-30 34 20 40-34 73 52v12a5 5 0 0 1-5 5H14a5 5 0 0 1-5-5z" fill="url(#fgrad)" opacity=".35"/>
+<circle cx="150" cy="34" r="10" fill="#ffd3e8" opacity=".85"/>
+<path d="M84 124l-6 26h44l-6-26z" fill="#241c3d"/><rect x="62" y="150" width="76" height="7" rx="3.5" fill="#2f2650"/>
+</g><g transform="translate(222 92) scale(0.78)">
+<path d="M18 42C6 8 40-14 100-14s94 22 82 56" fill="none" stroke="#3a2f5e" stroke-width="10" stroke-linecap="round"/>
+<path d="M32 24h136c20 0 32 13 32 32v22c0 21-13 34-34 34h-30c-11 0-17-5-23-15-4-7-7-11-13-11s-9 4-13 11c-6 10-12 15-23 15H34c-21 0-34-13-34-34V56c0-19 12-32 32-32z" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<path d="M36 36h128c12 0 20 8 20 20v16c0 8-5 14-13 16" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="42" cy="56" r="4" fill="#0b0814"/><circle cx="158" cy="56" r="4" fill="#0b0814"/><circle cx="42" cy="82" r="4" fill="#0b0814"/><circle cx="158" cy="82" r="4" fill="#0b0814"/>
+<circle cx="100" cy="48" r="3" fill="#ff5aa5"/>
+</g><path d="M172 100C212 70 210 68 250 98" fill="none" stroke="url(#fgrad)" stroke-width="3.5" stroke-linecap="round"/><text class="f-t s c" x="290" y="40">USB数据线或 Air Link</text></svg></figure>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="conn-vd" aria-labelledby="tab-c-vd" hidden>
+                <div class="split">
+                  <ol class="do">
+                    <li>在头显上安装<span class="ui">Virtual Desktop</span>应用（需另行购买：Quest在<a href="https://www.meta.com/experiences/virtual-desktop/2017050365004772/" target="_blank" rel="noopener">Meta Horizon Store</a>，PICO在PICO商店）</li>
+                    <li>在电脑上安装<a href="https://www.vrdesktop.net/" target="_blank" rel="noopener">Virtual Desktop Streamer</a>，在<span class="ui">ACCOUNTS</span>中输入头显账号（Meta或PICO）的用户名，点击<span class="ui">Save</span></li>
+                    <li>在头显上启动Virtual Desktop并连接电脑<span class="sub">连接成功后，头显中会显示电脑画面</span></li>
+                    <li>在左侧菜单选择<span class="ui">Launch SteamVR</span></li>
+                  </ol>
+                  <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-link"></use></svg>连接电脑与头显</figcaption><svg viewBox="0 0 400 200" role="img" aria-label="示意图：无线连接电脑与头显"><g transform="translate(10 34) scale(0.8)">
+<rect x="0" y="0" width="200" height="124" rx="10" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<rect x="9" y="9" width="182" height="106" rx="5" fill="#0b0814"/>
+<path d="M9 90l44-30 34 20 40-34 73 52v12a5 5 0 0 1-5 5H14a5 5 0 0 1-5-5z" fill="url(#fgrad)" opacity=".35"/>
+<circle cx="150" cy="34" r="10" fill="#ffd3e8" opacity=".85"/>
+<path d="M84 124l-6 26h44l-6-26z" fill="#241c3d"/><rect x="62" y="150" width="76" height="7" rx="3.5" fill="#2f2650"/>
+</g><g transform="translate(222 92) scale(0.78)">
+<path d="M18 42C6 8 40-14 100-14s94 22 82 56" fill="none" stroke="#3a2f5e" stroke-width="10" stroke-linecap="round"/>
+<path d="M32 24h136c20 0 32 13 32 32v22c0 21-13 34-34 34h-30c-11 0-17-5-23-15-4-7-7-11-13-11s-9 4-13 11c-6 10-12 15-23 15H34c-21 0-34-13-34-34V56c0-19 12-32 32-32z" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<path d="M36 36h128c12 0 20 8 20 20v16c0 8-5 14-13 16" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="42" cy="56" r="4" fill="#0b0814"/><circle cx="158" cy="56" r="4" fill="#0b0814"/><circle cx="42" cy="82" r="4" fill="#0b0814"/><circle cx="158" cy="82" r="4" fill="#0b0814"/>
+<circle cx="100" cy="48" r="3" fill="#ff5aa5"/>
+</g><path d="M172 100C212 70 210 68 250 98" fill="none" stroke="url(#fgrad)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 10"/><text class="f-t s c" x="290" y="40">Wi-Fi（无线）</text></svg></figure>
+                </div>
+              </div>
+
+              <div role="tabpanel" id="conn-sl" aria-labelledby="tab-c-sl" hidden>
+                <div class="split">
+                  <div class="yt" data-id="m5I_IkItfUA" data-title="Steam Link 讲解视频">
+                    <button type="button" aria-label="播放视频：Steam Link"><img src="https://i.ytimg.com/vi/m5I_IkItfUA/hqdefault.jpg" alt="" loading="lazy"><span class="play"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-play"></use></svg></span></button>
+                  </div>
+                  <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-link"></use></svg>连接电脑与头显</figcaption><svg viewBox="0 0 400 200" role="img" aria-label="示意图：无线连接电脑与头显"><g transform="translate(10 34) scale(0.8)">
+<rect x="0" y="0" width="200" height="124" rx="10" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<rect x="9" y="9" width="182" height="106" rx="5" fill="#0b0814"/>
+<path d="M9 90l44-30 34 20 40-34 73 52v12a5 5 0 0 1-5 5H14a5 5 0 0 1-5-5z" fill="url(#fgrad)" opacity=".35"/>
+<circle cx="150" cy="34" r="10" fill="#ffd3e8" opacity=".85"/>
+<path d="M84 124l-6 26h44l-6-26z" fill="#241c3d"/><rect x="62" y="150" width="76" height="7" rx="3.5" fill="#2f2650"/>
+</g><g transform="translate(222 92) scale(0.78)">
+<path d="M18 42C6 8 40-14 100-14s94 22 82 56" fill="none" stroke="#3a2f5e" stroke-width="10" stroke-linecap="round"/>
+<path d="M32 24h136c20 0 32 13 32 32v22c0 21-13 34-34 34h-30c-11 0-17-5-23-15-4-7-7-11-13-11s-9 4-13 11c-6 10-12 15-23 15H34c-21 0-34-13-34-34V56c0-19 12-32 32-32z" fill="url(#fbody)" stroke="rgba(236,226,255,.28)" stroke-width="1.5"/>
+<path d="M36 36h128c12 0 20 8 20 20v16c0 8-5 14-13 16" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="2" stroke-linecap="round"/>
+<circle cx="42" cy="56" r="4" fill="#0b0814"/><circle cx="158" cy="56" r="4" fill="#0b0814"/><circle cx="42" cy="82" r="4" fill="#0b0814"/><circle cx="158" cy="82" r="4" fill="#0b0814"/>
+<circle cx="100" cy="48" r="3" fill="#ff5aa5"/>
+</g><path d="M172 100C212 70 210 68 250 98" fill="none" stroke="url(#fgrad)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 10"/><text class="f-t s c" x="290" y="40">Wi-Fi（无线）</text></svg></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="game-launch-pcvr">
+          <div class="step-no"></div>
+          <div class="step-body">
+            <h3>启动游戏</h3>
+            <ol class="do">
+              <li>打开放好的<span class="file">MRsecretVR_PCVR</span>文件夹</li>
+              <li>双击<span class="file">MRsecretVR.exe</span></li>
+              <li>游戏启动，VR头显中显示游戏画面</li>
+            </ol>
+          </div>
+          <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-pc"></use></svg>电脑 · 文件资源管理器</figcaption><svg viewBox="0 0 400 236" role="img" aria-label="示意图：双击MRsecretVR.exe"><rect class="f-win" x=".5" y=".5" width="399" height="235" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">MRsecretVR_PCVR</text><path class="f-ic" transform="translate(22 56)" d="M1 3.5c0-1 .7-2 2-2h4l2.2 2.4H16c1.100 0 2 .9 2 2V14c0 1.200-.9 2-2 2H3c-1.300 0-2-.8-2-2z"/><text class="f-t m" x="52" y="71">MRsecretVR_Data</text><rect class="f-hl-fill" x="12" y="92" width="376" height="40" rx="8"/><rect class="f-hl" x="12" y="92" width="376" height="40" rx="8"/><rect x="22" y="101" width="22" height="22" rx="5" fill="url(#fgrad)"/><text class="f-t m b" x="52" y="118">MRsecretVR.exe</text><text class="f-t s pk" x="372" y="118" text-anchor="end">双击</text><text class="f-t m" x="52" y="168">UnityCrashHandler64.exe</text><text class="f-t m" x="52" y="206">UnityPlayer.dll</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="12" cy="92" r="12" opacity=".55"/><circle class="f-pin" cx="12" cy="92" r="12"/><text class="f-pin-t" x="12" y="92">2</text></g><path class="f-cursor" transform="translate(232 114)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure></div>
+        </div>
+      </div>
+
+      <div class="done reveal">
+        <div class="done-art fig"><svg viewBox="0 0 92 92" aria-hidden="true">
+<circle cx="46" cy="46" r="34" fill="none" stroke="url(#fgrad)" stroke-width="5"/>
+<path d="M31 47l11 11 20-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill="#ff8cc4" d="M78 6c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"/>
+<path fill="#b6a1ff" d="M12 66c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/>
+<path fill="#ffc163" d="M14 8c.6 3.2 1.8 4.4 5 5-3.2.6-4.4 1.8-5 5-.6-3.2-1.8-4.4-5-5 3.2-.6 4.4-1.8 5-5z"/>
+</svg></div>
+        <div>
+          <h3>恭喜！</h3>
+          <p>准备工作全部完成！尽情享受与她共度的时光吧！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="quest-setup" class="chapter band">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-no">02</span>
+        <p class="eyebrow">Quest Setup</p>
+        <h2>Quest一体机版安装</h2>
+      </div>
+
+      <div data-tabs>
+        <div class="seg" role="tablist" aria-label="选择安装方式">
+          <button role="tab" id="tab-a" aria-controls="sidequest-method" aria-selected="true" tabindex="0">A. SideQuest<small>使用电脑</small></button>
+          <button role="tab" id="tab-b" aria-controls="mobile-vr-method" aria-selected="false" tabindex="-1">B. Quest的Files应用<small>无需电脑</small></button>
+        </div>
+
+        
+        <div role="tabpanel" id="sidequest-method" aria-labelledby="tab-a">
+          <div class="flow">
+            <div class="step" id="dev-mode">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>开启开发者模式</h3>
+                <ol class="do">
+                  <li>在<a href="https://developer.oculus.com/" target="_blank" rel="noopener">Meta Quest for Developers</a>注册组织<span class="sub">见下方“组织注册步骤”</span></li>
+                  <li>打开手机蓝牙，启动Meta Horizon应用（原Meta Quest应用）</li>
+                  <li>在三条横线图标的菜单中选择<span class="ui">Devices</span></li>
+                  <li>选择你的Quest（确认显示为已连接）</li>
+                  <li><span class="ui">Headset settings</span>→开启<span class="ui">Developer mode</span></li>
+                  <li>重启Quest</li>
+                </ol>
+                <details class="more">
+                  <summary><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-chev"></use></svg>组织注册步骤</summary>
+                  <div class="more-body">
+                    <ol class="do">
+                      <li>访问Meta Quest for Developers，用Meta Quest账号登录</li>
+                      <li>为验证身份，登记信用卡信息（不会扣费）或设置两步验证</li>
+                      <li>注册组织名称<span class="sub">只是游玩非官方应用的话，名称可随意填写</span></li>
+                    </ol>
+                  </div>
+                </details>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-phone"></use></svg>手机 · Meta Horizon 应用</figcaption><svg viewBox="0 0 400 420" role="img" aria-label="示意图：在手机应用中开启开发者模式"><rect x="28" y="4" width="344" height="122" rx="18" fill="#100b1c" stroke="rgba(236,226,255,.22)" stroke-width="1.5"/><text class="f-t b" x="48" y="34" font-size="14">Menu</text><rect class="f-soft" x="44" y="46" width="312" height="34" rx="8"/><text class="f-t " x="58" y="69">Devices</text><rect class="f-hl-fill" x="44" y="46" width="312" height="34" rx="8"/><rect class="f-hl" x="44" y="46" width="312" height="34" rx="8"/><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="44" cy="46" r="12" opacity=".55"/><circle class="f-pin" cx="44" cy="46" r="12"/><text class="f-pin-t" x="44" y="46">3</text></g><rect class="f-soft" x="44" y="86" width="312" height="28" rx="8"/><text class="f-t s" x="58" y="105">Settings</text><path class="f-arrow" d="M200 130v16M193 139l7 7 7-7"/><rect x="28" y="150" width="344" height="122" rx="18" fill="#100b1c" stroke="rgba(236,226,255,.22)" stroke-width="1.5"/><text class="f-t b" x="48" y="180" font-size="14">Devices</text><rect class="f-soft" x="44" y="192" width="312" height="34" rx="8"/><text class="f-t " x="58" y="215">Quest 3</text><rect class="f-hl-fill" x="44" y="192" width="312" height="34" rx="8"/><rect class="f-hl" x="44" y="192" width="312" height="34" rx="8"/><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="44" cy="192" r="12" opacity=".55"/><circle class="f-pin" cx="44" cy="192" r="12"/><text class="f-pin-t" x="44" y="192">4</text></g><rect class="f-soft" x="44" y="232" width="312" height="28" rx="8"/><text class="f-t s" x="58" y="251">Add device</text><text class="f-t s ok" x="340" y="215" text-anchor="end">Connected</text><path class="f-arrow" d="M200 276v16M193 285l7 7 7-7"/><rect x="28" y="296" width="344" height="122" rx="18" fill="#100b1c" stroke="rgba(236,226,255,.22)" stroke-width="1.5"/><text class="f-t b" x="48" y="326" font-size="14">Headset settings</text><rect class="f-soft" x="44" y="338" width="312" height="34" rx="8"/><text class="f-t " x="58" y="361">Developer mode</text><rect class="f-hl-fill" x="44" y="338" width="312" height="34" rx="8"/><rect class="f-hl" x="44" y="338" width="312" height="34" rx="8"/><g class="f-pinwrap" data-n="5"><circle class="f-pin f-pulse" cx="44" cy="338" r="12" opacity=".55"/><circle class="f-pin" cx="44" cy="338" r="12"/><text class="f-pin-t" x="44" y="338">5</text></g><rect class="f-soft" x="44" y="378" width="312" height="28" rx="8"/><text class="f-t s" x="58" y="397">Power</text><rect class="f-on" x="314" y="345" width="30" height="16" rx="8"/><circle cx="336" cy="353" r="6" fill="#fff"/></svg></figure></div>
+            </div>
+
+            <div class="step" id="adb-driver">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>安装ADB驱动</h3>
+                <ol class="do">
+                  <li>在<a href="https://developer.oculus.com/downloads/package/oculus-adb-drivers/" target="_blank" rel="noopener">Meta Quest开发者中心</a>点击<span class="ui">Download</span></li>
+                  <li>勾选“I have read and agree to the terms of the license .”，点击<span class="ui">Download</span>保存</li>
+                  <li>解压zip文件</li>
+                  <li>右键点击<span class="file">android_winusb.inf</span>，选择<span class="ui">安装</span></li>
+                  <li>显示“操作成功完成。”后点击<span class="ui">确定</span></li>
+                </ol>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-pc"></use></svg>电脑 · 解压后的驱动文件夹</figcaption><svg viewBox="0 0 400 300" role="img" aria-label="示意图：右键点击android_winusb.inf并选择安装"><rect class="f-win" x=".5" y=".5" width="399" height="299" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">oculus-adb-driver</text><text class="f-t m" x="26" y="70">adb_usb.ini</text><text class="f-t m" x="26" y="100">android_usb_migrate.inf</text><rect class="f-hl-fill" x="14" y="112" width="232" height="30" rx="6"/><rect class="f-hl" x="14" y="112" width="232" height="30" rx="6"/><text class="f-t m" x="26" y="132">android_winusb.inf</text><text class="f-t m" x="26" y="166">x86</text><text class="f-t m" x="26" y="196">amd64</text><rect x="150" y="146" width="232" height="140" rx="10" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="170" y="172">打开</text><text class="f-t b" x="170" y="204">安装</text><text class="f-t s" x="170" y="236">复制</text><text class="f-t s" x="170" y="266">属性</text><rect class="f-hl-fill" x="158" y="184" width="216" height="30" rx="6"/><rect class="f-hl" x="158" y="184" width="216" height="30" rx="6"/><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="158" cy="184" r="12" opacity=".55"/><circle class="f-pin" cx="158" cy="184" r="12"/><text class="f-pin-t" x="158" y="184">4</text></g><path class="f-cursor" transform="translate(330 198)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure></div>
+            </div>
+
+            <div class="step no-fig" id="sidequest-install">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>安装SideQuest</h3>
+                <ol class="do">
+                  <li>在<a href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener">SideQuest官网</a>的“Advanced Installer”处点击<span class="ui">DOWNLOAD FOR WINDOWS</span></li>
+                  <li>运行下载的文件进行安装</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="step" id="quest-connect">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>连接Quest与电脑</h3>
+                <ol class="do">
+                  <li>用USB数据线连接Quest和电脑</li>
+                  <li>Quest中出现“Allow USB debugging?”时选择<span class="ui">Allow</span><span class="sub">勾选“Always allow from this computer”，下次可省去此步</span></li>
+                  <li>点开主菜单下方铃铛图标的<span class="ui">Notifications</span>，选择<span class="ui">USB detected</span></li>
+                  <li>出现是否允许访问文件的提示时，选择<span class="ui">Allow</span></li>
+                </ol>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · 头显内的确认提示</figcaption><svg viewBox="0 0 400 220" role="img" aria-label="示意图：Quest内的允许提示"><rect width="400" height="220" rx="14" fill="#0d0918"/><rect x="20" y="22" width="360" height="176" rx="18" fill="#1d1733" stroke="rgba(236,226,255,.16)"/><text class="f-t c b" x="200" y="72" font-size="17">Allow USB debugging?</text><rect class="f-soft" x="56" y="92" width="288" height="8" rx="4"/><rect class="f-btn" x="40" y="128" width="150" height="44" rx="22"/><text class="f-t c" x="115" y="155">Cancel</text><rect class="f-on" x="210" y="128" width="150" height="44" rx="22"/><text class="f-t c b" x="285" y="155">Allow</text><rect class="f-hl-fill" x="210" y="128" width="150" height="44" rx="22"/><rect class="f-hl" x="210" y="128" width="150" height="44" rx="22"/><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="210" cy="128" r="12" opacity=".55"/><circle class="f-pin" cx="210" cy="128" r="12"/><text class="f-pin-t" x="210" y="128">2</text></g><path class="f-cursor" transform="translate(318 158)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure></div>
+            </div>
+
+            <div class="step" id="sidequest-apk">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>安装游戏</h3>
+                <ol class="do">
+                  <li>启动SideQuest，确认已识别Quest<span class="sub">显示<code>No device connected</code>表示未连接，请检查与电脑的连接</span></li>
+                  <li>打开顶部的<span class="ui">Sideload</span></li>
+                  <li>将<span class="file">MRsecretVR.apk</span>拖入框内（或点击后选择）</li>
+                  <li><span class="ui">History</span>中显示<span class="ui">Completed</span>即完成</li>
+                </ol>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-pc"></use></svg>电脑 · SideQuest</figcaption><svg viewBox="0 0 400 316" role="img" aria-label="示意图：将APK拖入SideQuest的Sideload页面"><rect class="f-win" x=".5" y=".5" width="399" height="315" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">SideQuest</text><text class="f-t s l" x="18" y="60">Home</text><text class="f-t b l" x="76" y="60">Sideload</text><text class="f-t s l" x="168" y="60">Files</text><text class="f-t s l" x="218" y="60">Apps</text><text class="f-t s l" x="270" y="60">Stream</text><rect class="f-hl-fill" x="64" y="41" width="84" height="28" rx="7"/><rect class="f-hl" x="64" y="41" width="84" height="28" rx="7"/><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="64" cy="41" r="12" opacity=".55"/><circle class="f-pin" cx="64" cy="41" r="12"/><text class="f-pin-t" x="64" y="41">2</text></g><line class="f-line" x1="1" y1="80" x2="399" y2="80"/><rect x="16" y="96" width="368" height="104" rx="12" fill="rgba(255,90,165,.06)" stroke="#ff8cc4" stroke-dasharray="7 6"/><path class="f-ic" transform="translate(186 110)" d="M1 5c0-1.400 1-2.500 2.500-2.500h7l3 3H26c1.400 0 2.500 1 2.500 2.500v15c0 1.400-1 2.500-2.500 2.500H3.500C2 25.500 1 24.400 1 23zM15 21V11m-4 4l4-4 4 4"/><text class="f-t c l" x="200" y="162">Drop APK, OBB, or ZIP files</text><text class="f-t s c l" x="200" y="182">Click to browse, or multi-select files.</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="16" cy="96" r="12" opacity=".55"/><circle class="f-pin" cx="16" cy="96" r="12"/><text class="f-pin-t" x="16" y="96">3</text></g><text class="f-t b l" x="18" y="232">History</text><rect class="f-soft" x="16" y="246" width="368" height="50" rx="10"/><text class="f-t m" x="32" y="276">MRsecretVR.apk</text><circle cx="278" cy="271" r="9" class="f-ok"/><path d="M273.500 271l3 3 5.500-6" fill="none" stroke="#4fe0b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="f-t ok l" x="294" y="276">Completed</text><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="16" cy="246" r="12" opacity=".55"/><circle class="f-pin" cx="16" cy="246" r="12"/><text class="f-pin-t" x="16" y="246">4</text></g></svg></figure></div>
+            </div>
+
+            <div class="step" id="quest-launch">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>启动游戏</h3>
+                <ol class="do">
+                  <li>按 Meta 键打开菜单，选择底部中间的<span class="ui">Library</span></li>
+                  <li>选择 Library 左端的<span class="ui">三</span>（菜单）</li>
+                  <li>选择<span class="ui">Unknown Sources</span>（未知来源）</li>
+                  <li>选择<span class="ui">MRsecretVR</span>并启动</li>
+                </ol>
+                <p class="muted mt-s">※打开“Unknown Sources”的步骤因Quest系统版本而略有不同。若未显示，请重启Quest。此步骤仍在最新版Quest上确认中。</p>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Library（应用库）</figcaption><svg viewBox="0 0 400 380" role="img" aria-label="示意图：从应用库左侧菜单打开未知来源"><rect width="400" height="380" rx="16" fill="#0d0918"/><rect x="12" y="12" width="376" height="292" rx="16" fill="#1a1430" stroke="rgba(236,226,255,.14)"/><rect x="12" y="12" width="164" height="292" rx="16" fill="#211a3a"/><path class="f-ic" d="M32 39h20M32 46h20M32 53h20"/><rect class="f-hl-fill" x="22" y="26" width="40" height="38" rx="9"/><rect class="f-hl" x="22" y="26" width="40" height="38" rx="9"/><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="22" cy="26" r="12" opacity=".55"/><circle class="f-pin" cx="22" cy="26" r="12"/><text class="f-pin-t" x="22" y="26">2</text></g><text class="f-t s" x="34" y="104">All</text><text class="f-t s" x="34" y="136">Apps</text><rect class="f-hl-fill" x="22" y="154" width="146" height="38" rx="9"/><rect class="f-hl" x="22" y="154" width="146" height="38" rx="9"/><text class="f-t b" x="34" y="179" font-size="13">Unknown Sources</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="22" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="22" cy="154" r="12"/><text class="f-pin-t" x="22" y="154">3</text></g><text class="f-t s" x="34" y="226">Hidden</text><rect x="188" y="28" width="96" height="80" rx="10" fill="url(#fgrad)" opacity=".45"/><text class="f-t c b l" x="236" y="72" font-size="11.5">MRsecretVR</text><rect class="f-hl-fill" x="188" y="28" width="96" height="80" rx="10"/><rect class="f-hl" x="188" y="28" width="96" height="80" rx="10"/><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="188" cy="28" r="12" opacity=".55"/><circle class="f-pin" cx="188" cy="28" r="12"/><text class="f-pin-t" x="188" y="28">4</text></g><path class="f-cursor" transform="translate(254 84)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/><rect x="294" y="28" width="82" height="80" rx="10" class="f-soft"/><rect x="188" y="120" width="96" height="80" rx="10" class="f-soft"/><rect x="294" y="120" width="82" height="80" rx="10" class="f-soft"/><rect x="188" y="212" width="96" height="80" rx="10" class="f-soft"/><rect x="294" y="212" width="82" height="80" rx="10" class="f-soft"/><rect x="60" y="322" width="280" height="44" rx="22" fill="#211a3a" stroke="rgba(236,226,255,.14)"/><circle class="f-dim" cx="88" cy="344" r="6.5" /><circle class="f-dim" cx="122" cy="344" r="6.5" /><circle class="f-dim" cx="156" cy="344" r="6.5" /><circle class="f-dim" cx="244" cy="344" r="6.5" /><circle class="f-dim" cx="278" cy="344" r="6.5" /><circle class="f-dim" cx="312" cy="344" r="6.5" /><rect class="f-on" x="178" y="328" width="44" height="32" rx="10"/><path d="M191 336h7v7h-7zM202 336h7v7h-7zM191 347h7v7h-7zM202 347h7v7h-7z" fill="#fff"/><rect class="f-hl-fill" x="172" y="324" width="56" height="40" rx="12"/><rect class="f-hl" x="172" y="324" width="56" height="40" rx="12"/><g class="f-pinwrap" data-n="1"><circle class="f-pin f-pulse" cx="172" cy="324" r="12" opacity=".55"/><circle class="f-pin" cx="172" cy="324" r="12"/><text class="f-pin-t" x="172" y="324">1</text></g></svg></figure></div>
+            </div>
+          </div>
+
+          <div class="done reveal">
+            <div class="done-art fig"><svg viewBox="0 0 92 92" aria-hidden="true">
+<circle cx="46" cy="46" r="34" fill="none" stroke="url(#fgrad)" stroke-width="5"/>
+<path d="M31 47l11 11 20-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill="#ff8cc4" d="M78 6c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"/>
+<path fill="#b6a1ff" d="M12 66c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/>
+<path fill="#ffc163" d="M14 8c.6 3.2 1.8 4.4 5 5-3.2.6-4.4 1.8-5 5-.6-3.2-1.8-4.4-5-5 3.2-.6 4.4-1.8 5-5z"/>
+</svg></div>
+            <div>
+              <h3>恭喜！</h3>
+              <p>准备工作全部完成！尽情享受与她共度的时光吧！</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div role="tabpanel" id="mobile-vr-method" aria-labelledby="tab-b" hidden>
+          <div class="note warn mt-0"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"></use></svg><p>据报道，Mobile VR Station的安装功能已于2025年6月无法使用。下面使用“Files”应用的方法仍在确认中。如果不成功，请使用<a href="#sidequest-method">A. SideQuest</a>。</p></div>
+          <div class="flow mt-m">
+            <div class="step no-fig">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>开启开发者模式</h3>
+                <p>步骤与方法A的<a href="#dev-mode">开启开发者模式</a>相同。</p>
+              </div>
+            </div>
+
+            <div class="step no-fig" id="apk-prepare">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>准备APK文件</h3>
+                <div data-tabs class="mt-m">
+                  <div class="seg" role="tablist" aria-label="准备APK文件的方法">
+                    <button role="tab" id="tab-p1" aria-controls="apk-quest" aria-selected="true" tabindex="0">方法1<small>仅用Quest</small></button>
+                    <button role="tab" id="tab-p2" aria-controls="apk-pc" aria-selected="false" tabindex="-1">方法2<small>从电脑传输</small></button>
+                  </div>
+                  <div role="tabpanel" id="apk-quest" aria-labelledby="tab-p1">
+                    <div class="split top">
+                      <div>
+                    <ol class="do">
+                      <li>用Quest的浏览器访问<a href="https://www.dlsite.com/" target="_blank" rel="noopener">DLSite</a>，登录后下载游戏</li>
+                      <li>打开<span class="ui">Files</span>应用，对下载的zip文件选择<span class="ui">…</span>→<span class="ui">Extract</span>（解压）</li>
+                    </ol>
+                    <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>解压失败时请尝试方法2。未解压的APK无法安装。</p></div>
+                      </div>
+                      <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files 应用</figcaption><svg viewBox="0 0 400 250" role="img" aria-label="示意图：在文件应用中解压zip"><rect class="f-win" x=".5" y=".5" width="399" height="249" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR_ver1.1.0.zip</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><rect x="170" y="108" width="212" height="124" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="190" y="142">Open</text><rect class="f-hl-fill" x="178" y="154" width="196" height="32" rx="7"/><rect class="f-hl" x="178" y="154" width="196" height="32" rx="7"/><text class="f-t b" x="190" y="176">Extract</text><text class="f-t s" x="190" y="210">Delete</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="178" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="178" cy="154" r="12"/><text class="f-pin-t" x="178" y="154">2</text></g><path class="f-cursor" transform="translate(336 170)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="apk-pc" aria-labelledby="tab-p2" hidden>
+                    <ol class="do">
+                      <li>在电脑上解压下载的游戏文件</li>
+                      <li>用USB连接Quest和电脑</li>
+                      <li>在Quest中允许访问文件（选择<span class="ui">Allow</span>）</li>
+                      <li>从电脑将<span class="file">MRsecretVR.apk</span>复制到Quest的<span class="file">Download</span>文件夹</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="step" id="apk-install">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>安装APK</h3>
+                <ol class="do">
+                  <li>在<span class="ui">Files</span>应用中找到<span class="file">MRsecretVR.apk</span></li>
+                  <li>APK的<span class="ui">…</span>→<span class="ui">Open with</span>（打开方式）→<span class="ui">Package Installer</span></li>
+                  <li><span class="ui">Install</span>→<span class="ui">Done</span></li>
+                </ol>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files 应用</figcaption><svg viewBox="0 0 400 282" role="img" aria-label="示意图：在文件应用中用软件包安装程序安装APK"><rect class="f-win" x=".5" y=".5" width="399" height="281" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR.apk</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><g class="f-pinwrap" data-n="1"><circle class="f-pin f-pulse" cx="12" cy="52" r="12" opacity=".55"/><circle class="f-pin" cx="12" cy="52" r="12"/><text class="f-pin-t" x="12" y="52">1</text></g><rect x="150" y="108" width="232" height="90" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="170" y="142">Open with</text><rect class="f-hl-fill" x="158" y="154" width="216" height="32" rx="7"/><rect class="f-hl" x="158" y="154" width="216" height="32" rx="7"/><text class="f-t b" x="170" y="176">Package Installer</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="158" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="158" cy="154" r="12"/><text class="f-pin-t" x="158" y="154">2</text></g><path class="f-cursor" transform="translate(344 168)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/><rect class="f-on" x="150" y="220" width="232" height="44" rx="22"/><text class="f-t c b" x="266" y="247">Install</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="150" cy="220" r="12" opacity=".55"/><circle class="f-pin" cx="150" cy="220" r="12"/><text class="f-pin-t" x="150" y="220">3</text></g></svg></figure></div>
+            </div>
+
+            <div class="step" id="quest-launch-b">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>启动游戏</h3>
+                <ol class="do">
+                  <li>按 Meta 键打开菜单，选择底部中间的<span class="ui">Library</span></li>
+                  <li>选择 Library 左端的<span class="ui">三</span>（菜单）</li>
+                  <li>选择<span class="ui">Unknown Sources</span>（未知来源）</li>
+                  <li>选择<span class="ui">MRsecretVR</span>并启动</li>
+                </ol>
+                <p class="muted mt-s">※打开“Unknown Sources”的步骤因Quest系统版本而略有不同。若未显示，请重启Quest。此步骤仍在最新版Quest上确认中。</p>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Library（应用库）</figcaption><svg viewBox="0 0 400 380" role="img" aria-label="示意图：从应用库左侧菜单打开未知来源"><rect width="400" height="380" rx="16" fill="#0d0918"/><rect x="12" y="12" width="376" height="292" rx="16" fill="#1a1430" stroke="rgba(236,226,255,.14)"/><rect x="12" y="12" width="164" height="292" rx="16" fill="#211a3a"/><path class="f-ic" d="M32 39h20M32 46h20M32 53h20"/><rect class="f-hl-fill" x="22" y="26" width="40" height="38" rx="9"/><rect class="f-hl" x="22" y="26" width="40" height="38" rx="9"/><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="22" cy="26" r="12" opacity=".55"/><circle class="f-pin" cx="22" cy="26" r="12"/><text class="f-pin-t" x="22" y="26">2</text></g><text class="f-t s" x="34" y="104">All</text><text class="f-t s" x="34" y="136">Apps</text><rect class="f-hl-fill" x="22" y="154" width="146" height="38" rx="9"/><rect class="f-hl" x="22" y="154" width="146" height="38" rx="9"/><text class="f-t b" x="34" y="179" font-size="13">Unknown Sources</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="22" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="22" cy="154" r="12"/><text class="f-pin-t" x="22" y="154">3</text></g><text class="f-t s" x="34" y="226">Hidden</text><rect x="188" y="28" width="96" height="80" rx="10" fill="url(#fgrad)" opacity=".45"/><text class="f-t c b l" x="236" y="72" font-size="11.5">MRsecretVR</text><rect class="f-hl-fill" x="188" y="28" width="96" height="80" rx="10"/><rect class="f-hl" x="188" y="28" width="96" height="80" rx="10"/><g class="f-pinwrap" data-n="4"><circle class="f-pin f-pulse" cx="188" cy="28" r="12" opacity=".55"/><circle class="f-pin" cx="188" cy="28" r="12"/><text class="f-pin-t" x="188" y="28">4</text></g><path class="f-cursor" transform="translate(254 84)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/><rect x="294" y="28" width="82" height="80" rx="10" class="f-soft"/><rect x="188" y="120" width="96" height="80" rx="10" class="f-soft"/><rect x="294" y="120" width="82" height="80" rx="10" class="f-soft"/><rect x="188" y="212" width="96" height="80" rx="10" class="f-soft"/><rect x="294" y="212" width="82" height="80" rx="10" class="f-soft"/><rect x="60" y="322" width="280" height="44" rx="22" fill="#211a3a" stroke="rgba(236,226,255,.14)"/><circle class="f-dim" cx="88" cy="344" r="6.5" /><circle class="f-dim" cx="122" cy="344" r="6.5" /><circle class="f-dim" cx="156" cy="344" r="6.5" /><circle class="f-dim" cx="244" cy="344" r="6.5" /><circle class="f-dim" cx="278" cy="344" r="6.5" /><circle class="f-dim" cx="312" cy="344" r="6.5" /><rect class="f-on" x="178" y="328" width="44" height="32" rx="10"/><path d="M191 336h7v7h-7zM202 336h7v7h-7zM191 347h7v7h-7zM202 347h7v7h-7z" fill="#fff"/><rect class="f-hl-fill" x="172" y="324" width="56" height="40" rx="12"/><rect class="f-hl" x="172" y="324" width="56" height="40" rx="12"/><g class="f-pinwrap" data-n="1"><circle class="f-pin f-pulse" cx="172" cy="324" r="12" opacity=".55"/><circle class="f-pin" cx="172" cy="324" r="12"/><text class="f-pin-t" x="172" y="324">1</text></g></svg></figure></div>
+            </div>
+          </div>
+
+          <div class="done reveal">
+            <div class="done-art fig"><svg viewBox="0 0 92 92" aria-hidden="true">
+<circle cx="46" cy="46" r="34" fill="none" stroke="url(#fgrad)" stroke-width="5"/>
+<path d="M31 47l11 11 20-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill="#ff8cc4" d="M78 6c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"/>
+<path fill="#b6a1ff" d="M12 66c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/>
+<path fill="#ffc163" d="M14 8c.6 3.2 1.8 4.4 5 5-3.2.6-4.4 1.8-5 5-.6-3.2-1.8-4.4-5-5 3.2-.6 4.4-1.8 5-5z"/>
+</svg></div>
+            <div>
+              <h3>恭喜！</h3>
+              <p>准备工作全部完成！尽情享受与她共度的时光吧！</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="update-instructions" class="chapter">
+    <div class="wrap">
+      <div class="chapter-head">
+        <span class="chapter-no">03</span>
+        <p class="eyebrow">Update</p>
+        <h2>更新步骤</h2>
+        <p class="chapter-lead">PC版和Quest版的存档都会保留。</p>
+      </div>
+
+      <div class="cols-2">
+        <div id="pcvr-update" class="reveal">
+          <h3 class="sec-title">PCVR版</h3>
+          <ol class="do">
+            <li>解压下载的文件</li>
+            <li>运行新版本的<span class="file">MRsecretVR.exe</span></li>
+          </ol>
+          <details class="more">
+            <summary><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-chev"></use></svg>游戏开始画面无法选择菜单时</summary>
+            <div class="more-body">
+              <ul class="points">
+                <li>试着把游戏文件夹移到其他位置（例：Downloads → Desktop）</li>
+                <li>或将文件夹名改回首次启动时的名称（例：MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0）</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+        <div id="quest-update" class="reveal">
+          <h3 class="sec-title">Quest一体机版</h3>
+          <ol class="do">
+            <li>准备新版本的<span class="file">MRsecretVR.apk</span></li>
+            <li>按常规安装步骤用SideQuest安装<span class="sub">会自动覆盖安装</span></li>
+          </ol>
+          <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>无法用SideQuest安装时，请按<a href="#mobile-vr-method">B. Quest的Files应用</a>的步骤操作。</p></div>
+        </div>
+      </div>
+
+      <p class="mt-l center muted">更新完成后，尽情体验新功能和改进吧！</p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html"><img src="../assets/images/logo-trim-640.webp" alt="MRsecretVR" width="640" height="269" loading="lazy"></a>
+      <nav class="footer-nav" aria-label="页脚">
+        <a href="setup-guide.html">安装指南</a>
+        <a href="updates.html">更新记录</a>
+        <a href="manual.html">游玩指南</a>
+        <a href="credits.html">制作名单</a>
+        <a href="troubleshooting.html">问题解决</a>
+        <a href="dev-story.html">开发幕后</a>
+        <a href="shop.html">购买页面</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><span class="age">R18</span>© 2024 MRsecretVR All Rights Reserved.</p>
+      <p>本手册内容如有变更，恕不另行通知。</p>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="返回顶部"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-up"></use></svg></button>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

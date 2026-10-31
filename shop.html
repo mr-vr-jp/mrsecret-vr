@@ -7,265 +7,95 @@
     <meta name="keywords" content="ミスター秘密侵入VR, VRエロゲ, 購入, 販売, DLsite, VRゲーム, アダルトVR">
     <meta name="author" content="ミスターVR">
     <title>ミスター秘密侵入VR - 販売ページ</title>
-    
-    <!-- ファビコン設定 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/web-app-manifest-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/web-app-manifest-512x512.png">
     <meta name="msapplication-TileImage" content="assets/images/web-app-manifest-192x192.png">
-    <meta name="msapplication-TileColor" content="#4a90e2">
-    <meta name="theme-color" content="#4a90e2">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#09060f">
+    <meta name="theme-color" content="#09060f">
+
     <link rel="canonical" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html" />
-    
-    <!-- OGP設定 -->
+
     <meta property="og:title" content="ミスター秘密侵入VR - 販売ページ" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mr-vr-jp.github.io/mrsecret-vr/shop.html" />
     <meta property="og:description" content="VRエロゲー「ミスター秘密侵入VR」の購入ページ一覧です。DLsiteでの販売情報とリンクを掲載しています。" />
     <meta property="og:site_name" content="ミスター秘密侵入VR 公式サイト" />
     <meta property="og:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <!-- Twitter Card設定 -->
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ミスター秘密侵入VR - 販売ページ" />
     <meta name="twitter:description" content="VRエロゲー「ミスター秘密侵入VR」の購入ページ一覧です。DLsiteでの販売情報とリンクを掲載しています。" />
     <meta name="twitter:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('ヘッダーの読み込みに失敗しました:', error);
-                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
-                });
-    
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('フッターの読み込みに失敗しました:', error);
-                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
-                });
-        });
-    </script>    
-    <style>
-        :root {
-            --primary-color: #4a90e2;
-            --text-color: #e4e4e7;
-            --bg-color: #18181b;
-            --card-bg: #27272a;
-            --accent-color: #63b3ed;
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .header {
-            background-color: rgba(39, 39, 42, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .purchase-link {
-            display: inline-block;
-            background-color: #4a90e2;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .purchase-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
-        }
-
-        .purchase-link::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: translate(-50%, -50%) rotate(35deg);
-            transition: transform 0.5s ease;
-        }
-
-        .purchase-link:hover::after {
-            transform: translate(-50%, -50%) rotate(35deg) translateX(20%);
-        }
-      
-        .changelog {
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            margin-top: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .version-entry {
-            margin-bottom: 3rem;
-            padding: 1.5rem;
-            background-color: rgba(74, 144, 226, 0.1);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .version-header {
-            display: flex;
-            align-items: baseline;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .version-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-color);
-        }
-
-        .release-date {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        .changes-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .changes-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .changes-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 640px) {
-            .version-entry {
-                padding: 1rem;
-            }
-            
-            .version-header {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+    <link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html">
+    <link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/shop.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/shop.html">
+    <link rel="alternate" hreflang="x-default" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div id="header"></div>
+<body class="page-shop">
+<a class="skip" href="#top">本文へ移動</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9246a"/><stop offset=".55" stop-color="#9333d6"/><stop offset="1" stop-color="#6446d8"/></linearGradient><linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f5e"/><stop offset="1" stop-color="#171127"/></linearGradient></defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269"></a>
+    <nav class="site-nav" id="site-nav" aria-label="サイト内">
+      <a href="setup-guide.html">導入ガイド</a>
+      <a href="manual.html">プレイガイド</a>
+      <a href="troubleshooting.html">トラブルガイド</a>
+      <a href="updates.html">アップデート履歴</a>
+      <a href="shop.html" aria-current="page" class="nav-shop">販売ページ</a>
+    </nav>
+    <details class="lang"><summary><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-globe"></use></svg>JA</summary><div class="lang-menu"><a href="shop.html" lang="ja" hreflang="ja" aria-current="true">日本語</a><a href="en/shop.html" lang="en" hreflang="en">English</a><a href="zh/shop.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></div></details>
+    <button class="nav-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+<main id="top">
+  <section class="p-hero">
+    <div class="p-hero-bg"><img src="assets/images/manual/img-house-night.webp" alt="" width="1920" height="1080"></div>
+    <div class="wrap">
+      <p class="eyebrow">Shop</p>
+      <h1 class="p-title">販売ページ</h1>
+    </div>
+  </section>
 
-    <main style="padding-top: 90px">
-        <div class="container">
-            <section class="changelog">
-                <h1 style="color: var(--primary-color); margin-bottom: 2rem;">販売ページ</h1>
-                
-                <div class="version-entry" style="animation-delay: 0.2s;">
-                    <div class="version-header">
-                        <span class="version-number">DLSite</span>
-                    </div>
-                    <ul class="changes-list">
-                        <a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/mrsecret_vr_manual/id/RJ01266526.html" class="purchase-link" target="_blank">こちら</a>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <div id="footer"></div>
+  <div class="wrap shop split">
+    <figure class="media reveal"><div class="frame"><img src="assets/images/main-image.jpg" alt="ミスター秘密侵入VR メイン画像" width="2000" height="1500" loading="lazy"></div></figure>
+    <div class="reveal">
+      <p class="eyebrow">Shop</p>
+      <h2 class="shop-store">DLsite</h2>
+      <a class="btn" href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/mrsecret_vr_manual/id/RJ01266526.html" target="_blank" rel="noopener">DLsiteの販売ページ<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-ext"></use></svg></a>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269" loading="lazy"></a>
+      <nav class="footer-nav" aria-label="フッター">
+        <a href="setup-guide.html">導入ガイド</a>
+        <a href="updates.html">アップデート履歴</a>
+        <a href="manual.html">プレイガイド</a>
+        <a href="credits.html">ゲームクレジット</a>
+        <a href="troubleshooting.html">トラブルガイド</a>
+        <a href="dev-story.html">開発秘話</a>
+        <a href="shop.html">販売ページ</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><span class="age">R18</span>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+      <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="ページの先頭へ"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-up"></use></svg></button>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

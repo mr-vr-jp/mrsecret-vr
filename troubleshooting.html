@@ -8,22 +8,19 @@
     <meta name="author" content="ミスターVR">
     <meta name="robots" content="index, follow">
     <title>ミスター秘密侵入VR｜トラブルガイド - 問題解決サポート</title>
-    
-    <!-- ファビコン設定 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/web-app-manifest-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/web-app-manifest-512x512.png">
     <meta name="msapplication-TileImage" content="assets/images/web-app-manifest-192x192.png">
-    <meta name="msapplication-TileColor" content="#4a90e2">
-    <meta name="theme-color" content="#4a90e2">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#09060f">
+    <meta name="theme-color" content="#09060f">
+
     <link rel="canonical" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html" />
-    
-    <!-- OGP設定 -->
+
     <meta property="og:title" content="ミスター秘密侵入VR｜トラブルガイド - 問題解決サポート" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html" />
@@ -31,455 +28,195 @@
     <meta property="og:site_name" content="ミスター秘密侵入VR公式サイト" />
     <meta property="og:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
     <meta property="og:locale" content="ja_JP" />
-    
-    <!-- Twitter Card設定 -->
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ミスター秘密侵入VR｜トラブルガイド - 問題解決サポート" />
     <meta name="twitter:description" content="ミスター秘密侵入VRのトラブルシューティング完全ガイド。起動できない、操作が効かないなどの問題解決方法を詳しく解説。VRエロゲーの技術サポート情報。" />
     <meta name="twitter:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('ヘッダーの読み込みに失敗しました:', error);
-                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
-                });
-    
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('フッターの読み込みに失敗しました:', error);
-                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
-                });
-        });
-    </script>    
-    <style>
-        :root {
-            --primary-color: #4a90e2;
-            --text-color: #e4e4e7;
-            --bg-color: #18181b;
-            --card-bg: #27272a;
-            --warning-color: #e2984a;
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-top: 4rem;
-        }
-      
-        .header {
-            background-color: rgba(39, 39, 42, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .notice-banner {
-            background-color: rgba(226, 152, 74, 0.1);
-            border-left: 4px solid var(--warning-color);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 0 8px 8px 0;
-            animation: fadeIn 0.6s ease;
-        }
-
-        .notice-banner a {
-            color: var(--warning-color);
-            text-decoration: none;
-            border-bottom: 1px dotted var(--warning-color);
-        }
-
-        .notice-banner a:hover {
-            border-bottom-style: solid;
-        }
-
-        .troubleshooting-section {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 1rem 0;
-            animation: fadeInUp 0.6s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            animation-fill-mode: forwards;
-        }
-
-        .troubleshooting-section h2 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .custom-link {
-            color: var(--text-color);
-            text-decoration: underline;
-        }
-        
-        .custom-link:hover {
-            color: var(--primary-color);
-        }
-
-        .issue-card {
-            background-color: rgba(74, 144, 226, 0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .issue-title {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .solution-steps {
-            list-style: none;
-            padding-left: 0;
-            margin: 1rem 0;
-        }
-
-        .solution-steps li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .sub-issue {
-            margin: 1.5rem 0;
-            padding: 1rem;
-            background-color: rgba(74, 144, 226, 0.05);
-            border-radius: 6px;
-        }
-        
-        .sub-issue-title {
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 0.8rem;
-        }
-        
-        .solution-steps li::before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-
-        .known-issues {
-            background-color: rgba(226, 74, 74, 0.1);
-            border-left: 4px solid #e24a4a;
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
-            margin-top: 2rem;
-        }
-
-        .known-issues h3 {
-            color: #e24a4a;
-            margin-top: 0;
-        }
-
-        code {
-            background-color: rgba(74, 144, 226, 0.1);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-
-        .video-container {
-            position: relative;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            width: 100%;
-            max-width: 400px;
-            margin-right: auto;
-            margin-left: 0;
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .video-wrapper video {
-            width: auto;
-            height: auto;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            display: block;
-            border-radius: 4px;
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
-        .video-caption {
-            text-align: left;
-            color: var(--text-color);
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 640px) {
-            .video-container {
-                padding: 0.75rem;
-                margin: 1rem auto;
-            }
-            
-            .video-wrapper {
-                min-height: 150px;
-            }
-            
-            .video-caption {
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .video-container {
-                max-width: 90%;
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 640px) {
-            .video-container {
-                max-width: 300px;
-                padding: 0.75rem;
-                margin: 1rem auto;
-            }
-            
-            .video-wrapper {
-                max-height: 300px;
-            }
-            
-            .video-caption {
-                font-size: 0.8rem;
-            }
-        
-        }
-    </style>
+    <link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html">
+    <link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/troubleshooting.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/troubleshooting.html">
+    <link rel="alternate" hreflang="x-default" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="page-troubleshooting">
+<a class="skip" href="#top">本文へ移動</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9246a"/><stop offset=".55" stop-color="#9333d6"/><stop offset="1" stop-color="#6446d8"/></linearGradient><linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f5e"/><stop offset="1" stop-color="#171127"/></linearGradient></defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269"></a>
+    <nav class="site-nav" id="site-nav" aria-label="サイト内">
+      <a href="setup-guide.html">導入ガイド</a>
+      <a href="manual.html">プレイガイド</a>
+      <a href="troubleshooting.html" aria-current="page">トラブルガイド</a>
+      <a href="updates.html">アップデート履歴</a>
+      <a href="shop.html" class="nav-shop">販売ページ</a>
+    </nav>
+    <details class="lang"><summary><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-globe"></use></svg>JA</summary><div class="lang-menu"><a href="troubleshooting.html" lang="ja" hreflang="ja" aria-current="true">日本語</a><a href="en/troubleshooting.html" lang="en" hreflang="en">English</a><a href="zh/troubleshooting.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></div></details>
+    <button class="nav-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+<main id="top">
+  <section class="p-hero">
+    <div class="p-hero-bg"><img src="assets/images/key/scene-blinds.webp" alt="" width="1920" height="1080"></div>
+    <div class="narrow">
+      <p class="eyebrow">Trouble Guide</p>
+      <h1 class="p-title">トラブルガイド</h1>
+      <p class="p-lead">ご迷惑をおかけし申し訳ございません。その他の問題については<a href="https://ci-en.net/creator/27628/article/1288727" target="_blank" rel="noopener">Ci-enのページ</a>でコメントいただければ幸いです。</p>
+    </div>
+  </section>
 
-<body>
-    <div id="header"></div>
+  <div class="narrow">
+    <div class="search">
+      <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>
+      <input id="trouble-filter" type="search" placeholder="キーワードで絞り込み（例: メニュー、SideQuest、髪型）" aria-label="キーワードで絞り込み" autocomplete="off" data-filter-input>
+    </div>
+    <p class="search-empty" data-filter-empty hidden>該当する項目が見つかりませんでした。</p>
 
-    <main style="padding-top: 90px">
-        <div class="container">
-            <div class="notice-banner">
-                <p>ご迷惑をおかけし申し訳ございません。</p>
-                <p>その他の問題については<a href="https://ci-en.net/creator/27628/article/1288727" target="_blank">Ci-enのページ</a>でコメントいただければ幸いです。</p>
-            </div>
+    <section id="install-issues" class="qa-group" data-filter-group>
+      <h2 class="qa-title">起動・インストール関連</h2>
 
-            <div class="troubleshooting-section">
-                <h2>起動・インストール関連</h2>
-                
-                <div class="issue-card">
-                   <div class="issue-title">【PC版】ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</div>
-                  
-                   <div class="sub-issue">
-                       <div class="sub-issue-title">ケース1: フォルダパスに日本語や全角文字、スペースが含まれている場合</div>
-                       <div class="solution-header">対処方法</div>
-                       <ul class="solution-steps">
-                           <li>ゲームフォルダを英数字のみのパスに移動してください。</li>
-                           <li>上層フォルダも含めパス全体が英数字である必要があります。</li>
-                           <li>例: <code>C:\Games\MRsecretVR</code></li>
-                       </ul>
-                   </div>
-                
-                   <div class="sub-issue">
-                       <div class="sub-issue-title">ケース2: 一度ゲームを起動した場所でフォルダ名を変更した場合</div>
-                       <div class="solution-header">対処方法</div>
-                       <ul class="solution-steps">
-                           <li>ゲームフォルダを完全に別の場所に移動してください。</li>
-                            <li>例：<code>Downloads → Desktop）</code></li>
-                           <li>またはフォルダ名を最初に起動した時の名前に戻してください。</li>
-                           <li>例: <code>MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0</code></li>
-                       </ul>
-                   </div>
-                  
-                   <div class="additional-notes">問題が解決しない場合</div>
-                   <ul class="solution-steps">
-                       <li>一度選択不可になると、対処後にSteamVRを再起動する必要があります。</li>
-                       <li>ZIPファイルを再度ダウンロードし、新しい場所に展開してお試しください。</li>
-                   </ul>
-                   <p class="note">※これらの問題はSteamVRの仕様によるもので、アプリケーション側では制御できない問題となっています。</p>
-                </div>
-                
-                <div class="issue-card">
-                    <div class="issue-title">【PC版】SteamVRで起動できない</div>
-                    <ol class="solution-steps">
-                        <li>SteamVRウィンドウの「三本線」メニュー →「設定」を選択</li>
-                        <li>OpenXRの項目で「STEAMVRをOPENXRランタイムとして設定」を選択</li>
-                    </ol>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">【PC版】Quest LinkのSteamVRで起動できない</div>
-                    <p>PCのMeta Quest Linkソフトで、OpenXRの設定をご変更ください。</p>
-                    <ul class="solution-steps">
-                        <li>設定→一般→OpenXRランタイム</li>
-                        <li>「Meta Quest Linkをアクティブ」を選択</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">【Quest単体版】APKファイルが導入できない</div>
-                    <ol class="solution-steps">
-                        <li>Quest2でSideQuestによる導入ができない現象を確認しています。</li>
-                        <li><a href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html#mobile-vr-method" class="custom-link" target="_blank">導入ガイド</a>の「B. Mobile VR Stationを使用する方法」をお試しください。</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="troubleshooting-section" style="animation-delay: 0.2s">
-                <h2>操作・ゲームプレイ関連</h2>
-
-                <div class="issue-card">
-                    <div class="issue-title">髪型が着せ替えられない</div>
-                    <p>衣装と髪型で操作方法が若干異なります。</p>
-                    <ul class="solution-steps">
-                        <li>衣装の場合: リュックから取り出して掴むだけで着せ替えができます。</li>
-                        <li>髪型の場合: リュックから取り出した後、彼女の髪に当てる必要があります。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">下着が脱がせられない</div>
-                    <ul class="solution-steps">
-                        <li>パンツとブラジャーはトリガーボタンで掴むことができます。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">扉やアイテムの操作が難しい</div>
-                    <ul class="solution-steps">
-                        <li>手には物理判定があるので、扉に手をあててそのままスライドすると操作しやすいです。</li>
-                        <li>グリップボタンは使わず、手で直接押すとうまくいきやすい場合があります。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">手つなぎがうまくいかない</div>
-                    <ul class="solution-steps">
-                        <li>手から肘の間（前腕部分）を掴むようにしてください。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">MRモードでお手て繋ぎができない</div>
-                    <ul class="solution-steps">
-                        <li>メニューのポーズリセット後に1回のみ可能です。</li>
-                        <li>仕様上の制約となっています。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">MRモードの使い方が分からない</div>
-                    <ul class="solution-steps">
-                        <li>プレイガイドの「各モードの詳細」、「MRの設定方法」のタブをご確認ください。</li>
-                    </ul>
-                </div>
-
-                <div class="issue-card">
-                    <div class="issue-title">Quest3/3Sで空間認識機能が使えない</div>
-                    <ul class="solution-steps">
-                        <li>Quest3、Quest3S限定の機能となります</li>
-                        <li>プレイガイドの項目「各モードの詳細」の「MRの設定方法」のタブに記載の初期設定を行う必要があります。</li>                        
-                        <li>スペースの設定内に、「スペースを管理」と「ルーム名」の項目が表示されていることをご確認ください。</li>
-                        <li>スペースの設定にある「アプリのアクセス許可」→「空間データ」→「MRsecretVR」をON</li>
-                        <li>スペースの設定中に、部屋の形状を認識するMeshが表示されていることをご確認ください。</li>
-                        <li>メニューの「空間認識未対応」の箇所を押してONしていただく必要があります。</li>
-                    </ul>
-                </div>
-                
-            </div>
+      <details class="qa" id="pc-menu-unselectable" data-filter-item>
+        <summary><span><small class="tagline">PC</small>ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <div class="case">
+            <h3>フォルダパスに日本語や全角文字、スペースが含まれている場合</h3>
+            <ul class="points">
+              <li>ゲームフォルダを英数字のみのパスに移動してください。上層フォルダも含め、パス全体が英数字である必要があります。</li>
+            </ul>
+            <div class="path ok mt-s"><span class="mk">OK</span><code>C:\Games\MRsecretVR</code></div>
+          </div>
+          <div class="case">
+            <h3>一度ゲームを起動した場所でフォルダ名を変更した場合</h3>
+            <ul class="points">
+              <li>ゲームフォルダを完全に別の場所に移動してください（例: Downloads → Desktop）。</li>
+              <li>または、フォルダ名を最初に起動した時の名前に戻してください（例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0）。</li>
+            </ul>
+          </div>
+          <div class="case">
+            <h3>問題が解決しない場合</h3>
+            <ul class="points">
+              <li>一度選択不可になると、対処後にSteamVRを再起動する必要があります。</li>
+              <li>ZIPファイルを再度ダウンロードし、新しい場所に展開してお試しください。</li>
+            </ul>
+            <p class="muted mt-s">※これらの問題はSteamVRの仕様によるもので、アプリケーション側では制御できない問題となっています。</p>
+          </div>
         </div>
-    </main>
+      </details>
 
-    <div id="footer"></div>
+      <details class="qa" id="pc-steamvr" data-filter-item>
+        <summary><span><small class="tagline">PC</small>SteamVRで起動できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <ol class="do">
+            <li>SteamVRウィンドウの「三本線」メニュー →「設定」を選択</li>
+            <li>OpenXRの項目で「STEAMVRをOPENXRランタイムとして設定」を選択</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="qa" id="pc-questlink" data-filter-item>
+        <summary><span><small class="tagline">PC</small>Meta Horizon Link（旧 Quest Link）のSteamVRで起動できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>PCのMeta Horizon Linkソフト（旧 Meta Quest Link）で、OpenXRの設定をご変更ください。</p>
+          <ol class="do">
+            <li>設定→一般→OpenXRランタイム</li>
+            <li>アクティブに設定</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="qa" id="quest-apk" data-filter-item>
+        <summary><span><small class="tagline">Quest</small>APKファイルが導入できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>Quest2でSideQuestによる導入ができない現象を確認しています。</p>
+          <p><a href="setup-guide.html#mobile-vr-method">導入ガイド</a>の「B. Quest本体のファイルアプリ」をお試しください。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="play-issues" class="qa-group" data-filter-group>
+      <h2 class="qa-title">操作・ゲームプレイ関連</h2>
+
+      <details class="qa" id="hair" data-filter-item>
+        <summary><span>髪型が着せ替えられない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>衣装と髪型で操作方法が若干異なります。</p>
+          <ul class="points">
+            <li><strong>衣装の場合</strong>　リュックから取り出して掴むだけで着せ替えができます。</li>
+            <li><strong>髪型の場合</strong>　リュックから取り出した後、彼女の髪に当てる必要があります。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="qa" id="underwear" data-filter-item>
+        <summary><span>下着が脱がせられない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body"><p>パンツとブラジャーはグリップボタンで掴むことができます。</p></div>
+      </details>
+
+      <details class="qa" id="doors" data-filter-item>
+        <summary><span>扉やアイテムの操作が難しい</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <ul class="points">
+            <li>手には物理判定があるので、扉に手をあててそのままスライドすると操作しやすいです。</li>
+            <li>グリップボタンは使わず、手で直接押すとうまくいきやすい場合があります。</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="qa" id="hand-holding" data-filter-item>
+        <summary><span>手つなぎがうまくいかない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body"><p>手から肘の間（前腕部分）を掴むようにしてください。</p></div>
+      </details>
+
+      <details class="qa" id="mr-hand-holding" data-filter-item>
+        <summary><span>MRモードでお手て繋ぎができない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body"><p>メニューのポーズリセット後に1回のみ可能です。仕様上の制約となっています。</p></div>
+      </details>
+
+      <details class="qa" id="mr-howto" data-filter-item>
+        <summary><span>MRモードの使い方が分からない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body"><p><a class="link-arrow" href="manual.html#mr-settings-mode">プレイガイドの「MRの設定方法」を開く<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></a></p></div>
+      </details>
+
+      <details class="qa" id="quest3-scene" data-filter-item>
+        <summary><span>Quest3/3Sで空間認識機能が使えない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>Quest3、Quest3S限定の機能となります。<a href="manual.html#mr-settings-mode">MRの設定方法</a>に記載の初期設定を行ったうえで、次を確認してください。</p>
+          <ul class="points">
+            <li>スペースの設定内に、「スペースを管理」と「ルーム名」の項目が表示されていること</li>
+            <li>スペースの設定にある「アプリのアクセス許可」→「空間データ」→「MRsecretVR」がONであること</li>
+            <li>スペースの設定中に、部屋の形状を認識するMeshが表示されていること</li>
+            <li>メニューの「空間認識未対応」の箇所を押してONにしていること</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269" loading="lazy"></a>
+      <nav class="footer-nav" aria-label="フッター">
+        <a href="setup-guide.html">導入ガイド</a>
+        <a href="updates.html">アップデート履歴</a>
+        <a href="manual.html">プレイガイド</a>
+        <a href="credits.html">ゲームクレジット</a>
+        <a href="troubleshooting.html">トラブルガイド</a>
+        <a href="dev-story.html">開発秘話</a>
+        <a href="shop.html">販売ページ</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><span class="age">R18</span>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+      <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="ページの先頭へ"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-up"></use></svg></button>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

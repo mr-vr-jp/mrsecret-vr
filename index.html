@@ -8,22 +8,19 @@
     <meta name="author" content="ミスターVR">
     <meta name="robots" content="index, follow">
     <title>ミスター秘密侵入VR｜公式サイト - VRエロゲー完全ガイド</title>
-    
-    <!-- ファビコン設定 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/web-app-manifest-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/web-app-manifest-512x512.png">
     <meta name="msapplication-TileImage" content="assets/images/web-app-manifest-192x192.png">
-    <meta name="msapplication-TileColor" content="#4a90e2">
-    <meta name="theme-color" content="#4a90e2">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#09060f">
+    <meta name="theme-color" content="#09060f">
+
     <link rel="canonical" href="https://mr-vr-jp.github.io/mrsecret-vr/" />
-    
-    <!-- OGP設定 -->
+
     <meta property="og:title" content="ミスター秘密侵入VR｜公式サイト - VRエロゲー完全ガイド" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mr-vr-jp.github.io/mrsecret-vr/" />
@@ -31,16 +28,13 @@
     <meta property="og:site_name" content="ミスター秘密侵入VR公式サイト" />
     <meta property="og:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
     <meta property="og:locale" content="ja_JP" />
-    
-    <!-- Twitter Card設定 -->
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ミスター秘密侵入VR｜公式サイト - VRエロゲー完全ガイド" />
     <meta name="twitter:description" content="ミスター秘密侵入VR公式サイト。VRエロゲーの完全マニュアル、インストールガイド、操作方法、トラブルシューティング、アップデート情報を提供。PCVR・Quest対応の新感覚アダルトVRゲーム。" />
     <meta name="twitter:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <!-- 構造化データ -->
-    <script type="application/ld+json">
-    {
+
+    <script type="application/ld+json">    {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "ミスター秘密侵入VR公式サイト",
@@ -62,10 +56,8 @@
         }
     }
     </script>
-    
-    <!-- ゲーム用構造化データ -->
-    <script type="application/ld+json">
-    {
+
+    <script type="application/ld+json">    {
         "@context": "https://schema.org",
         "@type": "VideoGame",
         "name": "ミスター秘密侵入VR",
@@ -80,613 +72,173 @@
         }
     }
     </script>
-    
-    <style>
-
-        :root {
-            --primary-color: #4a90e2;
-            --text-color: #e4e4e7;
-            --bg-color: #18181b;
-            --card-bg: #27272a;
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        main {
-            margin-top: 70px;
-        }
-        
-        .header {
-            background-color: rgba(39, 39, 42, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-        
-        .logo {
-            height: 90px;
-        }
-        
-        .logo img {
-            height: 100%;
-            width: auto;
-            object-fit: contain;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .hero {
-            padding: 40px 0;
-            text-align: center;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            margin-top: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
-            color: var(--text-color);
-        }
-        
-        .thank-you-message {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            font-weight: 500;
-            margin: 0 0 2rem;
-            text-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
-            opacity: 0;
-            animation: fadeInMessage 1.5s ease forwards;
-        }
-        
-        .main-image-container {
-            position: relative;
-            margin: 2rem auto;
-            max-width: 1000px;
-            padding: 25px;
-            overflow: visible;
-        }
-        
-        .main-image {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            position: relative;
-            z-index: 2;
-        }
-        
-        .purchase-link {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-top: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .purchase-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
-        }
-        
-        .section-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards 0.2s;
-        }
-        
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            color: var(--text-color);
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            will-change: transform;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
-        
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .card p {
-            color: var(--text-color);
-            margin: 0;
-        }
-        
-        .requirements-section {
-            margin: 4rem 0;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards 0.4s;
-        }
-        
-        .requirements-section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .requirements-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-        
-        .requirements-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-        }
-        
-        .requirements-title {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-        .requirements-category {
-            color: var(--primary-color);
-            font-weight: bold;
-            margin: 1rem 0 0.5rem;
-        }
-        
-        .requirements-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .requirements-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.2rem;
-            position: relative;
-        }
-        
-        .requirements-list li::before {
-            content: "•";
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-        
-        .review-section {
-            margin-top: 2rem;
-            max-width: 35rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .review-section a {
-            color: var(--primary-color);  /* 既存の青色変数を使用 */
-            text-decoration: none;
-            transition: color 0.2s;
-        }        
-        
-        .review-section .bg-slate-800\/50 {
-            background-color: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(51, 65, 85, 0.5);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-        }
-        
-        .star-icon {
-            color: #60a5fa;
-        }
-        
-        .news-section {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards 0.6s;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 4rem 0;
-        }
-        
-        .news-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .news-item a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        
-        .news-item a:hover {
-            text-decoration: underline;
-            opacity: 0.8;
-        }
-        
-        .news-date {
-            min-width: 100px;
-            font-size: 0.875rem;
-            color: #94a3b8;
-        }
-        
-        .flex {
-            display: flex;
-        }
-        
-        .items-center {
-            align-items: center;
-        }
-        
-        .justify-center {
-            justify-content: center;
-        }
-        
-        .gap-2 {
-            gap: 0.5rem;
-        }
-        
-        .mb-3 {
-            margin-bottom: 0.75rem;
-        }
-        
-        .mb-4 {
-            margin-bottom: 1rem;
-        }
-        
-        .ml-1 {
-            margin-left: 0.25rem;
-        }
-        
-        .text-xs {
-            font-size: 0.75rem;
-        }
-        
-        .text-sm {
-            font-size: 0.875rem;
-        }
-        
-        .text-gray-300 {
-            color: #d1d5db;
-        }
-        
-        .text-gray-400 {
-            color: #9ca3af;
-        }
-        
-        .text-gray-500 {
-            color: #6b7280;
-        }
-        
-        .text-blue-400\/90 {
-            color: rgba(96, 165, 250, 0.9);
-        }
-        
-        .font-medium {
-            font-weight: 500;
-        }
-        
-        .underline {
-            text-decoration: underline;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInMessage {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .requirements-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .news-item {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .news-date {
-                min-width: auto;
-            }
-        }
-        
-        @media (max-width: 640px) {
-            .nav-links {
-                gap: 1rem;
-            }
-        }
-                
-    </style>
+    <link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/">
+    <link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/">
+    <link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://mr-vr-jp.github.io/mrsecret-vr/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <div id="header"></div>
+<body class="page-index">
+<a class="skip" href="#top">本文へ移動</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9246a"/><stop offset=".55" stop-color="#9333d6"/><stop offset="1" stop-color="#6446d8"/></linearGradient><linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f5e"/><stop offset="1" stop-color="#171127"/></linearGradient></defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269"></a>
+    <nav class="site-nav" id="site-nav" aria-label="サイト内">
+      <a href="setup-guide.html">導入ガイド</a>
+      <a href="manual.html">プレイガイド</a>
+      <a href="troubleshooting.html">トラブルガイド</a>
+      <a href="updates.html">アップデート履歴</a>
+      <a href="shop.html" class="nav-shop">販売ページ</a>
+    </nav>
+    <details class="lang"><summary><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-globe"></use></svg>JA</summary><div class="lang-menu"><a href="index.html" lang="ja" hreflang="ja" aria-current="true">日本語</a><a href="en/index.html" lang="en" hreflang="en">English</a><a href="zh/index.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></div></details>
+    <button class="nav-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+<main id="top">
+  <section class="home-hero">
+    <video class="home-hero-bg" autoplay muted loop playsinline poster="assets/images/manual/img-house-night.webp" aria-hidden="true"><source src="assets/videos/hero-house.mp4" type="video/mp4"></video>
+    <div class="blinds" aria-hidden="true"></div>
+    <div class="hero-hud" aria-hidden="true"><b class="rec">REC</b><span>CAM 00 · 彼女の家</span><time class="cam-time">02:13:48</time></div>
+    <img class="hero-mirai" src="assets/images/key/mirai.webp" alt="" width="974" height="1300" fetchpriority="high">
+    <div class="wrap home-hero-in">
+      <p class="eyebrow">Official Manual</p>
+      <h1 class="home-logo"><img src="assets/images/logo-trim-1000.webp" alt="ミスター秘密侵入VR - 新感覚VRエロゲー" width="1007" height="424"></h1>
+      <p class="hero-catch">彼女の日常に、こっそり忍び込め。</p>
+      <p class="home-thanks">この度はご購入いただき、誠にありがとうございます！</p>
+      <div class="btn-row">
+        <a class="btn" href="setup-guide.html">導入ガイド<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></a>
+        <a class="btn ghost" href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/mrsecret_vr_manual/id/RJ01266526.html" target="_blank" rel="noopener">販売ページはこちら！<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-ext"></use></svg></a>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <div class="container">
-            <section class="hero">
-                    <h1 class="hero-title">ミスター秘密侵入VR - 新感覚VRエロゲー</h1>
-                    <p class="thank-you-message">
-                        この度はご購入いただき、誠にありがとうございます!
-                    </p>
-                
-                <div class="main-image-container">
-                    <img src="assets/images/main-image.jpg" alt="VRエロゲーミスター秘密侵入VR - メイン画像" class="main-image">
-                </div>
-                
-                <a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/mrsecret_vr_manual/id/RJ01266526.html" class="purchase-link" target="_blank">販売ページはこちら！</a>
-                <div class="review-section">
-                    <div class="bg-slate-800/50">
-                        <div class="flex items-center justify-center gap-2 mb-4">
-                            <span class="star-icon">★</span>
-                            <span class="font-medium text-blue-400/90">レビューのお願い</span>
-                            <span class="star-icon">★</span>
-                        </div>
-                        
-                        <p class="text-gray-300 mb-4">
-                            DLsiteのレビューおよび、感想やご意見を<span class="highlight">「作品に応援コメント」</span>で残していただけますと、今後の開発の大きな励みとなります！
-                        </p>
-                        
-                        <div class="flex items-center justify-center gap-2 text-sm text-gray-400 mb-3">
-                            <span>DLsiteマイページの</span>
-                            <a href="https://www.dlsite.com/home/mypage/short-review" target="_blank" rel="noopener noreferrer">
-                                レビューページ
-                            </a>
-                            <span>から投稿できます</span>
-                        </div>
-                
-                        <div class="text-xs text-gray-500 flex items-center justify-center gap-1">
-                            <div class="point-info">
-                                <span>レビュー投稿でDLsiteポイントが還元されます</span>
-                                <a href="https://cs.dlsite.com/hc/ja/articles/11837465209881" target="_blank" rel="noopener noreferrer" class="underline ml-1">
-                                    詳細はこちら!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <section class="wrap home-guides" aria-label="ガイド">
+    <a class="guide reveal" href="setup-guide.html">
+      <img src="assets/images/manual/img-entrance.webp" alt="" loading="lazy">
+      <span class="guide-in">
+        <span class="guide-no">01</span>
+        <span class="guide-t">導入ガイド</span>
+        <span class="guide-d">インストール、アップデート方法を解説しています。まずはこちらをご確認ください。</span>
+        <span class="guide-go">ガイドを開く<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></span>
+      </span>
+    </a>
+    <a class="guide reveal" href="manual.html">
+      <img src="assets/images/manual/img-backpack-shot.webp" alt="" loading="lazy">
+      <span class="guide-in">
+        <span class="guide-no">02</span>
+        <span class="guide-t">プレイガイド</span>
+        <span class="guide-d">ゲームの操作方法とシステムを解説しています。このガイドを読むとより楽しく遊べます。</span>
+        <span class="guide-go">ガイドを開く<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></span>
+      </span>
+    </a>
+    <a class="guide reveal" href="troubleshooting.html">
+      <img src="assets/images/manual/img-hallway.webp" alt="" loading="lazy">
+      <span class="guide-in">
+        <span class="guide-no">03</span>
+        <span class="guide-t">トラブルガイド</span>
+        <span class="guide-d">よくある問題と解決方法について解説しています。</span>
+        <span class="guide-go">ガイドを開く<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></span>
+      </span>
+    </a>
+  </section>
 
-            <div class="section-grid">
-                <a href="setup-guide.html" class="card card-hover">
-                    <h2>🥽 導入ガイド</h2>
-                    <p>インストール、アップデート方法を解説しています。</p>
-                    <p>まずはこちらをご確認ください。</p>
-                </a>
-                <a href="manual.html" class="card card-hover">
-                    <h2>📖 プレイガイド</h2>
-                    <p>ゲームの操作方法とシステムを解説しています。</p>
-                    <p>このガイドを読むとより楽しく遊べます。</p>
-                </a>
-                <a href="troubleshooting.html" class="card card-hover">
-                    <h2>🔧 トラブルガイド</h2>
-                    <p>よくある問題と解決方法について解説しています。</p>
-                </a>
-                
-                <a href="shop.html" class="card card-hover">
-                    <h2>販売ページ</h2>
-                    <p>ゲームを購入できるストア一覧です。</p>                    
-                </a>
-                <a href="credits.html" class="card card-hover">
-                    <h2>ゲームクレジット</h2>
-                    <p>開発スタッフや使用アセットなどのクレジット情報です。</p>
-                </a>
-                <a href="https://ci-en.net/creator/27628/article/tag?name=%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88" class="card card-hover">
-                    <h2>アップデート履歴と変更点</h2>
-                    <p>各バージョンでの更新内容や変更点を確認できます。</p>
-                </a>
-                
-                <a href="dev-story.html" class="card card-hover">
-                    <h2>開発秘話</h2>
-                    <p>ゲーム制作の背景やエピソードです。</p>
-                </a>
-            </div>
+  <section class="cctv" aria-hidden="true">
+    <div class="cctv-strip">
+      <figure><video data-autoplay muted loop playsinline preload="none" poster="assets/images/manual/cctv-1-poster.webp"><source src="assets/videos/manual/cctv-1.mp4" type="video/mp4"></video><span>CAM 01</span></figure>
+      <figure><video data-autoplay muted loop playsinline preload="none" poster="assets/images/manual/cctv-2-poster.webp"><source src="assets/videos/manual/cctv-2.mp4" type="video/mp4"></video><span>CAM 02</span></figure>
+      <figure><video data-autoplay muted loop playsinline preload="none" poster="assets/images/manual/cctv-3-poster.webp"><source src="assets/videos/manual/cctv-3.mp4" type="video/mp4"></video><span>CAM 03</span></figure>
+      <figure><video data-autoplay muted loop playsinline preload="none" poster="assets/images/manual/cctv-4-poster.webp"><source src="assets/videos/manual/cctv-4.mp4" type="video/mp4"></video><span>CAM 04</span></figure>
+    </div>
+  </section>
 
-            <section class="requirements-section">
-                <h2>『ミスター秘密侵入VR』対応機種・動作要件</h2>
-                <div class="requirements-grid">
-                    <div class="requirements-card">
-                        <h3 class="requirements-title">PCVR版</h3>
-                        <ul class="requirements-list">
-                            <div class="requirements-category">動作要件</div>
-                            <li>対応OS: Windows 10/11</li>
-                            <li>必須: SteamVR</li>
-                            <li>GPU: RTX3060以上推奨</li>
-                            <li>メモリ: 16GB以上推奨</li>
+  <section class="wrap home-sec">
+    <div class="home-head">
+      <p class="eyebrow">Requirements</p>
+      <h2>対応機種・動作要件</h2>
+    </div>
+    <div class="req reveal">
+      <div class="req-col">
+        <h3>PCVR版</h3>
+        <dl>
+          <div><dt>対応OS</dt><dd>Windows 10/11</dd></div>
+          <div><dt>必須</dt><dd>SteamVR</dd></div>
+          <div><dt>GPU</dt><dd>RTX3060以上推奨</dd></div>
+          <div><dt>メモリ</dt><dd>16GB以上推奨</dd></div>
+          <div><dt>対応機種</dt><dd>Meta Quest 2/Pro/3/3S (SteamVR)<br>PICO Neo 3/4/4Ultra (SteamVR)<br>HTC VIVE シリーズ<br>その他SteamVR対応機種</dd></div>
+        </dl>
+      </div>
+      <div class="req-col">
+        <h3>Quest単体版</h3>
+        <dl>
+          <div><dt>導入</dt><dd>SideQuest または Quest本体のファイルアプリ</dd></div>
+          <div><dt>対応機種</dt><dd>Meta Quest 2<br>Meta Quest Pro<br>Meta Quest 3<br>Meta Quest 3S</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-                            <div class="requirements-category">対応機種</div>
-                            <li>Meta Quest 2/Pro/3/3S (SteamVR)</li>
-                            <li>PICO Neo 3/4/4Ultra (SteamVR)</li>
-                            <li>HTC VIVE シリーズ</li>
-                            <li>その他SteamVR対応機種</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="requirements-card">
-                        <h3 class="requirements-title">Quest単体版</h3>
-                        <ul class="requirements-list">
-                            <div class="requirements-category">動作要件</div>
-                            <li>SideQuestによるインストール</li>
+  <section class="wrap home-sec home-2col">
+    <div class="reveal">
+      <div class="home-head">
+        <p class="eyebrow">News</p>
+        <h2>お知らせ</h2>
+      </div>
+      <ol class="news">
+        <li><time datetime="2025-04-22">2025/4/22</time><p><a href="https://ci-en.net/creator/27628/article/1421854" target="_blank" rel="noopener">Ver 1.1.0</a>にアップデートしました。</p></li>
+        <li><time datetime="2025-01-09">2025/1/9</time><p><a href="https://ci-en.net/creator/27628/article/1329756" target="_blank" rel="noopener">Ver 1.0.2</a>にアップデートしました。</p></li>
+        <li><time datetime="2024-11-22">2024/11/22</time><p><a href="manual.html">プレイガイド</a>を更新しました。</p></li>
+        <li><time datetime="2024-11-20">2024/11/20</time><p><a href="https://ci-en.net/creator/27628/article/1288743" target="_blank" rel="noopener">Ver 1.0.1</a>にアップデートしました。</p></li>
+      </ol>
+      <details class="more">
+        <summary><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-chev"></use></svg>過去のお知らせ</summary>
+        <ol class="news mt-s">
+          <li><time datetime="2024-11-16">2024/11/16</time><p><a href="setup-guide.html">導入ガイド</a>を更新しました。</p></li>
+          <li><time datetime="2024-11-15">2024/11/15</time><p><a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" target="_blank" rel="noopener">ミスター秘密侵入VR</a>を販売開始しました！</p></li>
+          <li><time datetime="2024-11-13">2024/11/13</time><p>マニュアルサイトを公開しました。</p></li>
+          <li><time datetime="2024-11-12">2024/11/12</time><p>Ver 1.0.0をリリースしました。</p></li>
+        </ol>
+      </details>
+    </div>
+    <div class="review reveal">
+      <p class="eyebrow">Review</p>
+      <h2>レビューのお願い</h2>
+      <p>DLsiteのレビューおよび、感想やご意見を「作品に応援コメント」で残していただけますと、今後の開発の大きな励みとなります！</p>
+      <p class="muted">DLsiteマイページの <a href="https://www.dlsite.com/home/mypage/short-review" target="_blank" rel="noopener noreferrer">レビューページ</a> から投稿できます。レビュー投稿でDLsiteポイントが還元されます。<a href="https://cs.dlsite.com/hc/ja/articles/11837465209881" target="_blank" rel="noopener noreferrer">詳細はこちら！</a></p>
+    </div>
+  </section>
 
-                            <div class="requirements-category">対応機種</div>
-                            <li>Meta Quest 2</li>
-                            <li>Meta Quest Pro</li>
-                            <li>Meta Quest 3</li>
-                            <li>Meta Quest 3S</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="news-section">
-                <h2>お知らせ</h2>
-                <div class="news-item">
-                    <div class="news-date">2025/4/22</div>
-                    <p><a href="https://ci-en.net/creator/27628/article/1421854" target="_blank">Ver 1.1.0</a>にアップデートしました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2025/1/9</div>
-                    <p><a href="https://ci-en.net/creator/27628/article/1329756" target="_blank">Ver 1.0.2</a>にアップデートしました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/22</div>
-                    <p><a href="manual.html">プレイガイド</a>を更新しました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/20</div>
-                    <p><a href="https://ci-en.net/creator/27628/article/1288743" target="_blank">Ver 1.0.1</a>にアップデートしました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/16</div>
-                    <p><a href="setup-guide.html">導入ガイド</a>を更新しました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/15</div>
-                    <p><a href="https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/adultvrexpert/id/RJ01266526.html" target="_blank">ミスター秘密侵入VR</a>を販売開始しました！</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/13</div>
-                    <p>マニュアルサイトを公開しました。</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">2024/11/12</div>
-                    <p>Ver 1.0.0をリリースしました。</p>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <div id="footer"></div>
-
-    <script>
-        // ヘッダー/フッターの読み込み
-        async function loadComponent(id, url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                const html = await response.text();
-                document.getElementById(id).innerHTML = html;
-            } catch (error) {
-                console.error(`${id}の読み込みに失敗しました:`, error);
-                document.getElementById(id).innerHTML = `<p>${id}の読み込みに失敗しました</p>`;
-            }
-        }
-        
-        // 遅延ロード処理
-        function setupLazyLoading() {
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                rootMargin: '50px', // 要素が表示される50px手前で開始
-                threshold: 0.1 // 10%表示された時点で開始
-            });
-        
-            document.querySelectorAll('.section-grid, .requirements-section, .news-section')
-                .forEach(el => observer.observe(el));
-        }
-        
-        // DOMContentLoadedイベントでの初期化
-        document.addEventListener('DOMContentLoaded', async () => {
-            // ヘッダー/フッターの読み込み
-            await Promise.all([
-                loadComponent('header', 'header.html'),
-                loadComponent('footer', 'footer.html')
-            ]);
-        
-            // 遅延ロードの設定
-            setupLazyLoading();
-        });
-    </script>    
+  <nav class="wrap home-links" aria-label="その他のページ">
+    <a href="shop.html"><b>販売ページ<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></b><span>ゲームを購入できるストア一覧です。</span></a>
+    <a href="updates.html"><b>アップデート履歴と変更点<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></b><span>各バージョンでの更新内容や変更点を確認できます。</span></a>
+    <a href="credits.html"><b>ゲームクレジット<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></b><span>開発スタッフや使用アセットなどのクレジット情報です。</span></a>
+    <a href="dev-story.html"><b>開発秘話<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"></use></svg></b><span>ゲーム制作の背景やエピソードです。</span></a>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269" loading="lazy"></a>
+      <nav class="footer-nav" aria-label="フッター">
+        <a href="setup-guide.html">導入ガイド</a>
+        <a href="updates.html">アップデート履歴</a>
+        <a href="manual.html">プレイガイド</a>
+        <a href="credits.html">ゲームクレジット</a>
+        <a href="troubleshooting.html">トラブルガイド</a>
+        <a href="dev-story.html">開発秘話</a>
+        <a href="shop.html">販売ページ</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><span class="age">R18</span>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+      <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="ページの先頭へ"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-up"></use></svg></button>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

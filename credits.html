@@ -7,407 +7,202 @@
     <meta name="keywords" content="ミスター秘密侵入VR, VRエロゲ, クレジット, 開発者, 制作スタッフ, VRゲーム">
     <meta name="author" content="ミスターVR">
     <title>ミスター秘密侵入VR - クレジット</title>
-    
-    <!-- ファビコン設定 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/web-app-manifest-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/web-app-manifest-512x512.png">
     <meta name="msapplication-TileImage" content="assets/images/web-app-manifest-192x192.png">
-    <meta name="msapplication-TileColor" content="#4a90e2">
-    <meta name="theme-color" content="#4a90e2">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#09060f">
+    <meta name="theme-color" content="#09060f">
+
     <link rel="canonical" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html" />
-    
-    <!-- OGP設定 -->
+
     <meta property="og:title" content="ミスター秘密侵入VR - クレジット" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mr-vr-jp.github.io/mrsecret-vr/credits.html" />
     <meta property="og:description" content="VRエロゲー「ミスター秘密侵入VR」のクレジット情報です。開発スタッフ、使用3Dモデル、音楽、シェーダーなど制作に関わった方々とアセットのクレジットを掲載しています。" />
     <meta property="og:site_name" content="ミスター秘密侵入VR 公式サイト" />
     <meta property="og:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <!-- Twitter Card設定 -->
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ミスター秘密侵入VR - クレジット" />
     <meta name="twitter:description" content="VRエロゲー「ミスター秘密侵入VR」のクレジット情報です。開発スタッフ、使用3Dモデル、音楽、シェーダーなど制作に関わった方々とアセットのクレジットを掲載しています。" />
     <meta name="twitter:image" content="https://mr-vr-jp.github.io/mrsecret-vr/assets/images/main-image.jpg" />
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('ヘッダーの読み込みに失敗しました:', error);
-                    document.getElementById('header').innerHTML = '<p>ヘッダーの読み込みに失敗しました</p>';
-                });
-    
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('フッターの読み込みに失敗しました:', error);
-                    document.getElementById('footer').innerHTML = '<p>フッターの読み込みに失敗しました</p>';
-                });
-        });
-    </script>    
-    <style>
-        :root {
-            --primary-color: #4a90e2;
-            --text-color: #e4e4e7;
-            --bg-color: #18181b;
-            --card-bg: #27272a;
-        }
-
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            padding-top: 70px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .header {
-            background-color: rgba(39, 39, 42, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .credits-section {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .credits-section h2, h3 {
-            color: #4a90e2;
-            font-size: 2em;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #4a90e2;
-        }
-
-        .credits-section h4 {
-            color: #63b3ed;
-            font-size: 1.5em;
-            margin-top: 2rem;
-        }
-
-        .credits-item {
-            margin: 1rem 0;
-            animation-delay: calc(var(--animation-order) * 0.1s);
-        }
-
-        .credits-link {
-            color: #4a90e2;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .credits-link:hover {
-            color: #63b3ed;
-        }
-
-        .credits-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .credits-list li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.2rem;
-            position: relative;
-        }
-
-        .credits-list li::before {
-            content: "•";
-            color: #4a90e2;
-            position: absolute;
-            left: 0;
-        }
-
-        .credit-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            padding: 1rem;
-            background-color: rgba(74, 144, 226, 0.1);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .credit-item:hover {
-            background-color: rgba(74, 144, 226, 0.15);
-        }
-
-        .credit-title {
-            font-weight: 500;
-            color: #63b3ed;
-        }
-
-        .credit-author {
-            font-size: 0.9em;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 640px) {
-            .credits-section {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html">
+    <link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/credits.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/credits.html">
+    <link rel="alternate" hreflang="x-default" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="page-credits">
+<a class="skip" href="#top">本文へ移動</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c9246a"/><stop offset=".55" stop-color="#9333d6"/><stop offset="1" stop-color="#6446d8"/></linearGradient><linearGradient id="fbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2f5e"/><stop offset="1" stop-color="#171127"/></linearGradient></defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-logo" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269"></a>
+    <nav class="site-nav" id="site-nav" aria-label="サイト内">
+      <a href="setup-guide.html">導入ガイド</a>
+      <a href="manual.html">プレイガイド</a>
+      <a href="troubleshooting.html">トラブルガイド</a>
+      <a href="updates.html">アップデート履歴</a>
+      <a href="shop.html" class="nav-shop">販売ページ</a>
+    </nav>
+    <details class="lang"><summary><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-globe"></use></svg>JA</summary><div class="lang-menu"><a href="credits.html" lang="ja" hreflang="ja" aria-current="true">日本語</a><a href="en/credits.html" lang="en" hreflang="en">English</a><a href="zh/credits.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></div></details>
+    <button class="nav-toggle" type="button" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-menu"></use></svg></button>
+  </div>
+</header>
+<main id="top">
+  <section class="p-hero">
+    <div class="p-hero-bg"><img src="assets/images/key/scene-bedroom.webp" alt="" width="1920" height="1080"></div>
+    <div class="wrap">
+      <p class="eyebrow">Credits</p>
+      <h1 class="p-title">クレジット</h1>
+    </div>
+  </section>
 
-<body>
-    <div id="header"></div>
 
-    <main style="padding-top: 90px">
-        <div class="container">
-            <div class="credits-section" style="--animation-order: 1">
-                <h2>クレジット</h2>
-
-                <div class="credits-section" style="--animation-order: 2">
-                    <h3>開発</h3>
-                    <h4>いちゃらぶXR研究所</h4>
-                    <div class="credit-item">
-                        <div class="credit-title">監修</div>
-                        <div class="credit-author">
-                            <a href="https://x.com/3DVR3" target="_blank" class="credits-link">ミスターVR (@3DVR3)</a>
-                        </div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title">プログラマー</div>
-                        <div class="credit-author">
-                            <a href="https://x.com/ikadayo0u0" target="_blank" class="credits-link">IKA様 (@ikadayo0u0)</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="credits-section" style="--animation-order: 3">
-                    <h3>キャスト</h3>
-                    <div class="credit-item">
-                        <div class="credit-title">声優</div>
-                        <div class="credit-author">
-                            <a href="https://x.com/suamaamano" target="_blank" class="credits-link">天野すあま様 (@suamaamano)</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="credits-section" style="--animation-order: 4">
-                    <h3>開発協力</h3>
-                    <h4>シェーダー開発</h4>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://wataame89.booth.pm/items/4108136" target="_blank" class="credits-link">もっちりシェーダー</a></div>
-                        <div class="credit-author">綿飴屋 Wataameya様</div>
-                    </div>
-                </div>
-
-                <!-- デザイン・ギミック -->
-                <div class="credits-section" style="--animation-order: 5">
-                    <h3>デザイン・ギミック</h3>
-                    <div class="credit-item">
-                        <div class="credit-title">ベッドルーム・PC部屋デザイン</div>
-                        <div class="credit-author">Mochino様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title">ギミック制作</div>
-                        <div class="credit-author">Karuma様</div>
-                    </div>
-                </div>
-
-                <!-- 3Dモデル・アセット -->
-                <div class="credits-section" style="--animation-order: 6">
-                    <h3>3Dモデル・アセット</h3>
-                    <h4>ベースモデル</h4>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4035411" target="_blank" class="credits-link">オリジナル3Dモデル「セレスティア」</a></div>
-                        <div class="credit-author">ジンゴ様</div>
-                    </div>
-
-                    <h4>衣装・アクセサリー</h4>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://tempasta.booth.pm/items/4686753" target="_blank" class="credits-link">Soie Blanche</a></div>
-                        <div class="credit-author">てんぱすおおもり様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4861410" target="_blank" class="credits-link">ふわふわうさぎちゃんスリッパ</a></div>
-                        <div class="credit-author">POTATO CLOSET様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4060749" target="_blank" class="credits-link">Lace Garter + Socks & Lingerie</a></div>
-                        <div class="credit-author">てんぷらぱすた様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/5198599" target="_blank" class="credits-link">わくわくおもちゃセット4</a></div>
-                        <div class="credit-author">てんぷらぱすた様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4073592" target="_blank" class="credits-link">オタクに優しいセレスティアちゃん</a></div>
-                        <div class="credit-author">Bad/Ass Co.様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/5037031" target="_blank" class="credits-link">Night Cat Dress</a></div>
-                        <div class="credit-author">DRIP様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://addrecollection.booth.pm/items/4119716" target="_blank" class="credits-link">セレスティア対応♡コンカフェ衣装セット</a></div>
-                        <div class="credit-author">Add+Re:collection様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4168034" target="_blank" class="credits-link">例のセーター</a></div>
-                        <div class="credit-author">BERO様</div>
-                    </div>
-
-                    <h4>ヘアスタイル</h4>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4062761" target="_blank" class="credits-link">カジュアルミディアムヘア</a></div>
-                        <div class="credit-author">みかん様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://fiona.booth.pm/items/4927845" target="_blank" class="credits-link">Fairy Twin</a></div>
-                        <div class="credit-author">ふぃおな様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/3822566" target="_blank" class="credits-link">ピュアボブヘアー</a></div>
-                        <div class="credit-author">Luku様</div>
-                    </div>
-
-                    <h4>アクセサリー</h4>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/4507074" target="_blank" class="credits-link">Mochi Hairclip set</a></div>
-                        <div class="credit-author">もちもち様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://mocchiriomochi.booth.pm/items/3935691" target="_blank" class="credits-link">PB MOCHI SET</a></div>
-                        <div class="credit-author">もちもち様</div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://mocchiriomochi.booth.pm/items/3562479" target="_blank" class="credits-link">うさりんぐせっと</a></div>
-                        <div class="credit-author">もちもち様</div>
-                    </div>
-                </div>
-
-                <!-- シェーダー・システム -->
-                <div class="credits-section" style="--animation-order: 7">
-                    <h3>シェーダー・システム</h3>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/3087170" target="_blank" class="credits-link">lilToon</a></div>
-                        <div class="credit-author">lilxyzw様</div>
-                    </div>
-                </div>
-
-                <!-- 映像・背景 -->
-                <div class="credits-section" style="--animation-order: 8">
-                    <h3>映像・背景</h3>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://booth.pm/ja/items/5986967" target="_blank" class="credits-link">みにくる動く背景CG素材『海の中の世界』part01</a></div>
-                        <div class="credit-author">(C)みにくる/Minikle様</div>
-                    </div>
-                </div>
-
-                <!-- 音楽・サウンド -->
-                <div class="credits-section" style="--animation-order: 9">
-                    <h3>音楽・サウンド</h3>
-                    <div class="credit-item">
-                        <div class="credit-title">poipoi</div>
-                        <div class="credit-author"><a href="https://soundcloud.com/poipoinoidm" target="_blank" class="credits-link">poipoi様</a></div>
-                    </div>
-                    <div class="credit-item">
-                        <div class="credit-title">効果音</div>
-                        <div class="credit-author"><a href="https://maoudamashii.jokersounds.com/" target="_blank" class="credits-link">魔王魂様</a></div>
-                    </div>
-                </div>
-
-                <!-- アイコン・素材 -->
-                <div class="credits-section" style="--animation-order: 11">
-                    <h3>アイコン・素材</h3>
-                    <div class="credit-item">
-                        <div class="credit-title"><a href="https://thenounproject.com/browse/icons/term/sex-position/" target="_blank" class="credits-link">Sex Position</a></div>
-                        <div class="credit-author">mikicon from Noun Project様</div>
-                    </div>
-                </div>
-
-                <div class="credits-section" style="--animation-order: 10">
-                    <h3>Special Thanks</h3>
-                    <p>本作の開発にご協力いただいた全ての方々に心より感謝申し上げます。</p>
-                </div>
-            </div>
+  <div class="wrap credits">
+    <section class="credit-block reveal">
+      <h2 class="credit-h">開発</h2>
+      <p class="credit-studio">いちゃらぶXR研究所</p>
+      <div class="cols-2 credit-people">
+        <div class="person">
+          <span class="person-role">監修</span>
+          <a class="person-name" href="https://x.com/3DVR3" target="_blank" rel="noopener">ミスターVR (@3DVR3)</a>
         </div>
-    </main>
+        <div class="person">
+          <span class="person-role">プログラマー</span>
+          <a class="person-name" href="https://x.com/ikadayo0u0" target="_blank" rel="noopener">IKA様 (@ikadayo0u0)</a>
+        </div>
+      </div>
+    </section>
 
-    <div id="footer"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.credits-section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
-    </script>
+    <section class="credit-block reveal">
+      <h2 class="credit-h">キャスト</h2>
+      <div class="cols-2 credit-people">
+        <div class="person">
+          <span class="person-role">声優</span>
+          <a class="person-name" href="https://x.com/suamaamano" target="_blank" rel="noopener">天野すあま様 (@suamaamano)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cols-2 credit-two">
+      <section class="credit-block reveal">
+        <h2 class="credit-h">開発協力</h2>
+        <h3 class="credit-sub">シェーダー開発</h3>
+        <dl class="credit-list">
+          <div><dt><a href="https://wataame89.booth.pm/items/4108136" target="_blank" rel="noopener">もっちりシェーダー</a></dt><dd>綿飴屋 Wataameya様</dd></div>
+        </dl>
+      </section>
+
+      <section class="credit-block reveal">
+        <h2 class="credit-h">デザイン・ギミック</h2>
+        <dl class="credit-list">
+          <div><dt>ベッドルーム・PC部屋デザイン</dt><dd>Mochino様</dd></div>
+          <div><dt>ギミック制作</dt><dd>Karuma様</dd></div>
+        </dl>
+      </section>
+    </div>
+
+    <section class="credit-block reveal">
+      <h2 class="credit-h">3Dモデル・アセット</h2>
+      <h3 class="credit-sub">ベースモデル</h3>
+      <dl class="credit-list">
+        <div><dt><a href="https://booth.pm/ja/items/4035411" target="_blank" rel="noopener">オリジナル3Dモデル「セレスティア」</a></dt><dd>ジンゴ様</dd></div>
+      </dl>
+
+      <h3 class="credit-sub">衣装・アクセサリー</h3>
+      <dl class="credit-list cols">
+        <div><dt><a href="https://tempasta.booth.pm/items/4686753" target="_blank" rel="noopener">Soie Blanche</a></dt><dd>てんぱすおおもり様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/4861410" target="_blank" rel="noopener">ふわふわうさぎちゃんスリッパ</a></dt><dd>POTATO CLOSET様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/4060749" target="_blank" rel="noopener">Lace Garter + Socks &amp; Lingerie</a></dt><dd>てんぷらぱすた様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/5198599" target="_blank" rel="noopener">わくわくおもちゃセット4</a></dt><dd>てんぷらぱすた様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/4073592" target="_blank" rel="noopener">オタクに優しいセレスティアちゃん</a></dt><dd>Bad/Ass Co.様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/5037031" target="_blank" rel="noopener">Night Cat Dress</a></dt><dd>DRIP様</dd></div>
+        <div><dt><a href="https://addrecollection.booth.pm/items/4119716" target="_blank" rel="noopener">セレスティア対応♡コンカフェ衣装セット</a></dt><dd>Add+Re:collection様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/4168034" target="_blank" rel="noopener">例のセーター</a></dt><dd>BERO様</dd></div>
+      </dl>
+
+      <h3 class="credit-sub">ヘアスタイル</h3>
+      <dl class="credit-list cols">
+        <div><dt><a href="https://booth.pm/ja/items/4062761" target="_blank" rel="noopener">カジュアルミディアムヘア</a></dt><dd>みかん様</dd></div>
+        <div><dt><a href="https://fiona.booth.pm/items/4927845" target="_blank" rel="noopener">Fairy Twin</a></dt><dd>ふぃおな様</dd></div>
+        <div><dt><a href="https://booth.pm/ja/items/3822566" target="_blank" rel="noopener">ピュアボブヘアー</a></dt><dd>Luku様</dd></div>
+      </dl>
+
+      <h3 class="credit-sub">アクセサリー</h3>
+      <dl class="credit-list cols">
+        <div><dt><a href="https://booth.pm/ja/items/4507074" target="_blank" rel="noopener">Mochi Hairclip set</a></dt><dd>もちもち様</dd></div>
+        <div><dt><a href="https://mocchiriomochi.booth.pm/items/3935691" target="_blank" rel="noopener">PB MOCHI SET</a></dt><dd>もちもち様</dd></div>
+        <div><dt><a href="https://mocchiriomochi.booth.pm/items/3562479" target="_blank" rel="noopener">うさりんぐせっと</a></dt><dd>もちもち様</dd></div>
+      </dl>
+    </section>
+
+    <div class="cols-2 credit-two">
+      <section class="credit-block reveal">
+        <h2 class="credit-h">シェーダー・システム</h2>
+        <dl class="credit-list">
+          <div><dt><a href="https://booth.pm/ja/items/3087170" target="_blank" rel="noopener">lilToon</a></dt><dd>lilxyzw様</dd></div>
+        </dl>
+      </section>
+
+      <section class="credit-block reveal">
+        <h2 class="credit-h">映像・背景</h2>
+        <dl class="credit-list">
+          <div><dt><a href="https://booth.pm/ja/items/5986967" target="_blank" rel="noopener">みにくる動く背景CG素材『海の中の世界』part01</a></dt><dd>(C)みにくる/Minikle様</dd></div>
+        </dl>
+      </section>
+
+      <section class="credit-block reveal">
+        <h2 class="credit-h">音楽・サウンド</h2>
+        <dl class="credit-list">
+          <div><dt>poipoi</dt><dd><a href="https://soundcloud.com/poipoinoidm" target="_blank" rel="noopener">poipoi様</a></dd></div>
+          <div><dt>効果音</dt><dd><a href="https://maoudamashii.jokersounds.com/" target="_blank" rel="noopener">魔王魂様</a></dd></div>
+        </dl>
+      </section>
+
+      <section class="credit-block reveal">
+        <h2 class="credit-h">アイコン・素材</h2>
+        <dl class="credit-list">
+          <div><dt><a href="https://thenounproject.com/browse/icons/term/sex-position/" target="_blank" rel="noopener">Sex Position</a></dt><dd>mikicon from Noun Project様</dd></div>
+        </dl>
+      </section>
+    </div>
+
+    <section class="credit-block thanks reveal">
+      <h2 class="credit-h">Special Thanks</h2>
+      <p>本作の開発にご協力いただいた全ての方々に心より感謝申し上げます。</p>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html"><img src="assets/images/logo-trim-640.webp" alt="ミスター秘密侵入VR" width="640" height="269" loading="lazy"></a>
+      <nav class="footer-nav" aria-label="フッター">
+        <a href="setup-guide.html">導入ガイド</a>
+        <a href="updates.html">アップデート履歴</a>
+        <a href="manual.html">プレイガイド</a>
+        <a href="credits.html">ゲームクレジット</a>
+        <a href="troubleshooting.html">トラブルガイド</a>
+        <a href="dev-story.html">開発秘話</a>
+        <a href="shop.html">販売ページ</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p><span class="age">R18</span>© 2024 ミスター秘密侵入VR All Rights Reserved.</p>
+      <p>本マニュアルの内容は予告なく変更される場合があります。</p>
+    </div>
+  </div>
+</footer>
+<button class="to-top" type="button" aria-label="ページの先頭へ"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-up"></use></svg></button>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>

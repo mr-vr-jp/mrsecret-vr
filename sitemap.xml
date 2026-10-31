@@ -1,51 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mr-vr-jp.github.io/mrsecret-vr/</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-01</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/"/>
   </url>
   <url>
     <loc>https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/setup-guide.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/setup-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/setup-guide.html"/>
   </url>
   <url>
     <loc>https://mr-vr-jp.github.io/mrsecret-vr/manual.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/manual.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/manual.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/manual.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/manual.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/manual.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/manual.html"/>
   </url>
   <url>
     <loc>https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/troubleshooting.html"/>
   </url>
   <url>
-    <loc>https://mr-vr-jp.github.io/mrsecret-vr/shop.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/troubleshooting.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/troubleshooting.html"/>
   </url>
   <url>
-    <loc>https://mr-vr-jp.github.io/mrsecret-vr/credits.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mr-vr-jp.github.io/mrsecret-vr/dev-story.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/troubleshooting.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/troubleshooting.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/troubleshooting.html"/>
   </url>
   <url>
     <loc>https://mr-vr-jp.github.io/mrsecret-vr/updates.html</loc>
-    <lastmod>2025-05-28</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-01</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/updates.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/updates.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/updates.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/updates.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/updates.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/updates.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/shop.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/shop.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/shop.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/shop.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/shop.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/shop.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/credits.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/credits.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/credits.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/credits.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/credits.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/credits.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/credits.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/dev-story.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/dev-story.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/en/dev-story.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/dev-story.html"/>
+  </url>
+  <url>
+    <loc>https://mr-vr-jp.github.io/mrsecret-vr/zh/dev-story.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mr-vr-jp.github.io/mrsecret-vr/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mr-vr-jp.github.io/mrsecret-vr/en/dev-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mr-vr-jp.github.io/mrsecret-vr/zh/dev-story.html"/>
   </url>
 </urlset>
