@@ -255,12 +255,96 @@
 
       <div data-tabs>
         <div class="seg" role="tablist" aria-label="Choose an install method">
-          <button role="tab" id="tab-a" aria-controls="sidequest-method" aria-selected="true" tabindex="0">A. SideQuest<small>Uses a PC</small></button>
-          <button role="tab" id="tab-b" aria-controls="mobile-vr-method" aria-selected="false" tabindex="-1">B. Quest Files App<small>No PC needed</small></button>
+          <button role="tab" id="tab-a" aria-controls="mobile-vr-method" aria-selected="true" tabindex="0">A. Quest Only<small>Recommended · No PC</small></button>
+          <button role="tab" id="tab-b" aria-controls="sidequest-method" aria-selected="false" tabindex="-1">B. SideQuest<small>Uses a PC</small></button>
         </div>
 
         
-        <div role="tabpanel" id="sidequest-method" aria-labelledby="tab-a">
+        <div role="tabpanel" id="mobile-vr-method" aria-labelledby="tab-a">
+          <div class="note tip mt-0"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>You can install with just your Quest, no PC or phone needed. If it doesn't work, use <a href="#sidequest-method">B. SideQuest</a>. Mobile VR Station can no longer install APKs.</p></div>
+          <div class="flow mt-m">
+            <div class="step no-fig" id="apk-prepare">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>Prepare the APK File</h3>
+                <div data-tabs class="mt-m">
+                  <div class="seg" role="tablist" aria-label="How to get the APK file">
+                    <button role="tab" id="tab-p1" aria-controls="apk-quest" aria-selected="true" tabindex="0">Option 1<small>Quest only</small></button>
+                    <button role="tab" id="tab-p2" aria-controls="apk-pc" aria-selected="false" tabindex="-1">Option 2<small>Transfer from PC</small></button>
+                  </div>
+                  <div role="tabpanel" id="apk-quest" aria-labelledby="tab-p1">
+                    <div class="split top">
+                      <div>
+                    <ol class="do">
+                      <li>In the Quest browser, go to <a href="https://www.dlsite.com/" target="_blank" rel="noopener">DLsite</a>, log in and download the game</li>
+                      <li>Open the <span class="ui">Files</span> app, select the three-dot menu on the downloaded zip, then <span class="ui">Extract</span></li>
+                    </ol>
+                    <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>If extraction fails, try Option 2. The APK can't be installed while it's still zipped.</p></div>
+                      </div>
+                      <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files app</figcaption><svg viewBox="0 0 400 250" role="img" aria-label="Diagram: extract the zip in the Files app"><rect class="f-win" x=".5" y=".5" width="399" height="249" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR_ver1.1.0.zip</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><rect x="170" y="108" width="212" height="124" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="190" y="142">Open</text><rect class="f-hl-fill" x="178" y="154" width="196" height="32" rx="7"/><rect class="f-hl" x="178" y="154" width="196" height="32" rx="7"/><text class="f-t b" x="190" y="176">Extract</text><text class="f-t s" x="190" y="210">Delete</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="178" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="178" cy="154" r="12"/><text class="f-pin-t" x="178" y="154">2</text></g><path class="f-cursor" transform="translate(336 170)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure>
+                    </div>
+                  </div>
+                  <div role="tabpanel" id="apk-pc" aria-labelledby="tab-p2" hidden>
+                    <ol class="do">
+                      <li>Extract the downloaded game files on your PC</li>
+                      <li>Connect the Quest to your PC via USB</li>
+                      <li>In the Quest, select <span class="ui">Allow</span> to grant file access</li>
+                      <li>Copy <span class="file">MRsecretVR.apk</span> from your PC to the Quest's <span class="file">Download</span> folder</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="step" id="apk-install">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>Install the APK</h3>
+                <ol class="do">
+                  <li>Find <span class="file">MRsecretVR.apk</span> in the <span class="ui">Files</span> app</li>
+                  <li>On the APK, select the three-dot menu → <span class="ui">Open with</span> → <span class="ui">Package Installer</span></li>
+                  <li><span class="ui">Install</span> → <span class="ui">Done</span></li>
+                </ol>
+                <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>If it won't install or launch, complete <a href="#dev-mode">Enable Developer Mode</a> and try again.</p></div>
+              </div>
+              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files app</figcaption><svg viewBox="0 0 400 282" role="img" aria-label="Diagram: install the APK with Package Installer from the Files app"><rect class="f-win" x=".5" y=".5" width="399" height="281" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR.apk</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><g class="f-pinwrap" data-n="1"><circle class="f-pin f-pulse" cx="12" cy="52" r="12" opacity=".55"/><circle class="f-pin" cx="12" cy="52" r="12"/><text class="f-pin-t" x="12" y="52">1</text></g><rect x="150" y="108" width="232" height="90" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="170" y="142">Open with</text><rect class="f-hl-fill" x="158" y="154" width="216" height="32" rx="7"/><rect class="f-hl" x="158" y="154" width="216" height="32" rx="7"/><text class="f-t b" x="170" y="176">Package Installer</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="158" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="158" cy="154" r="12"/><text class="f-pin-t" x="158" y="154">2</text></g><path class="f-cursor" transform="translate(344 168)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/><rect class="f-on" x="150" y="220" width="232" height="44" rx="22"/><text class="f-t c b" x="266" y="247">Install</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="150" cy="220" r="12" opacity=".55"/><circle class="f-pin" cx="150" cy="220" r="12"/><text class="f-pin-t" x="150" y="220">3</text></g></svg></figure></div>
+            </div>
+
+            <div class="step" id="quest-launch-b">
+              <div class="step-no"></div>
+              <div class="step-body">
+                <h3>Launch the Game</h3>
+                <ol class="do">
+                  <li>Press the Meta button to open the menu and select <span class="ui">Library</span> at the bottom center</li>
+                  <li>Select the three-line menu icon at the left edge of Library</li>
+                  <li>Select <span class="ui">Unknown Sources</span></li>
+                  <li>Select <span class="ui">MRsecretVR</span> to launch it</li>
+                </ol>
+                <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>The menu icon at the left edge is small and can be hard to hit. That's down to the Quest's own interface. Move the pointer slowly and press when the "Menu" label appears.</p></div>
+                <p class="muted mt-s">Note: Opening Unknown Sources works slightly differently depending on your Quest version. If it doesn't appear, Developer Mode may not be enabled. <a href="#dev-mode">Enable it</a> and restart the Quest.</p>
+              </div>
+              <div class="step-fig fig"><p class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Library</p><figure class="media"><div class="frame r-1x1"><video data-autoplay muted loop playsinline preload="none" poster="../assets/images/setup/unknown-sources-poster.webp" aria-label="Video: opening Unknown Sources from the Library"><source src="../assets/videos/setup/unknown-sources.mp4" type="video/mp4"></video></div></figure></div>
+            </div>
+          </div>
+
+          <div class="done reveal">
+            <div class="done-art fig"><svg viewBox="0 0 92 92" aria-hidden="true">
+<circle cx="46" cy="46" r="34" fill="none" stroke="url(#fgrad)" stroke-width="5"/>
+<path d="M31 47l11 11 20-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill="#ff8cc4" d="M78 6c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"/>
+<path fill="#b6a1ff" d="M12 66c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/>
+<path fill="#ffc163" d="M14 8c.6 3.2 1.8 4.4 5 5-3.2.6-4.4 1.8-5 5-.6-3.2-1.8-4.4-5-5 3.2-.6 4.4-1.8 5-5z"/>
+</svg></div>
+            <div>
+              <h3>Congratulations!</h3>
+              <p>You're all set! Enjoy your time with her to the fullest!</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div role="tabpanel" id="sidequest-method" aria-labelledby="tab-b" hidden>
           <div class="flow">
             <div class="step" id="dev-mode">
               <div class="step-no"></div>
@@ -308,7 +392,7 @@
               <div class="step-body">
                 <h3>Install SideQuest</h3>
                 <ol class="do">
-                  <li>On the <a href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener">SideQuest website</a>, click <span class="ui">DOWNLOAD FOR WINDOWS</span> under "Advanced Installer"</li>
+                  <li>On the <a href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener">SideQuest website</a>, click <span class="ui">Download for Windows</span> under "SideQuest desktop app"</li>
                   <li>Run the downloaded file to install</li>
                 </ol>
               </div>
@@ -353,98 +437,7 @@
                   <li>Select <span class="ui">MRsecretVR</span> to launch it</li>
                 </ol>
                 <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>The menu icon at the left edge is small and can be hard to hit. That's down to the Quest's own interface. Move the pointer slowly and press when the "Menu" label appears.</p></div>
-                <p class="muted mt-s">Note: Opening Unknown Sources works slightly differently depending on your Quest version. If it doesn't appear, Developer Mode may not be enabled, so restart the Quest.</p>
-              </div>
-              <div class="step-fig fig"><p class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Library</p><figure class="media"><div class="frame r-1x1"><video data-autoplay muted loop playsinline preload="none" poster="../assets/images/setup/unknown-sources-poster.webp" aria-label="Video: opening Unknown Sources from the Library"><source src="../assets/videos/setup/unknown-sources.mp4" type="video/mp4"></video></div></figure></div>
-            </div>
-          </div>
-
-          <div class="done reveal">
-            <div class="done-art fig"><svg viewBox="0 0 92 92" aria-hidden="true">
-<circle cx="46" cy="46" r="34" fill="none" stroke="url(#fgrad)" stroke-width="5"/>
-<path d="M31 47l11 11 20-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill="#ff8cc4" d="M78 6c1 6 3 8 9 9-6 1-8 3-9 9-1-6-3-8-9-9 6-1 8-3 9-9z"/>
-<path fill="#b6a1ff" d="M12 66c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/>
-<path fill="#ffc163" d="M14 8c.6 3.2 1.8 4.4 5 5-3.2.6-4.4 1.8-5 5-.6-3.2-1.8-4.4-5-5 3.2-.6 4.4-1.8 5-5z"/>
-</svg></div>
-            <div>
-              <h3>Congratulations!</h3>
-              <p>You're all set! Enjoy your time with her to the fullest!</p>
-            </div>
-          </div>
-        </div>
-
-        
-        <div role="tabpanel" id="mobile-vr-method" aria-labelledby="tab-b" hidden>
-          <div class="note warn mt-0"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"></use></svg><p>Installing with Mobile VR Station reportedly stopped working in June 2025. The "Files" app method below is still being verified. If it doesn't work, use <a href="#sidequest-method">A. SideQuest</a>.</p></div>
-          <div class="flow mt-m">
-            <div class="step no-fig">
-              <div class="step-no"></div>
-              <div class="step-body">
-                <h3>Enable Developer Mode</h3>
-                <p>Follow the same steps as <a href="#dev-mode">Enable Developer Mode</a> in method A.</p>
-              </div>
-            </div>
-
-            <div class="step no-fig" id="apk-prepare">
-              <div class="step-no"></div>
-              <div class="step-body">
-                <h3>Prepare the APK File</h3>
-                <div data-tabs class="mt-m">
-                  <div class="seg" role="tablist" aria-label="How to get the APK file">
-                    <button role="tab" id="tab-p1" aria-controls="apk-quest" aria-selected="true" tabindex="0">Option 1<small>Quest only</small></button>
-                    <button role="tab" id="tab-p2" aria-controls="apk-pc" aria-selected="false" tabindex="-1">Option 2<small>Transfer from PC</small></button>
-                  </div>
-                  <div role="tabpanel" id="apk-quest" aria-labelledby="tab-p1">
-                    <div class="split top">
-                      <div>
-                    <ol class="do">
-                      <li>In the Quest browser, go to <a href="https://www.dlsite.com/" target="_blank" rel="noopener">DLsite</a>, log in and download the game</li>
-                      <li>Open the <span class="ui">Files</span> app, select the three-dot menu on the downloaded zip, then <span class="ui">Extract</span></li>
-                    </ol>
-                    <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>If extraction fails, try Option 2. The APK can't be installed while it's still zipped.</p></div>
-                      </div>
-                      <figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files app</figcaption><svg viewBox="0 0 400 250" role="img" aria-label="Diagram: extract the zip in the Files app"><rect class="f-win" x=".5" y=".5" width="399" height="249" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR_ver1.1.0.zip</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><rect x="170" y="108" width="212" height="124" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="190" y="142">Open</text><rect class="f-hl-fill" x="178" y="154" width="196" height="32" rx="7"/><rect class="f-hl" x="178" y="154" width="196" height="32" rx="7"/><text class="f-t b" x="190" y="176">Extract</text><text class="f-t s" x="190" y="210">Delete</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="178" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="178" cy="154" r="12"/><text class="f-pin-t" x="178" y="154">2</text></g><path class="f-cursor" transform="translate(336 170)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/></svg></figure>
-                    </div>
-                  </div>
-                  <div role="tabpanel" id="apk-pc" aria-labelledby="tab-p2" hidden>
-                    <ol class="do">
-                      <li>Extract the downloaded game files on your PC</li>
-                      <li>Connect the Quest to your PC via USB</li>
-                      <li>In the Quest, select <span class="ui">Allow</span> to grant file access</li>
-                      <li>Copy <span class="file">MRsecretVR.apk</span> from your PC to the Quest's <span class="file">Download</span> folder</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="step" id="apk-install">
-              <div class="step-no"></div>
-              <div class="step-body">
-                <h3>Install the APK</h3>
-                <ol class="do">
-                  <li>Find <span class="file">MRsecretVR.apk</span> in the <span class="ui">Files</span> app</li>
-                  <li>On the APK, select the three-dot menu → <span class="ui">Open with</span> → <span class="ui">Package Installer</span></li>
-                  <li><span class="ui">Install</span> → <span class="ui">Done</span></li>
-                </ol>
-              </div>
-              <div class="step-fig"><figure class="fig"><figcaption class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Files app</figcaption><svg viewBox="0 0 400 282" role="img" aria-label="Diagram: install the APK with Package Installer from the Files app"><rect class="f-win" x=".5" y=".5" width="399" height="281" rx="12"/><path class="f-bar" d="M1 34V13a12 12 0 0 1 12-12h374a12 12 0 0 1 12 12v21z"/><circle class="f-dim" cx="20" cy="17" r="4"/><circle class="f-dim" cx="34" cy="17" r="4"/><circle class="f-dim" cx="48" cy="17" r="4"/><text class="f-t s" x="68" y="22">Files</text><rect class="f-soft" x="12" y="52" width="376" height="44" rx="9"/><path class="f-ic" transform="translate(24 65)" d="M3 1h8l5 5v11c0 1-.7 1.700-1.700 1.700H3c-1 0-1.700-.7-1.700-1.700V2.700C1.300 1.700 2 1 3 1z"/><text class="f-t m" x="50" y="79">MRsecretVR.apk</text><path class="f-ic" d="M352 74h.01M360 74h.01M368 74h.01" stroke-width="3"/><rect class="f-hl-fill" x="342" y="60" width="34" height="28" rx="7"/><rect class="f-hl" x="342" y="60" width="34" height="28" rx="7"/><g class="f-pinwrap" data-n="1"><circle class="f-pin f-pulse" cx="12" cy="52" r="12" opacity=".55"/><circle class="f-pin" cx="12" cy="52" r="12"/><text class="f-pin-t" x="12" y="52">1</text></g><rect x="150" y="108" width="232" height="90" rx="11" fill="#241c3d" stroke="rgba(236,226,255,.2)"/><text class="f-t s" x="170" y="142">Open with</text><rect class="f-hl-fill" x="158" y="154" width="216" height="32" rx="7"/><rect class="f-hl" x="158" y="154" width="216" height="32" rx="7"/><text class="f-t b" x="170" y="176">Package Installer</text><g class="f-pinwrap" data-n="2"><circle class="f-pin f-pulse" cx="158" cy="154" r="12" opacity=".55"/><circle class="f-pin" cx="158" cy="154" r="12"/><text class="f-pin-t" x="158" y="154">2</text></g><path class="f-cursor" transform="translate(344 168)" d="M0 0v20l5.2-4.6 3.6 8.4 3.8-1.6-3.6-8.2 7-.6z"/><rect class="f-on" x="150" y="220" width="232" height="44" rx="22"/><text class="f-t c b" x="266" y="247">Install</text><g class="f-pinwrap" data-n="3"><circle class="f-pin f-pulse" cx="150" cy="220" r="12" opacity=".55"/><circle class="f-pin" cx="150" cy="220" r="12"/><text class="f-pin-t" x="150" y="220">3</text></g></svg></figure></div>
-            </div>
-
-            <div class="step" id="quest-launch-b">
-              <div class="step-no"></div>
-              <div class="step-body">
-                <h3>Launch the Game</h3>
-                <ol class="do">
-                  <li>Press the Meta button to open the menu and select <span class="ui">Library</span> at the bottom center</li>
-                  <li>Select the three-line menu icon at the left edge of Library</li>
-                  <li>Select <span class="ui">Unknown Sources</span></li>
-                  <li>Select <span class="ui">MRsecretVR</span> to launch it</li>
-                </ol>
-                <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>The menu icon at the left edge is small and can be hard to hit. That's down to the Quest's own interface. Move the pointer slowly and press when the "Menu" label appears.</p></div>
-                <p class="muted mt-s">Note: Opening Unknown Sources works slightly differently depending on your Quest version. If it doesn't appear, Developer Mode may not be enabled, so restart the Quest.</p>
+                <p class="muted mt-s">Note: Opening Unknown Sources works slightly differently depending on your Quest version. If it doesn't appear, Developer Mode may not be enabled. <a href="#dev-mode">Enable it</a> and restart the Quest.</p>
               </div>
               <div class="step-fig fig"><p class="fig-cap"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-headset"></use></svg>Quest · Library</p><figure class="media"><div class="frame r-1x1"><video data-autoplay muted loop playsinline preload="none" poster="../assets/images/setup/unknown-sources-poster.webp" aria-label="Video: opening Unknown Sources from the Library"><source src="../assets/videos/setup/unknown-sources.mp4" type="video/mp4"></video></div></figure></div>
             </div>
@@ -499,9 +492,8 @@
           <h3 class="sec-title">Quest Standalone Version</h3>
           <ol class="do">
             <li>Get the new version's <span class="file">MRsecretVR.apk</span></li>
-            <li>Install it with SideQuest, the same way as a normal install<span class="sub">It installs over the old version automatically</span></li>
+            <li>Install it the same way as a normal install<span class="sub">It installs over the old version automatically</span></li>
           </ol>
-          <div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>If you can't install with SideQuest, follow the steps in <a href="#mobile-vr-method">B. Quest Files App</a>.</p></div>
         </div>
       </div>
 
