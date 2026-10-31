@@ -6,7 +6,7 @@
 
 - GitHub Pages（リポジトリ `mr-vr-jp/mrsecret-vr`）。`main` ブランチの直下をそのまま公開する（Pages の設定は「Deploy from a branch」・`main` / `(root)`）。
 - `main` へ push すると、GitHub が自動でサイトを作り直して公開する。手元から別の経路で公開する仕組みは無いので、本番とGitの `main` は同じ内容になる。
-- `main` への push で `.github/workflows/remove-comments.yml` も動く。`assets/` の外のHTMLからコメントを消し、変更があれば自動でコミットする。`tools/build.py` は書き出しの時点でコメントを消しているので、通常は変更が出ない。自動コミットが入った時は、次の作業の前に取り込む。
+- `main` への push で `.github/workflows/remove-comments.yml` も動くが、途中で作る `node_modules` まで変更と見なし、GitHubの権限で push を拒否されて失敗する（2026-11-01に確認。どの push でも同じ）。公開には影響しない。書き込み権限を与えると `node_modules` が `main` へ入るので、権限だけを変えない。
 - push の成功と公開の成功は別。push 後に、リポジトリの Actions の「pages build and deployment」が成功したことと、公開URLで変更が見えることを確かめる。
 
 ## ページの作り方
