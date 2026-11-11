@@ -49,6 +49,8 @@
     </div>
   </section>
 
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>This guide covers the full version, ver1.2.0.<br>The DLsite file update is pending as of November 11, 2026.</p></div></div>
+
   <nav class="chapter-bar" aria-label="Contents" data-toc>
     <div class="wrap">
       <a href="#introduction"><b>01</b>Introduction</a>
@@ -126,7 +128,7 @@
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="../assets/images/manual/img-house-night.webp" alt="Her house at night" loading="lazy"></div></figure>
             <h4>Story Mode</h4>
-            <ul class="points"><li>The main game mode</li><li>Infiltration and exploration</li><li>Item collecting</li><li>Save data carries over</li></ul>
+            <ul class="points"><li>The main game mode</li><li>Infiltration and exploration</li><li>Item collecting</li><li>Outfit and hairstyle collection progress is saved</li></ul>
           </div>
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="../assets/images/manual/dl-dressup.webp" alt="Changing outfits and hairstyles" loading="lazy"></div></figure>
@@ -212,12 +214,12 @@
       <div class="sec split">
         <div class="reveal">
           <h3 class="sec-title">Motion Sickness Setting</h3>
-          <p class="sec-lead">Turn on "酔い軽減" (reduce sickness) in the menu to enable both of these at once.</p>
+          <p class="sec-lead">Open "酔い設定" (comfort settings) in the menu to adjust these settings separately.</p>
           <ul class="points">
-            <li><strong>Vignette:</strong> darkens the edges of your view while you move</li>
-            <li><strong>Crouch:</strong> switches posture instantly</li>
+            <li><strong>Vignette:</strong> adjust how strongly the edges of your view darken while moving.</li>
+            <li><strong>Crouching and turning:</strong> choose instant changes or smooth movement.</li>
           </ul>
-          <div class="menu-shot mt-m"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/img-menu.webp" alt="In-game menu" loading="lazy"></div></figure></div>
+          <div class="menu-shot mt-m"><figure class="media"><div class="frame" style="aspect-ratio:8/5"><img class="zoomable" src="../assets/images/manual/menu-main-1.2.0.png" alt="Full ver1.2.0 menu. Open 酔い設定 for comfort settings" width="1600" height="1000" loading="lazy"></div></figure></div>
         </div>
         <div class="vignette reveal" data-vignette>
           <figure class="media"><div class="frame r-16x9"><img class="zoomable" src="../assets/images/manual/img-hallway.webp" alt="Example view while moving" loading="lazy"></div></figure>
@@ -349,8 +351,8 @@
               <h3 class="sec-title">Dress-Up</h3>
               <ol class="do">
                 <li><strong>Take out items:</strong> get an outfit or hairstyle from the backpack</li>
-                <li><strong>Undress:</strong> use the scissors to remove her current outfit</li>
-                <li><strong>New look:</strong> hold the outfit or hairstyle close to her to put it on</li>
+                <li><strong>Change her look:</strong> hold the outfit against her body, or the hairstyle against her head.</li>
+                <li><strong>To remove an outfit:</strong> use the scissors. You do not need to remove the current outfit before changing it.</li>
               </ol>
             </div>
             <div class="reveal"><figure class="media cam"><div class="frame r-16x9"><video data-autoplay muted loop playsinline preload="none" poster="../assets/images/manual/vid-backpack-poster.webp" aria-label="Backpack video"><source src="../assets/videos/manual/vid-backpack.mp4" type="video/mp4"></video><span class="cam-hud" aria-hidden="true"><b class="rec">REC</b><span class="cam-id"></span><time class="cam-time">02:13:48</time></span></div></figure></div>
@@ -365,6 +367,7 @@
               <figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/dl-mr-sweater.webp" alt="Her lying on a real sofa in MR Mode" loading="lazy"></div></figure>
             </div>
             <div class="table-scroll reveal">
+              <p class="muted mt-s">This table describes the features available in this game's MR Mode.</p>
               <table class="spec">
                 <thead><tr><th>Device</th><th>Passthrough</th><th>Spatial recognition</th></tr></thead>
                 <tbody>
@@ -434,18 +437,17 @@
             <div class="reveal"><figure class="media"><div class="frame r-16x9"><img class="zoomable" src="../assets/images/manual/img-vd-passthrough.webp" alt="VR Passthrough settings in Virtual Desktop" loading="lazy"></div></figure></div>
           </div>
 
-          <div class="sec split top">
+          <div class="sec">
             <div class="reveal">
               <h3 class="sec-title">Spatial Recognition Setup on Quest 3/3S</h3>
               <ol class="do">
-                <li>Open Settings on the Quest</li>
-                <li>Select "Physical space" → "Space setup" → "Set up"</li>
-                <li>Complete the space setup</li>
-                <li>You can turn spatial recognition ON/OFF from the menu</li>
+                <li>Open space setup in the Quest settings and register the shape of your room.</li>
+                <li>Allow MRsecretVR to access spatial data.</li>
+                <li>Start the game and open MR Mode.</li>
+                <li>Once the room has loaded, turn on spatial recognition (空間Mesh) in the menu.</li>
               </ol>
-              <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>Turning it ON briefly shows the shape of your space</p></div>
+              <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>The room shape briefly becomes visible when enabled. If the menu says "非対応" (not supported), see the <a href="troubleshooting.html#quest3-scene">spatial recognition checks</a>.</p></div>
             </div>
-            <div class="reveal menu-shot"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/img-mr-menu.webp" alt="MR Mode menu" loading="lazy"></div></figure></div>
           </div>
         </div>
       </div>
@@ -478,8 +480,8 @@
         <div class="reveal">
           <h3 class="sec-title">Preventing Motion Sickness</h3>
           <ul class="points mt-s">
-            <li>Turn the sickness setting ON at first</li>
-            <li>Turn it OFF once you're used to it</li>
+            <li>Adjust the vignette strength and crouching/turning motion in comfort settings</li>
+            <li>Keep the settings that feel comfortable; there is no need to reduce them</li>
             <li>Take a break when you feel tired</li>
           </ul>
           <p class="mt-s"><a class="link-arrow" href="https://youtu.be/VzBKmSKs63E" target="_blank" rel="noopener">5 VR sickness tips from a nurse (YouTube)<svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-ext"></use></svg></a></p>
@@ -543,7 +545,7 @@
             <ul class="points">
               <li>Always check her position on the monitor</li>
               <li>She can spot you even through glass</li>
-              <li>From behind, you can get close without being noticed</li>
+              <li>Approach from behind while staying out of her view, and watch for her turning around or making contact</li>
               <li>Use the narrow paths around the house</li>
               <li>Moving while crouched makes you harder to spot</li>
             </ul>

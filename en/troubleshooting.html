@@ -49,6 +49,8 @@
     </div>
   </section>
 
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>This guide covers the full version, ver1.2.0.<br>The DLsite file update is pending as of November 11, 2026.</p></div></div>
+
   <div class="narrow">
     <div class="search">
       <svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"></use></svg>
@@ -62,57 +64,42 @@
       <details class="qa" id="pc-menu-unselectable" data-filter-item>
         <summary><span><small class="tagline">PC</small>Can't select anything in the start screen menu (controllers don't respond)</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <div class="case">
-            <h3>If the folder path contains spaces or non-English characters such as Japanese</h3>
-            <ul class="points">
-              <li>Move the game folder to a path with only letters and numbers. The whole path, including parent folders, must be alphanumeric.</li>
-            </ul>
-            <div class="path ok mt-s"><span class="mk">OK</span><code>C:\Games\MRsecretVR</code></div>
-          </div>
-          <div class="case">
-            <h3>If you renamed the folder after launching the game from it</h3>
-            <ul class="points">
-              <li>Move the game folder to a completely different location (e.g. Downloads → Desktop).</li>
-              <li>Or rename the folder back to what it was at first launch (e.g. MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0).</li>
-            </ul>
-          </div>
-          <div class="case">
-            <h3>If the problem persists</h3>
-            <ul class="points">
-              <li>Once the menu becomes unselectable, you must restart SteamVR after applying a fix.</li>
-              <li>Download the ZIP file again and extract it to a new location.</li>
-            </ul>
-            <p class="muted mt-s">Note: These issues are caused by how SteamVR works and can't be controlled by the game.</p>
-          </div>
+          <p>If you use the full version, download <strong>ver1.2.0 or later</strong> from the store where you purchased it. This update fixes controller input issues and launching from folder paths containing Japanese characters or spaces.</p>
+          <ol class="do">
+            <li>Close the game and SteamVR</li>
+            <li>Follow the <a href="setup-guide.html#pcvr-update">PCVR update instructions</a></li>
+            <li>Start SteamVR, then run <span class="file">MRsecretVR.exe</span> from the new game folder</li>
+          </ol>
+          <p class="mt-m">If the issue continues after updating, tell us your VR headset, connection method, game version, and symptoms on our <a href="https://ci-en.net/creator/27628/article/1288727" target="_blank" rel="noopener">Ci-en page</a>.</p>
+        </div>
+      </details>
+
+      <details class="qa" id="quest-not-responding" data-filter-item>
+        <summary><span><small class="tagline">Quest</small>The game won't launch and shows “Not responding”</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>Full ver1.2.0 includes a fix for the standalone Quest game becoming unresponsive at startup. Download the latest version from the store where you purchased it and follow the <a href="setup-guide.html#quest-update">Quest update instructions</a>.</p>
+          <div class="note warn"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"></use></svg><p>Save data cannot be transferred when moving from the old store release to this ver1.2.0 release for the first time. Read the update instructions before proceeding.</p></div>
         </div>
       </details>
 
       <details class="qa" id="pc-steamvr" data-filter-item>
         <summary><span><small class="tagline">PC</small>Won't launch in SteamVR</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <ol class="do">
-            <li>In the SteamVR window, open the three-line menu and select "Settings"</li>
-            <li>Under OpenXR, select "SET STEAMVR AS OPENXR RUNTIME"</li>
-          </ol>
+          <ol class="do"><li>Close the game and check the <a href="setup-guide.html#vr-connection">headset connection steps</a>.</li><li>Start SteamVR and confirm that it recognizes your headset and controllers.</li><li>Run <span class="file">MRsecretVR.exe</span> from the new game folder.</li></ol>
         </div>
       </details>
 
       <details class="qa" id="pc-questlink" data-filter-item>
         <summary><span><small class="tagline">PC</small>Won't launch in SteamVR over Meta Horizon Link (formerly Quest Link)</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>Change the OpenXR setting in the Meta Horizon Link app (formerly Meta Quest Link) on your PC.</p>
-          <ol class="do">
-            <li>Settings → General → OpenXR Runtime</li>
-            <li>Set it as active</li>
-          </ol>
+          <ol class="do"><li>Connect to your PC through Meta Horizon Link and confirm that the Link screen appears in your headset.</li><li>Start SteamVR on the PC and confirm that it recognizes your headset and controllers.</li><li>Run <span class="file">MRsecretVR.exe</span>.</li></ol><p class="mt-s">If Link itself cannot connect, check the <a href="setup-guide.html#conn-link">connection guide</a>.</p>
         </div>
       </details>
 
       <details class="qa" id="quest-apk" data-filter-item>
         <summary><span><small class="tagline">Quest</small>Can't install the APK file</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>We've confirmed that installing with SideQuest can fail on Quest 2.</p>
-          <p>Try "A. Quest Only" in the <a href="setup-guide.html#mobile-vr-method">Install Guide</a>.</p>
+          <p>If updating from the old store release to ver1.2.0 for the first time, read the <a href="setup-guide.html#quest-update">update steps and save data warning</a> first.</p><p>For a failed fresh installation, make sure you extracted the zip and are using the APK inside. If installation through the <a href="setup-guide.html#mobile-vr-method">Quest Files app</a> fails, check <a href="setup-guide.html#dev-mode">developer mode</a> and the <a href="setup-guide.html#sidequest-method">SideQuest steps</a>.</p>
         </div>
       </details>
     </section>
@@ -125,7 +112,7 @@
         <div class="qa-body">
           <p>Outfits and hairstyles work slightly differently.</p>
           <ul class="points">
-            <li><strong>Outfits:</strong> Take one out of the backpack and just grab it to change her.</li>
+            <li><strong>Outfits:</strong> Take one out of the backpack and hold it against her body.</li>
             <li><strong>Hairstyles:</strong> After taking one out of the backpack, you need to touch it to her hair.</li>
           </ul>
         </div>
@@ -153,7 +140,9 @@
 
       <details class="qa" id="mr-hand-holding" data-filter-item>
         <summary><span>Can't hold hands in MR Mode</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
-        <div class="qa-body"><p>It works only once after selecting "ポーズリセット" (reset pose) in the menu. This is a limitation of the game's design.</p></div>
+        <div class="qa-body">
+          <p>If she does not move when you hold her hand, select "ポーズリセット" (Reset Pose) in the menu, then grab her forearm again.</p>
+        </div>
       </details>
 
       <details class="qa" id="mr-howto" data-filter-item>
@@ -169,8 +158,9 @@
             <li>"Manage spaces" and your room name appear in Space setup</li>
             <li>In Space setup, "App permissions" → "Spatial data" → "MRsecretVR" is ON</li>
             <li>During space setup, a mesh tracing the shape of your room appears</li>
-            <li>You've pressed "空間認識未対応" (spatial recognition off) in the menu to turn it ON</li>
+            <li>After changing room settings or permissions, restart the game and turn on spatial recognition (空間Mesh) once the room has loaded</li>
           </ul>
+          <p class="mt-s">"非対応" (not supported) can also mean the room mesh has not loaded. Pressing that label alone will not enable it.</p>
         </div>
       </details>
     </section>

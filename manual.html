@@ -36,7 +36,7 @@
 
     <script type="application/ld+json">    {
         "@context": "https://schema.org",
-        "@type": "HowTo",
+        "@type": "TechArticle",
         "name": "ミスター秘密侵入VR｜プレイガイド - 完全攻略マニュアル",
         "description": "ミスター秘密侵入VRの完全プレイガイド。操作方法、ゲームシステム、各モード解説、衣装・髪型着せ替えなど。",
         "author": {
@@ -48,7 +48,7 @@
             "name": "ミスター秘密侵入VR公式サイト"
         },
         "url": "https://mr-vr-jp.github.io/mrsecret-vr/manual.html",
-        "dateModified": "2026-11-01",
+        "dateModified": "2026-11-11",
         "about": {
             "@type": "VideoGame",
             "name": "ミスター秘密侵入VR"
@@ -90,6 +90,8 @@
       <p class="p-lead">まずはゲーム内のチュートリアルから。詰まったときや、もっと遊び方を知りたいときに、必要な部分だけご覧ください。</p>
     </div>
   </section>
+
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-info"></use></svg><p>製品版ver1.2.0向けのガイドです。<br>DLsiteは差し替え反映待ちです（2026年11月11日現在）。</p></div></div>
 
   <nav class="chapter-bar" aria-label="目次" data-toc>
     <div class="wrap">
@@ -168,7 +170,7 @@
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="assets/images/manual/img-house-night.webp" alt="夜の彼女の家" loading="lazy"></div></figure>
             <h4>ストーリーモード</h4>
-            <ul class="points"><li>メインのゲームモード</li><li>潜入＆探索アクション</li><li>アイテム収集要素</li><li>セーブデータ引き継ぎ</li></ul>
+            <ul class="points"><li>メインのゲームモード</li><li>潜入＆探索アクション</li><li>アイテム収集要素</li><li>衣装と髪型の収集状況を保存</li></ul>
           </div>
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="assets/images/manual/dl-dressup.webp" alt="衣装と髪型の着せ替え" loading="lazy"></div></figure>
@@ -254,12 +256,12 @@
       <div class="sec split">
         <div class="reveal">
           <h3 class="sec-title">VR酔い防止設定</h3>
-          <p class="sec-lead">メニューでONにすると、次の2つが同時に設定されます。</p>
+          <p class="sec-lead">メニューの「酔い設定」で、次の項目を個別に調整できます。</p>
           <ul class="points">
-            <li><strong>ビネット効果</strong>　移動時に視界の周辺が暗くなる</li>
-            <li><strong>しゃがみ動作</strong>　瞬時に姿勢が切り替わる</li>
+            <li><strong>ビネット効果</strong>　移動時に視界の周辺が暗くなる強さを調整します。</li>
+            <li><strong>しゃがみと回転</strong>　瞬時に切り替える動作と、ゆっくり動く動作を選べます。</li>
           </ul>
-          <div class="menu-shot mt-m"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="assets/images/manual/img-menu.webp" alt="ゲーム内メニュー" loading="lazy"></div></figure></div>
+          <div class="menu-shot mt-m"><figure class="media"><div class="frame" style="aspect-ratio:8/5"><img class="zoomable" src="assets/images/manual/menu-main-1.2.0.png" alt="製品版ver1.2.0のメニュー。「酔い設定」から調整できます" width="1600" height="1000" loading="lazy"></div></figure></div>
         </div>
         <div class="vignette reveal" data-vignette>
           <figure class="media"><div class="frame r-16x9"><img class="zoomable" src="assets/images/manual/img-hallway.webp" alt="移動中の視界の例" loading="lazy"></div></figure>
@@ -391,8 +393,8 @@
               <h3 class="sec-title">着せ替え</h3>
               <ol class="do">
                 <li><strong>アイテム取り出し</strong>　リュックから衣装や髪型を取り出します</li>
-                <li><strong>服の脱衣</strong>　ハサミを使用して現在の衣装を脱がせます</li>
-                <li><strong>新しい姿にする</strong>　衣装と髪型を手に持って近づけると着せられます</li>
+                <li><strong>着せ替える</strong>　手に持った衣装を彼女の身体に、髪型を頭に当てます。</li>
+                <li><strong>服を脱がせる場合</strong>　ハサミを使います。着せ替え前に脱がせる必要はありません。</li>
               </ol>
             </div>
             <div class="reveal"><figure class="media cam"><div class="frame r-16x9"><video data-autoplay muted loop playsinline preload="none" poster="assets/images/manual/vid-backpack-poster.webp" aria-label="リュックの動画"><source src="assets/videos/manual/vid-backpack.mp4" type="video/mp4"></video><span class="cam-hud" aria-hidden="true"><b class="rec">REC</b><span class="cam-id"></span><time class="cam-time">02:13:48</time></span></div></figure></div>
@@ -407,6 +409,7 @@
               <figure class="media"><div class="frame r-1x1"><img class="zoomable" src="assets/images/manual/dl-mr-sweater.webp" alt="MRモードで現実のソファに寝かせた彼女" loading="lazy"></div></figure>
             </div>
             <div class="table-scroll reveal">
+              <p class="muted mt-s">この表は、本作のMRモードで利用できる機能を示しています。</p>
               <table class="spec">
                 <thead><tr><th>機種</th><th>パススルー</th><th>空間認識</th></tr></thead>
                 <tbody>
@@ -476,18 +479,17 @@
             <div class="reveal"><figure class="media"><div class="frame r-16x9"><img class="zoomable" src="assets/images/manual/img-vd-passthrough.webp" alt="Virtual DesktopのVR Passthrough設定画面" loading="lazy"></div></figure></div>
           </div>
 
-          <div class="sec split top">
+          <div class="sec">
             <div class="reveal">
               <h3 class="sec-title">Quest 3/3Sの空間認識設定</h3>
               <ol class="do">
-                <li>Quest本体の設定を開きます</li>
-                <li>「物理的空間」→「スペースの設定」→「スペースの設定」を選択</li>
-                <li>スペースの設定を完了させます</li>
-                <li>メニューから空間認識のON/OFFが切り替え可能です</li>
+                <li>Quest本体の設定からスペースの設定を開き、部屋の形状を登録します。</li>
+                <li>MRsecretVRへの空間データのアクセスを許可します。</li>
+                <li>ゲームを起動し、MRモードを開きます。</li>
+                <li>部屋が読み込まれたら、メニューの空間認識（空間Mesh）をONにします。</li>
               </ol>
-              <div class="note tip"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-bulb"></use></svg><p>ONにすると一時的に空間の形状が表示されます</p></div>
+              <div class="note tip"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-bulb"></use></svg><p>ONにすると部屋の形状が一時的に表示されます。「非対応」と表示される場合は、<a href="troubleshooting.html#quest3-scene">空間認識の確認手順</a>をご覧ください。</p></div>
             </div>
-            <div class="reveal menu-shot"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="assets/images/manual/img-mr-menu.webp" alt="MRモードのメニュー" loading="lazy"></div></figure></div>
           </div>
         </div>
       </div>
@@ -520,8 +522,8 @@
         <div class="reveal">
           <h3 class="sec-title">VR酔い対策</h3>
           <ul class="points mt-s">
-            <li>初めは酔い防止設定をONに</li>
-            <li>慣れてきたら設定をOFFに</li>
+            <li>「酔い設定」でビネットの強さと、しゃがみや回転の動作を調整する</li>
+            <li>無理に設定を弱めず、自分が快適に遊べる状態にする</li>
             <li>疲れを感じたら適度な休憩を</li>
           </ul>
           <p class="mt-s"><a class="link-arrow" href="https://youtu.be/VzBKmSKs63E" target="_blank" rel="noopener">看護師に聞いた5つのVR酔い対策（YouTube）<svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-ext"></use></svg></a></p>
@@ -585,7 +587,7 @@
             <ul class="points">
               <li>モニターで常に位置を確認</li>
               <li>ガラス越しでも見つかります</li>
-              <li>背後なら近づいてもバレません</li>
+              <li>背後から視界に入らないように近づき、振り向きや接触に注意しましょう</li>
               <li>家周囲の細い通路も活用しましょう</li>
               <li>しゃがんで移動すると発見されにくくなります</li>
             </ul>

@@ -69,6 +69,8 @@
     </div>
   </section>
 
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-info"></use></svg><p>製品版ver1.2.0向けのガイドです。<br>DLsiteは差し替え反映待ちです（2026年11月11日現在）。</p></div></div>
+
   <div class="narrow">
     <div class="search">
       <svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-search"></use></svg>
@@ -82,57 +84,42 @@
       <details class="qa" id="pc-menu-unselectable" data-filter-item>
         <summary><span><small class="tagline">PC</small>ゲーム開始画面でメニューが選択できない（コントローラーが効かない）</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <div class="case">
-            <h3>フォルダパスに日本語や全角文字、スペースが含まれている場合</h3>
-            <ul class="points">
-              <li>ゲームフォルダを英数字のみのパスに移動してください。上層フォルダも含め、パス全体が英数字である必要があります。</li>
-            </ul>
-            <div class="path ok mt-s"><span class="mk">OK</span><code>C:\Games\MRsecretVR</code></div>
-          </div>
-          <div class="case">
-            <h3>一度ゲームを起動した場所でフォルダ名を変更した場合</h3>
-            <ul class="points">
-              <li>ゲームフォルダを完全に別の場所に移動してください（例: Downloads → Desktop）。</li>
-              <li>または、フォルダ名を最初に起動した時の名前に戻してください（例: MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0）。</li>
-            </ul>
-          </div>
-          <div class="case">
-            <h3>問題が解決しない場合</h3>
-            <ul class="points">
-              <li>一度選択不可になると、対処後にSteamVRを再起動する必要があります。</li>
-              <li>ZIPファイルを再度ダウンロードし、新しい場所に展開してお試しください。</li>
-            </ul>
-            <p class="muted mt-s">※これらの問題はSteamVRの仕様によるもので、アプリケーション側では制御できない問題となっています。</p>
-          </div>
+          <p>製品版をご利用の場合は、購入先から<strong>ver1.2.0以降</strong>をダウンロードして更新してください。コントローラー入力と、日本語・空白を含むフォルダからの起動に関する不具合を修正しています。</p>
+          <ol class="do">
+            <li>ゲームとSteamVRを終了する</li>
+            <li><a href="setup-guide.html#pcvr-update">PCVR版のアップデート手順</a>に従って更新する</li>
+            <li>SteamVRを起動してから、新しいフォルダの<span class="file">MRsecretVR.exe</span>を実行する</li>
+          </ol>
+          <p class="mt-m">更新後も改善しない場合は、使用しているVRヘッドセットと接続方法、ゲームのバージョン、症状を<a href="https://ci-en.net/creator/27628/article/1288727" target="_blank" rel="noopener">Ci-enのページ</a>でお知らせください。</p>
+        </div>
+      </details>
+
+      <details class="qa" id="quest-not-responding" data-filter-item>
+        <summary><span><small class="tagline">Quest</small>「応答していません」と表示され、起動できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>製品版ver1.2.0では、Quest単体版の起動時に応答しなくなる問題への対策を追加しています。購入先から最新版をダウンロードし、<a href="setup-guide.html#quest-update">Quest単体版のアップデート手順</a>をご確認ください。</p>
+          <div class="note warn"><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-alert"></use></svg><p>旧公開版から今回のver1.2.0への初回移行では、以前のセーブデータを引き継げません。更新手順の注意事項を読んでから操作してください。</p></div>
         </div>
       </details>
 
       <details class="qa" id="pc-steamvr" data-filter-item>
         <summary><span><small class="tagline">PC</small>SteamVRで起動できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <ol class="do">
-            <li>SteamVRウィンドウの「三本線」メニュー →「設定」を選択</li>
-            <li>OpenXRの項目で「STEAMVRをOPENXRランタイムとして設定」を選択</li>
-          </ol>
+          <ol class="do"><li>ゲームを終了し、<a href="setup-guide.html#vr-connection">ヘッドセットの接続手順</a>を確認する</li><li>SteamVRを起動し、ヘッドセットとコントローラーが認識されていることを確認する</li><li>新しいゲームフォルダの<span class="file">MRsecretVR.exe</span>を起動する</li></ol>
         </div>
       </details>
 
       <details class="qa" id="pc-questlink" data-filter-item>
         <summary><span><small class="tagline">PC</small>Meta Horizon Link（旧 Quest Link）のSteamVRで起動できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>PCのMeta Horizon Linkソフト（旧 Meta Quest Link）で、OpenXRの設定をご変更ください。</p>
-          <ol class="do">
-            <li>設定→一般→OpenXRランタイム</li>
-            <li>アクティブに設定</li>
-          </ol>
+          <ol class="do"><li>Meta Horizon LinkでPCに接続し、ヘッドセット内にLinkの画面が表示されることを確認する</li><li>PCでSteamVRを起動し、ヘッドセットとコントローラーが認識されていることを確認する</li><li><span class="file">MRsecretVR.exe</span>を起動する</li></ol><p class="mt-s">Link自体が接続できない場合は、<a href="setup-guide.html#conn-link">接続方法</a>をご確認ください。</p>
         </div>
       </details>
 
       <details class="qa" id="quest-apk" data-filter-item>
         <summary><span><small class="tagline">Quest</small>APKファイルが導入できない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>Quest2でSideQuestによる導入ができない現象を確認しています。</p>
-          <p><a href="setup-guide.html#mobile-vr-method">導入ガイド</a>の「A. Quest本体だけ」をお試しください。</p>
+          <p>旧公開版からver1.2.0への初回更新では、先に<a href="setup-guide.html#quest-update">更新手順とセーブデータの注意事項</a>をご確認ください。</p><p>新規インストールで失敗する場合は、zipを展開し、取り出したAPKを使っていることを確認してください。<a href="setup-guide.html#mobile-vr-method">Questのファイルアプリでの導入</a>でうまくいかない時は、<a href="setup-guide.html#dev-mode">開発者モード</a>と<a href="setup-guide.html#sidequest-method">SideQuestの手順</a>をご確認ください。</p>
         </div>
       </details>
     </section>
@@ -145,7 +132,7 @@
         <div class="qa-body">
           <p>衣装と髪型で操作方法が若干異なります。</p>
           <ul class="points">
-            <li><strong>衣装の場合</strong>　リュックから取り出して掴むだけで着せ替えができます。</li>
+            <li><strong>衣装の場合</strong>　リュックから取り出し、手に持って彼女の身体に当てます。</li>
             <li><strong>髪型の場合</strong>　リュックから取り出した後、彼女の髪に当てる必要があります。</li>
           </ul>
         </div>
@@ -173,7 +160,9 @@
 
       <details class="qa" id="mr-hand-holding" data-filter-item>
         <summary><span>MRモードでお手て繋ぎができない</span><svg class="i" aria-hidden="true"><use href="assets/img/icons.svg#i-plus"></use></svg></summary>
-        <div class="qa-body"><p>メニューのポーズリセット後に1回のみ可能です。仕様上の制約となっています。</p></div>
+        <div class="qa-body">
+          <p>手を掴んでも移動しない場合は、メニューで「ポーズリセット」を実行してから、もう一度前腕部分を掴んでください。</p>
+        </div>
       </details>
 
       <details class="qa" id="mr-howto" data-filter-item>
@@ -189,8 +178,9 @@
             <li>スペースの設定内に、「スペースを管理」と「ルーム名」の項目が表示されていること</li>
             <li>スペースの設定にある「アプリのアクセス許可」→「空間データ」→「MRsecretVR」がONであること</li>
             <li>スペースの設定中に、部屋の形状を認識するMeshが表示されていること</li>
-            <li>メニューの「空間認識未対応」の箇所を押してONにしていること</li>
+            <li>設定やアクセス許可を変更した後はゲームを起動し直し、部屋が読み込まれた状態で空間認識（空間Mesh）をONにしていること</li>
           </ul>
+          <p class="mt-s">「非対応」は部屋の形状を読み込めていない場合にも表示されます。その表示を押すだけでは有効になりません。</p>
         </div>
       </details>
     </section>

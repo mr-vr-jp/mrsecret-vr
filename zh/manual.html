@@ -49,6 +49,8 @@
     </div>
   </section>
 
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>本指南以正式版ver1.2.0为准。<br>截至2026年11月11日，DLsite的文件替换仍待生效。</p></div></div>
+
   <nav class="chapter-bar" aria-label="目录" data-toc>
     <div class="wrap">
       <a href="#introduction"><b>01</b>简介</a>
@@ -126,7 +128,7 @@
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="../assets/images/manual/img-house-night.webp" alt="夜晚她的家" loading="lazy"></div></figure>
             <h4>故事模式</h4>
-            <ul class="points"><li>主要游戏模式</li><li>潜入＆探索动作</li><li>道具收集要素</li><li>继承存档</li></ul>
+            <ul class="points"><li>主要游戏模式</li><li>潜入＆探索动作</li><li>道具收集要素</li><li>保存服装与发型的收集进度</li></ul>
           </div>
           <div class="mode reveal">
             <figure class="media"><div class="frame r-4x3"><img class="zoomable" src="../assets/images/manual/dl-dressup.webp" alt="更换服装和发型" loading="lazy"></div></figure>
@@ -212,12 +214,12 @@
       <div class="sec split">
         <div class="reveal">
           <h3 class="sec-title">防晕设置</h3>
-          <p class="sec-lead">在菜单中将「酔い軽減」（减轻晕动）设为ON，会同时启用以下2项。</p>
+          <p class="sec-lead">在菜单的「酔い設定」（防晕设置）中，可分别调整以下项目。</p>
           <ul class="points">
-            <li><strong>暗角效果</strong>　移动时视野边缘变暗</li>
-            <li><strong>蹲下动作</strong>　姿势瞬间切换</li>
+            <li><strong>暗角效果</strong>　调整移动时视野边缘变暗的强度。</li>
+            <li><strong>蹲下与转向</strong>　可选择瞬间切换或平滑移动。</li>
           </ul>
-          <div class="menu-shot mt-m"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/img-menu.webp" alt="游戏内菜单" loading="lazy"></div></figure></div>
+          <div class="menu-shot mt-m"><figure class="media"><div class="frame" style="aspect-ratio:8/5"><img class="zoomable" src="../assets/images/manual/menu-main-1.2.0.png" alt="正式版ver1.2.0菜单。选择「酔い設定」可调整防晕设置" width="1600" height="1000" loading="lazy"></div></figure></div>
         </div>
         <div class="vignette reveal" data-vignette>
           <figure class="media"><div class="frame r-16x9"><img class="zoomable" src="../assets/images/manual/img-hallway.webp" alt="移动中的视野示例" loading="lazy"></div></figure>
@@ -349,8 +351,8 @@
               <h3 class="sec-title">换装</h3>
               <ol class="do">
                 <li><strong>取出道具</strong>　从背包取出服装或发型</li>
-                <li><strong>脱下衣服</strong>　用剪刀脱掉当前的服装</li>
-                <li><strong>换上新造型</strong>　手持服装或发型靠近她即可换上</li>
+                <li><strong>更换造型</strong>　手持服装贴到她的身体上，或将发型贴到她的头部。</li>
+                <li><strong>如需脱下服装</strong>　使用剪刀。换装前不必先脱下当前服装。</li>
               </ol>
             </div>
             <div class="reveal"><figure class="media cam"><div class="frame r-16x9"><video data-autoplay muted loop playsinline preload="none" poster="../assets/images/manual/vid-backpack-poster.webp" aria-label="背包的视频"><source src="../assets/videos/manual/vid-backpack.mp4" type="video/mp4"></video><span class="cam-hud" aria-hidden="true"><b class="rec">REC</b><span class="cam-id"></span><time class="cam-time">02:13:48</time></span></div></figure></div>
@@ -365,6 +367,7 @@
               <figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/dl-mr-sweater.webp" alt="MR模式下让她躺在现实中的沙发上" loading="lazy"></div></figure>
             </div>
             <div class="table-scroll reveal">
+              <p class="muted mt-s">此表说明本作MR模式可使用的功能。</p>
               <table class="spec">
                 <thead><tr><th>机型</th><th>透视</th><th>空间识别</th></tr></thead>
                 <tbody>
@@ -434,18 +437,17 @@
             <div class="reveal"><figure class="media"><div class="frame r-16x9"><img class="zoomable" src="../assets/images/manual/img-vd-passthrough.webp" alt="Virtual Desktop的VR Passthrough设置画面" loading="lazy"></div></figure></div>
           </div>
 
-          <div class="sec split top">
+          <div class="sec">
             <div class="reveal">
               <h3 class="sec-title">Quest 3/3S的空间识别设置</h3>
               <ol class="do">
-                <li>打开Quest的设置（Settings）</li>
-                <li>选择“Physical space”→“Space setup”→“Set up”</li>
-                <li>完成空间设置</li>
-                <li>可在游戏菜单中切换空间识别的ON/OFF</li>
+                <li>在Quest设置中打开空间设置，登记房间形状。</li>
+                <li>允许MRsecretVR访问空间数据。</li>
+                <li>启动游戏并进入MR模式。</li>
+                <li>房间加载完成后，在菜单中开启空间识别（空間Mesh）。</li>
               </ol>
-              <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>设为ON时会短暂显示空间形状</p></div>
+              <div class="note tip"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-bulb"></use></svg><p>开启后会短暂显示房间形状。若显示「非対応」（不支持），请查看<a href="troubleshooting.html#quest3-scene">空间识别检查步骤</a>。</p></div>
             </div>
-            <div class="reveal menu-shot"><figure class="media"><div class="frame r-1x1"><img class="zoomable" src="../assets/images/manual/img-mr-menu.webp" alt="MR模式的菜单" loading="lazy"></div></figure></div>
           </div>
         </div>
       </div>
@@ -478,8 +480,8 @@
         <div class="reveal">
           <h3 class="sec-title">防晕对策</h3>
           <ul class="points mt-s">
-            <li>刚开始先开启防晕设置</li>
-            <li>习惯后再关闭</li>
+            <li>在防晕设置中调整暗角强度以及蹲下、转向的动作</li>
+            <li>保留让自己舒适的设置，不必勉强减弱效果</li>
             <li>感到疲劳就适当休息</li>
           </ul>
           <p class="mt-s"><a class="link-arrow" href="https://youtu.be/VzBKmSKs63E" target="_blank" rel="noopener">护士传授的5个VR防晕方法（YouTube）<svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-ext"></use></svg></a></p>
@@ -543,7 +545,7 @@
             <ul class="points">
               <li>用监视器随时确认她的位置</li>
               <li>隔着玻璃也会被发现</li>
-              <li>从背后靠近不会被发现</li>
+              <li>从背后靠近时避开她的视线，并注意她突然转身或与你发生接触</li>
               <li>善用房屋周围的狭窄通道</li>
               <li>蹲着移动更不易被发现</li>
             </ul>

@@ -49,6 +49,8 @@
     </div>
   </section>
 
+  <div class="narrow"><div class="note"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"></use></svg><p>本指南以正式版ver1.2.0为准。<br>截至2026年11月11日，DLsite的文件替换仍待生效。</p></div></div>
+
   <div class="narrow">
     <div class="search">
       <svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"></use></svg>
@@ -62,57 +64,42 @@
       <details class="qa" id="pc-menu-unselectable" data-filter-item>
         <summary><span><small class="tagline">PC</small>游戏开始画面无法选择菜单（手柄没反应）</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <div class="case">
-            <h3>文件夹路径含中文、日文等全角字符或空格时</h3>
-            <ul class="points">
-              <li>请将游戏文件夹移到仅由英文字母和数字组成的路径。包括上级文件夹在内，整个路径都必须是英文字母和数字。</li>
-            </ul>
-            <div class="path ok mt-s"><span class="mk">OK</span><code>C:\Games\MRsecretVR</code></div>
-          </div>
-          <div class="case">
-            <h3>在启动过游戏的位置修改了文件夹名称时</h3>
-            <ul class="points">
-              <li>请将游戏文件夹移到完全不同的位置（例：Downloads → Desktop）。</li>
-              <li>或将文件夹名改回首次启动时的名称（例：MRsecretVR_ver1.0.1 → MRsecretVR_ver1.0）。</li>
-            </ul>
-          </div>
-          <div class="case">
-            <h3>问题仍未解决时</h3>
-            <ul class="points">
-              <li>一旦无法选择，处理后需要重启SteamVR。</li>
-              <li>请重新下载ZIP文件，解压到新位置后再试。</li>
-            </ul>
-            <p class="muted mt-s">※这些问题源于SteamVR的机制，游戏本身无法控制。</p>
-          </div>
+          <p>若您使用的是正式版，请从购买游戏的商店下载<strong>ver1.2.0或更高版本</strong>。本次更新修复了手柄输入问题，以及从包含日文或空格的路径启动时出现的问题。</p>
+          <ol class="do">
+            <li>退出游戏和SteamVR</li>
+            <li>按照<a href="setup-guide.html#pcvr-update">PCVR版更新步骤</a>进行更新</li>
+            <li>启动SteamVR，再运行新游戏文件夹中的<span class="file">MRsecretVR.exe</span></li>
+          </ol>
+          <p class="mt-m">若更新后问题仍未解决，请在<a href="https://ci-en.net/creator/27628/article/1288727" target="_blank" rel="noopener">Ci-en页面</a>告知我们您使用的VR头显、连接方式、游戏版本和具体症状。</p>
+        </div>
+      </details>
+
+      <details class="qa" id="quest-not-responding" data-filter-item>
+        <summary><span><small class="tagline">Quest</small>显示“无响应”，无法启动游戏</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
+        <div class="qa-body">
+          <p>正式版ver1.2.0针对Quest一体机版启动时无响应的问题进行了修正。请从购买游戏的商店下载最新版，并查看<a href="setup-guide.html#quest-update">Quest一体机版更新步骤</a>。</p>
+          <div class="note warn"><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"></use></svg><p>从旧公开版首次升级至本次ver1.2.0时，无法继承原有存档。请先阅读更新步骤中的注意事项再进行操作。</p></div>
         </div>
       </details>
 
       <details class="qa" id="pc-steamvr" data-filter-item>
         <summary><span><small class="tagline">PC</small>无法通过SteamVR启动</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <ol class="do">
-            <li>在SteamVR窗口的“三条横线”菜单中选择“设置”</li>
-            <li>在OpenXR一项中选择“将 STEAMVR 设置为 OPENXR 运行时”</li>
-          </ol>
+          <ol class="do"><li>退出游戏，查看<a href="setup-guide.html#vr-connection">头显连接步骤</a>。</li><li>启动SteamVR，确认头显和手柄均已被识别。</li><li>运行新游戏文件夹中的<span class="file">MRsecretVR.exe</span>。</li></ol>
         </div>
       </details>
 
       <details class="qa" id="pc-questlink" data-filter-item>
         <summary><span><small class="tagline">PC</small>通过Meta Horizon Link（原 Quest Link）的SteamVR无法启动</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>请在电脑上的Meta Horizon Link软件（原 Meta Quest Link）中更改OpenXR设置。</p>
-          <ol class="do">
-            <li>Settings→General→OpenXR Runtime</li>
-            <li>设为active（当前运行时）</li>
-          </ol>
+          <ol class="do"><li>通过Meta Horizon Link连接电脑，确认头显中显示Link画面。</li><li>在电脑上启动SteamVR，确认头显和手柄均已被识别。</li><li>运行<span class="file">MRsecretVR.exe</span>。</li></ol><p class="mt-s">若Link本身无法连接，请查看<a href="setup-guide.html#conn-link">连接指南</a>。</p>
         </div>
       </details>
 
       <details class="qa" id="quest-apk" data-filter-item>
         <summary><span><small class="tagline">Quest</small>无法安装APK文件</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
         <div class="qa-body">
-          <p>已确认Quest2上存在无法通过SideQuest安装的情况。</p>
-          <p>请尝试<a href="setup-guide.html#mobile-vr-method">安装指南</a>中的“A. 仅用Quest”。</p>
+          <p>从旧公开版首次升级至ver1.2.0时，请先阅读<a href="setup-guide.html#quest-update">更新步骤与存档注意事项</a>。</p><p>若首次安装失败，请确认已解压zip并使用其中的APK。若通过<a href="setup-guide.html#mobile-vr-method">Quest的Files应用</a>仍无法安装，请查看<a href="setup-guide.html#dev-mode">开发者模式</a>和<a href="setup-guide.html#sidequest-method">SideQuest步骤</a>。</p>
         </div>
       </details>
     </section>
@@ -125,7 +112,7 @@
         <div class="qa-body">
           <p>服装和发型的操作方法略有不同。</p>
           <ul class="points">
-            <li><strong>服装</strong>　从背包取出并抓住即可换装。</li>
+            <li><strong>服装</strong>　从背包取出，手持服装贴到她的身体上。</li>
             <li><strong>发型</strong>　从背包取出后，需要贴到她的头发上。</li>
           </ul>
         </div>
@@ -153,7 +140,9 @@
 
       <details class="qa" id="mr-hand-holding" data-filter-item>
         <summary><span>MR模式下无法牵手</span><svg class="i" aria-hidden="true"><use href="../assets/img/icons.svg#i-plus"></use></svg></summary>
-        <div class="qa-body"><p>仅在菜单中执行「ポーズリセット」（重置姿势）后可牵手1次。这是设计上的限制。</p></div>
+        <div class="qa-body">
+          <p>如果牵手后她没有移动，请在菜单中执行「ポーズリセット」（重置姿势），再抓住她的前臂。</p>
+        </div>
       </details>
 
       <details class="qa" id="mr-howto" data-filter-item>
@@ -169,8 +158,9 @@
             <li>“Space setup”中显示空间管理和房间名称这两项</li>
             <li>“Space setup”中的“App permissions”→“Spatial data”→“MRsecretVR”已开启</li>
             <li>空间设置过程中，显示了识别房间形状的网格（Mesh）</li>
-            <li>已在菜单中点按「空間認識未対応」（空间识别未启用）将其设为ON</li>
+            <li>更改房间设置或权限后，重新启动游戏，待房间加载完成再开启空间识别（空間Mesh）</li>
           </ul>
+          <p class="mt-s">「非対応」（不支持）也可能表示房间网格尚未加载。仅点击该文字无法启用此功能。</p>
         </div>
       </details>
     </section>
